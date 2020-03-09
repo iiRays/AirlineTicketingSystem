@@ -95,6 +95,7 @@
       <DependentUpon>AirlineSystem.dbml</DependentUpon>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Util\DBUtil.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>

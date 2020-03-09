@@ -17,9 +17,7 @@
         plane.Capacity = TextBox4.Text
 
         'Insert into DB
-        Dim db As New AirlineSystemDataContext
-        db.Planes.InsertOnSubmit(plane)
-        db.SubmitChanges()
+        DBUtil.Insert(plane)
 
     End Sub
 End Class
