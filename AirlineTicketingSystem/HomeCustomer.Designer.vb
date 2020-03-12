@@ -22,78 +22,84 @@ Partial Class HomeCustomer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnAccount = New System.Windows.Forms.Button()
+        Me.btnMyBookings = New System.Windows.Forms.Button()
+        Me.btnFlights = New System.Windows.Forms.Button()
         Me.lblTitle = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'Label2
+        'btnAccount
         '
-        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.Label2.Font = New System.Drawing.Font("Poppins", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(507, 239)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(225, 250)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "my bookings"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnAccount.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.btnAccount.FlatAppearance.BorderSize = 0
+        Me.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAccount.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnAccount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.btnAccount.Location = New System.Drawing.Point(773, 253)
+        Me.btnAccount.Name = "btnAccount"
+        Me.btnAccount.Size = New System.Drawing.Size(225, 250)
+        Me.btnAccount.TabIndex = 33
+        Me.btnAccount.Text = "account"
+        Me.btnAccount.UseVisualStyleBackColor = False
         '
-        'Label1
+        'btnMyBookings
         '
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.Label1.Font = New System.Drawing.Font("Poppins", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(238, 239)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(225, 250)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "flights"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnMyBookings.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.btnMyBookings.FlatAppearance.BorderSize = 0
+        Me.btnMyBookings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMyBookings.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnMyBookings.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.btnMyBookings.Location = New System.Drawing.Point(505, 253)
+        Me.btnMyBookings.Name = "btnMyBookings"
+        Me.btnMyBookings.Size = New System.Drawing.Size(225, 250)
+        Me.btnMyBookings.TabIndex = 32
+        Me.btnMyBookings.Text = "my bookings"
+        Me.btnMyBookings.UseVisualStyleBackColor = False
+        '
+        'btnFlights
+        '
+        Me.btnFlights.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.btnFlights.FlatAppearance.BorderSize = 0
+        Me.btnFlights.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFlights.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnFlights.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.btnFlights.Location = New System.Drawing.Point(235, 253)
+        Me.btnFlights.Name = "btnFlights"
+        Me.btnFlights.Size = New System.Drawing.Size(225, 250)
+        Me.btnFlights.TabIndex = 31
+        Me.btnFlights.Text = "flights"
+        Me.btnFlights.UseVisualStyleBackColor = False
         '
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.lblTitle.Location = New System.Drawing.Point(527, 89)
+        Me.lblTitle.Location = New System.Drawing.Point(527, 110)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(181, 70)
-        Me.lblTitle.TabIndex = 3
+        Me.lblTitle.TabIndex = 30
         Me.lblTitle.Text = "ao zora"
         '
-        'Label3
-        '
-        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.Label3.Font = New System.Drawing.Font("Poppins", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(776, 239)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(225, 250)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = "account"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'HomeLoggedIn
+        'HomeCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1264, 681)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnAccount)
+        Me.Controls.Add(Me.btnMyBookings)
+        Me.Controls.Add(Me.btnFlights)
         Me.Controls.Add(Me.lblTitle)
-        Me.Name = "HomeLoggedIn"
+        Me.Name = "HomeCustomer"
         Me.Text = "Home"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents btnAccount As Button
+    Friend WithEvents btnMyBookings As Button
+    Friend WithEvents btnFlights As Button
     Friend WithEvents lblTitle As Label
-    Friend WithEvents Label3 As Label
 End Class

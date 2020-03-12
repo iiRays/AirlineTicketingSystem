@@ -22,48 +22,12 @@ Partial Class AdminDashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.lblTitle = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnBack = New System.Windows.Forms.Button()
+        Me.btnFlights = New System.Windows.Forms.Button()
+        Me.btnRoutes = New System.Windows.Forms.Button()
+        Me.btnCities = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'Label3
-        '
-        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.Label3.Font = New System.Drawing.Font("Poppins", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(781, 259)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(225, 250)
-        Me.Label3.TabIndex = 14
-        Me.Label3.Text = "cities"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.Label2.Font = New System.Drawing.Font("Poppins", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(512, 259)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(225, 250)
-        Me.Label2.TabIndex = 13
-        Me.Label2.Text = "routes"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label1
-        '
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.Label1.Font = New System.Drawing.Font("Poppins", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(243, 259)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(225, 250)
-        Me.Label1.TabIndex = 12
-        Me.Label1.Text = "flights"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblTitle
         '
@@ -76,17 +40,61 @@ Partial Class AdminDashboard
         Me.lblTitle.TabIndex = 11
         Me.lblTitle.Text = "ao zora"
         '
-        'Label4
+        'btnBack
         '
-        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.Label4.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(27, 28)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(150, 75)
-        Me.Label4.TabIndex = 15
-        Me.Label4.Text = "back"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.btnBack.FlatAppearance.BorderSize = 0
+        Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBack.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnBack.ForeColor = System.Drawing.Color.White
+        Me.btnBack.Location = New System.Drawing.Point(36, 34)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(150, 75)
+        Me.btnBack.TabIndex = 26
+        Me.btnBack.Text = "back"
+        Me.btnBack.UseVisualStyleBackColor = False
+        '
+        'btnFlights
+        '
+        Me.btnFlights.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.btnFlights.FlatAppearance.BorderSize = 0
+        Me.btnFlights.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFlights.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnFlights.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.btnFlights.Location = New System.Drawing.Point(240, 252)
+        Me.btnFlights.Name = "btnFlights"
+        Me.btnFlights.Size = New System.Drawing.Size(225, 250)
+        Me.btnFlights.TabIndex = 27
+        Me.btnFlights.Text = "flights"
+        Me.btnFlights.UseVisualStyleBackColor = False
+        '
+        'btnRoutes
+        '
+        Me.btnRoutes.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.btnRoutes.FlatAppearance.BorderSize = 0
+        Me.btnRoutes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRoutes.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnRoutes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.btnRoutes.Location = New System.Drawing.Point(510, 252)
+        Me.btnRoutes.Name = "btnRoutes"
+        Me.btnRoutes.Size = New System.Drawing.Size(225, 250)
+        Me.btnRoutes.TabIndex = 28
+        Me.btnRoutes.Text = "routes"
+        Me.btnRoutes.UseVisualStyleBackColor = False
+        '
+        'btnCities
+        '
+        Me.btnCities.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.btnCities.FlatAppearance.BorderSize = 0
+        Me.btnCities.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCities.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnCities.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.btnCities.Location = New System.Drawing.Point(778, 252)
+        Me.btnCities.Name = "btnCities"
+        Me.btnCities.Size = New System.Drawing.Size(225, 250)
+        Me.btnCities.TabIndex = 29
+        Me.btnCities.Text = "cities"
+        Me.btnCities.UseVisualStyleBackColor = False
         '
         'AdminDashboard
         '
@@ -94,10 +102,10 @@ Partial Class AdminDashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1264, 681)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnCities)
+        Me.Controls.Add(Me.btnRoutes)
+        Me.Controls.Add(Me.btnFlights)
+        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.lblTitle)
         Me.Name = "AdminDashboard"
         Me.Text = "Admin Dashboard"
@@ -105,10 +113,9 @@ Partial Class AdminDashboard
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents lblTitle As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents btnBack As Button
+    Friend WithEvents btnFlights As Button
+    Friend WithEvents btnRoutes As Button
+    Friend WithEvents btnCities As Button
 End Class
