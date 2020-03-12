@@ -1,4 +1,5 @@
-﻿Public Class Form1
+﻿
+Public Class Form1
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
@@ -32,5 +33,10 @@
         TextBox2.Text = plane.Model
         TextBox3.Text = plane.Manufacturer
         TextBox4.Text = plane.Capacity
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Quick.Print("test")
+
     End Sub
 End Class
