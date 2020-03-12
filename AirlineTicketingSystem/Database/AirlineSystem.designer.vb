@@ -155,7 +155,7 @@ Partial Public Class AirlineSystemDataContext
 	End Property
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.booking")>  _
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Booking")>  _
 Partial Public Class Booking
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
@@ -175,7 +175,7 @@ Partial Public Class Booking
 	
 	Private _CreditCardNo As String
 	
-	Private _isCancelled As Boolean
+	Private _IsCancelled As Boolean
 	
 	Private _ExtraBaggageKG As Integer
 	
@@ -220,9 +220,9 @@ Partial Public Class Booking
     End Sub
     Partial Private Sub OnCreditCardNoChanged()
     End Sub
-    Partial Private Sub OnisCancelledChanging(value As Boolean)
+    Partial Private Sub OnIsCancelledChanging(value As Boolean)
     End Sub
-    Partial Private Sub OnisCancelledChanged()
+    Partial Private Sub OnIsCancelledChanged()
     End Sub
     Partial Private Sub OnExtraBaggageKGChanging(value As Integer)
     End Sub
@@ -359,19 +359,19 @@ Partial Public Class Booking
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_isCancelled", DbType:="Bit NOT NULL")>  _
-	Public Property isCancelled() As Boolean
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsCancelled", DbType:="Bit NOT NULL")>  _
+	Public Property IsCancelled() As Boolean
 		Get
-			Return Me._isCancelled
+			Return Me._IsCancelled
 		End Get
 		Set
-			If ((Me._isCancelled = value)  _
+			If ((Me._IsCancelled = value)  _
 						= false) Then
-				Me.OnisCancelledChanging(value)
+				Me.OnIsCancelledChanging(value)
 				Me.SendPropertyChanging
-				Me._isCancelled = value
-				Me.SendPropertyChanged("isCancelled")
-				Me.OnisCancelledChanged
+				Me._IsCancelled = value
+				Me.SendPropertyChanged("IsCancelled")
+				Me.OnIsCancelledChanged
 			End If
 		End Set
 	End Property
@@ -393,7 +393,7 @@ Partial Public Class Booking
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="booking_ticket", Storage:="_Tickets", ThisKey:="BookingID", OtherKey:="BookingID")>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Booking_Ticket", Storage:="_Tickets", ThisKey:="BookingID", OtherKey:="BookingID")>  _
 	Public Property Tickets() As EntitySet(Of Ticket)
 		Get
 			Return Me._Tickets
@@ -403,7 +403,7 @@ Partial Public Class Booking
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="customer_booking", Storage:="_Customer", ThisKey:="CustomerID", OtherKey:="CustomerID", IsForeignKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Customer_Booking", Storage:="_Customer", ThisKey:="CustomerID", OtherKey:="CustomerID", IsForeignKey:=true)>  _
 	Public Property Customer() As Customer
 		Get
 			Return Me._Customer.Entity
@@ -431,7 +431,7 @@ Partial Public Class Booking
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="flight_booking", Storage:="_Flight", ThisKey:="FlightID", OtherKey:="FlightID", IsForeignKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Flight_Booking", Storage:="_Flight", ThisKey:="FlightID", OtherKey:="FlightID", IsForeignKey:=true)>  _
 	Public Property Flight() As Flight
 		Get
 			Return Me._Flight.Entity
@@ -488,7 +488,7 @@ Partial Public Class Booking
 	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.ticket")>  _
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Ticket")>  _
 Partial Public Class Ticket
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
@@ -602,7 +602,7 @@ Partial Public Class Ticket
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="booking_ticket", Storage:="_Booking", ThisKey:="BookingID", OtherKey:="BookingID", IsForeignKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Booking_Ticket", Storage:="_Booking", ThisKey:="BookingID", OtherKey:="BookingID", IsForeignKey:=true)>  _
 	Public Property Booking() As Booking
 		Get
 			Return Me._Booking.Entity
@@ -649,7 +649,7 @@ Partial Public Class Ticket
 	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.city")>  _
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.City")>  _
 Partial Public Class City
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
@@ -804,7 +804,7 @@ Partial Public Class City
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="city_stop", Storage:="_Stops", ThisKey:="CityID", OtherKey:="CityID")>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="City_Stop", Storage:="_Stops", ThisKey:="CityID", OtherKey:="CityID")>  _
 	Public Property Stops() As EntitySet(Of [Stop])
 		Get
 			Return Me._Stops
@@ -843,7 +843,7 @@ Partial Public Class City
 	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.customer")>  _
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Customer")>  _
 Partial Public Class Customer
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
@@ -853,6 +853,10 @@ Partial Public Class Customer
 	
 	Private _Name As String
 	
+	Private _Password As String
+	
+	Private _PasswordSalt As System.Data.Linq.Binary
+	
 	Private _Gender As Char
 	
 	Private _DateOfBirth As Date
@@ -861,7 +865,7 @@ Partial Public Class Customer
 	
 	Private _Email As String
 	
-	Private _isRegistered As Boolean
+	Private _IsRegistered As Boolean
 	
 	Private _Country As String
 	
@@ -884,6 +888,14 @@ Partial Public Class Customer
     End Sub
     Partial Private Sub OnNameChanged()
     End Sub
+    Partial Private Sub OnPasswordChanging(value As String)
+    End Sub
+    Partial Private Sub OnPasswordChanged()
+    End Sub
+    Partial Private Sub OnPasswordSaltChanging(value As System.Data.Linq.Binary)
+    End Sub
+    Partial Private Sub OnPasswordSaltChanged()
+    End Sub
     Partial Private Sub OnGenderChanging(value As Char)
     End Sub
     Partial Private Sub OnGenderChanged()
@@ -900,9 +912,9 @@ Partial Public Class Customer
     End Sub
     Partial Private Sub OnEmailChanged()
     End Sub
-    Partial Private Sub OnisRegisteredChanging(value As Boolean)
+    Partial Private Sub OnIsRegisteredChanging(value As Boolean)
     End Sub
-    Partial Private Sub OnisRegisteredChanged()
+    Partial Private Sub OnIsRegisteredChanged()
     End Sub
     Partial Private Sub OnCountryChanging(value As String)
     End Sub
@@ -948,6 +960,38 @@ Partial Public Class Customer
 				Me._Name = value
 				Me.SendPropertyChanged("Name")
 				Me.OnNameChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Password", DbType:="VarChar(100) NOT NULL", CanBeNull:=false)>  _
+	Public Property Password() As String
+		Get
+			Return Me._Password
+		End Get
+		Set
+			If (String.Equals(Me._Password, value) = false) Then
+				Me.OnPasswordChanging(value)
+				Me.SendPropertyChanging
+				Me._Password = value
+				Me.SendPropertyChanged("Password")
+				Me.OnPasswordChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PasswordSalt", DbType:="VarBinary(100) NOT NULL", CanBeNull:=false, UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property PasswordSalt() As System.Data.Linq.Binary
+		Get
+			Return Me._PasswordSalt
+		End Get
+		Set
+			If (Object.Equals(Me._PasswordSalt, value) = false) Then
+				Me.OnPasswordSaltChanging(value)
+				Me.SendPropertyChanging
+				Me._PasswordSalt = value
+				Me.SendPropertyChanged("PasswordSalt")
+				Me.OnPasswordSaltChanged
 			End If
 		End Set
 	End Property
@@ -1018,19 +1062,19 @@ Partial Public Class Customer
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_isRegistered", DbType:="Bit NOT NULL")>  _
-	Public Property isRegistered() As Boolean
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsRegistered", DbType:="Bit NOT NULL")>  _
+	Public Property IsRegistered() As Boolean
 		Get
-			Return Me._isRegistered
+			Return Me._IsRegistered
 		End Get
 		Set
-			If ((Me._isRegistered = value)  _
+			If ((Me._IsRegistered = value)  _
 						= false) Then
-				Me.OnisRegisteredChanging(value)
+				Me.OnIsRegisteredChanging(value)
 				Me.SendPropertyChanging
-				Me._isRegistered = value
-				Me.SendPropertyChanged("isRegistered")
-				Me.OnisRegisteredChanged
+				Me._IsRegistered = value
+				Me.SendPropertyChanged("IsRegistered")
+				Me.OnIsRegisteredChanged
 			End If
 		End Set
 	End Property
@@ -1067,7 +1111,7 @@ Partial Public Class Customer
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="customer_booking", Storage:="_Bookings", ThisKey:="CustomerID", OtherKey:="CustomerID")>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Customer_Booking", Storage:="_Bookings", ThisKey:="CustomerID", OtherKey:="CustomerID")>  _
 	Public Property Bookings() As EntitySet(Of Booking)
 		Get
 			Return Me._Bookings
@@ -1106,7 +1150,7 @@ Partial Public Class Customer
 	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.flight")>  _
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Flight")>  _
 Partial Public Class Flight
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
@@ -1256,7 +1300,7 @@ Partial Public Class Flight
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="flight_booking", Storage:="_Bookings", ThisKey:="FlightID", OtherKey:="FlightID")>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Flight_Booking", Storage:="_Bookings", ThisKey:="FlightID", OtherKey:="FlightID")>  _
 	Public Property Bookings() As EntitySet(Of Booking)
 		Get
 			Return Me._Bookings
@@ -1266,7 +1310,7 @@ Partial Public Class Flight
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="flight_stop", Storage:="_Stops", ThisKey:="FlightID", OtherKey:="FlightID")>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Flight_Stop", Storage:="_Stops", ThisKey:="FlightID", OtherKey:="FlightID")>  _
 	Public Property Stops() As EntitySet(Of [Stop])
 		Get
 			Return Me._Stops
@@ -1276,7 +1320,7 @@ Partial Public Class Flight
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="plane_flight", Storage:="_Plane", ThisKey:="PlaneID", OtherKey:="PlaneID", IsForeignKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Plane_Flight", Storage:="_Plane", ThisKey:="PlaneID", OtherKey:="PlaneID", IsForeignKey:=true)>  _
 	Public Property Plane() As Plane
 		Get
 			Return Me._Plane.Entity
@@ -1304,7 +1348,7 @@ Partial Public Class Flight
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="route_flight", Storage:="_Route", ThisKey:="RouteID", OtherKey:="RouteID", IsForeignKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Route_Flight", Storage:="_Route", ThisKey:="RouteID", OtherKey:="RouteID", IsForeignKey:=true)>  _
 	Public Property Route() As Route
 		Get
 			Return Me._Route.Entity
@@ -1371,7 +1415,7 @@ Partial Public Class Flight
 	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.plane")>  _
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Plane")>  _
 Partial Public Class Plane
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
@@ -1483,7 +1527,7 @@ Partial Public Class Plane
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="plane_flight", Storage:="_Flights", ThisKey:="PlaneID", OtherKey:="PlaneID")>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Plane_Flight", Storage:="_Flights", ThisKey:="PlaneID", OtherKey:="PlaneID")>  _
 	Public Property Flights() As EntitySet(Of Flight)
 		Get
 			Return Me._Flights
@@ -1522,7 +1566,7 @@ Partial Public Class Plane
 	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.route")>  _
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Route")>  _
 Partial Public Class Route
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
@@ -1534,7 +1578,7 @@ Partial Public Class Route
 	
 	Private _DurationMins As Integer
 	
-	Private _isDaily As Boolean
+	Private _IsDaily As Boolean
 	
 	Private _Price As Decimal
 	
@@ -1559,9 +1603,9 @@ Partial Public Class Route
     End Sub
     Partial Private Sub OnDurationMinsChanged()
     End Sub
-    Partial Private Sub OnisDailyChanging(value As Boolean)
+    Partial Private Sub OnIsDailyChanging(value As Boolean)
     End Sub
-    Partial Private Sub OnisDailyChanged()
+    Partial Private Sub OnIsDailyChanged()
     End Sub
     Partial Private Sub OnPriceChanging(value As Decimal)
     End Sub
@@ -1625,19 +1669,19 @@ Partial Public Class Route
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_isDaily", DbType:="Bit NOT NULL")>  _
-	Public Property isDaily() As Boolean
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsDaily", DbType:="Bit NOT NULL")>  _
+	Public Property IsDaily() As Boolean
 		Get
-			Return Me._isDaily
+			Return Me._IsDaily
 		End Get
 		Set
-			If ((Me._isDaily = value)  _
+			If ((Me._IsDaily = value)  _
 						= false) Then
-				Me.OnisDailyChanging(value)
+				Me.OnIsDailyChanging(value)
 				Me.SendPropertyChanging
-				Me._isDaily = value
-				Me.SendPropertyChanged("isDaily")
-				Me.OnisDailyChanged
+				Me._IsDaily = value
+				Me.SendPropertyChanged("IsDaily")
+				Me.OnIsDailyChanged
 			End If
 		End Set
 	End Property
@@ -1659,7 +1703,7 @@ Partial Public Class Route
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="route_flight", Storage:="_Flights", ThisKey:="RouteID", OtherKey:="RouteID")>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Route_Flight", Storage:="_Flights", ThisKey:="RouteID", OtherKey:="RouteID")>  _
 	Public Property Flights() As EntitySet(Of Flight)
 		Get
 			Return Me._Flights
@@ -1698,7 +1742,7 @@ Partial Public Class Route
 	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.stop")>  _
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Stop")>  _
 Partial Public Class [Stop]
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
@@ -1708,7 +1752,7 @@ Partial Public Class [Stop]
 	
 	Private _CityID As String
 	
-	Private _isOrigin As Boolean
+	Private _IsOrigin As Boolean
 	
 	Private _City As EntityRef(Of City)
 	
@@ -1729,9 +1773,9 @@ Partial Public Class [Stop]
     End Sub
     Partial Private Sub OnCityIDChanged()
     End Sub
-    Partial Private Sub OnisOriginChanging(value As Boolean)
+    Partial Private Sub OnIsOriginChanging(value As Boolean)
     End Sub
-    Partial Private Sub OnisOriginChanged()
+    Partial Private Sub OnIsOriginChanged()
     End Sub
     #End Region
 	
@@ -1780,24 +1824,24 @@ Partial Public Class [Stop]
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_isOrigin", DbType:="Bit NOT NULL")>  _
-	Public Property isOrigin() As Boolean
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsOrigin", DbType:="Bit NOT NULL")>  _
+	Public Property IsOrigin() As Boolean
 		Get
-			Return Me._isOrigin
+			Return Me._IsOrigin
 		End Get
 		Set
-			If ((Me._isOrigin = value)  _
+			If ((Me._IsOrigin = value)  _
 						= false) Then
-				Me.OnisOriginChanging(value)
+				Me.OnIsOriginChanging(value)
 				Me.SendPropertyChanging
-				Me._isOrigin = value
-				Me.SendPropertyChanged("isOrigin")
-				Me.OnisOriginChanged
+				Me._IsOrigin = value
+				Me.SendPropertyChanged("IsOrigin")
+				Me.OnIsOriginChanged
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="city_stop", Storage:="_City", ThisKey:="CityID", OtherKey:="CityID", IsForeignKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="City_Stop", Storage:="_City", ThisKey:="CityID", OtherKey:="CityID", IsForeignKey:=true)>  _
 	Public Property City() As City
 		Get
 			Return Me._City.Entity
@@ -1825,7 +1869,7 @@ Partial Public Class [Stop]
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="flight_stop", Storage:="_Flight", ThisKey:="FlightID", OtherKey:="FlightID", IsForeignKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Flight_Stop", Storage:="_Flight", ThisKey:="FlightID", OtherKey:="FlightID", IsForeignKey:=true)>  _
 	Public Property Flight() As Flight
 		Get
 			Return Me._Flight.Entity
