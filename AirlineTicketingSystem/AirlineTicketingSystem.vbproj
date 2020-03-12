@@ -89,12 +89,84 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminDashboard.Designer.vb">
+      <DependentUpon>AdminDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFlightList.Designer.vb">
+      <DependentUpon>AdminFlightList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFlightList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFlightSearch.Designer.vb">
+      <DependentUpon>AdminFlightSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFlightSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookFlight1.Designer.vb">
+      <DependentUpon>BookFlight1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookFlight1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookFlight2.Designer.vb">
+      <DependentUpon>BookFlight2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookFlight2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Database\AirlineSystem.designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AirlineSystem.dbml</DependentUpon>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="FlightList.Designer.vb">
+      <DependentUpon>FlightList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FlightList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlightSearch.Designer.vb">
+      <DependentUpon>FlightSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FlightSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeAdmin.Designer.vb">
+      <DependentUpon>HomeAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomeAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeCustomer.Designer.vb">
+      <DependentUpon>HomeCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomeCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeGuest.Designer.vb">
+      <DependentUpon>HomeGuest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomeGuest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.vb">
+      <DependentUpon>Register.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Register.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Util\DBUtil.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -122,14 +194,50 @@
     <Compile Include="Util\Quick.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFlightList.resx">
+      <DependentUpon>AdminFlightList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFlightSearch.resx">
+      <DependentUpon>AdminFlightSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookFlight1.resx">
+      <DependentUpon>BookFlight1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookFlight2.resx">
+      <DependentUpon>BookFlight2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlightList.resx">
+      <DependentUpon>FlightList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlightSearch.resx">
+      <DependentUpon>FlightSearch.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeAdmin.resx">
+      <DependentUpon>HomeAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeCustomer.resx">
+      <DependentUpon>HomeCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeGuest.resx">
+      <DependentUpon>HomeGuest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
