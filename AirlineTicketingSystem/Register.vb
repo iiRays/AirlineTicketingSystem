@@ -1,4 +1,4 @@
-﻿Imports AirlineTicketingSystem.DBUtil
+﻿Imports AirlineTicketingSystem.DB
 Public Class Register
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
         Dim cust As New Customer

@@ -15,7 +15,7 @@
     End Sub
 
     Public Shared Function GenerateId(Of T)() As String
-        Dim total = DBUtil.GetCount(Of T)()
+        Dim total = DB.GetCount(Of T)()
         Dim id As String = ""
 
         If GetType(T) = GetType(Customer) Then

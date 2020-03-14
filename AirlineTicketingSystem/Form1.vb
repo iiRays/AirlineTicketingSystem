@@ -21,14 +21,14 @@ Public Class Form1
         plane.Manufacturer = TextBox3.Text
         plane.Capacity = TextBox4.Text
 
-        DBUtil.Update(plane, TextBox5.Text)
+        DB.Update(plane, TextBox5.Text)
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim plane As Plane = DBUtil.Get(Of Plane)(TextBox5.Text)
+        Dim plane As Plane = DB.Get(Of Plane)(TextBox5.Text)
         TextBox1.Text = plane.PlaneID
         TextBox2.Text = plane.Model
         TextBox3.Text = plane.Manufacturer

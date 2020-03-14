@@ -173,7 +173,7 @@
     <Compile Include="Startup.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Util\DBUtil.vb" />
+    <Compile Include="Util\DB.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>

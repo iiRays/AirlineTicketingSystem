@@ -8,7 +8,7 @@
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         'Get customer based on email
-        Dim cResult = From cust In DBUtil.db.Customers
+        Dim cResult = From cust In DB.context.Customers
                       Where cust.Email = txtEmail.Text
 
 

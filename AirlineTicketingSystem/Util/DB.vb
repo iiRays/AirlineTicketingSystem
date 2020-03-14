@@ -1,37 +1,37 @@
-﻿Public Class DBUtil
-    Public Shared db As New AirlineSystemDataContext()
+﻿Public Class DB
+    Public Shared context As New AirlineSystemDataContext()
     Public Shared Sub Insert(obj As Object)
 
         If TypeOf obj Is Plane Then
             'Insert Plane
-            db.Planes.InsertOnSubmit(obj)
+            context.Planes.InsertOnSubmit(obj)
         ElseIf TypeOf obj Is Customer Then
             'Insert Customer
-            db.Customers.InsertOnSubmit(obj)
+            context.Customers.InsertOnSubmit(obj)
         ElseIf TypeOf obj Is Booking Then
             'Insert Booking
-            db.Bookings.InsertOnSubmit(obj)
+            context.Bookings.InsertOnSubmit(obj)
         ElseIf TypeOf obj Is City Then
             'Insert City
-            db.Cities.InsertOnSubmit(obj)
+            context.Cities.InsertOnSubmit(obj)
         ElseIf TypeOf obj Is Flight Then
             'Insert Flight
-            db.Flights.InsertOnSubmit(obj)
+            context.Flights.InsertOnSubmit(obj)
         ElseIf TypeOf obj Is Route Then
             'Insert route
-            db.Routes.InsertOnSubmit(obj)
+            context.Routes.InsertOnSubmit(obj)
         ElseIf TypeOf obj Is [Stop] Then
             'Insert Stop
-            db.Stops.InsertOnSubmit(obj)
+            context.Stops.InsertOnSubmit(obj)
         ElseIf TypeOf obj Is Ticket Then
             'Insert ticket
-            db.Tickets.InsertOnSubmit(obj)
+            context.Tickets.InsertOnSubmit(obj)
         Else
             Throw New Exception("Object's type is not present in Airline Database.")
         End If
 
         Try
-            db.SubmitChanges()
+            context.SubmitChanges()
         Catch ex As SqlClient.SqlException
             Quick.Print(ex.Message)
         End Try
@@ -43,51 +43,51 @@
 
         If TypeOf obj Is Plane Then
             'Delete Plane
-            db.Planes.DeleteOnSubmit(DBUtil.Get(Of Plane)(CType(obj, Plane).PlaneID))
+            context.Planes.DeleteOnSubmit(AirlineTicketingSystem.DB.Get(Of Plane)(CType(obj, Plane).PlaneID))
         ElseIf TypeOf obj Is Customer Then
             'Delete Customer
-            db.Customers.DeleteOnSubmit(DBUtil.Get(Of Customer)(CType(obj, Customer).CustomerID))
+            context.Customers.DeleteOnSubmit(AirlineTicketingSystem.DB.Get(Of Customer)(CType(obj, Customer).CustomerID))
         ElseIf TypeOf obj Is Booking Then
             'Delete Booking
-            db.Bookings.DeleteOnSubmit(DBUtil.Get(Of Booking)(CType(obj, Booking).BookingID))
+            context.Bookings.DeleteOnSubmit(AirlineTicketingSystem.DB.Get(Of Booking)(CType(obj, Booking).BookingID))
         ElseIf TypeOf obj Is City Then
             'Delete City
-            db.Cities.DeleteOnSubmit(DBUtil.Get(Of City)(CType(obj, City).CityID))
+            context.Cities.DeleteOnSubmit(AirlineTicketingSystem.DB.Get(Of City)(CType(obj, City).CityID))
         ElseIf TypeOf obj Is Flight Then
             'Delete Flight
-            db.Flights.DeleteOnSubmit(DBUtil.Get(Of Flight)(CType(obj, Flight).FlightID))
+            context.Flights.DeleteOnSubmit(AirlineTicketingSystem.DB.Get(Of Flight)(CType(obj, Flight).FlightID))
         ElseIf TypeOf obj Is Route Then
             'Delete route
-            db.Routes.DeleteOnSubmit(DBUtil.Get(Of Route)(CType(obj, Route).RouteID))
+            context.Routes.DeleteOnSubmit(AirlineTicketingSystem.DB.Get(Of Route)(CType(obj, Route).RouteID))
         ElseIf TypeOf obj Is [Stop] Then
             'Delete Stop
-            db.Stops.DeleteOnSubmit(obj)
+            context.Stops.DeleteOnSubmit(obj)
         ElseIf TypeOf obj Is Ticket Then
             'Delete ticket
-            db.Tickets.DeleteOnSubmit(DBUtil.Get(Of Ticket)(CType(obj, Ticket).TicketID))
+            context.Tickets.DeleteOnSubmit(AirlineTicketingSystem.DB.Get(Of Ticket)(CType(obj, Ticket).TicketID))
         Else
             Throw New Exception("Object's type is not present in Airline Database.")
         End If
 
-        db.SubmitChanges()
+        context.SubmitChanges()
 
     End Sub
 
     Public Shared Function [Get](Of T)(id As String) As Object
         If GetType(T) = GetType(Plane) Then
-            Return db.Planes.FirstOrDefault(Function(o) o.PlaneID = id)
+            Return context.Planes.FirstOrDefault(Function(o) o.PlaneID = id)
         ElseIf GetType(T) = GetType(Customer) Then
-            Return db.Customers.FirstOrDefault(Function(o) o.CustomerID = id)
+            Return context.Customers.FirstOrDefault(Function(o) o.CustomerID = id)
         ElseIf GetType(T) = GetType(Booking) Then
-            Return db.Bookings.FirstOrDefault(Function(o) o.BookingID = id)
+            Return context.Bookings.FirstOrDefault(Function(o) o.BookingID = id)
         ElseIf GetType(T) = GetType(City) Then
-            Return db.Cities.FirstOrDefault(Function(o) o.CityID = id)
+            Return context.Cities.FirstOrDefault(Function(o) o.CityID = id)
         ElseIf GetType(T) = GetType(Flight) Then
-            Return db.Flights.FirstOrDefault(Function(o) o.FlightID = id)
+            Return context.Flights.FirstOrDefault(Function(o) o.FlightID = id)
         ElseIf GetType(T) = GetType(Route) Then
-            Return db.Routes.FirstOrDefault(Function(o) o.RouteID = id)
+            Return context.Routes.FirstOrDefault(Function(o) o.RouteID = id)
         ElseIf GetType(T) = GetType(Ticket) Then
-            Return db.Tickets.FirstOrDefault(Function(o) o.TicketID = id)
+            Return context.Tickets.FirstOrDefault(Function(o) o.TicketID = id)
         Else
             Throw New Exception("Object's type is not present in Airline Database.")
         End If
@@ -96,7 +96,7 @@
 
 
 
-        db.SubmitChanges()
+        context.SubmitChanges()
 
     End Function
 
@@ -140,27 +140,27 @@
             Throw New Exception("Object's type is not present in Airline Database.")
         End If
 
-        db.SubmitChanges()
+        context.SubmitChanges()
 
-        db = New AirlineSystemDataContext()
+        context = New AirlineSystemDataContext()
     End Sub
 
     Public Shared Function GetCount(Of T)() As Integer
 
         If GetType(T) = GetType(Customer) Then
-            Return Aggregate cust In db.Customers Into Count()
+            Return Aggregate cust In context.Customers Into Count()
         ElseIf GetType(T) = GetType(Booking) Then
-            Return Aggregate booking In db.Bookings Into Count()
+            Return Aggregate booking In context.Bookings Into Count()
         ElseIf GetType(T) = GetType(City) Then
-            Return Aggregate city In db.Cities Into Count()
+            Return Aggregate city In context.Cities Into Count()
         ElseIf GetType(T) = GetType(Flight) Then
-            Return Aggregate flight In db.Flights Into Count()
+            Return Aggregate flight In context.Flights Into Count()
         ElseIf GetType(T) = GetType(Route) Then
-            Return Aggregate route In db.Routes Into Count()
+            Return Aggregate route In context.Routes Into Count()
         ElseIf GetType(T) = GetType(Plane) Then
-            Return Aggregate plane In db.Planes Into Count()
+            Return Aggregate plane In context.Planes Into Count()
         ElseIf GetType(T) = GetType(Ticket) Then
-            Return Aggregate ticket In db.Tickets Into Count()
+            Return Aggregate ticket In context.Tickets Into Count()
         Else
             Throw New Exception("Object's type is not present in Airline Database.")
         End If
