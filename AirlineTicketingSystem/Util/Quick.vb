@@ -18,10 +18,28 @@
         Dim total = DBUtil.GetCount(Of T)()
         Dim id As String = ""
 
-        For i As Integer = 0 To 10 - total.ToString.Length
+        If GetType(T) = GetType(Customer) Then
+            id += "C"
+        ElseIf GetType(T) = GetType(Booking) Then
+            id += "B"
+        ElseIf GetType(T) = GetType(City) Then
+            id += "S" 'Customer already uses C
+        ElseIf GetType(T) = GetType(Flight) Then
+            id += "F"
+        ElseIf GetType(T) = GetType(Route) Then
+            id += "R"
+        ElseIf GetType(T) = GetType(Plane) Then
+            id += "P"
+        ElseIf GetType(T) = GetType(Ticket) Then
+            id += "T"
+        Else
+            Throw New Exception("Object's type is not present in Airline Database.")
+        End If
+
+        For i As Integer = 0 To 9 - total.ToString.Length
             id += "0"
         Next
-        id += total.ToString
+        id += (total + 1).ToString
 
         Return id
     End Function
