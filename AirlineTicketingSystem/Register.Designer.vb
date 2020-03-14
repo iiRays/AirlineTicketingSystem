@@ -36,9 +36,9 @@ Partial Class Register
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.pnlGender = New System.Windows.Forms.Panel()
-        Me.rbFemale = New System.Windows.Forms.RadioButton()
-        Me.rbNonBinary = New System.Windows.Forms.RadioButton()
         Me.rbMale = New System.Windows.Forms.RadioButton()
+        Me.rbNonBinary = New System.Windows.Forms.RadioButton()
+        Me.rbFemale = New System.Windows.Forms.RadioButton()
         Me.pnlGender.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -47,7 +47,7 @@ Partial Class Register
         Me.btnRedirect.AutoSize = True
         Me.btnRedirect.FlatAppearance.BorderSize = 0
         Me.btnRedirect.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRedirect.Font = New System.Drawing.Font("Poppins", 18.0!, CType(((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic) _
+        Me.btnRedirect.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, CType(((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic) _
                 Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle))
         Me.btnRedirect.ForeColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(214, Byte), Integer))
         Me.btnRedirect.Location = New System.Drawing.Point(522, 538)
@@ -62,7 +62,7 @@ Partial Class Register
         Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnBack.FlatAppearance.BorderSize = 0
         Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBack.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnBack.ForeColor = System.Drawing.Color.White
         Me.btnBack.Location = New System.Drawing.Point(33, 30)
         Me.btnBack.Name = "btnBack"
@@ -76,7 +76,7 @@ Partial Class Register
         Me.btnRegister.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnRegister.FlatAppearance.BorderSize = 0
         Me.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRegister.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnRegister.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnRegister.ForeColor = System.Drawing.Color.White
         Me.btnRegister.Location = New System.Drawing.Point(805, 543)
         Me.btnRegister.Name = "btnRegister"
@@ -88,11 +88,11 @@ Partial Class Register
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Poppins", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(214, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(294, 543)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(239, 42)
+        Me.Label5.Size = New System.Drawing.Size(217, 29)
         Me.Label5.TabIndex = 33
         Me.Label5.Text = "Have an account?"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -111,7 +111,7 @@ Partial Class Register
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(295, 347)
         Me.Label2.Name = "Label2"
@@ -124,7 +124,7 @@ Partial Class Register
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(295, 245)
         Me.Label1.Name = "Label1"
@@ -159,18 +159,18 @@ Partial Class Register
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.lblTitle.Location = New System.Drawing.Point(545, 45)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(191, 70)
+        Me.lblTitle.Size = New System.Drawing.Size(160, 46)
         Me.lblTitle.TabIndex = 27
         Me.lblTitle.Text = "register"
         '
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(295, 140)
         Me.Label3.Name = "Label3"
@@ -194,7 +194,7 @@ Partial Class Register
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.Color.White
-        Me.Label4.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(296, 447)
         Me.Label4.Name = "Label4"
@@ -215,47 +215,47 @@ Partial Class Register
         Me.pnlGender.Size = New System.Drawing.Size(500, 75)
         Me.pnlGender.TabIndex = 44
         '
-        'rbFemale
+        'rbMale
         '
-        Me.rbFemale.AutoSize = True
-        Me.rbFemale.BackColor = System.Drawing.Color.White
-        Me.rbFemale.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbFemale.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.rbFemale.Location = New System.Drawing.Point(128, 14)
-        Me.rbFemale.Name = "rbFemale"
-        Me.rbFemale.Size = New System.Drawing.Size(127, 46)
-        Me.rbFemale.TabIndex = 42
-        Me.rbFemale.TabStop = True
-        Me.rbFemale.Text = "Female"
-        Me.rbFemale.UseVisualStyleBackColor = False
+        Me.rbMale.AutoSize = True
+        Me.rbMale.BackColor = System.Drawing.Color.White
+        Me.rbMale.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbMale.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.rbMale.Location = New System.Drawing.Point(7, 14)
+        Me.rbMale.Name = "rbMale"
+        Me.rbMale.Size = New System.Drawing.Size(88, 33)
+        Me.rbMale.TabIndex = 41
+        Me.rbMale.TabStop = True
+        Me.rbMale.Text = "Male"
+        Me.rbMale.UseVisualStyleBackColor = False
         '
         'rbNonBinary
         '
         Me.rbNonBinary.AutoSize = True
         Me.rbNonBinary.BackColor = System.Drawing.Color.White
-        Me.rbNonBinary.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbNonBinary.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbNonBinary.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.rbNonBinary.Location = New System.Drawing.Point(283, 14)
         Me.rbNonBinary.Name = "rbNonBinary"
-        Me.rbNonBinary.Size = New System.Drawing.Size(178, 46)
+        Me.rbNonBinary.Size = New System.Drawing.Size(161, 33)
         Me.rbNonBinary.TabIndex = 43
         Me.rbNonBinary.TabStop = True
         Me.rbNonBinary.Text = "Non-Binary"
         Me.rbNonBinary.UseVisualStyleBackColor = False
         '
-        'rbMale
+        'rbFemale
         '
-        Me.rbMale.AutoSize = True
-        Me.rbMale.BackColor = System.Drawing.Color.White
-        Me.rbMale.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbMale.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.rbMale.Location = New System.Drawing.Point(7, 14)
-        Me.rbMale.Name = "rbMale"
-        Me.rbMale.Size = New System.Drawing.Size(96, 46)
-        Me.rbMale.TabIndex = 41
-        Me.rbMale.TabStop = True
-        Me.rbMale.Text = "Male"
-        Me.rbMale.UseVisualStyleBackColor = False
+        Me.rbFemale.AutoSize = True
+        Me.rbFemale.BackColor = System.Drawing.Color.White
+        Me.rbFemale.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbFemale.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.rbFemale.Location = New System.Drawing.Point(128, 14)
+        Me.rbFemale.Name = "rbFemale"
+        Me.rbFemale.Size = New System.Drawing.Size(119, 33)
+        Me.rbFemale.TabIndex = 42
+        Me.rbFemale.TabStop = True
+        Me.rbFemale.Text = "Female"
+        Me.rbFemale.UseVisualStyleBackColor = False
         '
         'Register
         '

@@ -28,7 +28,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim plane As Plane = DBUtil.Get(TextBox5.Text, "plane")
+        Dim plane As Plane = DBUtil.Get(Of Plane)(TextBox5.Text)
         TextBox1.Text = plane.PlaneID
         TextBox2.Text = plane.Model
         TextBox3.Text = plane.Manufacturer

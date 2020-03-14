@@ -39,7 +39,7 @@
 
     Public Shared Function Compare(enteredPassword As String, storedHashedPassword As String, storedSalt As String) As Boolean
 
-        If (New Hash(enteredPassword, storedSalt)).Equals(storedHashedPassword) Then
+        If (New Hash(enteredPassword, storedSalt)).hashedPassword.Equals(storedHashedPassword) Then
             Return True
         Else
             Return False

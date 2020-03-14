@@ -36,7 +36,7 @@
             Throw New Exception("Object's type is not present in Airline Database.")
         End If
 
-        For i As Integer = 0 To 9 - total.ToString.Length
+        For i As Integer = 0 To 8 - total.ToString.Length
             id += "0"
         Next
         id += (total + 1).ToString
