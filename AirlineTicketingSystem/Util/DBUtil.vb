@@ -30,7 +30,12 @@
             Throw New Exception("Object's type is not present in Airline Database.")
         End If
 
-        db.SubmitChanges()
+        Try
+            db.SubmitChanges()
+        Catch ex As SqlClient.SqlException
+            Quick.Print(ex.Message)
+        End Try
+
 
     End Sub
 
@@ -138,5 +143,28 @@
 
         db = New AirlineSystemDataContext()
     End Sub
+
+    Public Shared Function GetCount(Of T)() As Integer
+
+        If GetType(T) = GetType(Customer) Then
+            Return Aggregate cust In db.Customers Into Count()
+        ElseIf GetType(T) = GetType(Booking) Then
+            Return Aggregate booking In db.Bookings Into Count()
+        ElseIf GetType(T) = GetType(City) Then
+            Return Aggregate city In db.Cities Into Count()
+        ElseIf GetType(T) = GetType(Flight) Then
+            Return Aggregate flight In db.Flights Into Count()
+        ElseIf GetType(T) = GetType(Route) Then
+            Return Aggregate route In db.Routes Into Count()
+        ElseIf GetType(T) = GetType(Plane) Then
+            Return Aggregate plane In db.Planes Into Count()
+        ElseIf GetType(T) = GetType(Ticket) Then
+            Return Aggregate ticket In db.Tickets Into Count()
+        Else
+            Throw New Exception("Object's type is not present in Airline Database.")
+        End If
+
+
+    End Function
 
 End Class

@@ -16,7 +16,7 @@
 
     'Combines password + salt to create a unique hashed password
     Private Shared Function Combine(password As String, salt As String) As String
-        Return password + Hash(password)
+        Return salt + Hash(password)
     End Function
 
     Public Shared Function Hash([string] As String) As String

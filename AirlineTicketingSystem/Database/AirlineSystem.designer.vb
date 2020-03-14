@@ -343,7 +343,7 @@ Partial Public Class Booking
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CreditCardNo", DbType:="VarChar(12) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CreditCardNo", DbType:="VarChar(12)")>  _
 	Public Property CreditCardNo() As String
 		Get
 			Return Me._CreditCardNo
@@ -855,17 +855,19 @@ Partial Public Class Customer
 	
 	Private _Password As String
 	
-	Private _PasswordSalt As System.Data.Linq.Binary
+	Private _PasswordSalt As String
 	
-	Private _Gender As Char
-	
-	Private _DateOfBirth As Date
-	
-	Private _PhoneNo As String
+	Private _Gender As System.Nullable(Of Char)
 	
 	Private _Email As String
 	
 	Private _IsRegistered As Boolean
+	
+	Private _DateOfBirth As System.Nullable(Of Date)
+	
+	Private _PhoneNo As String
+	
+	Private _CreditCardNo As String
 	
 	Private _Country As String
 	
@@ -892,21 +894,13 @@ Partial Public Class Customer
     End Sub
     Partial Private Sub OnPasswordChanged()
     End Sub
-    Partial Private Sub OnPasswordSaltChanging(value As System.Data.Linq.Binary)
+    Partial Private Sub OnPasswordSaltChanging(value As String)
     End Sub
     Partial Private Sub OnPasswordSaltChanged()
     End Sub
-    Partial Private Sub OnGenderChanging(value As Char)
+    Partial Private Sub OnGenderChanging(value As System.Nullable(Of Char))
     End Sub
     Partial Private Sub OnGenderChanged()
-    End Sub
-    Partial Private Sub OnDateOfBirthChanging(value As Date)
-    End Sub
-    Partial Private Sub OnDateOfBirthChanged()
-    End Sub
-    Partial Private Sub OnPhoneNoChanging(value As String)
-    End Sub
-    Partial Private Sub OnPhoneNoChanged()
     End Sub
     Partial Private Sub OnEmailChanging(value As String)
     End Sub
@@ -915,6 +909,18 @@ Partial Public Class Customer
     Partial Private Sub OnIsRegisteredChanging(value As Boolean)
     End Sub
     Partial Private Sub OnIsRegisteredChanged()
+    End Sub
+    Partial Private Sub OnDateOfBirthChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnDateOfBirthChanged()
+    End Sub
+    Partial Private Sub OnPhoneNoChanging(value As String)
+    End Sub
+    Partial Private Sub OnPhoneNoChanged()
+    End Sub
+    Partial Private Sub OnCreditCardNoChanging(value As String)
+    End Sub
+    Partial Private Sub OnCreditCardNoChanged()
     End Sub
     Partial Private Sub OnCountryChanging(value As String)
     End Sub
@@ -980,13 +986,13 @@ Partial Public Class Customer
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PasswordSalt", DbType:="VarBinary(100) NOT NULL", CanBeNull:=false, UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property PasswordSalt() As System.Data.Linq.Binary
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PasswordSalt", DbType:="VarChar(100) NOT NULL", CanBeNull:=false)>  _
+	Public Property PasswordSalt() As String
 		Get
 			Return Me._PasswordSalt
 		End Get
 		Set
-			If (Object.Equals(Me._PasswordSalt, value) = false) Then
+			If (String.Equals(Me._PasswordSalt, value) = false) Then
 				Me.OnPasswordSaltChanging(value)
 				Me.SendPropertyChanging
 				Me._PasswordSalt = value
@@ -996,52 +1002,18 @@ Partial Public Class Customer
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Gender", DbType:="Char(1) NOT NULL")>  _
-	Public Property Gender() As Char
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Gender", DbType:="Char(1)")>  _
+	Public Property Gender() As System.Nullable(Of Char)
 		Get
 			Return Me._Gender
 		End Get
 		Set
-			If ((Me._Gender = value)  _
-						= false) Then
+			If (Me._Gender.Equals(value) = false) Then
 				Me.OnGenderChanging(value)
 				Me.SendPropertyChanging
 				Me._Gender = value
 				Me.SendPropertyChanged("Gender")
 				Me.OnGenderChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DateOfBirth", DbType:="Date NOT NULL")>  _
-	Public Property DateOfBirth() As Date
-		Get
-			Return Me._DateOfBirth
-		End Get
-		Set
-			If ((Me._DateOfBirth = value)  _
-						= false) Then
-				Me.OnDateOfBirthChanging(value)
-				Me.SendPropertyChanging
-				Me._DateOfBirth = value
-				Me.SendPropertyChanged("DateOfBirth")
-				Me.OnDateOfBirthChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PhoneNo", DbType:="VarChar(12) NOT NULL", CanBeNull:=false)>  _
-	Public Property PhoneNo() As String
-		Get
-			Return Me._PhoneNo
-		End Get
-		Set
-			If (String.Equals(Me._PhoneNo, value) = false) Then
-				Me.OnPhoneNoChanging(value)
-				Me.SendPropertyChanging
-				Me._PhoneNo = value
-				Me.SendPropertyChanged("PhoneNo")
-				Me.OnPhoneNoChanged
 			End If
 		End Set
 	End Property
@@ -1079,7 +1051,55 @@ Partial Public Class Customer
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Country", DbType:="VarChar(35) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DateOfBirth", DbType:="Date")>  _
+	Public Property DateOfBirth() As System.Nullable(Of Date)
+		Get
+			Return Me._DateOfBirth
+		End Get
+		Set
+			If (Me._DateOfBirth.Equals(value) = false) Then
+				Me.OnDateOfBirthChanging(value)
+				Me.SendPropertyChanging
+				Me._DateOfBirth = value
+				Me.SendPropertyChanged("DateOfBirth")
+				Me.OnDateOfBirthChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PhoneNo", DbType:="VarChar(12)")>  _
+	Public Property PhoneNo() As String
+		Get
+			Return Me._PhoneNo
+		End Get
+		Set
+			If (String.Equals(Me._PhoneNo, value) = false) Then
+				Me.OnPhoneNoChanging(value)
+				Me.SendPropertyChanging
+				Me._PhoneNo = value
+				Me.SendPropertyChanged("PhoneNo")
+				Me.OnPhoneNoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CreditCardNo", DbType:="VarChar(12)")>  _
+	Public Property CreditCardNo() As String
+		Get
+			Return Me._CreditCardNo
+		End Get
+		Set
+			If (String.Equals(Me._CreditCardNo, value) = false) Then
+				Me.OnCreditCardNoChanging(value)
+				Me.SendPropertyChanging
+				Me._CreditCardNo = value
+				Me.SendPropertyChanged("CreditCardNo")
+				Me.OnCreditCardNoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Country", DbType:="VarChar(35)")>  _
 	Public Property Country() As String
 		Get
 			Return Me._Country
@@ -1095,7 +1115,7 @@ Partial Public Class Customer
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_City", DbType:="VarChar(25) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_City", DbType:="VarChar(25)")>  _
 	Public Property City() As String
 		Get
 			Return Me._City
