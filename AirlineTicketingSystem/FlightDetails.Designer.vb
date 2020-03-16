@@ -86,7 +86,7 @@ Partial Class FlightDetails
         Me.Panel1.Controls.Add(Me.lblSource)
         Me.Panel1.Controls.Add(Me.lblDuration)
         Me.Panel1.Controls.Add(Me.lblDate)
-        Me.Panel1.Location = New System.Drawing.Point(94, 175)
+        Me.Panel1.Location = New System.Drawing.Point(126, 179)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1000, 375)
         Me.Panel1.TabIndex = 41
@@ -270,7 +270,7 @@ Partial Class FlightDetails
         Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEdit.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnEdit.ForeColor = System.Drawing.Color.White
-        Me.btnEdit.Location = New System.Drawing.Point(94, 547)
+        Me.btnEdit.Location = New System.Drawing.Point(126, 551)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(150, 75)
         Me.btnEdit.TabIndex = 57
