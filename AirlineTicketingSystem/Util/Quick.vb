@@ -1,5 +1,7 @@
 ﻿Public Class Quick
     'This class aids in shortening code
+
+
     Public Shared Sub Print(text As String)
         Console.WriteLine(text)
     End Sub

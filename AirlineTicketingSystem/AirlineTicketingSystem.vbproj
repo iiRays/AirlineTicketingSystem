@@ -107,6 +107,8 @@
     <Compile Include="AdminFlightSearch.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Util\App.vb" />
+    <Compile Include="Util\LinkedList.vb" />
     <Compile Include="BookFlight1.Designer.vb">
       <DependentUpon>BookFlight1.vb</DependentUpon>
     </Compile>
