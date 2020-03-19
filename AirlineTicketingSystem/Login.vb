@@ -1,9 +1,6 @@
 ﻿Public Class Login
     Private Sub btnRedirect_Click(sender As Object, e As EventArgs) Handles btnRedirect.Click
-        Dim form As New Register
-        form.Show()
-        Me.Close()
-
+        Quick.Navigate(Me, New Register)
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -22,8 +19,13 @@
                 Quick.ShowError("Login error", "Password is incorrect")
             Else
                 'Perform login
+                App.Session.Add("user", cResult.First())
                 Quick.Print("Login is successful.")
             End If
         End If
+    End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+
     End Sub
 End Class

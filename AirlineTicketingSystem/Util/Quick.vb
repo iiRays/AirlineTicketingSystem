@@ -1,7 +1,10 @@
 ﻿Public Class Quick
     'This class aids in shortening code
 
-
+    Public Shared Sub Navigate([from] As Form, [to] As Form)
+        [to].Show()
+        from.Close()
+    End Sub
     Public Shared Sub Print(text As String)
         Console.WriteLine(text)
     End Sub
