@@ -32,6 +32,25 @@
         Return -1
     End Function
 
+    Public Sub [Set](Tag As String, Item As Object)
+        Dim temp = Top
+        Dim isFound = False
+
+        For counter As Integer = 1 To Size Step 1
+            If temp.Tag.Equals(Tag) Then
+                isFound = True
+                Exit For
+            End If
+            temp = temp.Next
+        Next
+
+        If (Not isFound) Then
+            Throw New Exception("Item not found in LinkedList")
+        Else
+            temp.Data = Item
+        End If
+    End Sub
+
     Public Sub Delete(Tag As String)
         Dim temp = Top
         Dim previous As New LinkedNode(Of T)()
