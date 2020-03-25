@@ -40,11 +40,12 @@ Partial Class FlightSearch
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.lblTitle.Location = New System.Drawing.Point(531, 49)
+        Me.lblTitle.Location = New System.Drawing.Point(708, 60)
+        Me.lblTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(160, 70)
+        Me.lblTitle.Size = New System.Drawing.Size(131, 46)
         Me.lblTitle.TabIndex = 28
         Me.lblTitle.Text = "flights"
         Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -54,11 +55,12 @@ Partial Class FlightSearch
         Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.btnBack.FlatAppearance.BorderSize = 0
         Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBack.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnBack.ForeColor = System.Drawing.Color.White
-        Me.btnBack.Location = New System.Drawing.Point(38, 33)
+        Me.btnBack.Location = New System.Drawing.Point(51, 41)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(150, 75)
+        Me.btnBack.Size = New System.Drawing.Size(200, 92)
         Me.btnBack.TabIndex = 36
         Me.btnBack.Text = "back"
         Me.btnBack.UseVisualStyleBackColor = False
@@ -66,12 +68,13 @@ Partial Class FlightSearch
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(289, 183)
+        Me.Label3.Location = New System.Drawing.Point(385, 225)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-        Me.Label3.Size = New System.Drawing.Size(125, 75)
+        Me.Label3.Padding = New System.Windows.Forms.Padding(27, 0, 0, 0)
+        Me.Label3.Size = New System.Drawing.Size(167, 92)
         Me.Label3.TabIndex = 45
         Me.Label3.Text = "from"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -80,22 +83,24 @@ Partial Class FlightSearch
         '
         Me.txtFrom.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtFrom.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFrom.Location = New System.Drawing.Point(410, 183)
+        Me.txtFrom.Location = New System.Drawing.Point(547, 225)
+        Me.txtFrom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtFrom.Multiline = True
         Me.txtFrom.Name = "txtFrom"
-        Me.txtFrom.Size = New System.Drawing.Size(550, 75)
+        Me.txtFrom.Size = New System.Drawing.Size(733, 92)
         Me.txtFrom.TabIndex = 44
         Me.txtFrom.Tag = ""
         '
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(289, 390)
+        Me.Label2.Location = New System.Drawing.Point(385, 480)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-        Me.Label2.Size = New System.Drawing.Size(125, 75)
+        Me.Label2.Padding = New System.Windows.Forms.Padding(27, 0, 0, 0)
+        Me.Label2.Size = New System.Drawing.Size(167, 92)
         Me.Label2.TabIndex = 42
         Me.Label2.Text = "date"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -103,12 +108,13 @@ Partial Class FlightSearch
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(289, 288)
+        Me.Label1.Location = New System.Drawing.Point(385, 354)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-        Me.Label1.Size = New System.Drawing.Size(125, 75)
+        Me.Label1.Padding = New System.Windows.Forms.Padding(27, 0, 0, 0)
+        Me.Label1.Size = New System.Drawing.Size(167, 92)
         Me.Label1.TabIndex = 41
         Me.Label1.Text = "to"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -116,7 +122,8 @@ Partial Class FlightSearch
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(464, 363)
+        Me.TextBox1.Location = New System.Drawing.Point(619, 447)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(0, 0)
@@ -128,10 +135,11 @@ Partial Class FlightSearch
         '
         Me.txtTo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtTo.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTo.Location = New System.Drawing.Point(410, 288)
+        Me.txtTo.Location = New System.Drawing.Point(547, 354)
+        Me.txtTo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtTo.Multiline = True
         Me.txtTo.Name = "txtTo"
-        Me.txtTo.Size = New System.Drawing.Size(550, 75)
+        Me.txtTo.Size = New System.Drawing.Size(733, 92)
         Me.txtTo.TabIndex = 39
         Me.txtTo.Tag = ""
         '
@@ -140,11 +148,12 @@ Partial Class FlightSearch
         Me.btnSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.btnSearch.FlatAppearance.BorderSize = 0
         Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSearch.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnSearch.ForeColor = System.Drawing.Color.White
-        Me.btnSearch.Location = New System.Drawing.Point(799, 502)
+        Me.btnSearch.Location = New System.Drawing.Point(1065, 618)
+        Me.btnSearch.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(165, 75)
+        Me.btnSearch.Size = New System.Drawing.Size(220, 92)
         Me.btnSearch.TabIndex = 46
         Me.btnSearch.Text = "search"
         Me.btnSearch.UseVisualStyleBackColor = False
@@ -153,22 +162,24 @@ Partial Class FlightSearch
         '
         Me.txtPeople.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPeople.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPeople.Location = New System.Drawing.Point(860, 390)
+        Me.txtPeople.Location = New System.Drawing.Point(1147, 480)
+        Me.txtPeople.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtPeople.Multiline = True
         Me.txtPeople.Name = "txtPeople"
-        Me.txtPeople.Size = New System.Drawing.Size(100, 75)
+        Me.txtPeople.Size = New System.Drawing.Size(133, 92)
         Me.txtPeople.TabIndex = 48
         Me.txtPeople.Tag = ""
         '
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.Color.White
-        Me.Label4.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(729, 390)
+        Me.Label4.Location = New System.Drawing.Point(972, 480)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-        Me.Label4.Size = New System.Drawing.Size(135, 75)
+        Me.Label4.Padding = New System.Windows.Forms.Padding(27, 0, 0, 0)
+        Me.Label4.Size = New System.Drawing.Size(180, 92)
         Me.Label4.TabIndex = 47
         Me.Label4.Text = "people"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -177,29 +188,31 @@ Partial Class FlightSearch
         '
         Me.dtpDate.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText
         Me.dtpDate.CalendarTitleForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.dtpDate.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpDate.Location = New System.Drawing.Point(417, 404)
+        Me.dtpDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpDate.Location = New System.Drawing.Point(556, 497)
+        Me.dtpDate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dtpDate.Name = "dtpDate"
-        Me.dtpDate.Size = New System.Drawing.Size(274, 43)
+        Me.dtpDate.Size = New System.Drawing.Size(364, 35)
         Me.dtpDate.TabIndex = 49
         '
         'txtDate
         '
         Me.txtDate.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDate.Location = New System.Drawing.Point(410, 390)
+        Me.txtDate.Location = New System.Drawing.Point(547, 480)
+        Me.txtDate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDate.Multiline = True
         Me.txtDate.Name = "txtDate"
-        Me.txtDate.Size = New System.Drawing.Size(300, 75)
+        Me.txtDate.Size = New System.Drawing.Size(400, 92)
         Me.txtDate.TabIndex = 43
         Me.txtDate.Tag = ""
         '
         'FlightSearch
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.ClientSize = New System.Drawing.Size(1685, 838)
         Me.Controls.Add(Me.dtpDate)
         Me.Controls.Add(Me.txtPeople)
         Me.Controls.Add(Me.Label4)
@@ -213,6 +226,7 @@ Partial Class FlightSearch
         Me.Controls.Add(Me.txtTo)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.lblTitle)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FlightSearch"
         Me.Text = "Flight Search"
         Me.ResumeLayout(False)

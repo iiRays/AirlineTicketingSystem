@@ -33,11 +33,12 @@ Partial Class HomeCustomer
         Me.btnAccount.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnAccount.FlatAppearance.BorderSize = 0
         Me.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAccount.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnAccount.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnAccount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.btnAccount.Location = New System.Drawing.Point(773, 253)
+        Me.btnAccount.Location = New System.Drawing.Point(1031, 311)
+        Me.btnAccount.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAccount.Name = "btnAccount"
-        Me.btnAccount.Size = New System.Drawing.Size(225, 250)
+        Me.btnAccount.Size = New System.Drawing.Size(300, 308)
         Me.btnAccount.TabIndex = 33
         Me.btnAccount.Text = "account"
         Me.btnAccount.UseVisualStyleBackColor = False
@@ -47,11 +48,12 @@ Partial Class HomeCustomer
         Me.btnMyBookings.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnMyBookings.FlatAppearance.BorderSize = 0
         Me.btnMyBookings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMyBookings.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnMyBookings.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnMyBookings.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.btnMyBookings.Location = New System.Drawing.Point(505, 253)
+        Me.btnMyBookings.Location = New System.Drawing.Point(673, 311)
+        Me.btnMyBookings.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnMyBookings.Name = "btnMyBookings"
-        Me.btnMyBookings.Size = New System.Drawing.Size(225, 250)
+        Me.btnMyBookings.Size = New System.Drawing.Size(300, 308)
         Me.btnMyBookings.TabIndex = 32
         Me.btnMyBookings.Text = "my bookings"
         Me.btnMyBookings.UseVisualStyleBackColor = False
@@ -61,11 +63,12 @@ Partial Class HomeCustomer
         Me.btnFlights.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnFlights.FlatAppearance.BorderSize = 0
         Me.btnFlights.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFlights.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnFlights.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnFlights.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.btnFlights.Location = New System.Drawing.Point(235, 253)
+        Me.btnFlights.Location = New System.Drawing.Point(313, 311)
+        Me.btnFlights.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnFlights.Name = "btnFlights"
-        Me.btnFlights.Size = New System.Drawing.Size(225, 250)
+        Me.btnFlights.Size = New System.Drawing.Size(300, 308)
         Me.btnFlights.TabIndex = 31
         Me.btnFlights.Text = "flights"
         Me.btnFlights.UseVisualStyleBackColor = False
@@ -73,24 +76,26 @@ Partial Class HomeCustomer
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.lblTitle.Location = New System.Drawing.Point(527, 110)
+        Me.lblTitle.Location = New System.Drawing.Point(703, 135)
+        Me.lblTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(181, 70)
+        Me.lblTitle.Size = New System.Drawing.Size(161, 46)
         Me.lblTitle.TabIndex = 30
         Me.lblTitle.Text = "ao zora"
         '
         'HomeCustomer
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.ClientSize = New System.Drawing.Size(1685, 838)
         Me.Controls.Add(Me.btnAccount)
         Me.Controls.Add(Me.btnMyBookings)
         Me.Controls.Add(Me.btnFlights)
         Me.Controls.Add(Me.lblTitle)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "HomeCustomer"
         Me.Text = "Home"
         Me.ResumeLayout(False)

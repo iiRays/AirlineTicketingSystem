@@ -30,4 +30,8 @@ Public Class Register
         form.Show()
         Me.Close()
     End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        Quick.Navigate(Me, New Login)
+    End Sub
 End Class
