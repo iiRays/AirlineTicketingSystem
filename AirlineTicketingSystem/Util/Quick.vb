@@ -1,6 +1,18 @@
 ﻿Public Class Quick
     'This class aids in shortening code
 
+    Public Shared Function GetRandomString(size As Integer) As String
+        Dim randomNo As New Random()
+        Dim stringPool = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        Dim generatedString = ""
+
+        For counter As Integer = 0 To size - 1 Step 1
+            generatedString &= stringPool(randomNo.Next(1, stringPool.Length))
+        Next
+
+        Return generatedString
+    End Function
+
     Public Shared Sub Navigate([from] As Form, [to] As Form)
         [to].Show()
         from.Close()
