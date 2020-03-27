@@ -101,6 +101,38 @@
     End Function
 
 
+    Public Shared Function GetAll(Of T)() As List(Of T)
+        If GetType(T) = GetType(Plane) Then
+            Return context.Planes.ToList().Cast(Of T)().ToList() 'https://visualstudiomagazine.com/blogs/tool-tracker/2015/12/convert-list-types.aspx
+        ElseIf GetType(T) = GetType(Customer) Then
+            Return context.Customers.ToList().Cast(Of T)().ToList()
+        ElseIf GetType(T) = GetType(Booking) Then
+            Return context.Bookings.ToList().Cast(Of T)().ToList()
+        ElseIf GetType(T) = GetType(City) Then
+            Return context.Cities.ToList().Cast(Of T)().ToList()
+        ElseIf GetType(T) = GetType(Flight) Then
+            Return context.Flights.ToList().Cast(Of T)().ToList()
+        ElseIf GetType(T) = GetType(Route) Then
+            Return context.Routes.ToList().Cast(Of T)().ToList()
+        ElseIf GetType(T) = GetType(Ticket) Then
+            Return context.Tickets.ToList().Cast(Of T)().ToList()
+        Else
+            Throw New Exception("Object's type is not present in Airline Database.")
+        End If
+
+        context.SubmitChanges()
+    End Function
+
+    Public Shared Function GetFlightSource(flightID As String) As [Stop]
+        Return context.Stops.FirstOrDefault(Function(o) o.FlightID = flightID And o.IsOrigin = True)
+        context.SubmitChanges()
+    End Function
+
+    Public Shared Function GetFlightDestination(flightID As String) As [Stop]
+        Return context.Stops.FirstOrDefault(Function(o) o.FlightID = flightID And o.IsOrigin = False)
+        context.SubmitChanges()
+    End Function
+
     Public Shared Sub Update(obj As Object, currentId As String)
         If TypeOf obj Is Plane Then
             'Update Plane

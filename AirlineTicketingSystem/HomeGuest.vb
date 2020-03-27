@@ -6,4 +6,10 @@
         Me.Close()
 
     End Sub
+
+    Private Sub BtnFlights_Click(sender As Object, e As EventArgs) Handles btnFlights.Click
+        Dim flightList As New FlightList
+        flightList.Show()
+        Me.Close()
+    End Sub
 End Class
