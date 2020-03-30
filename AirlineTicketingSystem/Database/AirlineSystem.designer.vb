@@ -1182,9 +1182,9 @@ Partial Public Class Flight
 	
 	Private _PlaneID As String
 	
-	Private _DepartureTime As System.TimeSpan
+	Private _DepartureTime As Date
 	
-	Private _ArrivalTime As System.TimeSpan
+	Private _ArrivalTime As Date
 	
 	Private _Bookings As EntitySet(Of Booking)
 	
@@ -1213,11 +1213,11 @@ Partial Public Class Flight
     End Sub
     Partial Private Sub OnPlaneIDChanged()
     End Sub
-    Partial Private Sub OnDepartureTimeChanging(value As System.TimeSpan)
+    Partial Private Sub OnDepartureTimeChanging(value As Date)
     End Sub
     Partial Private Sub OnDepartureTimeChanged()
     End Sub
-    Partial Private Sub OnArrivalTimeChanging(value As System.TimeSpan)
+    Partial Private Sub OnArrivalTimeChanging(value As Date)
     End Sub
     Partial Private Sub OnArrivalTimeChanged()
     End Sub
@@ -1286,8 +1286,8 @@ Partial Public Class Flight
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DepartureTime", DbType:="Time NOT NULL")>  _
-	Public Property DepartureTime() As System.TimeSpan
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DepartureTime", DbType:="DateTime NOT NULL")>  _
+	Public Property DepartureTime() As Date
 		Get
 			Return Me._DepartureTime
 		End Get
@@ -1303,8 +1303,8 @@ Partial Public Class Flight
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ArrivalTime", DbType:="Time NOT NULL")>  _
-	Public Property ArrivalTime() As System.TimeSpan
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ArrivalTime", DbType:="DateTime NOT NULL")>  _
+	Public Property ArrivalTime() As Date
 		Get
 			Return Me._ArrivalTime
 		End Get

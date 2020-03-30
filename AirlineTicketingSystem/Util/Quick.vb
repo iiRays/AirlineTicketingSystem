@@ -1,6 +1,7 @@
 ﻿Public Class Quick
     'This class aids in shortening code
 
+
     Public Shared Function GetRandomString(size As Integer) As String
         Dim randomNo As New Random()
         Dim stringPool = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
