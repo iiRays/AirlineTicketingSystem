@@ -51,11 +51,11 @@ Partial Class FlightItem
         'lblId
         '
         Me.lblId.AutoSize = True
-        Me.lblId.Font = New System.Drawing.Font("Microsoft Sans Serif", 39.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblId.Font = New System.Drawing.Font("OCR A Extended", 39.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblId.ForeColor = System.Drawing.Color.White
         Me.lblId.Location = New System.Drawing.Point(41, 60)
         Me.lblId.Name = "lblId"
-        Me.lblId.Size = New System.Drawing.Size(117, 61)
+        Me.lblId.Size = New System.Drawing.Size(122, 54)
         Me.lblId.TabIndex = 41
         Me.lblId.Text = "001"
         Me.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -83,7 +83,7 @@ Partial Class FlightItem
         Me.btnGo.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.btnGo.FlatAppearance.BorderSize = 0
         Me.btnGo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGo.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnGo.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnGo.ForeColor = System.Drawing.Color.White
         Me.btnGo.Location = New System.Drawing.Point(875, 135)
         Me.btnGo.Name = "btnGo"
@@ -95,11 +95,11 @@ Partial Class FlightItem
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Font = New System.Drawing.Font("Poppins", 14.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(829, 60)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(134, 24)
+        Me.Label2.Size = New System.Drawing.Size(148, 34)
         Me.Label2.TabIndex = 49
         Me.Label2.Text = "seats booked"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -107,11 +107,11 @@ Partial Class FlightItem
         'lblSeats
         '
         Me.lblSeats.AutoSize = True
-        Me.lblSeats.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Bold)
+        Me.lblSeats.Font = New System.Drawing.Font("Poppins", 22.0!, System.Drawing.FontStyle.Bold)
         Me.lblSeats.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.lblSeats.Location = New System.Drawing.Point(842, 25)
         Me.lblSeats.Name = "lblSeats"
-        Me.lblSeats.Size = New System.Drawing.Size(150, 36)
+        Me.lblSeats.Size = New System.Drawing.Size(145, 53)
         Me.lblSeats.TabIndex = 48
         Me.lblSeats.Text = "150 / 150"
         Me.lblSeats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -119,11 +119,11 @@ Partial Class FlightItem
         'lblArrivalTime
         '
         Me.lblArrivalTime.AutoSize = True
-        Me.lblArrivalTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold)
+        Me.lblArrivalTime.Font = New System.Drawing.Font("Poppins", 30.0!, System.Drawing.FontStyle.Bold)
         Me.lblArrivalTime.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.lblArrivalTime.Location = New System.Drawing.Point(535, 110)
         Me.lblArrivalTime.Name = "lblArrivalTime"
-        Me.lblArrivalTime.Size = New System.Drawing.Size(124, 46)
+        Me.lblArrivalTime.Size = New System.Drawing.Size(125, 70)
         Me.lblArrivalTime.TabIndex = 47
         Me.lblArrivalTime.Text = "17:30"
         Me.lblArrivalTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -131,11 +131,11 @@ Partial Class FlightItem
         'lblDestination
         '
         Me.lblDestination.AutoSize = True
-        Me.lblDestination.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Bold)
+        Me.lblDestination.Font = New System.Drawing.Font("Poppins", 22.0!, System.Drawing.FontStyle.Bold)
         Me.lblDestination.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.lblDestination.Location = New System.Drawing.Point(537, 74)
         Me.lblDestination.Name = "lblDestination"
-        Me.lblDestination.Size = New System.Drawing.Size(214, 36)
+        Me.lblDestination.Size = New System.Drawing.Size(240, 53)
         Me.lblDestination.TabIndex = 46
         Me.lblDestination.Text = "Kota Kinabalu"
         Me.lblDestination.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -143,11 +143,11 @@ Partial Class FlightItem
         'lblDepartureTime
         '
         Me.lblDepartureTime.AutoSize = True
-        Me.lblDepartureTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold)
+        Me.lblDepartureTime.Font = New System.Drawing.Font("Poppins", 30.0!, System.Drawing.FontStyle.Bold)
         Me.lblDepartureTime.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.lblDepartureTime.Location = New System.Drawing.Point(229, 110)
         Me.lblDepartureTime.Name = "lblDepartureTime"
-        Me.lblDepartureTime.Size = New System.Drawing.Size(124, 46)
+        Me.lblDepartureTime.Size = New System.Drawing.Size(133, 70)
         Me.lblDepartureTime.TabIndex = 45
         Me.lblDepartureTime.Text = "15:00"
         Me.lblDepartureTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -155,11 +155,11 @@ Partial Class FlightItem
         'lblSource
         '
         Me.lblSource.AutoSize = True
-        Me.lblSource.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Bold)
+        Me.lblSource.Font = New System.Drawing.Font("Poppins", 22.0!, System.Drawing.FontStyle.Bold)
         Me.lblSource.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.lblSource.Location = New System.Drawing.Point(231, 74)
         Me.lblSource.Name = "lblSource"
-        Me.lblSource.Size = New System.Drawing.Size(212, 36)
+        Me.lblSource.Size = New System.Drawing.Size(238, 53)
         Me.lblSource.TabIndex = 44
         Me.lblSource.Text = "Kuala Lumpur"
         Me.lblSource.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -167,11 +167,11 @@ Partial Class FlightItem
         'lblDuration
         '
         Me.lblDuration.AutoSize = True
-        Me.lblDuration.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDuration.Font = New System.Drawing.Font("Poppins", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDuration.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.lblDuration.Location = New System.Drawing.Point(540, 25)
         Me.lblDuration.Name = "lblDuration"
-        Me.lblDuration.Size = New System.Drawing.Size(157, 26)
+        Me.lblDuration.Size = New System.Drawing.Size(166, 39)
         Me.lblDuration.TabIndex = 43
         Me.lblDuration.Text = "2h 30 approx."
         Me.lblDuration.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -179,11 +179,11 @@ Partial Class FlightItem
         'lblDate
         '
         Me.lblDate.AutoSize = True
-        Me.lblDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDate.Font = New System.Drawing.Font("Poppins", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.lblDate.Location = New System.Drawing.Point(234, 25)
         Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(253, 26)
+        Me.lblDate.Size = New System.Drawing.Size(266, 39)
         Me.lblDate.TabIndex = 42
         Me.lblDate.Text = "Monday, 9 March 2020"
         Me.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter

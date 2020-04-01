@@ -23,4 +23,44 @@
         lblArrivalTime.Text = Flight.ArrivalTime.ToString("h:mm tt")
         lblDuration.Text = Flight.ArrivalTime.Subtract(Flight.DepartureTime).Hours & "h " & Flight.ArrivalTime.Subtract(Flight.DepartureTime).Minutes & "M approx."
     End Sub
+
+    Private Sub LblDepartureTime_Click(sender As Object, e As EventArgs) Handles lblDepartureTime.Click
+
+    End Sub
+
+    Private Sub LblId_Click(sender As Object, e As EventArgs) Handles lblId.Click
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub LblSeats_Click(sender As Object, e As EventArgs) Handles lblSeats.Click
+
+    End Sub
+
+    Private Sub LblArrivalTime_Click(sender As Object, e As EventArgs) Handles lblArrivalTime.Click
+
+    End Sub
+
+    Private Sub LblDestination_Click(sender As Object, e As EventArgs) Handles lblDestination.Click
+
+    End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+
+    Private Sub LblSource_Click(sender As Object, e As EventArgs) Handles lblSource.Click
+
+    End Sub
+
+    Private Sub LblDuration_Click(sender As Object, e As EventArgs) Handles lblDuration.Click
+
+    End Sub
+
+    Private Sub LblDate_Click(sender As Object, e As EventArgs) Handles lblDate.Click
+
+    End Sub
 End Class
