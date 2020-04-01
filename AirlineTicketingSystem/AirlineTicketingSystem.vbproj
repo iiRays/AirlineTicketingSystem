@@ -123,6 +123,12 @@
     <Compile Include="BookingSummary.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserControls\BookingSummaryPassengerItem.Designer.vb">
+      <DependentUpon>BookingSummaryPassengerItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BookingSummaryPassengerItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControls\FlightItem.Designer.vb">
       <DependentUpon>FlightItem.vb</DependentUpon>
     </Compile>
@@ -259,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FlightDetails.resx">
       <DependentUpon>FlightDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\BookingSummaryPassengerItem.resx">
+      <DependentUpon>BookingSummaryPassengerItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\FlightItem.resx">
       <DependentUpon>FlightItem.vb</DependentUpon>

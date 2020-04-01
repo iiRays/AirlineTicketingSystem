@@ -1048,6 +1048,10 @@ Partial Public Class Flight
 	
 	Private _ArrivalTime As Date
 	
+	Private _Price As Decimal
+	
+	Private _IsDaily As Boolean
+	
 	Private _Bookings As EntitySet(Of Booking)
 	
 	Private _Stops As EntitySet(Of [Stop])
@@ -1082,6 +1086,14 @@ Partial Public Class Flight
     Partial Private Sub OnArrivalTimeChanging(value As Date)
     End Sub
     Partial Private Sub OnArrivalTimeChanged()
+    End Sub
+    Partial Private Sub OnPriceChanging(value As Decimal)
+    End Sub
+    Partial Private Sub OnPriceChanged()
+    End Sub
+    Partial Private Sub OnIsDailyChanging(value As Boolean)
+    End Sub
+    Partial Private Sub OnIsDailyChanged()
     End Sub
     #End Region
 	
@@ -1178,6 +1190,40 @@ Partial Public Class Flight
 				Me._ArrivalTime = value
 				Me.SendPropertyChanged("ArrivalTime")
 				Me.OnArrivalTimeChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Price", DbType:="Decimal(7,2) NOT NULL")>  _
+	Public Property Price() As Decimal
+		Get
+			Return Me._Price
+		End Get
+		Set
+			If ((Me._Price = value)  _
+						= false) Then
+				Me.OnPriceChanging(value)
+				Me.SendPropertyChanging
+				Me._Price = value
+				Me.SendPropertyChanged("Price")
+				Me.OnPriceChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsDaily", DbType:="Bit NOT NULL")>  _
+	Public Property IsDaily() As Boolean
+		Get
+			Return Me._IsDaily
+		End Get
+		Set
+			If ((Me._IsDaily = value)  _
+						= false) Then
+				Me.OnIsDailyChanging(value)
+				Me.SendPropertyChanging
+				Me._IsDaily = value
+				Me.SendPropertyChanged("IsDaily")
+				Me.OnIsDailyChanged
 			End If
 		End Set
 	End Property
@@ -1460,10 +1506,6 @@ Partial Public Class Route
 	
 	Private _DurationMins As Integer
 	
-	Private _IsDaily As Boolean
-	
-	Private _Price As Decimal
-	
 	Private _Flights As EntitySet(Of Flight)
 	
     #Region "Extensibility Method Definitions"
@@ -1484,14 +1526,6 @@ Partial Public Class Route
     Partial Private Sub OnDurationMinsChanging(value As Integer)
     End Sub
     Partial Private Sub OnDurationMinsChanged()
-    End Sub
-    Partial Private Sub OnIsDailyChanging(value As Boolean)
-    End Sub
-    Partial Private Sub OnIsDailyChanged()
-    End Sub
-    Partial Private Sub OnPriceChanging(value As Decimal)
-    End Sub
-    Partial Private Sub OnPriceChanged()
     End Sub
     #End Region
 	
@@ -1547,40 +1581,6 @@ Partial Public Class Route
 				Me._DurationMins = value
 				Me.SendPropertyChanged("DurationMins")
 				Me.OnDurationMinsChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsDaily", DbType:="Bit NOT NULL")>  _
-	Public Property IsDaily() As Boolean
-		Get
-			Return Me._IsDaily
-		End Get
-		Set
-			If ((Me._IsDaily = value)  _
-						= false) Then
-				Me.OnIsDailyChanging(value)
-				Me.SendPropertyChanging
-				Me._IsDaily = value
-				Me.SendPropertyChanged("IsDaily")
-				Me.OnIsDailyChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Price", DbType:="Decimal(7,2) NOT NULL")>  _
-	Public Property Price() As Decimal
-		Get
-			Return Me._Price
-		End Get
-		Set
-			If ((Me._Price = value)  _
-						= false) Then
-				Me.OnPriceChanging(value)
-				Me.SendPropertyChanging
-				Me._Price = value
-				Me.SendPropertyChanged("Price")
-				Me.OnPriceChanged
 			End If
 		End Set
 	End Property

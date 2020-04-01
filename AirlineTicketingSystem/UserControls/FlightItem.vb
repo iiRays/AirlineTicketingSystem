@@ -14,13 +14,19 @@
 
     Private Sub FlightItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblSeats.Text = Flight.Bookings.Count & "/" & Flight.Plane.Capacity 'NOTE: Does not account for multiple passengers per booking YET
-        lblDate.Text = Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Flight.DepartureTime.Month) & " " & Flight.DepartureTime.Day.ToString
+        If Flight.IsDaily Then
+            lblDate.Text = "DAILY"
+        Else
+            lblDate.Text = Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Flight.DepartureTime.Month) & " " & Flight.DepartureTime.Day.ToString
+        End If
+
+        lblPrice.Text = Flight.Price
         lblId.Text = Flight.FlightID
-        lblDuration.Text = Flight.Route.DurationHour.ToString & "h " & Flight.Route.DurationMins.ToString & "m approx."
+        lblDuration.Text = Flight.Route.DurationHour.ToString & "h " & Flight.Route.DurationMins.ToString
         lblSource.Text = DB.GetFlightSource(Flight.FlightID).City.Name
-        lblDepartureTime.Text = Flight.DepartureTime.ToString("h:mm tt")
+        lblDepartureTime.Text = Flight.DepartureTime.ToString("HH:mm")
         lblDestination.Text = DB.GetFlightDestination(Flight.FlightID).City.Name
-        lblArrivalTime.Text = Flight.ArrivalTime.ToString("h:mm tt")
+        lblArrivalTime.Text = Flight.ArrivalTime.ToString("HH:mm")
         lblDuration.Text = Flight.ArrivalTime.Subtract(Flight.DepartureTime).Hours & "h " & Flight.ArrivalTime.Subtract(Flight.DepartureTime).Minutes & "M approx."
     End Sub
 

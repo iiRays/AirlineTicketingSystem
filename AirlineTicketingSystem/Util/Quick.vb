@@ -2,6 +2,26 @@
 Public Class Quick
     'This class aids in shortening code
 
+    Public Shared Sub SetFormFont(FontName As String, Form As Form)
+        For Each Control As Control In Form.Controls
+            Quick.Print(Control.Name)
+            Control.Font = New Font(FontName, Control.Font.Size, Control.Font.Style)
+            If TypeOf Control Is Panel Then
+                SetFormFont(FontName, Control)
+            End If
+        Next
+    End Sub
+
+    Public Shared Sub SetFormFont(FontName As String, ParentControl As Control)
+        For Each Control As Control In ParentControl.Controls
+            Quick.Print(Control.Name)
+            Control.Font = New Font(FontName, Control.Font.Size, Control.Font.Style)
+            If TypeOf Control Is Panel Then
+                SetFormFont(FontName, Control)
+            End If
+        Next
+    End Sub
+
     Public Shared Function CheckRegex(regex As String, str As String) As Boolean
         ' Code is possible thanks to Dot Net Perls @ https://www.dotnetperls.com/regex-vbnet
 

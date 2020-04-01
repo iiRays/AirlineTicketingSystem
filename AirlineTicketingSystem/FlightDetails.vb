@@ -3,7 +3,11 @@
     Private Sub FlightDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Flight = App.Session.Get("selectedFlight")
         lblSeats.Text = Flight.Bookings.Count & "/" & Flight.Plane.Capacity 'NOTE: Does not account for multiple passengers per booking YET
-        lblDate.Text = Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Flight.DepartureTime.Month) & " " & Flight.DepartureTime.Day.ToString
+        If Flight.IsDaily Then
+            lblDate.Text = "DAILY"
+        Else
+            lblDate.Text = Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Flight.DepartureTime.Month) & " " & Flight.DepartureTime.Day.ToString
+        End If
         lblId.Text = Flight.FlightID
         lblDuration.Text = Flight.Route.DurationHour.ToString & "h " & Flight.Route.DurationMins.ToString & "m approx."
         lblSource.Text = DB.GetFlightSource(Flight.FlightID).City.Name

@@ -2,6 +2,7 @@
     Private Flight As New Flight
 
     Private Sub BookFlight1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         'Check for existing
         If App.Session.Get("Booking") IsNot Nothing Then
             Dim booking As Booking = App.Session.Get("Booking")
@@ -11,8 +12,8 @@
 
         Flight = App.Session.Get("selectedFlight")
         lblId.Text = Flight.FlightID
-        lblArrival.Text = Flight.ArrivalTime.ToString("h:mm tt")
-        lblDepartureTime.Text = Flight.DepartureTime.ToString("h:mm tt")
+        lblArrival.Text = Flight.ArrivalTime.ToString("HH:mm")
+        lblDepartureTime.Text = Flight.DepartureTime.ToString("HH:mm")
         lblDestination.Text = DB.GetFlightDestination(Flight.FlightID).City.Name
         lblSource.Text = DB.GetFlightSource(Flight.FlightID).City.Name
         lblDate.Text = Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Flight.DepartureTime.Month) & " " & Flight.DepartureTime.Day.ToString
@@ -20,8 +21,10 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnNext.Click
         Dim peopleCount = 0
+        Dim kgCount = 0
         Try
             peopleCount = CType(txtPeople.Text, Int32)
+            kgCount = CType(txtLuggageKg.Text, Int32)
         Catch ex As Exception
             Quick.ShowError("Incorrect no. of people", "Ensure that your no. of people is in numerals only.")
             Return
@@ -32,9 +35,18 @@
             Return
         End If
 
+        If kgCount > 50 Then
+            Quick.ShowWarning("Max luggage exceeded", "We only allow a maximum of 50 kg per booking.")
+            Return
+        End If
+
         Dim booking As New Booking()
+        'Perform initializations
         booking.NoOfPassengers = peopleCount
         booking.CreditCardNo = txtCard.Text
+        booking.ExtraBaggageKG = kgCount
+        booking.IsCancelled = False
+
 
         App.Session.Add("Booking", booking)
 

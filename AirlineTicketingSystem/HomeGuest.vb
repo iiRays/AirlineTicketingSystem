@@ -12,4 +12,8 @@
         flightList.Show()
         Me.Close()
     End Sub
+
+    Private Sub HomeGuest_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Quick.SetFormFont("Poppins", Me)
+    End Sub
 End Class
