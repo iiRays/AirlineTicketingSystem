@@ -1,10 +1,11 @@
 ﻿Imports AirlineTicketingSystem.DB
 Public Class Register
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-        Dim cust As New Customer
+        Dim cust As New User
         cust.Name = txtName.Text
         cust.Email = txtEmail.Text
-        cust.CustomerID = Quick.GenerateId(Of Customer)
+        cust.UserID = Quick.GenerateId(Of User)
+        cust.IsStaff = False
 
         If rbMale.Checked Then
             cust.Gender = Convert.ToChar("M")

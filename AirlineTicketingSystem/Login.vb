@@ -4,8 +4,8 @@
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        'Get customer based on email
-        Dim cResult = From cust In DB.context.Customers
+        'Get user based on email
+        Dim cResult = From cust In DB.context.Users
                       Where cust.Email = txtEmail.Text
 
 
@@ -20,7 +20,7 @@
             Else
                 'Perform login
                 App.Session.Add("user", cResult.First())
-                App.Session.Add("role", "customer")
+                App.Session.Add("role", "user")
                 Quick.Print("Login is successful.")
             End If
         End If

@@ -5,9 +5,9 @@
         If TypeOf obj Is Plane Then
             'Insert Plane
             context.Planes.InsertOnSubmit(obj)
-        ElseIf TypeOf obj Is Customer Then
-            'Insert Customer
-            context.Customers.InsertOnSubmit(obj)
+        ElseIf TypeOf obj Is User Then
+            'Insert User
+            context.Users.InsertOnSubmit(obj)
         ElseIf TypeOf obj Is Booking Then
             'Insert Booking
             context.Bookings.InsertOnSubmit(obj)
@@ -44,9 +44,9 @@
         If TypeOf obj Is Plane Then
             'Delete Plane
             context.Planes.DeleteOnSubmit(AirlineTicketingSystem.DB.Get(Of Plane)(CType(obj, Plane).PlaneID))
-        ElseIf TypeOf obj Is Customer Then
-            'Delete Customer
-            context.Customers.DeleteOnSubmit(AirlineTicketingSystem.DB.Get(Of Customer)(CType(obj, Customer).CustomerID))
+        ElseIf TypeOf obj Is User Then
+            'Delete User
+            context.Users.DeleteOnSubmit(AirlineTicketingSystem.DB.Get(Of User)(CType(obj, User).UserID))
         ElseIf TypeOf obj Is Booking Then
             'Delete Booking
             context.Bookings.DeleteOnSubmit(AirlineTicketingSystem.DB.Get(Of Booking)(CType(obj, Booking).BookingID))
@@ -76,8 +76,8 @@
     Public Shared Function [Get](Of T)(id As String) As Object
         If GetType(T) = GetType(Plane) Then
             Return context.Planes.FirstOrDefault(Function(o) o.PlaneID = id)
-        ElseIf GetType(T) = GetType(Customer) Then
-            Return context.Customers.FirstOrDefault(Function(o) o.CustomerID = id)
+        ElseIf GetType(T) = GetType(User) Then
+            Return context.Users.FirstOrDefault(Function(o) o.UserID = id)
         ElseIf GetType(T) = GetType(Booking) Then
             Return context.Bookings.FirstOrDefault(Function(o) o.BookingID = id)
         ElseIf GetType(T) = GetType(City) Then
@@ -104,8 +104,8 @@
     Public Shared Function GetAll(Of T)() As List(Of T)
         If GetType(T) = GetType(Plane) Then
             Return context.Planes.ToList().Cast(Of T)().ToList() 'https://visualstudiomagazine.com/blogs/tool-tracker/2015/12/convert-list-types.aspx
-        ElseIf GetType(T) = GetType(Customer) Then
-            Return context.Customers.ToList().Cast(Of T)().ToList()
+        ElseIf GetType(T) = GetType(User) Then
+            Return context.Users.ToList().Cast(Of T)().ToList()
         ElseIf GetType(T) = GetType(Booking) Then
             Return context.Bookings.ToList().Cast(Of T)().ToList()
         ElseIf GetType(T) = GetType(City) Then
@@ -144,9 +144,9 @@
             plane.Capacity = newPlane.Capacity
 
 
-        ElseIf TypeOf obj Is Customer Then
-            'Update Customer
-            Dim cust As Customer = [Get](Of Customer)(currentId)
+        ElseIf TypeOf obj Is User Then
+            'Update User
+            Dim cust As User = [Get](Of User)(currentId)
 
         ElseIf TypeOf obj Is Booking Then
             'Update Booking
@@ -179,8 +179,8 @@
 
     Public Shared Function GetCount(Of T)() As Integer
 
-        If GetType(T) = GetType(Customer) Then
-            Return Aggregate cust In context.Customers Into Count()
+        If GetType(T) = GetType(User) Then
+            Return Aggregate cust In context.Users Into Count()
         ElseIf GetType(T) = GetType(Booking) Then
             Return Aggregate booking In context.Bookings Into Count()
         ElseIf GetType(T) = GetType(City) Then

@@ -97,15 +97,15 @@
             Dim temp = Top
 
             'Loop until last item
-            For i As Integer = 1 To Size Step 1
-                'Same as for(i=i;i<=Size;i++)
+            While temp.Next IsNot Nothing
                 temp = temp.Next
-            Next
+            End While
 
             'Append at the end
             temp.Next = New LinkedNode(Of T)(Tag, Item)
 
         End If
+        Size += 1
     End Sub
 
     Public Sub Clear()

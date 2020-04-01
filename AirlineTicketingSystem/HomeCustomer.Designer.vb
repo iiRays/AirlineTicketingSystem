@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class HomeCustomer
+Partial Class HomeUser
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -85,7 +85,7 @@ Partial Class HomeCustomer
         Me.lblTitle.TabIndex = 30
         Me.lblTitle.Text = "ao zora"
         '
-        'HomeCustomer
+        'HomeUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -96,7 +96,7 @@ Partial Class HomeCustomer
         Me.Controls.Add(Me.btnFlights)
         Me.Controls.Add(Me.lblTitle)
         Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Name = "HomeCustomer"
+        Me.Name = "HomeUser"
         Me.Text = "Home"
         Me.ResumeLayout(False)
         Me.PerformLayout()

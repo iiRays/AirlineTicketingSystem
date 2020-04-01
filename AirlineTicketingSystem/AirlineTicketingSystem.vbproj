@@ -117,10 +117,16 @@
     <Compile Include="AdminFlightSearch.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FlightItem.Designer.vb">
+    <Compile Include="UserControls\FlightItem.Designer.vb">
       <DependentUpon>FlightItem.vb</DependentUpon>
     </Compile>
-    <Compile Include="FlightItem.vb">
+    <Compile Include="UserControls\FlightItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PassengerItem.Designer.vb">
+      <DependentUpon>PassengerItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PassengerItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Util\App.vb" />
@@ -245,7 +251,7 @@
     <EmbeddedResource Include="FlightDetails.resx">
       <DependentUpon>FlightDetails.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FlightItem.resx">
+    <EmbeddedResource Include="UserControls\FlightItem.resx">
       <DependentUpon>FlightItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FlightList.resx">
@@ -280,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Startup.resx">
       <DependentUpon>Startup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PassengerItem.resx">
+      <DependentUpon>PassengerItem.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

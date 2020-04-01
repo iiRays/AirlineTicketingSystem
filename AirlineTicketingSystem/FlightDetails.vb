@@ -1,6 +1,7 @@
 ﻿Public Class FlightDetails
-    Public Flight As Flight
+    Private Flight As New Flight
     Private Sub FlightDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Flight = App.Session.Get("selectedFlight")
         lblSeats.Text = Flight.Bookings.Count & "/" & Flight.Plane.Capacity 'NOTE: Does not account for multiple passengers per booking YET
         lblDate.Text = Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Flight.DepartureTime.Month) & " " & Flight.DepartureTime.Day.ToString
         lblId.Text = Flight.FlightID
@@ -20,10 +21,17 @@
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        'Clear selected flight
+        App.Session.Delete("selectedFlight")
+
         Quick.Navigate(Me, New FlightList)
     End Sub
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
 
+    End Sub
+
+    Private Sub btnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
+        Quick.Navigate(Me, New BookFlight1)
     End Sub
 End Class
