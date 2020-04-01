@@ -7,6 +7,10 @@
     End Sub
 
     Public Function [Get](Tag As String) As T
+        If Size = 0 Then
+            Return Nothing
+        End If
+
         Dim temp = Top
 
         For counter As Integer = 1 To Size Step 1
@@ -20,6 +24,10 @@
     End Function
 
     Public Function IndexOf(Tag As String) As Integer
+        If Size = 0 Then
+            Return -1
+        End If
+
         Dim temp = Top
 
         For counter As Integer = 1 To Size Step 1

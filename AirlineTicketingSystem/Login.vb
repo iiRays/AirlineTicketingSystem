@@ -20,6 +20,7 @@
             Else
                 'Perform login
                 App.Session.Add("user", cResult.First())
+                App.Session.Add("role", "customer")
                 Quick.Print("Login is successful.")
             End If
         End If
