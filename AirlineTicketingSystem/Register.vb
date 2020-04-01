@@ -24,6 +24,8 @@ Public Class Register
         cust.PasswordSalt = hasher.salt
 
         Insert(cust)
+
+        Quick.Navigate(Me, New Login)
     End Sub
 
     Private Sub btnRedirect_Click(sender As Object, e As EventArgs) Handles btnRedirect.Click

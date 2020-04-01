@@ -14,7 +14,7 @@
 
         'Fill in the first passenger with user name is logged in
         If App.Session.Get("user") IsNot Nothing Then
-            CType(Me.Controls("txtPassenger1"), TextBox).Text = CType(App.Session.Get("user"), User).Name
+            CType(Me.Controls("txtPassenger1"), PassengerItem).txtName.Text = CType(App.Session.Get("user"), User).Name
         End If
 
     End Sub
