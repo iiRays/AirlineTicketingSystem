@@ -117,6 +117,12 @@
     <Compile Include="AdminFlightSearch.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BookingSummary.Designer.vb">
+      <DependentUpon>BookingSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookingSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserControls\FlightItem.Designer.vb">
       <DependentUpon>FlightItem.vb</DependentUpon>
     </Compile>
@@ -247,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookFlight2.resx">
       <DependentUpon>BookFlight2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingSummary.resx">
+      <DependentUpon>BookingSummary.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FlightDetails.resx">
       <DependentUpon>FlightDetails.vb</DependentUpon>

@@ -34,6 +34,7 @@ Partial Class FlightItem
         Me.lblSource = New System.Windows.Forms.Label()
         Me.lblDuration = New System.Windows.Forms.Label()
         Me.lblDate = New System.Windows.Forms.Label()
+        Me.lblPrice = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -63,6 +64,7 @@ Partial Class FlightItem
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.lblPrice)
         Me.Panel1.Controls.Add(Me.btnGo)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.lblSeats)
@@ -97,7 +99,7 @@ Partial Class FlightItem
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Poppins", 14.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(829, 60)
+        Me.Label2.Location = New System.Drawing.Point(839, 91)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(148, 34)
         Me.Label2.TabIndex = 49
@@ -109,7 +111,7 @@ Partial Class FlightItem
         Me.lblSeats.AutoSize = True
         Me.lblSeats.Font = New System.Drawing.Font("Poppins", 22.0!, System.Drawing.FontStyle.Bold)
         Me.lblSeats.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.lblSeats.Location = New System.Drawing.Point(842, 25)
+        Me.lblSeats.Location = New System.Drawing.Point(852, 56)
         Me.lblSeats.Name = "lblSeats"
         Me.lblSeats.Size = New System.Drawing.Size(145, 53)
         Me.lblSeats.TabIndex = 48
@@ -188,6 +190,19 @@ Partial Class FlightItem
         Me.lblDate.Text = "Monday, 9 March 2020"
         Me.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'lblPrice
+        '
+        Me.lblPrice.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblPrice.AutoSize = True
+        Me.lblPrice.Font = New System.Drawing.Font("Poppins", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
+        Me.lblPrice.Location = New System.Drawing.Point(860, 4)
+        Me.lblPrice.Name = "lblPrice"
+        Me.lblPrice.Size = New System.Drawing.Size(137, 60)
+        Me.lblPrice.TabIndex = 50
+        Me.lblPrice.Text = "RM 123"
+        Me.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'FlightItem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -216,4 +231,5 @@ Partial Class FlightItem
     Friend WithEvents lblSource As Label
     Friend WithEvents lblDuration As Label
     Friend WithEvents lblDate As Label
+    Friend WithEvents lblPrice As Label
 End Class
