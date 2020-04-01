@@ -30,8 +30,8 @@ Partial Class BookFlight1
         Me.lblDepartureTime = New System.Windows.Forms.Label()
         Me.lblSource = New System.Windows.Forms.Label()
         Me.lblDate = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblArrival = New System.Windows.Forms.Label()
+        Me.lblDestination = New System.Windows.Forms.Label()
         Me.txtPeople = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -92,8 +92,8 @@ Partial Class BookFlight1
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.lblArrival)
+        Me.Panel1.Controls.Add(Me.lblDestination)
         Me.Panel1.Controls.Add(Me.lblDepartureTime)
         Me.Panel1.Controls.Add(Me.lblSource)
         Me.Panel1.Controls.Add(Me.lblDate)
@@ -139,29 +139,29 @@ Partial Class BookFlight1
         Me.lblDate.Text = "Monday, 9 March 2020"
         Me.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label1
+        'lblArrival
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Poppins", 25.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(605, 45)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(112, 60)
-        Me.Label1.TabIndex = 47
-        Me.Label1.Text = "15:00"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblArrival.AutoSize = True
+        Me.lblArrival.Font = New System.Drawing.Font("Poppins", 25.0!, System.Drawing.FontStyle.Bold)
+        Me.lblArrival.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
+        Me.lblArrival.Location = New System.Drawing.Point(605, 45)
+        Me.lblArrival.Name = "lblArrival"
+        Me.lblArrival.Size = New System.Drawing.Size(112, 60)
+        Me.lblArrival.TabIndex = 47
+        Me.lblArrival.Text = "15:00"
+        Me.lblArrival.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label2
+        'lblDestination
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Poppins", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(712, 52)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(214, 48)
-        Me.Label2.TabIndex = 46
-        Me.Label2.Text = "Kuala Lumpur"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblDestination.AutoSize = True
+        Me.lblDestination.Font = New System.Drawing.Font("Poppins", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.lblDestination.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.lblDestination.Location = New System.Drawing.Point(712, 52)
+        Me.lblDestination.Name = "lblDestination"
+        Me.lblDestination.Size = New System.Drawing.Size(214, 48)
+        Me.lblDestination.TabIndex = 46
+        Me.lblDestination.Text = "Kuala Lumpur"
+        Me.lblDestination.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtPeople
         '
@@ -257,8 +257,8 @@ Partial Class BookFlight1
     Friend WithEvents Panel2 As Panel
     Friend WithEvents lblId As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblArrival As Label
+    Friend WithEvents lblDestination As Label
     Friend WithEvents lblDepartureTime As Label
     Friend WithEvents lblSource As Label
     Friend WithEvents lblDate As Label
