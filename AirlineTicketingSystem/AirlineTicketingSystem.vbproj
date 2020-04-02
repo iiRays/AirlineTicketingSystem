@@ -240,6 +240,7 @@
     </Compile>
     <Compile Include="Util\Hash.vb" />
     <Compile Include="Util\Quick.vb" />
+    <Compile Include="Util\TitleBar.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Account.resx">

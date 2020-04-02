@@ -1,0 +1,108 @@
+﻿Public Class TitleBar
+    Private Form As Form
+    Private IsFormDraggable As Boolean
+    Private IsMouseDown = False
+    Private RemoveBorder As Boolean
+    Private X As Integer
+    Private Y As Integer
+
+    'Constructors
+    Public Sub New(Form As Form, IsFormDraggable As Boolean)
+        Me.Form = Form
+        Me.IsFormDraggable = IsFormDraggable
+        Me.RemoveBorder = True
+
+        LoadTitleBar()
+    End Sub
+
+    Public Sub New(Form As Form, IsFormDraggable As Boolean, RemoveBorder As Boolean)
+        Me.Form = Form
+        Me.IsFormDraggable = IsFormDraggable
+        Me.RemoveBorder = RemoveBorder
+
+        LoadTitleBar()
+    End Sub
+
+    'Static load methods
+    Public Shared Sub Load(Form As Form)
+        Dim CustomBar = New TitleBar(Form, True)
+    End Sub
+
+    Public Shared Sub Load(Form As Form, IsFormDraggable As Boolean)
+        Dim CustomBar = New TitleBar(Form, IsFormDraggable)
+    End Sub
+
+    Public Shared Sub Load(Form As Form, IsFormDraggable As Boolean, RemoveBorder As Boolean)
+        Dim CustomBar = New TitleBar(Form, IsFormDraggable, RemoveBorder)
+    End Sub
+
+    'Private nonstatic methods
+    Private Sub LoadTitleBar()
+        If RemoveBorder Then
+            Form.FormBorderStyle = FormBorderStyle.None
+        End If
+
+        Dim closeButton As New Label()
+        closeButton.Anchor = AnchorStyles.Top
+        closeButton.Anchor = AnchorStyles.Right
+        closeButton.AutoSize = True
+        closeButton.Font = New Font("Poppins", 14, FontStyle.Regular)
+        closeButton.ForeColor = Color.White
+        closeButton.Text = "x"
+        AddHandler closeButton.Click, AddressOf Quick.CloseForm
+
+        Dim minimizeButton As New Label()
+        minimizeButton.Anchor = AnchorStyles.Top
+        minimizeButton.Anchor = AnchorStyles.Right
+        minimizeButton.AutoSize = True
+        minimizeButton.Font = New Font("Poppins", 14, FontStyle.Regular)
+        minimizeButton.ForeColor = Color.White
+        minimizeButton.Text = "-"
+        AddHandler minimizeButton.Click, AddressOf Quick.MinimizeForm
+
+        Dim panel As New FlowLayoutPanel()
+        panel.Dock = DockStyle.Top
+        panel.FlowDirection = FlowDirection.RightToLeft
+        panel.Controls.Add(closeButton)
+        panel.Controls.Add(minimizeButton)
+        panel.BackColor = Color.Transparent
+        panel.AutoSize = True
+
+        'Make the panel itself draggable
+        AddHandler panel.MouseDown, AddressOf DragMouseDown
+        AddHandler panel.MouseUp, AddressOf DragMouseUp
+        AddHandler panel.MouseMove, AddressOf Drag
+
+        If IsFormDraggable Then
+            'Make the form itself draggable
+            AddHandler Form.MouseDown, AddressOf DragMouseDown
+            AddHandler Form.MouseUp, AddressOf DragMouseUp
+            AddHandler Form.MouseMove, AddressOf Drag
+        End If
+
+        Form.Controls.Add(panel)
+
+    End Sub
+
+    'Draggable title bar code below is possible thanks to user2536474 @ https://stackoverflow.com/questions/17392088/allow-a-user-to-move-a-borderless-window
+
+    Private Sub DragMouseDown(ByVal sender As Object, ByVal e As MouseEventArgs)
+        If e.Button = MouseButtons.Left Then
+            IsMouseDown = True
+            X = e.X
+            Y = e.Y
+        End If
+    End Sub
+
+    Private Sub DragMouseUp(ByVal sender As Object, ByVal e As MouseEventArgs)
+        If e.Button = MouseButtons.Left Then
+            IsMouseDown = False
+        End If
+    End Sub
+
+    Private Sub Drag(ByVal sender As Object, ByVal e As MouseEventArgs)
+        If IsMouseDown Then
+            Form.Location = New Point(Form.Location.X + (e.X - X), Form.Location.Y + (e.Y - Y))
+        End If
+    End Sub
+End Class

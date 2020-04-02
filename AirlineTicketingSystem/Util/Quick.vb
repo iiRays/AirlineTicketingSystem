@@ -2,6 +2,20 @@
 Public Class Quick
     'This class aids in shortening code
 
+    'Closes a form
+    Public Shared Function CloseForm(ByVal sender As Object, ByVal e As EventArgs)
+        Dim form = DirectCast(sender, Label).FindForm
+        form.FormBorderStyle = FormBorderStyle.Sizable
+        form.Close()
+    End Function
+
+    'Minimizes a form
+    Public Shared Function MinimizeForm(ByVal sender As Object, ByVal e As EventArgs)
+        Dim form = DirectCast(sender, Label).FindForm
+        form.FormBorderStyle = FormBorderStyle.Sizable
+        form.WindowState = FormWindowState.Minimized
+        form.FormBorderStyle = FormBorderStyle.None
+    End Function
     Public Shared Sub SetFormFont(FontName As String, Form As Form)
         For Each Control As Control In Form.Controls
             Quick.Print(Control.Name)
