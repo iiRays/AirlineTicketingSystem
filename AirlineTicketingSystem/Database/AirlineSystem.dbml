@@ -8,7 +8,7 @@
       <Column Name="NoOfPassengers" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="TotalPrice" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
       <Column Name="PaymentDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="CreditCardNo" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="CreditCardNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="IsCancelled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="ExtraBaggageKG" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Booking_Ticket" Member="Tickets" ThisKey="BookingID" OtherKey="BookingID" Type="Ticket" />

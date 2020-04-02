@@ -81,12 +81,11 @@ Partial Class BookFlight1
 		'
 		'lblId
 		'
-		Me.lblId.AutoSize = True
 		Me.lblId.Font = New System.Drawing.Font("OCR A Extended", 39.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.lblId.ForeColor = System.Drawing.Color.White
-		Me.lblId.Location = New System.Drawing.Point(41, 27)
+		Me.lblId.Location = New System.Drawing.Point(0, 27)
 		Me.lblId.Name = "lblId"
-		Me.lblId.Size = New System.Drawing.Size(122, 54)
+		Me.lblId.Size = New System.Drawing.Size(197, 54)
 		Me.lblId.TabIndex = 41
 		Me.lblId.Text = "001"
 		Me.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -275,7 +274,6 @@ Partial Class BookFlight1
 		Me.Name = "BookFlight1"
 		Me.Text = "Book Flight"
 		Me.Panel2.ResumeLayout(False)
-		Me.Panel2.PerformLayout()
 		Me.Panel1.ResumeLayout(False)
 		Me.Panel1.PerformLayout()
 		Me.ResumeLayout(False)

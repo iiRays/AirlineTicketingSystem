@@ -20,7 +20,7 @@
             lblDate.Text = Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Flight.DepartureTime.Month) & " " & Flight.DepartureTime.Day.ToString
         End If
 
-        lblPrice.Text = Flight.Price
+        lblPrice.Text = "RM " & Flight.Price
         lblId.Text = Flight.FlightID
         lblDuration.Text = Flight.Route.DurationHour.ToString & "h " & Flight.Route.DurationMins.ToString
         lblSource.Text = DB.GetFlightSource(Flight.FlightID).City.Name

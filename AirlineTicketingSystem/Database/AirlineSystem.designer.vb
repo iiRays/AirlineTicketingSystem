@@ -343,7 +343,7 @@ Partial Public Class Booking
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CreditCardNo", DbType:="VarChar(12)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CreditCardNo", DbType:="VarChar(20)")>  _
 	Public Property CreditCardNo() As String
 		Get
 			Return Me._CreditCardNo

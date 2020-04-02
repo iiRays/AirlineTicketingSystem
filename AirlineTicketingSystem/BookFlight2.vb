@@ -30,6 +30,10 @@
             Dim ticket As New Ticket()
             ticket.BookingID = booking.BookingID
             ticket.Name = CType(Me.Controls("txtPassenger" & (passengerCount + 1)), PassengerItem).txtName.Text
+            If ticket.Name.Length = 0 Then
+                Quick.ShowError("Missing passengers", "Passenger " & (passengerCount + 1) & " is empty.")
+                Return
+            End If
             ticket.Seat = "ECO"
             ticket.TicketID = Quick.GenerateId(Of Ticket)()
             passengerList.Add(ticket)

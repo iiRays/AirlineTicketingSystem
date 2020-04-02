@@ -123,6 +123,12 @@
     <Compile Include="BookingSummary.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Splash.Designer.vb">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserControls\BookingSummaryPassengerItem.Designer.vb">
       <DependentUpon>BookingSummaryPassengerItem.vb</DependentUpon>
     </Compile>
@@ -209,12 +215,6 @@
     <Compile Include="Register.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Startup.Designer.vb">
-      <DependentUpon>Startup.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Startup.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Util\DB.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -266,6 +266,9 @@
     <EmbeddedResource Include="FlightDetails.resx">
       <DependentUpon>FlightDetails.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\BookingSummaryPassengerItem.resx">
       <DependentUpon>BookingSummaryPassengerItem.vb</DependentUpon>
     </EmbeddedResource>
@@ -301,9 +304,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Startup.resx">
-      <DependentUpon>Startup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\PassengerItem.resx">
       <DependentUpon>PassengerItem.vb</DependentUpon>

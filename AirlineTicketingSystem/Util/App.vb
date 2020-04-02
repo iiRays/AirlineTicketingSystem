@@ -11,6 +11,14 @@
         End If
     End Sub
 
+    Public Shared Function IsLoggedIn() As Boolean
+        If Session.Get("user") Is Nothing Then
+            Return False
+        Else
+            Return True
+        End If
+    End Function
+
     'Unneeded methods but may prove useful
     Public Shared Sub SaveState(form As Form)
         App.Session.Add(form.Name, form)

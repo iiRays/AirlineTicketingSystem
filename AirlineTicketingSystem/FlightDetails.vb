@@ -15,6 +15,7 @@
         lblDestination.Text = DB.GetFlightDestination(Flight.FlightID).City.Name
         lblArrivalTime.Text = Flight.ArrivalTime.ToString("h:mm tt")
         lblDuration.Text = Flight.ArrivalTime.Subtract(Flight.DepartureTime).Hours & "h " & Flight.ArrivalTime.Subtract(Flight.DepartureTime).Minutes & "M approx."
+        lblPrice.Text = "RM " & Flight.Price
 
         'Whether to show Edit Flight button or not
         If (App.Session.Get("role") = "staff") Then
