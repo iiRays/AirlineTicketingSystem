@@ -16,6 +16,6 @@
     End Sub
 
     Private Sub BtnCities_Click(sender As Object, e As EventArgs) Handles btnCities.Click
-        'Quick.Navigate(Me, New ???)
+        Quick.Navigate(Me, New AdminCitiesDashboard)
     End Sub
 End Class

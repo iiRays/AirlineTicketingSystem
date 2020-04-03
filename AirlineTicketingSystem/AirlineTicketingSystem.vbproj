@@ -123,6 +123,12 @@
     <Compile Include="AdminCitiesView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AdminCitiesViewResults.Designer.vb">
+      <DependentUpon>AdminCitiesViewResults.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCitiesViewResults.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminDashboard.Designer.vb">
       <DependentUpon>AdminDashboard.vb</DependentUpon>
     </Compile>
@@ -169,6 +175,12 @@
       <DependentUpon>BookingSummaryPassengerItem.vb</DependentUpon>
     </Compile>
     <Compile Include="UserControls\BookingSummaryPassengerItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CityItem.Designer.vb">
+      <DependentUpon>CityItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CityItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\FlightItem.Designer.vb">
@@ -294,6 +306,9 @@
     <EmbeddedResource Include="AdminCitiesView.resx">
       <DependentUpon>AdminCitiesView.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminCitiesViewResults.resx">
+      <DependentUpon>AdminCitiesViewResults.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.vb</DependentUpon>
     </EmbeddedResource>
@@ -326,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\BookingSummaryPassengerItem.resx">
       <DependentUpon>BookingSummaryPassengerItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CityItem.resx">
+      <DependentUpon>CityItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\FlightItem.resx">
       <DependentUpon>FlightItem.vb</DependentUpon>
