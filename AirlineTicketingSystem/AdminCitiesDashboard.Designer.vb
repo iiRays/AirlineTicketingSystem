@@ -39,7 +39,7 @@ Partial Class AdminCitiesDashboard
         Me.btnView.Name = "btnView"
         Me.btnView.Size = New System.Drawing.Size(225, 250)
         Me.btnView.TabIndex = 45
-        Me.btnView.Text = "view all cities"
+        Me.btnView.Text = "view cities"
         Me.btnView.UseVisualStyleBackColor = False
         '
         'btnAdd

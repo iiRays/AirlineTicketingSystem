@@ -13,6 +13,6 @@
     End Sub
 
     Private Sub BtnRoutes_Click(sender As Object, e As EventArgs) Handles btnView.Click
-        'Quick.Navigate(Me, New ???)
+        Quick.Navigate(Me, New AdminCitiesView)
     End Sub
 End Class
