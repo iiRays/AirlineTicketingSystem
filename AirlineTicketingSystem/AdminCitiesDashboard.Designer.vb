@@ -22,39 +22,39 @@ Partial Class AdminCitiesDashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnRoutes = New System.Windows.Forms.Button()
-        Me.btnFlights = New System.Windows.Forms.Button()
+        Me.btnView = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'btnRoutes
+        'btnView
         '
-        Me.btnRoutes.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.btnRoutes.FlatAppearance.BorderSize = 0
-        Me.btnRoutes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRoutes.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
-        Me.btnRoutes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.btnRoutes.Location = New System.Drawing.Point(652, 240)
-        Me.btnRoutes.Name = "btnRoutes"
-        Me.btnRoutes.Size = New System.Drawing.Size(225, 250)
-        Me.btnRoutes.TabIndex = 45
-        Me.btnRoutes.Text = "view all cities"
-        Me.btnRoutes.UseVisualStyleBackColor = False
+        Me.btnView.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.btnView.FlatAppearance.BorderSize = 0
+        Me.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnView.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnView.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.btnView.Location = New System.Drawing.Point(652, 240)
+        Me.btnView.Name = "btnView"
+        Me.btnView.Size = New System.Drawing.Size(225, 250)
+        Me.btnView.TabIndex = 45
+        Me.btnView.Text = "view all cities"
+        Me.btnView.UseVisualStyleBackColor = False
         '
-        'btnFlights
+        'btnAdd
         '
-        Me.btnFlights.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.btnFlights.FlatAppearance.BorderSize = 0
-        Me.btnFlights.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFlights.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
-        Me.btnFlights.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.btnFlights.Location = New System.Drawing.Point(382, 240)
-        Me.btnFlights.Name = "btnFlights"
-        Me.btnFlights.Size = New System.Drawing.Size(225, 250)
-        Me.btnFlights.TabIndex = 44
-        Me.btnFlights.Text = "add a city"
-        Me.btnFlights.UseVisualStyleBackColor = False
+        Me.btnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.btnAdd.FlatAppearance.BorderSize = 0
+        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAdd.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnAdd.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.btnAdd.Location = New System.Drawing.Point(382, 240)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(225, 250)
+        Me.btnAdd.TabIndex = 44
+        Me.btnAdd.Text = "add a city"
+        Me.btnAdd.UseVisualStyleBackColor = False
         '
         'btnBack
         '
@@ -88,8 +88,8 @@ Partial Class AdminCitiesDashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1264, 681)
-        Me.Controls.Add(Me.btnRoutes)
-        Me.Controls.Add(Me.btnFlights)
+        Me.Controls.Add(Me.btnView)
+        Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.lblTitle)
         Me.Name = "AdminCitiesDashboard"
@@ -99,8 +99,8 @@ Partial Class AdminCitiesDashboard
 
     End Sub
 
-    Friend WithEvents btnRoutes As Button
-    Friend WithEvents btnFlights As Button
+    Friend WithEvents btnView As Button
+    Friend WithEvents btnAdd As Button
     Friend WithEvents btnBack As Button
     Friend WithEvents lblTitle As Label
 End Class

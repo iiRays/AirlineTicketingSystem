@@ -99,6 +99,18 @@
     <Compile Include="Account.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AdminCitiesAdd.Designer.vb">
+      <DependentUpon>AdminCitiesAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCitiesAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCitiesAddSummary.Designer.vb">
+      <DependentUpon>AdminCitiesAddSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCitiesAddSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminCitiesDashboard.Designer.vb">
       <DependentUpon>AdminCitiesDashboard.vb</DependentUpon>
     </Compile>
@@ -263,6 +275,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Account.resx">
       <DependentUpon>Account.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCitiesAdd.resx">
+      <DependentUpon>AdminCitiesAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCitiesAddSummary.resx">
+      <DependentUpon>AdminCitiesAddSummary.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminCitiesDashboard.resx">
       <DependentUpon>AdminCitiesDashboard.vb</DependentUpon>
