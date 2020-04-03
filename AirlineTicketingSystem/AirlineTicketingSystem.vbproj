@@ -99,6 +99,12 @@
     <Compile Include="Account.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AdminCitiesDashboard.Designer.vb">
+      <DependentUpon>AdminCitiesDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCitiesDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminDashboard.Designer.vb">
       <DependentUpon>AdminDashboard.vb</DependentUpon>
     </Compile>
@@ -111,10 +117,22 @@
     <Compile Include="AdminFlightList.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AdminFlightsDashboard.Designer.vb">
+      <DependentUpon>AdminFlightsDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFlightsDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminFlightSearch.Designer.vb">
       <DependentUpon>AdminFlightSearch.vb</DependentUpon>
     </Compile>
     <Compile Include="AdminFlightSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminRoutesDashboard.Designer.vb">
+      <DependentUpon>AdminRoutesDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRoutesDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BookingSummary.Designer.vb">
@@ -246,14 +264,23 @@
     <EmbeddedResource Include="Account.resx">
       <DependentUpon>Account.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminCitiesDashboard.resx">
+      <DependentUpon>AdminCitiesDashboard.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminFlightList.resx">
       <DependentUpon>AdminFlightList.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminFlightsDashboard.resx">
+      <DependentUpon>AdminFlightsDashboard.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminFlightSearch.resx">
       <DependentUpon>AdminFlightSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminRoutesDashboard.resx">
+      <DependentUpon>AdminRoutesDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookFlight1.resx">
       <DependentUpon>BookFlight1.vb</DependentUpon>
