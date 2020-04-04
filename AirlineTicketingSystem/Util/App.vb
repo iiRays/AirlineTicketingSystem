@@ -4,12 +4,15 @@
     Public Shared Session As LinkedList(Of Object)
 
     'Logs the user in
-    Public Shared Sub LoginUser(Of T)(user As T)
-        If GetType(T) = GetType(User) Then
-            Session.Add("user", user)
-            ' To add staff login later
+    Public Shared Function GetUser() As User
+        Dim user As User = Session.Get("user")
+
+        If user Is Nothing Then
+            Return Nothing
+        Else
+            Return user
         End If
-    End Sub
+    End Function
 
     Public Shared Function IsLoggedIn() As Boolean
         If Session.Get("user") Is Nothing Then

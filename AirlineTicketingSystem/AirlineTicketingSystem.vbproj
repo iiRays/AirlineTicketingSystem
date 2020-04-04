@@ -239,10 +239,10 @@
     <Compile Include="HomeAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomeCustomer.Designer.vb">
-      <DependentUpon>HomeCustomer.vb</DependentUpon>
+    <Compile Include="HomeUser.Designer.vb">
+      <DependentUpon>HomeUser.vb</DependentUpon>
     </Compile>
-    <Compile Include="HomeCustomer.vb">
+    <Compile Include="HomeUser.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HomeGuest.Designer.vb">
@@ -360,8 +360,8 @@
     <EmbeddedResource Include="HomeAdmin.resx">
       <DependentUpon>HomeAdmin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeCustomer.resx">
-      <DependentUpon>HomeCustomer.vb</DependentUpon>
+    <EmbeddedResource Include="HomeUser.resx">
+      <DependentUpon>HomeUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeGuest.resx">
       <DependentUpon>HomeGuest.vb</DependentUpon>

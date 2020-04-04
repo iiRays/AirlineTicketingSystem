@@ -18,6 +18,15 @@
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-
+        Dim user = App.GetUser
+        If user IsNot Nothing Then
+            If user.IsStaff Then
+                Quick.Navigate(Me, New HomeAdmin)
+            Else
+                Quick.Navigate(Me, New HomeUser)
+            End If
+        Else
+            Quick.Navigate(Me, HomeGuest)
+        End If
     End Sub
 End Class

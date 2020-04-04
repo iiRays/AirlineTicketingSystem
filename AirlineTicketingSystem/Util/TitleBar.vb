@@ -44,7 +44,7 @@
             Form.FormBorderStyle = FormBorderStyle.None
         End If
 
-        'Check if the background is light (avg RGB is > 200)
+        'Check if the background is light (RGB is > 200)
         If CType(Form.BackColor.R, Integer) > 200 Or CType(Form.BackColor.G, Integer) > 200 Or CType(Form.BackColor.B, Integer) > 200 Then
             btColor = Color.Black
         End If

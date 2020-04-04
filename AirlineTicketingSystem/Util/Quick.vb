@@ -18,7 +18,6 @@ Public Class Quick
     End Function
     Public Shared Sub SetFormFont(FontName As String, Form As Form)
         For Each Control As Control In Form.Controls
-            Quick.Print(Control.Name)
             Control.Font = New Font(FontName, Control.Font.Size, Control.Font.Style)
             If TypeOf Control Is Panel Then
                 SetFormFont(FontName, Control)
@@ -28,7 +27,6 @@ Public Class Quick
 
     Public Shared Sub SetFormFont(FontName As String, ParentControl As Control)
         For Each Control As Control In ParentControl.Controls
-            Quick.Print(Control.Name)
             Control.Font = New Font(FontName, Control.Font.Size, Control.Font.Style)
             If TypeOf Control Is Panel Then
                 SetFormFont(FontName, Control)

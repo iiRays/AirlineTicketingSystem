@@ -22,6 +22,9 @@
                 App.Session.Add("user", cResult.First())
                 App.Session.Add("role", "user")
                 Quick.Print("Login is successful.")
+                Dim form As New HomeUser
+                form.Show()
+                Me.Close()
             End If
         End If
     End Sub

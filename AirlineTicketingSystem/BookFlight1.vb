@@ -10,6 +10,14 @@
             txtCard.Text = booking.CreditCardNo
         End If
 
+        Dim user = App.GetUser()
+        If user IsNot Nothing Then
+            If user.CreditCardNo IsNot Nothing Then
+                txtCard.Text = user.CreditCardNo
+            End If
+        End If
+
+
         Flight = App.Session.Get("selectedFlight")
         lblId.Text = Flight.FlightID
         lblArrival.Text = Flight.ArrivalTime.ToString("HH:mm")
