@@ -263,13 +263,11 @@
     End Function
 
     Public Shared Function GetFlightSource(flightID As String) As [Stop]
-        Return context.Stops.FirstOrDefault(Function(o) o.FlightID = flightID And o.IsOrigin = True)
-        context.SubmitChanges()
+        Return (From stops In context.Stops Where stops.RouteID = (From flight In context.Flights Where flight.FlightID = flightID).First().RouteID And stops.IsOrigin = True).First()
     End Function
 
     Public Shared Function GetFlightDestination(flightID As String) As [Stop]
-        Return context.Stops.FirstOrDefault(Function(o) o.FlightID = flightID And o.IsOrigin = False)
-        context.SubmitChanges()
+        Return (From stops In context.Stops Where stops.RouteID = (From flight In context.Flights Where flight.FlightID = flightID).First().RouteID And stops.IsOrigin = False).First()
     End Function
 
     Public Shared Sub Update(obj As Object, currentId As String)

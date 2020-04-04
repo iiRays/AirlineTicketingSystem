@@ -38,8 +38,15 @@
 
     'Private nonstatic methods
     Private Sub LoadTitleBar()
+        Dim btColor = Color.White
+
         If RemoveBorder Then
             Form.FormBorderStyle = FormBorderStyle.None
+        End If
+
+        'Check if the background is light (avg RGB is > 200)
+        If CType(Form.BackColor.R, Integer) > 200 Or CType(Form.BackColor.G, Integer) > 200 Or CType(Form.BackColor.B, Integer) > 200 Then
+            btColor = Color.Black
         End If
 
         Dim closeButton As New Label()
@@ -47,7 +54,7 @@
         closeButton.Anchor = AnchorStyles.Right
         closeButton.AutoSize = True
         closeButton.Font = New Font("Poppins", 14, FontStyle.Regular)
-        closeButton.ForeColor = Color.White
+        closeButton.ForeColor = btColor
         closeButton.Text = "x"
         AddHandler closeButton.Click, AddressOf Quick.CloseForm
 
@@ -56,7 +63,7 @@
         minimizeButton.Anchor = AnchorStyles.Right
         minimizeButton.AutoSize = True
         minimizeButton.Font = New Font("Poppins", 14, FontStyle.Regular)
-        minimizeButton.ForeColor = Color.White
+        minimizeButton.ForeColor = btColor
         minimizeButton.Text = "-"
         AddHandler minimizeButton.Click, AddressOf Quick.MinimizeForm
 

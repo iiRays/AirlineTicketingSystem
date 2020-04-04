@@ -621,7 +621,7 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Password", DbType:="VarChar(100) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Password", DbType:="VarChar(100)")>  _
 	Public Property Password() As String
 		Get
 			Return Me._Password
@@ -637,7 +637,7 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PasswordSalt", DbType:="VarChar(100) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PasswordSalt", DbType:="VarChar(100)")>  _
 	Public Property PasswordSalt() As String
 		Get
 			Return Me._PasswordSalt
@@ -734,7 +734,7 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CreditCardNo", DbType:="VarChar(12)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CreditCardNo", DbType:="VarChar(20)")>  _
 	Public Property CreditCardNo() As String
 		Get
 			Return Me._CreditCardNo
@@ -1054,8 +1054,6 @@ Partial Public Class Flight
 	
 	Private _Bookings As EntitySet(Of Booking)
 	
-	Private _Stops As EntitySet(Of [Stop])
-	
 	Private _Plane As EntityRef(Of Plane)
 	
 	Private _Route As EntityRef(Of Route)
@@ -1100,7 +1098,6 @@ Partial Public Class Flight
 	Public Sub New()
 		MyBase.New
 		Me._Bookings = New EntitySet(Of Booking)(AddressOf Me.attach_Bookings, AddressOf Me.detach_Bookings)
-		Me._Stops = New EntitySet(Of [Stop])(AddressOf Me.attach_Stops, AddressOf Me.detach_Stops)
 		Me._Plane = CType(Nothing, EntityRef(Of Plane))
 		Me._Route = CType(Nothing, EntityRef(Of Route))
 		OnCreated
@@ -1238,16 +1235,6 @@ Partial Public Class Flight
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Flight_Stop", Storage:="_Stops", ThisKey:="FlightID", OtherKey:="FlightID")>  _
-	Public Property Stops() As EntitySet(Of [Stop])
-		Get
-			Return Me._Stops
-		End Get
-		Set
-			Me._Stops.Assign(value)
-		End Set
-	End Property
-	
 	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Plane_Flight", Storage:="_Plane", ThisKey:="PlaneID", OtherKey:="PlaneID", IsForeignKey:=true)>  _
 	Public Property Plane() As Plane
 		Get
@@ -1328,16 +1315,6 @@ Partial Public Class Flight
 	End Sub
 	
 	Private Sub detach_Bookings(ByVal entity As Booking)
-		Me.SendPropertyChanging
-		entity.Flight = Nothing
-	End Sub
-	
-	Private Sub attach_Stops(ByVal entity As [Stop])
-		Me.SendPropertyChanging
-		entity.Flight = Me
-	End Sub
-	
-	Private Sub detach_Stops(ByVal entity As [Stop])
 		Me.SendPropertyChanging
 		entity.Flight = Nothing
 	End Sub
@@ -1508,6 +1485,8 @@ Partial Public Class Route
 	
 	Private _Flights As EntitySet(Of Flight)
 	
+	Private _Stops As EntitySet(Of [Stop])
+	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
     End Sub
@@ -1532,6 +1511,7 @@ Partial Public Class Route
 	Public Sub New()
 		MyBase.New
 		Me._Flights = New EntitySet(Of Flight)(AddressOf Me.attach_Flights, AddressOf Me.detach_Flights)
+		Me._Stops = New EntitySet(Of [Stop])(AddressOf Me.attach_Stops, AddressOf Me.detach_Stops)
 		OnCreated
 	End Sub
 	
@@ -1595,6 +1575,16 @@ Partial Public Class Route
 		End Set
 	End Property
 	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Route_Stop", Storage:="_Stops", ThisKey:="RouteID", OtherKey:="RouteID")>  _
+	Public Property Stops() As EntitySet(Of [Stop])
+		Get
+			Return Me._Stops
+		End Get
+		Set
+			Me._Stops.Assign(value)
+		End Set
+	End Property
+	
 	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
 	
 	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
@@ -1622,6 +1612,16 @@ Partial Public Class Route
 		Me.SendPropertyChanging
 		entity.Route = Nothing
 	End Sub
+	
+	Private Sub attach_Stops(ByVal entity As [Stop])
+		Me.SendPropertyChanging
+		entity.Route = Me
+	End Sub
+	
+	Private Sub detach_Stops(ByVal entity As [Stop])
+		Me.SendPropertyChanging
+		entity.Route = Nothing
+	End Sub
 End Class
 
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Stop")>  _
@@ -1630,7 +1630,7 @@ Partial Public Class [Stop]
 	
 	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
 	
-	Private _FlightID As String
+	Private _RouteID As String
 	
 	Private _CityID As String
 	
@@ -1638,7 +1638,7 @@ Partial Public Class [Stop]
 	
 	Private _City As EntityRef(Of City)
 	
-	Private _Flight As EntityRef(Of Flight)
+	Private _Route As EntityRef(Of Route)
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -1647,9 +1647,9 @@ Partial Public Class [Stop]
     End Sub
     Partial Private Sub OnCreated()
     End Sub
-    Partial Private Sub OnFlightIDChanging(value As String)
+    Partial Private Sub OnRouteIDChanging(value As String)
     End Sub
-    Partial Private Sub OnFlightIDChanged()
+    Partial Private Sub OnRouteIDChanged()
     End Sub
     Partial Private Sub OnCityIDChanging(value As String)
     End Sub
@@ -1664,25 +1664,25 @@ Partial Public Class [Stop]
 	Public Sub New()
 		MyBase.New
 		Me._City = CType(Nothing, EntityRef(Of City))
-		Me._Flight = CType(Nothing, EntityRef(Of Flight))
+		Me._Route = CType(Nothing, EntityRef(Of Route))
 		OnCreated
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FlightID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
-	Public Property FlightID() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_RouteID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	Public Property RouteID() As String
 		Get
-			Return Me._FlightID
+			Return Me._RouteID
 		End Get
 		Set
-			If (String.Equals(Me._FlightID, value) = false) Then
-				If Me._Flight.HasLoadedOrAssignedValue Then
+			If (String.Equals(Me._RouteID, value) = false) Then
+				If Me._Route.HasLoadedOrAssignedValue Then
 					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
 				End If
-				Me.OnFlightIDChanging(value)
+				Me.OnRouteIDChanging(value)
 				Me.SendPropertyChanging
-				Me._FlightID = value
-				Me.SendPropertyChanged("FlightID")
-				Me.OnFlightIDChanged
+				Me._RouteID = value
+				Me.SendPropertyChanged("RouteID")
+				Me.OnRouteIDChanged
 			End If
 		End Set
 	End Property
@@ -1751,30 +1751,30 @@ Partial Public Class [Stop]
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Flight_Stop", Storage:="_Flight", ThisKey:="FlightID", OtherKey:="FlightID", IsForeignKey:=true)>  _
-	Public Property Flight() As Flight
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Route_Stop", Storage:="_Route", ThisKey:="RouteID", OtherKey:="RouteID", IsForeignKey:=true)>  _
+	Public Property Route() As Route
 		Get
-			Return Me._Flight.Entity
+			Return Me._Route.Entity
 		End Get
 		Set
-			Dim previousValue As Flight = Me._Flight.Entity
+			Dim previousValue As Route = Me._Route.Entity
 			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._Flight.HasLoadedOrAssignedValue = false)) Then
+						OrElse (Me._Route.HasLoadedOrAssignedValue = false)) Then
 				Me.SendPropertyChanging
 				If ((previousValue Is Nothing)  _
 							= false) Then
-					Me._Flight.Entity = Nothing
+					Me._Route.Entity = Nothing
 					previousValue.Stops.Remove(Me)
 				End If
-				Me._Flight.Entity = value
+				Me._Route.Entity = value
 				If ((value Is Nothing)  _
 							= false) Then
 					value.Stops.Add(Me)
-					Me._FlightID = value.FlightID
+					Me._RouteID = value.RouteID
 				Else
-					Me._FlightID = CType(Nothing, String)
+					Me._RouteID = CType(Nothing, String)
 				End If
-				Me.SendPropertyChanged("Flight")
+				Me.SendPropertyChanged("Route")
 			End If
 		End Set
 	End Property
