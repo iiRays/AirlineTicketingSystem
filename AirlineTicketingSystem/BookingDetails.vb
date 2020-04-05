@@ -38,6 +38,7 @@
     End Sub
 
     Private Sub BookingDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblFlightId.Text = Booking.FlightID
         lblBookingId.Text = Booking.BookingID
         lblPrice.Text = "RM " & Booking.TotalPrice
         lblDuration.Text = Booking.Flight.Route.DurationHour.ToString & "h " & Booking.Flight.Route.DurationMins.ToString
@@ -53,6 +54,15 @@
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Quick.Navigate(Me, New MyBookings)
+        If App.GetUser Is Nothing Then
+            Quick.Navigate(Me, New BookingSearch())
+        Else
+            Quick.Navigate(Me, New MyBookings)
+        End If
+
+    End Sub
+
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnViewFlight.Click
+        Quick.Navigate(Me, New FlightDetails(Booking))
     End Sub
 End Class

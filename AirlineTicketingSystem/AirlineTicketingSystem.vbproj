@@ -165,6 +165,12 @@
     <Compile Include="BookingDetails.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BookingSearch.Designer.vb">
+      <DependentUpon>BookingSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookingSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BookingSummary.Designer.vb">
       <DependentUpon>BookingSummary.vb</DependentUpon>
     </Compile>
@@ -350,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookingDetails.resx">
       <DependentUpon>BookingDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingSearch.resx">
+      <DependentUpon>BookingSearch.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookingSummary.resx">
       <DependentUpon>BookingSummary.vb</DependentUpon>

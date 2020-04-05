@@ -1,7 +1,18 @@
 ﻿Public Class BookFlight2
     Private booking As Booking = App.Session.Get("Booking")
     Private Sub BookFlight2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        booking.BookingID = Quick.GenerateId(Of Booking)()
+
+        Dim exists = True
+        Dim generatedId = ""
+        While exists
+            generatedId = Quick.GetRandomString(6)
+            If DB.Get(Of Booking)(generatedId) Is Nothing Then
+                'Cannot find similar ID in db, can proceed
+                exists = False
+            End If
+        End While
+
+        booking.BookingID = generatedId
 
         For passengerCount As Integer = 0 To booking.NoOfPassengers - 1 Step 1
             'Add single passenger name textbox

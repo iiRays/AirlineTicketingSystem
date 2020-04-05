@@ -2,10 +2,8 @@
     Public Flight As Flight
     Public FlightList As FlightList
     Private Sub btnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
-        Dim flightDetails As New FlightDetails()
         App.Session.Add("selectedFlight", Flight)
-        flightDetails.Show()
-        FlightList.Close() 'Closes the flightList screen
+        Quick.Navigate(FlightList, New FlightDetails())
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint

@@ -68,6 +68,6 @@
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Quick.Navigate(Me, New FlightDetails)
+        Quick.Navigate(Me, New FlightDetails())
     End Sub
 End Class

@@ -27,7 +27,7 @@ Partial Class BookingDetails
 		Me.lblBaggageKg = New System.Windows.Forms.Label()
 		Me.lblStatus = New System.Windows.Forms.Label()
 		Me.Label8 = New System.Windows.Forms.Label()
-		Me.btnEdit = New System.Windows.Forms.Button()
+		Me.btnViewFlight = New System.Windows.Forms.Button()
 		Me.Label6 = New System.Windows.Forms.Label()
 		Me.lblPrice = New System.Windows.Forms.Label()
 		Me.Label7 = New System.Windows.Forms.Label()
@@ -58,7 +58,7 @@ Partial Class BookingDetails
 		Me.Panel1.Controls.Add(Me.lblBaggageKg)
 		Me.Panel1.Controls.Add(Me.lblStatus)
 		Me.Panel1.Controls.Add(Me.Label8)
-		Me.Panel1.Controls.Add(Me.btnEdit)
+		Me.Panel1.Controls.Add(Me.btnViewFlight)
 		Me.Panel1.Controls.Add(Me.Label6)
 		Me.Panel1.Controls.Add(Me.lblPrice)
 		Me.Panel1.Controls.Add(Me.Label7)
@@ -132,19 +132,19 @@ Partial Class BookingDetails
 		Me.Label8.Text = "Status"
 		Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
-		'btnEdit
+		'btnViewFlight
 		'
-		Me.btnEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(142, Byte), Integer))
-		Me.btnEdit.FlatAppearance.BorderSize = 0
-		Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.btnEdit.Font = New System.Drawing.Font("Poppins", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
-		Me.btnEdit.ForeColor = System.Drawing.Color.White
-		Me.btnEdit.Location = New System.Drawing.Point(601, 19)
-		Me.btnEdit.Name = "btnEdit"
-		Me.btnEdit.Size = New System.Drawing.Size(125, 50)
-		Me.btnEdit.TabIndex = 61
-		Me.btnEdit.Text = "view"
-		Me.btnEdit.UseVisualStyleBackColor = False
+		Me.btnViewFlight.BackColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(142, Byte), Integer))
+		Me.btnViewFlight.FlatAppearance.BorderSize = 0
+		Me.btnViewFlight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btnViewFlight.Font = New System.Drawing.Font("Poppins", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+		Me.btnViewFlight.ForeColor = System.Drawing.Color.White
+		Me.btnViewFlight.Location = New System.Drawing.Point(601, 19)
+		Me.btnViewFlight.Name = "btnViewFlight"
+		Me.btnViewFlight.Size = New System.Drawing.Size(125, 50)
+		Me.btnViewFlight.TabIndex = 61
+		Me.btnViewFlight.Text = "view"
+		Me.btnViewFlight.UseVisualStyleBackColor = False
 		'
 		'Label6
 		'
@@ -433,7 +433,7 @@ Partial Class BookingDetails
     Friend WithEvents lblTitle As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents lblFlightId As Label
-    Friend WithEvents btnEdit As Button
+    Friend WithEvents btnViewFlight As Button
     Friend WithEvents lblStatus As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label

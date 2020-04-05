@@ -1,7 +1,29 @@
 ﻿Public Class FlightDetails
     Private Flight As New Flight
-    Private Sub FlightDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private IsBooking = True
+    Private ViewingBooking As New Booking
+
+    Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+
         Flight = App.Session.Get("selectedFlight")
+    End Sub
+    Sub New(ViewingBooking As Booking)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        Me.IsBooking = False
+        Me.ViewingBooking = ViewingBooking
+        Me.Flight = ViewingBooking.Flight
+    End Sub
+
+    Private Sub FlightDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblSeats.Text = Flight.Bookings.Count & "/" & Flight.Plane.Capacity 'NOTE: Does not account for multiple passengers per booking YET
         If Flight.IsDaily Then
             lblDate.Text = "DAILY"
@@ -23,13 +45,21 @@
         Else
             btnEdit.Hide()
         End If
+
+        If IsBooking = False Then
+            btnGo.Hide()
+        End If
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        'Clear selected flight
-        App.Session.Delete("selectedFlight")
+        If Not IsBooking Then
+            Quick.Navigate(Me, New BookingDetails(ViewingBooking))
+        Else
+            'Clear selected flight
+            App.Session.Delete("selectedFlight")
 
-        Quick.Navigate(Me, New FlightList)
+            Quick.Navigate(Me, New FlightList)
+        End If
     End Sub
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click

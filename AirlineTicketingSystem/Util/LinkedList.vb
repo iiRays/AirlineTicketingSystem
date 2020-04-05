@@ -63,14 +63,18 @@
         Dim temp = Top
         Dim previous As New LinkedNode(Of T)()
 
-        If Size = 1 And temp.Tag.Equals(Tag) Then
+
+        If Size = 1 AndAlso temp.Tag.Equals(Tag) Then
             Clear()
+        ElseIf Size = 0 Then
+            ' If no item inside
+            Return
         ElseIf (Size = 2 And temp.Next.Tag.Equals(Tag)) Then
             temp.Next = Nothing
             Size -= 1
         Else 'If got more than 2 items
             For counter As Integer = 1 To Size Step 1
-                If temp.Next.Tag.Equals(Tag) Then 'If the next item is to be deleted
+                If temp.Next IsNot Nothing AndAlso temp.Next.Tag.Equals(Tag) Then 'If the next item is to be deleted
                     'Replace the next item with the one after
                     temp.Next = temp.Next.Next
                     Size -= 1
