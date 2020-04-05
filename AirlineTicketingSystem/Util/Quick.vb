@@ -107,4 +107,34 @@ Public Class Quick
 
         Return id
     End Function
+
+    Public Shared Function GenerateId(Of T)(count As Integer) As String
+        Dim total = count
+        Dim id As String = ""
+
+        If GetType(T) = GetType(User) Then
+            id += "C"
+        ElseIf GetType(T) = GetType(Booking) Then
+            id += "B"
+        ElseIf GetType(T) = GetType(City) Then
+            id += "S" 'User already uses C
+        ElseIf GetType(T) = GetType(Flight) Then
+            id += "F"
+        ElseIf GetType(T) = GetType(Route) Then
+            id += "R"
+        ElseIf GetType(T) = GetType(Plane) Then
+            id += "P"
+        ElseIf GetType(T) = GetType(Ticket) Then
+            id += "T"
+        Else
+            Throw New Exception("Object's type is not present in Airline Database.")
+        End If
+
+        For i As Integer = 0 To 8 - total.ToString.Length
+            id += "0"
+        Next
+        id += (total + 1).ToString
+
+        Return id
+    End Function
 End Class

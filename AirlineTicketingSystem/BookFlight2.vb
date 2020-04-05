@@ -35,7 +35,7 @@
                 Return
             End If
             ticket.Seat = "ECO"
-            ticket.TicketID = Quick.GenerateId(Of Ticket)()
+            ticket.TicketID = Quick.GenerateId(Of Ticket)(DB.GetCount(Of Ticket) + passengerCount)
             passengerList.Add(ticket)
         Next
 
@@ -43,7 +43,7 @@
         App.Session.Add("passengerList", passengerList)
 
         'Calculate price
-        booking.TotalPrice = CType(App.Session.Get("selectedFlight"), Flight).Price + (15 * booking.NoOfPassengers)
+        booking.TotalPrice = CType(App.Session.Get("selectedFlight"), Flight).Price * booking.NoOfPassengers + (15 * booking.ExtraBaggageKG)
 
         'Update session
         App.Session.Set("Booking", booking)

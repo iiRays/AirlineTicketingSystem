@@ -23,6 +23,6 @@
     End Sub
 
     Private Sub BtnMyBookings_Click(sender As Object, e As EventArgs) Handles btnMyBookings.Click
-        'Quick.Navigate(Me, New MyBookings)
+        Quick.Navigate(Me, New MyBookings)
     End Sub
 End Class
