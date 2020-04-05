@@ -159,10 +159,22 @@
     <Compile Include="AdminRoutesDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BookingDetails.Designer.vb">
+      <DependentUpon>BookingDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookingDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BookingSummary.Designer.vb">
       <DependentUpon>BookingSummary.vb</DependentUpon>
     </Compile>
     <Compile Include="BookingSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyBookings.Designer.vb">
+      <DependentUpon>MyBookings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MyBookings.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Splash.Designer.vb">
@@ -170,6 +182,12 @@
     </Compile>
     <Compile Include="Splash.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\BookingItem.Designer.vb">
+      <DependentUpon>BookingItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BookingItem.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\BookingSummaryPassengerItem.Designer.vb">
       <DependentUpon>BookingSummaryPassengerItem.vb</DependentUpon>
@@ -330,14 +348,23 @@
     <EmbeddedResource Include="BookFlight2.resx">
       <DependentUpon>BookFlight2.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BookingDetails.resx">
+      <DependentUpon>BookingDetails.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookingSummary.resx">
       <DependentUpon>BookingSummary.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FlightDetails.resx">
       <DependentUpon>FlightDetails.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyBookings.resx">
+      <DependentUpon>MyBookings.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\BookingItem.resx">
+      <DependentUpon>BookingItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\BookingSummaryPassengerItem.resx">
       <DependentUpon>BookingSummaryPassengerItem.vb</DependentUpon>
