@@ -38,15 +38,16 @@
     End Sub
 
     Private Sub BookingDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblFlightId.Text = Booking.FlightID
+        lblFlightId.Text = Booking.Flight.FlightNo
+        lblBaggageKg.Text = Booking.ExtraBaggageKG
+        lblPassengers.Text = Booking.NoOfPassengers
         lblBookingId.Text = Booking.BookingID
         lblPrice.Text = "RM " & Booking.TotalPrice
-        lblDuration.Text = Booking.Flight.Route.DurationHour.ToString & "h " & Booking.Flight.Route.DurationMins.ToString
         lblSource.Text = DB.GetFlightSource(Booking.Flight.FlightID).City.Name
         lblDepartureTime.Text = Booking.Flight.DepartureTime.ToString("HH:mm")
         lblDestination.Text = DB.GetFlightDestination(Booking.Flight.FlightID).City.Name
         lblArrivalTime.Text = Booking.Flight.ArrivalTime.ToString("HH:mm")
-        lblDuration.Text = Booking.Flight.ArrivalTime.Subtract(Booking.Flight.DepartureTime).Hours & "h " & Booking.Flight.ArrivalTime.Subtract(Booking.Flight.DepartureTime).Minutes & "M approx."
+        lblPaymentDate.Text = Booking.PaymentDate.ToString("d MMM yyyy")
     End Sub
 
     Private Sub LblPrice_Click(sender As Object, e As EventArgs) Handles lblPrice.Click
@@ -54,7 +55,7 @@
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        If App.GetUser Is Nothing Then
+        If App.User Is Nothing Then
             Quick.Navigate(Me, New BookingSearch())
         Else
             Quick.Navigate(Me, New MyBookings)

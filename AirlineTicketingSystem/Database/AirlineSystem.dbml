@@ -50,10 +50,12 @@
       <Column Name="FlightID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="RouteID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Column Name="PlaneID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="FlightNo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="DepartureTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="ArrivalTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="Price" Type="System.Decimal" DbType="Decimal(7,2) NOT NULL" CanBeNull="false" />
       <Column Name="IsDaily" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsFlightInstance" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Association Name="Flight_Booking" Member="Bookings" ThisKey="FlightID" OtherKey="FlightID" Type="Booking" />
       <Association Name="Plane_Flight" Member="Plane" ThisKey="PlaneID" OtherKey="PlaneID" Type="Plane" IsForeignKey="true" />
       <Association Name="Route_Flight" Member="Route" ThisKey="RouteID" OtherKey="RouteID" Type="Route" IsForeignKey="true" />

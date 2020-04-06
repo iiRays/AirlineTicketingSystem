@@ -22,7 +22,7 @@
 
 		'Initialize session
 		App.Session = New LinkedList(Of Object)
-
+		Email.ServerEmail = "aozorairlines@gmail.com"
 
 	End Sub
 

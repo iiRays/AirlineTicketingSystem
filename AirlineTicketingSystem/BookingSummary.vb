@@ -17,7 +17,7 @@
         Else
             lblDate.Text = Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Flight.DepartureTime.Month) & " " & Flight.DepartureTime.Day.ToString
         End If
-        lblId.Text = Flight.FlightID
+        lblId.Text = flight.FlightNo
         lblDuration.Text = Flight.Route.DurationHour.ToString & "h " & Flight.Route.DurationMins.ToString
         lblSource.Text = DB.GetFlightSource(Flight.FlightID).City.Name
         lblDepartureTime.Text = Flight.DepartureTime.ToString("HH:mm")
@@ -55,7 +55,7 @@
 
         'IsUserLoggedIn
         If App.IsLoggedIn Then
-            user = App.Session.Get("user")
+            user = App.User
 
         Else
             'Create guest
@@ -78,5 +78,7 @@
         For Each Ticket As Ticket In passengerList
             DB.Insert(Ticket)
         Next
+
+        App.Session.Clear()
     End Sub
 End Class

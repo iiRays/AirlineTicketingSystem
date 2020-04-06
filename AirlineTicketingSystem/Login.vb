@@ -19,8 +19,7 @@
                 Quick.ShowError("Login error", "Password is incorrect")
             Else
                 'Perform login
-                App.Session.Add("user", cResult.First())
-                App.Session.Add("role", "user")
+                App.User = cResult.First()
                 Quick.Print("Login is successful.")
                 Dim form As New HomeUser
                 form.Show()

@@ -16,6 +16,7 @@ Public Class Register
         Else
             'No gender is chosen
             Quick.ShowError("Registration Failed", "Ensure gender is selected.")
+            Return
         End If
 
         ' Hash password
@@ -23,9 +24,26 @@ Public Class Register
         cust.Password = hasher.hashedPassword
         cust.PasswordSalt = hasher.salt
 
-        Insert(cust)
+        'Generate verification code
+        Dim verificationCode = Quick.GetRandomString(10)
 
-        Quick.Navigate(Me, New Login)
+        Try
+            'Send welcome email
+            Email.Send("Welcome to Ao Zora!", "Hey " & cust.Name & "! Complete your registration by entering this verification code: <br><h2>" & verificationCode & "</h2>", cust.Email)
+
+        Catch ex As Exception
+            Quick.ShowError("You're almost there!", "The email you have entered (" & cust.Email & ") is an invalid email.")
+            Return
+        End Try
+
+        'Redirect
+
+        Dim form As New VerifyEmail()
+        form.User = cust
+        form.Code = verificationCode
+        form.RegistrationForm = Me
+        form.Show()
+        Me.Hide()
     End Sub
 
     Private Sub btnRedirect_Click(sender As Object, e As EventArgs) Handles btnRedirect.Click

@@ -14,12 +14,14 @@
         lblSeats.Text = Flight.Bookings.Count & "/" & Flight.Plane.Capacity 'NOTE: Does not account for multiple passengers per booking YET
         If Flight.IsDaily Then
             lblDate.Text = "DAILY"
+            lblSeats.Hide()
+            lblSeatsTitle.Hide()
         Else
             lblDate.Text = Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Flight.DepartureTime.Month) & " " & Flight.DepartureTime.Day.ToString
         End If
 
         lblPrice.Text = "RM " & Flight.Price
-        lblId.Text = Flight.FlightID
+        lblId.Text = Flight.FlightNo
         lblDuration.Text = Flight.Route.DurationHour.ToString & "h " & Flight.Route.DurationMins.ToString
         lblSource.Text = DB.GetFlightSource(Flight.FlightID).City.Name
         lblDepartureTime.Text = Flight.DepartureTime.ToString("HH:mm")
@@ -36,7 +38,7 @@
 
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles lblSeatsTitle.Click
 
     End Sub
 

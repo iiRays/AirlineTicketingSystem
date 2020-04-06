@@ -122,9 +122,9 @@ Partial Class BookingItem
 		Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
 		Me.Label1.Location = New System.Drawing.Point(159, 12)
 		Me.Label1.Name = "Label1"
-		Me.Label1.Size = New System.Drawing.Size(106, 39)
+		Me.Label1.Size = New System.Drawing.Size(114, 39)
 		Me.Label1.TabIndex = 51
-		Me.Label1.Text = "Flight ID"
+		Me.Label1.Text = "Flight No"
 		Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
 		'lblArrivalTime
@@ -180,7 +180,7 @@ Partial Class BookingItem
 		Me.lblFlightId.AutoSize = True
 		Me.lblFlightId.Font = New System.Drawing.Font("Poppins", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.lblFlightId.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-		Me.lblFlightId.Location = New System.Drawing.Point(260, 12)
+		Me.lblFlightId.Location = New System.Drawing.Point(279, 12)
 		Me.lblFlightId.Name = "lblFlightId"
 		Me.lblFlightId.Size = New System.Drawing.Size(78, 39)
 		Me.lblFlightId.TabIndex = 42

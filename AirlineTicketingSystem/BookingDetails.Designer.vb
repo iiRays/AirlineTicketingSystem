@@ -44,7 +44,7 @@ Partial Class BookingDetails
 		Me.lblPassengers = New System.Windows.Forms.Label()
 		Me.lblDepartureTime = New System.Windows.Forms.Label()
 		Me.lblSource = New System.Windows.Forms.Label()
-		Me.lblDuration = New System.Windows.Forms.Label()
+		Me.lblPaymentDate = New System.Windows.Forms.Label()
 		Me.lblDate = New System.Windows.Forms.Label()
 		Me.btnBack = New System.Windows.Forms.Button()
 		Me.lblTitle = New System.Windows.Forms.Label()
@@ -75,7 +75,7 @@ Partial Class BookingDetails
 		Me.Panel1.Controls.Add(Me.lblPassengers)
 		Me.Panel1.Controls.Add(Me.lblDepartureTime)
 		Me.Panel1.Controls.Add(Me.lblSource)
-		Me.Panel1.Controls.Add(Me.lblDuration)
+		Me.Panel1.Controls.Add(Me.lblPaymentDate)
 		Me.Panel1.Controls.Add(Me.lblDate)
 		Me.Panel1.Location = New System.Drawing.Point(109, 161)
 		Me.Panel1.Name = "Panel1"
@@ -176,11 +176,11 @@ Partial Class BookingDetails
 		Me.Label7.BackColor = System.Drawing.Color.Transparent
 		Me.Label7.Font = New System.Drawing.Font("Poppins", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-		Me.Label7.Location = New System.Drawing.Point(252, 26)
+		Me.Label7.Location = New System.Drawing.Point(252, 28)
 		Me.Label7.Name = "Label7"
-		Me.Label7.Size = New System.Drawing.Size(131, 48)
+		Me.Label7.Size = New System.Drawing.Size(140, 48)
 		Me.Label7.TabIndex = 60
-		Me.Label7.Text = "Flight ID"
+		Me.Label7.Text = "Flight No"
 		Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
 		'lblFlightId
@@ -189,7 +189,7 @@ Partial Class BookingDetails
 		Me.lblFlightId.BackColor = System.Drawing.Color.Transparent
 		Me.lblFlightId.Font = New System.Drawing.Font("Poppins", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.lblFlightId.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-		Me.lblFlightId.Location = New System.Drawing.Point(379, 19)
+		Me.lblFlightId.Location = New System.Drawing.Point(388, 21)
 		Me.lblFlightId.Name = "lblFlightId"
 		Me.lblFlightId.Size = New System.Drawing.Size(121, 60)
 		Me.lblFlightId.TabIndex = 59
@@ -272,7 +272,7 @@ Partial Class BookingDetails
 		'lblBookingId
 		'
 		Me.lblBookingId.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-		Me.lblBookingId.Font = New System.Drawing.Font("OCR A Extended", 40.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.lblBookingId.Font = New System.Drawing.Font("OCR A Extended", 35.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.lblBookingId.ForeColor = System.Drawing.Color.White
 		Me.lblBookingId.Location = New System.Drawing.Point(0, 0)
 		Me.lblBookingId.Name = "lblBookingId"
@@ -343,17 +343,17 @@ Partial Class BookingDetails
 		Me.lblSource.Text = "Kuala Lumpur"
 		Me.lblSource.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
-		'lblDuration
+		'lblPaymentDate
 		'
-		Me.lblDuration.AutoSize = True
-		Me.lblDuration.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDuration.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-		Me.lblDuration.Location = New System.Drawing.Point(829, 121)
-		Me.lblDuration.Name = "lblDuration"
-		Me.lblDuration.Size = New System.Drawing.Size(140, 42)
-		Me.lblDuration.TabIndex = 43
-		Me.lblDuration.Text = "Jan 1 2020"
-		Me.lblDuration.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+		Me.lblPaymentDate.AutoSize = True
+		Me.lblPaymentDate.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.lblPaymentDate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
+		Me.lblPaymentDate.Location = New System.Drawing.Point(829, 121)
+		Me.lblPaymentDate.Name = "lblPaymentDate"
+		Me.lblPaymentDate.Size = New System.Drawing.Size(140, 42)
+		Me.lblPaymentDate.TabIndex = 43
+		Me.lblPaymentDate.Text = "Jan 1 2020"
+		Me.lblPaymentDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
 		'lblDate
 		'
@@ -427,7 +427,7 @@ Partial Class BookingDetails
     Friend WithEvents lblPassengers As Label
     Friend WithEvents lblDepartureTime As Label
     Friend WithEvents lblSource As Label
-    Friend WithEvents lblDuration As Label
+    Friend WithEvents lblPaymentDate As Label
     Friend WithEvents lblDate As Label
     Friend WithEvents btnBack As Button
     Friend WithEvents lblTitle As Label

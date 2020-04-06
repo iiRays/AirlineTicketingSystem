@@ -1,6 +1,6 @@
 ﻿Public Class MyBookings
     Private Sub MyBookings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim user As User = App.GetUser()
+        Dim user As User = App.User
         Dim bookingList As List(Of Booking) = user.Bookings.ToList
         Dim loopCount = 0
 

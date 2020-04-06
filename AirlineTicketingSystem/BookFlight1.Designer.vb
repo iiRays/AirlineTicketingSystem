@@ -39,6 +39,9 @@ Partial Class BookFlight1
 		Me.btnNext = New System.Windows.Forms.Button()
 		Me.txtLuggageKg = New System.Windows.Forms.TextBox()
 		Me.lblLuggage = New System.Windows.Forms.Label()
+		Me.dtpDate = New System.Windows.Forms.DateTimePicker()
+		Me.txtDate = New System.Windows.Forms.TextBox()
+		Me.Label5 = New System.Windows.Forms.Label()
 		Me.Panel2.SuspendLayout()
 		Me.Panel1.SuspendLayout()
 		Me.SuspendLayout()
@@ -168,11 +171,10 @@ Partial Class BookFlight1
 		'txtPeople
 		'
 		Me.txtPeople.BorderStyle = System.Windows.Forms.BorderStyle.None
-		Me.txtPeople.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtPeople.Location = New System.Drawing.Point(255, 284)
-		Me.txtPeople.Multiline = True
+		Me.txtPeople.Font = New System.Drawing.Font("Microsoft Sans Serif", 37.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.txtPeople.Location = New System.Drawing.Point(313, 289)
 		Me.txtPeople.Name = "txtPeople"
-		Me.txtPeople.Size = New System.Drawing.Size(100, 75)
+		Me.txtPeople.Size = New System.Drawing.Size(100, 57)
 		Me.txtPeople.TabIndex = 50
 		Me.txtPeople.Tag = ""
 		'
@@ -181,23 +183,22 @@ Partial Class BookFlight1
 		Me.Label4.BackColor = System.Drawing.Color.White
 		Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
 		Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-		Me.Label4.Location = New System.Drawing.Point(101, 284)
+		Me.Label4.Location = New System.Drawing.Point(104, 289)
 		Me.Label4.Name = "Label4"
 		Me.Label4.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-		Me.Label4.Size = New System.Drawing.Size(160, 75)
+		Me.Label4.Size = New System.Drawing.Size(214, 57)
 		Me.Label4.TabIndex = 49
-		Me.Label4.Text = "people"
+		Me.Label4.Text = "no. of people"
 		Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
 		'txtCard
 		'
 		Me.txtCard.BorderStyle = System.Windows.Forms.BorderStyle.None
-		Me.txtCard.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtCard.Location = New System.Drawing.Point(322, 382)
+		Me.txtCard.Font = New System.Drawing.Font("Microsoft Sans Serif", 37.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.txtCard.Location = New System.Drawing.Point(326, 384)
 		Me.txtCard.MaxLength = 19
-		Me.txtCard.Multiline = True
 		Me.txtCard.Name = "txtCard"
-		Me.txtCard.Size = New System.Drawing.Size(300, 75)
+		Me.txtCard.Size = New System.Drawing.Size(453, 57)
 		Me.txtCard.TabIndex = 52
 		Me.txtCard.Tag = ""
 		'
@@ -206,10 +207,10 @@ Partial Class BookFlight1
 		Me.Label3.BackColor = System.Drawing.Color.White
 		Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
 		Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-		Me.Label3.Location = New System.Drawing.Point(101, 382)
+		Me.Label3.Location = New System.Drawing.Point(105, 384)
 		Me.Label3.Name = "Label3"
 		Me.Label3.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-		Me.Label3.Size = New System.Drawing.Size(225, 75)
+		Me.Label3.Size = New System.Drawing.Size(225, 57)
 		Me.Label3.TabIndex = 51
 		Me.Label3.Text = "credit card no."
 		Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -231,12 +232,11 @@ Partial Class BookFlight1
 		'txtLuggageKg
 		'
 		Me.txtLuggageKg.BorderStyle = System.Windows.Forms.BorderStyle.None
-		Me.txtLuggageKg.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtLuggageKg.Location = New System.Drawing.Point(322, 479)
+		Me.txtLuggageKg.Font = New System.Drawing.Font("Microsoft Sans Serif", 37.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.txtLuggageKg.Location = New System.Drawing.Point(391, 466)
 		Me.txtLuggageKg.MaxLength = 19
-		Me.txtLuggageKg.Multiline = True
 		Me.txtLuggageKg.Name = "txtLuggageKg"
-		Me.txtLuggageKg.Size = New System.Drawing.Size(100, 75)
+		Me.txtLuggageKg.Size = New System.Drawing.Size(100, 57)
 		Me.txtLuggageKg.TabIndex = 55
 		Me.txtLuggageKg.Tag = ""
 		'
@@ -245,13 +245,49 @@ Partial Class BookFlight1
 		Me.lblLuggage.BackColor = System.Drawing.Color.White
 		Me.lblLuggage.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
 		Me.lblLuggage.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-		Me.lblLuggage.Location = New System.Drawing.Point(101, 479)
+		Me.lblLuggage.Location = New System.Drawing.Point(105, 466)
 		Me.lblLuggage.Name = "lblLuggage"
 		Me.lblLuggage.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-		Me.lblLuggage.Size = New System.Drawing.Size(225, 75)
+		Me.lblLuggage.Size = New System.Drawing.Size(290, 57)
 		Me.lblLuggage.TabIndex = 54
 		Me.lblLuggage.Text = "luggage kg. ($15/kg)"
 		Me.lblLuggage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		'
+		'dtpDate
+		'
+		Me.dtpDate.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText
+		Me.dtpDate.CalendarTitleForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+		Me.dtpDate.CustomFormat = "d MMM yyyy"
+		Me.dtpDate.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+		Me.dtpDate.Location = New System.Drawing.Point(670, 297)
+		Me.dtpDate.Name = "dtpDate"
+		Me.dtpDate.Size = New System.Drawing.Size(183, 37)
+		Me.dtpDate.TabIndex = 68
+		'
+		'txtDate
+		'
+		Me.txtDate.BorderStyle = System.Windows.Forms.BorderStyle.None
+		Me.txtDate.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.txtDate.Location = New System.Drawing.Point(652, 289)
+		Me.txtDate.Multiline = True
+		Me.txtDate.Name = "txtDate"
+		Me.txtDate.Size = New System.Drawing.Size(215, 57)
+		Me.txtDate.TabIndex = 67
+		Me.txtDate.Tag = ""
+		'
+		'Label5
+		'
+		Me.Label5.BackColor = System.Drawing.Color.White
+		Me.Label5.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
+		Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
+		Me.Label5.Location = New System.Drawing.Point(460, 289)
+		Me.Label5.Name = "Label5"
+		Me.Label5.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
+		Me.Label5.Size = New System.Drawing.Size(198, 57)
+		Me.Label5.TabIndex = 66
+		Me.Label5.Text = "departure date"
+		Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
 		'BookFlight1
 		'
@@ -259,6 +295,9 @@ Partial Class BookFlight1
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
 		Me.ClientSize = New System.Drawing.Size(1264, 681)
+		Me.Controls.Add(Me.dtpDate)
+		Me.Controls.Add(Me.txtDate)
+		Me.Controls.Add(Me.Label5)
 		Me.Controls.Add(Me.txtLuggageKg)
 		Me.Controls.Add(Me.lblLuggage)
 		Me.Controls.Add(Me.btnNext)
@@ -298,4 +337,7 @@ Partial Class BookFlight1
     Friend WithEvents btnNext As Button
     Friend WithEvents txtLuggageKg As TextBox
     Friend WithEvents lblLuggage As Label
+	Friend WithEvents dtpDate As DateTimePicker
+	Friend WithEvents txtDate As TextBox
+	Friend WithEvents Label5 As Label
 End Class

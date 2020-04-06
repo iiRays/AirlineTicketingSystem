@@ -21,6 +21,7 @@
 		lblDestination.Text = DB.GetFlightDestination(Booking.Flight.FlightID).City.Name
 		lblArrivalTime.Text = Booking.Flight.ArrivalTime.ToString("HH:mm")
 		lblBookingId.Text = Booking.BookingID
+		lblFlightId.Text = Booking.Flight.FlightNo
 	End Sub
 
 	Private Sub btnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click

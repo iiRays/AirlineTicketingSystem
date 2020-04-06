@@ -1044,6 +1044,8 @@ Partial Public Class Flight
 	
 	Private _PlaneID As String
 	
+	Private _FlightNo As String
+	
 	Private _DepartureTime As Date
 	
 	Private _ArrivalTime As Date
@@ -1051,6 +1053,8 @@ Partial Public Class Flight
 	Private _Price As Decimal
 	
 	Private _IsDaily As Boolean
+	
+	Private _IsFlightInstance As Boolean
 	
 	Private _Bookings As EntitySet(Of Booking)
 	
@@ -1077,6 +1081,10 @@ Partial Public Class Flight
     End Sub
     Partial Private Sub OnPlaneIDChanged()
     End Sub
+    Partial Private Sub OnFlightNoChanging(value As String)
+    End Sub
+    Partial Private Sub OnFlightNoChanged()
+    End Sub
     Partial Private Sub OnDepartureTimeChanging(value As Date)
     End Sub
     Partial Private Sub OnDepartureTimeChanged()
@@ -1092,6 +1100,10 @@ Partial Public Class Flight
     Partial Private Sub OnIsDailyChanging(value As Boolean)
     End Sub
     Partial Private Sub OnIsDailyChanged()
+    End Sub
+    Partial Private Sub OnIsFlightInstanceChanging(value As Boolean)
+    End Sub
+    Partial Private Sub OnIsFlightInstanceChanged()
     End Sub
     #End Region
 	
@@ -1153,6 +1165,22 @@ Partial Public Class Flight
 				Me._PlaneID = value
 				Me.SendPropertyChanged("PlaneID")
 				Me.OnPlaneIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FlightNo", DbType:="VarChar(10) NOT NULL", CanBeNull:=false)>  _
+	Public Property FlightNo() As String
+		Get
+			Return Me._FlightNo
+		End Get
+		Set
+			If (String.Equals(Me._FlightNo, value) = false) Then
+				Me.OnFlightNoChanging(value)
+				Me.SendPropertyChanging
+				Me._FlightNo = value
+				Me.SendPropertyChanged("FlightNo")
+				Me.OnFlightNoChanged
 			End If
 		End Set
 	End Property
@@ -1221,6 +1249,23 @@ Partial Public Class Flight
 				Me._IsDaily = value
 				Me.SendPropertyChanged("IsDaily")
 				Me.OnIsDailyChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsFlightInstance", DbType:="Bit NOT NULL")>  _
+	Public Property IsFlightInstance() As Boolean
+		Get
+			Return Me._IsFlightInstance
+		End Get
+		Set
+			If ((Me._IsFlightInstance = value)  _
+						= false) Then
+				Me.OnIsFlightInstanceChanging(value)
+				Me.SendPropertyChanging
+				Me._IsFlightInstance = value
+				Me.SendPropertyChanged("IsFlightInstance")
+				Me.OnIsFlightInstanceChanged
 			End If
 		End Set
 	End Property

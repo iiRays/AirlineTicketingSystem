@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub HomeUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblUsername.Text &= App.GetUser().Name
+        lblUsername.Text &= App.User.Name
         TitleBar.Load(Me)
     End Sub
 

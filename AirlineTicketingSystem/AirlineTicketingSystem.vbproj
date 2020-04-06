@@ -220,6 +220,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Util\App.vb" />
+    <Compile Include="Util\Email.vb" />
     <Compile Include="Util\LinkedList.vb" />
     <Compile Include="BookFlight1.Designer.vb">
       <DependentUpon>BookFlight1.vb</DependentUpon>
@@ -313,6 +314,12 @@
     <Compile Include="Util\Hash.vb" />
     <Compile Include="Util\Quick.vb" />
     <Compile Include="Util\TitleBar.vb" />
+    <Compile Include="VerifyEmail.Designer.vb">
+      <DependentUpon>VerifyEmail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VerifyEmail.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Account.resx">
@@ -416,6 +423,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\PassengerItem.resx">
       <DependentUpon>PassengerItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerifyEmail.resx">
+      <DependentUpon>VerifyEmail.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

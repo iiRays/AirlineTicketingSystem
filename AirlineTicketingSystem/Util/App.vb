@@ -2,20 +2,10 @@
     'To handle app-wide data
 
     Public Shared Session As LinkedList(Of Object)
-
-    'Logs the user in
-    Public Shared Function GetUser() As User
-        Dim user As User = Session.Get("user")
-
-        If user Is Nothing Then
-            Return Nothing
-        Else
-            Return user
-        End If
-    End Function
+    Public Shared User As User
 
     Public Shared Function IsLoggedIn() As Boolean
-        If Session.Get("user") Is Nothing Then
+        If User Is Nothing Then
             Return False
         Else
             Return True
