@@ -1,7 +1,7 @@
 ﻿Public Class BookFlight2
     Private booking As Booking = App.Session.Get("Booking")
     Private Sub BookFlight2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        TitleBar.Load(Me)
         Dim exists = True
         Dim generatedId = ""
         While exists

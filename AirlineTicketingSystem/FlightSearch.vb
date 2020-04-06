@@ -4,6 +4,6 @@
     End Sub
 
     Private Sub FlightSearch_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        TitleBar.Load(Me)
     End Sub
 End Class

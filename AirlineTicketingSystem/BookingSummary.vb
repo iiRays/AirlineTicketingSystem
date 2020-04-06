@@ -11,19 +11,20 @@
     End Sub
 
     Private Sub BookingSummary_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TitleBar.Load(Me)
         lblPrice.Text = CType(App.Session.Get("Booking"), Booking).TotalPrice
-        If Flight.IsDaily Then
+        If flight.IsDaily Then
             lblDate.Text = "DAILY"
         Else
-            lblDate.Text = Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Flight.DepartureTime.Month) & " " & Flight.DepartureTime.Day.ToString
+            lblDate.Text = flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(flight.DepartureTime.Month) & " " & flight.DepartureTime.Day.ToString
         End If
         lblId.Text = flight.FlightNo
-        lblDuration.Text = Flight.Route.DurationHour.ToString & "h " & Flight.Route.DurationMins.ToString
-        lblSource.Text = DB.GetFlightSource(Flight.FlightID).City.Name
-        lblDepartureTime.Text = Flight.DepartureTime.ToString("HH:mm")
-        lblDestination.Text = DB.GetFlightDestination(Flight.FlightID).City.Name
-        lblArrivalTime.Text = Flight.ArrivalTime.ToString("HH:mm")
-        lblDuration.Text = Flight.ArrivalTime.Subtract(Flight.DepartureTime).Hours & "h " & Flight.ArrivalTime.Subtract(Flight.DepartureTime).Minutes & "M"
+        lblDuration.Text = flight.Route.DurationHour.ToString & "h " & flight.Route.DurationMins.ToString
+        lblSource.Text = DB.GetFlightSource(flight.FlightID).City.Name
+        lblDepartureTime.Text = flight.DepartureTime.ToString("HH:mm")
+        lblDestination.Text = DB.GetFlightDestination(flight.FlightID).City.Name
+        lblArrivalTime.Text = flight.ArrivalTime.ToString("HH:mm")
+        lblDuration.Text = flight.ArrivalTime.Subtract(flight.DepartureTime).Hours & "h " & flight.ArrivalTime.Subtract(flight.DepartureTime).Minutes & "M"
 
         'Get panel reference
         Dim namePanel As Panel = Me.Controls("panelPassengers")
