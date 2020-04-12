@@ -1,27 +1,27 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class BookFlight1
-    Inherits System.Windows.Forms.Form
+	Inherits System.Windows.Forms.Form
 
-    'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-        Try
-            If disposing AndAlso components IsNot Nothing Then
-                components.Dispose()
-            End If
-        Finally
-            MyBase.Dispose(disposing)
-        End Try
-    End Sub
+	'Form overrides dispose to clean up the component list.
+	<System.Diagnostics.DebuggerNonUserCode()>
+	Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+		Try
+			If disposing AndAlso components IsNot Nothing Then
+				components.Dispose()
+			End If
+		Finally
+			MyBase.Dispose(disposing)
+		End Try
+	End Sub
 
-    'Required by the Windows Form Designer
-    Private components As System.ComponentModel.IContainer
+	'Required by the Windows Form Designer
+	Private components As System.ComponentModel.IContainer
 
-    'NOTE: The following procedure is required by the Windows Form Designer
-    'It can be modified using the Windows Form Designer.  
-    'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
-    Private Sub InitializeComponent()
+	'NOTE: The following procedure is required by the Windows Form Designer
+	'It can be modified using the Windows Form Designer.  
+	'Do not modify it using the code editor.
+	<System.Diagnostics.DebuggerStepThrough()>
+	Private Sub InitializeComponent()
 		Me.btnBack = New System.Windows.Forms.Button()
 		Me.lblTitle = New System.Windows.Forms.Label()
 		Me.Panel2 = New System.Windows.Forms.Panel()
@@ -39,9 +39,6 @@ Partial Class BookFlight1
 		Me.btnNext = New System.Windows.Forms.Button()
 		Me.txtLuggageKg = New System.Windows.Forms.TextBox()
 		Me.lblLuggage = New System.Windows.Forms.Label()
-		Me.dtpDate = New System.Windows.Forms.DateTimePicker()
-		Me.txtDate = New System.Windows.Forms.TextBox()
-		Me.Label5 = New System.Windows.Forms.Label()
 		Me.Panel2.SuspendLayout()
 		Me.Panel1.SuspendLayout()
 		Me.SuspendLayout()
@@ -253,51 +250,12 @@ Partial Class BookFlight1
 		Me.lblLuggage.Text = "luggage kg. ($15/kg)"
 		Me.lblLuggage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
-		'dtpDate
-		'
-		Me.dtpDate.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText
-		Me.dtpDate.CalendarTitleForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-		Me.dtpDate.CustomFormat = "d MMM yyyy"
-		Me.dtpDate.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-		Me.dtpDate.Location = New System.Drawing.Point(670, 297)
-		Me.dtpDate.Name = "dtpDate"
-		Me.dtpDate.Size = New System.Drawing.Size(183, 37)
-		Me.dtpDate.TabIndex = 68
-		'
-		'txtDate
-		'
-		Me.txtDate.BorderStyle = System.Windows.Forms.BorderStyle.None
-		Me.txtDate.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtDate.Location = New System.Drawing.Point(652, 289)
-		Me.txtDate.Multiline = True
-		Me.txtDate.Name = "txtDate"
-		Me.txtDate.Size = New System.Drawing.Size(215, 57)
-		Me.txtDate.TabIndex = 67
-		Me.txtDate.Tag = ""
-		'
-		'Label5
-		'
-		Me.Label5.BackColor = System.Drawing.Color.White
-		Me.Label5.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
-		Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-		Me.Label5.Location = New System.Drawing.Point(460, 289)
-		Me.Label5.Name = "Label5"
-		Me.Label5.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-		Me.Label5.Size = New System.Drawing.Size(198, 57)
-		Me.Label5.TabIndex = 66
-		Me.Label5.Text = "departure date"
-		Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-		'
 		'BookFlight1
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
 		Me.ClientSize = New System.Drawing.Size(1264, 681)
-		Me.Controls.Add(Me.dtpDate)
-		Me.Controls.Add(Me.txtDate)
-		Me.Controls.Add(Me.Label5)
 		Me.Controls.Add(Me.txtLuggageKg)
 		Me.Controls.Add(Me.lblLuggage)
 		Me.Controls.Add(Me.btnNext)
@@ -321,23 +279,20 @@ Partial Class BookFlight1
 	End Sub
 
 	Friend WithEvents btnBack As Button
-    Friend WithEvents lblTitle As Label
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents lblId As Label
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents lblArrival As Label
-    Friend WithEvents lblDestination As Label
-    Friend WithEvents lblDepartureTime As Label
-    Friend WithEvents lblSource As Label
-    Friend WithEvents lblDate As Label
-    Friend WithEvents txtPeople As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents txtCard As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents btnNext As Button
-    Friend WithEvents txtLuggageKg As TextBox
-    Friend WithEvents lblLuggage As Label
-	Friend WithEvents dtpDate As DateTimePicker
-	Friend WithEvents txtDate As TextBox
-	Friend WithEvents Label5 As Label
+	Friend WithEvents lblTitle As Label
+	Friend WithEvents Panel2 As Panel
+	Friend WithEvents lblId As Label
+	Friend WithEvents Panel1 As Panel
+	Friend WithEvents lblArrival As Label
+	Friend WithEvents lblDestination As Label
+	Friend WithEvents lblDepartureTime As Label
+	Friend WithEvents lblSource As Label
+	Friend WithEvents lblDate As Label
+	Friend WithEvents txtPeople As TextBox
+	Friend WithEvents Label4 As Label
+	Friend WithEvents txtCard As TextBox
+	Friend WithEvents Label3 As Label
+	Friend WithEvents btnNext As Button
+	Friend WithEvents txtLuggageKg As TextBox
+	Friend WithEvents lblLuggage As Label
 End Class

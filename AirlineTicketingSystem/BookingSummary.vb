@@ -72,8 +72,26 @@
             'ToDo: show a dialog to fill in guest info
         End If
 
-        booking.User = user
 
+        Dim existingFlight = DB.GetExistingFlight(flight, CType(App.Session.Get("selectedDate"), Date))
+
+        If existingFlight Is Nothing Then
+            'If this flight doesn't exist
+            flight.FlightID = Quick.GenerateId(Of Flight)()
+
+            DB.Insert(flight)
+        Else
+            If existingFlight.Bookings.Count = existingFlight.Plane.Capacity Then
+                ' Flight is full
+
+                Quick.ShowError("Flight is full", "It seems that the flight is completely full, which might have happened as you were booking your flight. You are not allowed to book this flight any longer")
+                Return
+            End If
+        End If
+
+            booking.User = user
+
+        booking.FlightID = flight.FlightID
         DB.Insert(booking)
         For Each Ticket As Ticket In passengerList
             DB.Insert(Ticket)

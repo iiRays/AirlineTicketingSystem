@@ -31,8 +31,6 @@ Partial Class FlightSearch
 		Me.TextBox1 = New System.Windows.Forms.TextBox()
 		Me.txtTo = New System.Windows.Forms.TextBox()
 		Me.btnSearch = New System.Windows.Forms.Button()
-		Me.txtPeople = New System.Windows.Forms.TextBox()
-		Me.Label4 = New System.Windows.Forms.Label()
 		Me.dtpDate = New System.Windows.Forms.DateTimePicker()
 		Me.txtDate = New System.Windows.Forms.TextBox()
 		Me.SuspendLayout()
@@ -92,7 +90,7 @@ Partial Class FlightSearch
 		Me.Label2.BackColor = System.Drawing.Color.White
 		Me.Label2.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
 		Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-		Me.Label2.Location = New System.Drawing.Point(289, 390)
+		Me.Label2.Location = New System.Drawing.Point(403, 389)
 		Me.Label2.Name = "Label2"
 		Me.Label2.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
 		Me.Label2.Size = New System.Drawing.Size(125, 75)
@@ -142,43 +140,21 @@ Partial Class FlightSearch
 		Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.btnSearch.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
 		Me.btnSearch.ForeColor = System.Drawing.Color.White
-		Me.btnSearch.Location = New System.Drawing.Point(799, 502)
+		Me.btnSearch.Location = New System.Drawing.Point(501, 489)
 		Me.btnSearch.Name = "btnSearch"
 		Me.btnSearch.Size = New System.Drawing.Size(165, 75)
 		Me.btnSearch.TabIndex = 46
 		Me.btnSearch.Text = "search"
 		Me.btnSearch.UseVisualStyleBackColor = False
 		'
-		'txtPeople
-		'
-		Me.txtPeople.BorderStyle = System.Windows.Forms.BorderStyle.None
-		Me.txtPeople.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtPeople.Location = New System.Drawing.Point(860, 390)
-		Me.txtPeople.Multiline = True
-		Me.txtPeople.Name = "txtPeople"
-		Me.txtPeople.Size = New System.Drawing.Size(100, 75)
-		Me.txtPeople.TabIndex = 48
-		Me.txtPeople.Tag = ""
-		'
-		'Label4
-		'
-		Me.Label4.BackColor = System.Drawing.Color.White
-		Me.Label4.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
-		Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-		Me.Label4.Location = New System.Drawing.Point(729, 390)
-		Me.Label4.Name = "Label4"
-		Me.Label4.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-		Me.Label4.Size = New System.Drawing.Size(135, 75)
-		Me.Label4.TabIndex = 47
-		Me.Label4.Text = "people"
-		Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-		'
 		'dtpDate
 		'
 		Me.dtpDate.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText
 		Me.dtpDate.CalendarTitleForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+		Me.dtpDate.CustomFormat = "d MMM yyyy"
 		Me.dtpDate.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.dtpDate.Location = New System.Drawing.Point(417, 404)
+		Me.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+		Me.dtpDate.Location = New System.Drawing.Point(524, 403)
 		Me.dtpDate.Name = "dtpDate"
 		Me.dtpDate.Size = New System.Drawing.Size(274, 43)
 		Me.dtpDate.TabIndex = 49
@@ -187,7 +163,7 @@ Partial Class FlightSearch
 		'
 		Me.txtDate.BorderStyle = System.Windows.Forms.BorderStyle.None
 		Me.txtDate.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtDate.Location = New System.Drawing.Point(410, 390)
+		Me.txtDate.Location = New System.Drawing.Point(524, 389)
 		Me.txtDate.Multiline = True
 		Me.txtDate.Name = "txtDate"
 		Me.txtDate.Size = New System.Drawing.Size(300, 75)
@@ -201,8 +177,6 @@ Partial Class FlightSearch
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
 		Me.ClientSize = New System.Drawing.Size(1264, 681)
 		Me.Controls.Add(Me.dtpDate)
-		Me.Controls.Add(Me.txtPeople)
-		Me.Controls.Add(Me.Label4)
 		Me.Controls.Add(Me.btnSearch)
 		Me.Controls.Add(Me.Label3)
 		Me.Controls.Add(Me.txtFrom)
@@ -229,8 +203,6 @@ Partial Class FlightSearch
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents txtTo As TextBox
     Friend WithEvents btnSearch As Button
-    Friend WithEvents txtPeople As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents dtpDate As DateTimePicker
-    Friend WithEvents txtDate As TextBox
+	Friend WithEvents dtpDate As DateTimePicker
+	Friend WithEvents txtDate As TextBox
 End Class

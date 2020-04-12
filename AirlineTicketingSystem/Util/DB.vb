@@ -1,5 +1,15 @@
 ﻿Public Class DB
     Public Shared context As New AirlineSystemDataContext()
+
+
+    Public Shared Function GetExistingFlight(flight As Flight, selectedDate As Date) As Flight
+        Dim results = From dbFlight In DB.context.Flights Where dbFlight.FlightNo = flight.FlightNo And dbFlight.DepartureTime.Day = selectedDate.Day And dbFlight.DepartureTime.Month = selectedDate.Month And dbFlight.DepartureTime.Year = selectedDate.Year
+        If results.Count = 0 Then
+            Return Nothing
+        Else
+            Return results.First
+        End If
+    End Function
     Public Shared Sub Insert(obj As Object)
 
         If TypeOf obj Is Plane Then
