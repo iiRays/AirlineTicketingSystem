@@ -52,25 +52,13 @@
         booking.PaymentDate = DateAndTime.Now()
         booking.FlightID = flight.FlightID
 
-        Dim user = New User()
+        Dim user As User = App.Session.Get("payer")
 
         'IsUserLoggedIn
-        If App.IsLoggedIn Then
-            user = App.User
-
-        Else
+        If Not App.IsLoggedIn Then
             'Create guest
-            user.Name = passengerList(0).Name 'First passenger will be the booking user
             user.IsStaff = False
             user.UserID = Quick.GenerateId(Of User)()
-            user.Email = "tbc"
-            user.CreditCardNo = booking.CreditCardNo
-            user.DateOfBirth = DateAndTime.Now()
-            user.Country = "tbc"
-            user.City = "tbc"
-            user.Gender = "G"
-
-            'ToDo: show a dialog to fill in guest info
         End If
 
 
@@ -99,5 +87,7 @@
         Next
 
         App.Session.Clear()
+
+        Quick.Navigate(Me, New BookingFinish(booking))
     End Sub
 End Class

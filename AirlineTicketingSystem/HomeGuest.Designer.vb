@@ -38,9 +38,10 @@ Partial Class HomeGuest
 		Me.btnLogin.Font = New System.Drawing.Font("Poppins", 35.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
 		Me.btnLogin.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
 		Me.btnLogin.Image = CType(resources.GetObject("btnLogin.Image"), System.Drawing.Image)
-		Me.btnLogin.Location = New System.Drawing.Point(654, 318)
+		Me.btnLogin.Location = New System.Drawing.Point(872, 391)
+		Me.btnLogin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
 		Me.btnLogin.Name = "btnLogin"
-		Me.btnLogin.Size = New System.Drawing.Size(300, 300)
+		Me.btnLogin.Size = New System.Drawing.Size(400, 369)
 		Me.btnLogin.TabIndex = 32
 		Me.btnLogin.UseVisualStyleBackColor = False
 		'
@@ -52,18 +53,20 @@ Partial Class HomeGuest
 		Me.btnFlights.Font = New System.Drawing.Font("Poppins", 35.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
 		Me.btnFlights.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
 		Me.btnFlights.Image = CType(resources.GetObject("btnFlights.Image"), System.Drawing.Image)
-		Me.btnFlights.Location = New System.Drawing.Point(328, 318)
+		Me.btnFlights.Location = New System.Drawing.Point(437, 391)
+		Me.btnFlights.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
 		Me.btnFlights.Name = "btnFlights"
-		Me.btnFlights.Size = New System.Drawing.Size(300, 300)
+		Me.btnFlights.Size = New System.Drawing.Size(400, 369)
 		Me.btnFlights.TabIndex = 31
 		Me.btnFlights.UseVisualStyleBackColor = False
 		'
 		'PictureBox1
 		'
 		Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-		Me.PictureBox1.Location = New System.Drawing.Point(-1, 30)
+		Me.PictureBox1.Location = New System.Drawing.Point(-1, 37)
+		Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
 		Me.PictureBox1.Name = "PictureBox1"
-		Me.PictureBox1.Size = New System.Drawing.Size(1280, 690)
+		Me.PictureBox1.Size = New System.Drawing.Size(1707, 849)
 		Me.PictureBox1.TabIndex = 33
 		Me.PictureBox1.TabStop = False
 		'
@@ -74,24 +77,26 @@ Partial Class HomeGuest
 		Me.btnBookingSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.btnBookingSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
 		Me.btnBookingSearch.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-		Me.btnBookingSearch.Location = New System.Drawing.Point(1067, 63)
+		Me.btnBookingSearch.Location = New System.Drawing.Point(1423, 78)
+		Me.btnBookingSearch.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
 		Me.btnBookingSearch.Name = "btnBookingSearch"
-		Me.btnBookingSearch.Size = New System.Drawing.Size(183, 118)
+		Me.btnBookingSearch.Size = New System.Drawing.Size(244, 145)
 		Me.btnBookingSearch.TabIndex = 34
 		Me.btnBookingSearch.Text = "Search booking"
 		Me.btnBookingSearch.UseVisualStyleBackColor = False
 		'
 		'HomeGuest
 		'
-		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+		Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-		Me.ClientSize = New System.Drawing.Size(1280, 720)
+		Me.ClientSize = New System.Drawing.Size(1701, 877)
 		Me.Controls.Add(Me.btnBookingSearch)
 		Me.Controls.Add(Me.btnLogin)
 		Me.Controls.Add(Me.btnFlights)
 		Me.Controls.Add(Me.PictureBox1)
 		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+		Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
 		Me.Name = "HomeGuest"
 		Me.Text = "Home"
 		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
