@@ -25,8 +25,8 @@
                 'Flight instance does not exist
 
                 'Copy references
-                flightInstance.RouteID = Flight.RouteID
-                flightInstance.PlaneID = Flight.PlaneID
+                flightInstance.Route = Flight.Route
+                flightInstance.Plane = Flight.Plane
 
                 'Copy flight details
                 flightInstance.FlightNo = Flight.FlightNo
@@ -61,7 +61,7 @@
 
         End If
 
-        lblSeats.Text = Flight.Bookings.Count & "/" & Flight.Plane.Capacity 'NOTE: Does not account for multiple passengers per booking YET
+        lblSeats.Text = Flight.Bookings.Count & "/" & CType(DB.Get(Of Plane)(Flight.PlaneID), Plane).Capacity 'NOTE: Does not account for multiple passengers per booking YET
 
         lblPrice.Text = "RM " & Flight.Price
         lblId.Text = Flight.FlightNo
