@@ -9,7 +9,12 @@
     End Sub
 
     Private Sub btSearch_Click(sender As Object, e As EventArgs) Handles btSearch.Click
-        Dim booking As Booking = DB.Get(Of Booking)(txtBookingID.Text)
+        Search(txtBookingID.Text)
+    End Sub
+
+    Public Sub Search(bookingID As String)
+        DB.RefreshContext()
+        Dim booking As Booking = DB.Get(Of Booking)(bookingID)
         If booking Is Nothing Then
             Quick.ShowError("Incorrect booking ID", "No booking with this ID can be found.")
             Return

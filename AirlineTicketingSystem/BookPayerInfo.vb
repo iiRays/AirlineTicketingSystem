@@ -52,18 +52,19 @@
     End Sub
 
     Private Sub BookPayerInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        With BookFlightForm.User
-            txtName.Text = If(BookFlightForm.User IsNot Nothing AndAlso .Name IsNot Nothing, .Name, "")
-            txtEmail.Text = If(BookFlightForm.User IsNot Nothing AndAlso .Email IsNot Nothing, .Email, "")
-            txtCard.Text = If(BookFlightForm.User IsNot Nothing AndAlso .CreditCardNo IsNot Nothing, .CreditCardNo, "")
-            txtCity.Text = If(BookFlightForm.User IsNot Nothing AndAlso .City IsNot Nothing, .City, "")
-            txtCountry.Text = If(BookFlightForm.User IsNot Nothing AndAlso .Country IsNot Nothing, .Country, "")
-            dtpDate.Value = If(BookFlightForm.User IsNot Nothing AndAlso .DateOfBirth IsNot Nothing, .DateOfBirth, DateAndTime.Now())
+        Dim user = If(BookFlightForm.User Is Nothing, App.User, BookFlightForm.User)
 
+        With user
+            txtName.Text = If(user IsNot Nothing AndAlso .Name IsNot Nothing, .Name, "")
+            txtEmail.Text = If(user IsNot Nothing AndAlso .Email IsNot Nothing, .Email, "")
+            txtCard.Text = If(user IsNot Nothing AndAlso .CreditCardNo IsNot Nothing, .CreditCardNo, "")
+            txtCity.Text = If(user IsNot Nothing AndAlso .City IsNot Nothing, .City, "")
+            txtCountry.Text = If(user IsNot Nothing AndAlso .Country IsNot Nothing, .Country, "")
+            dtpDate.Value = If(user IsNot Nothing AndAlso .DateOfBirth IsNot Nothing, .DateOfBirth, DateAndTime.Now())
         End With
 
-        If BookFlightForm.User IsNot Nothing Then
-            With BookFlightForm.User
+        If user IsNot Nothing Then
+            With user
                 If .Gender = "M" Then
                     rbMale.Checked = True
                 ElseIf .Gender = "F" Then

@@ -39,7 +39,7 @@ Public Class BookFlight1
         Dim errorStr As New StringBuilder()
         Dim hasKgErrors = False
 
-        errorStr.AppendLine(If(User Is Nothing, "- Please fill in payer details.", ""))
+        errorStr.AppendLine(If(lblInfoStatus.Text = "not yet filled", "- Please fill in payer details.", ""))
 
         Try
             peopleCount = CType(txtPeople.Text, Int32)
@@ -99,8 +99,22 @@ Public Class BookFlight1
 
     Public Sub UpdateLabel()
         If User IsNot Nothing Then
-            lblInfoStatus.Text = "already filled"
-            lblInfoStatus.ForeColor = Color.Green
+            Dim hasError = False
+            With User
+                hasError = If(.Name.Trim.Length = 0, True, False)
+                hasError = If(.Email.Trim.Length = 0, True, False)
+                hasError = If(.DateOfBirth.HasValue = False OrElse DateAndTime.DateDiff(DateInterval.Year, .DateOfBirth.Value, DateAndTime.Now()) < 18, True, False)
+                hasError = If(.Country Is Nothing OrElse .Country.Trim.Length = 0, True, False)
+                hasError = If(.City Is Nothing OrElse .City.Trim.Length = 0, True, False)
+                hasError = If(.Gender Is Nothing OrElse .Gender = "", True, False)
+                hasError = If(.CreditCardNo Is Nothing OrElse .CreditCardNo.Trim.Length = 0, True, False)
+            End With
+
+            If hasError = False Then
+                lblInfoStatus.Text = "already filled"
+                lblInfoStatus.ForeColor = Color.Green
+            End If
+
         End If
     End Sub
 End Class

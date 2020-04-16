@@ -78,9 +78,12 @@
             End If
         End If
 
-            booking.User = user
+        booking.User = user
+        booking.UserID = user.UserID
 
         booking.FlightID = flight.FlightID
+        booking.Flight = flight
+
         DB.Insert(booking)
         For Each Ticket As Ticket In passengerList
             DB.Insert(Ticket)

@@ -1,6 +1,16 @@
 ﻿Public Class FlightSearch
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Quick.Navigate(Me, New FlightList)
+
+        Dim user = App.User
+        If user IsNot Nothing Then
+            If user.IsStaff Then
+                Quick.Navigate(Me, New HomeAdmin)
+            Else
+                Quick.Navigate(Me, New HomeUser)
+            End If
+        Else
+            Quick.Navigate(Me, HomeGuest)
+        End If
     End Sub
 
     Private Sub FlightSearch_Load(sender As Object, e As EventArgs) Handles MyBase.Load
