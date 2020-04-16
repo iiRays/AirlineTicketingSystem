@@ -6,7 +6,7 @@
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         'Get user based on email
         Dim cResult = From cust In DB.context.Users
-                      Where cust.Email = txtEmail.Text
+                      Where cust.Email = txtEmail.Text And cust.Password IsNot Nothing
 
 
         If cResult.Count = 0 Then
