@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub FlightSearch_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        TitleBar.Load(Me)
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click

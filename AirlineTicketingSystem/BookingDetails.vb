@@ -38,6 +38,7 @@
     End Sub
 
     Private Sub BookingDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TitleBar.Load(Me)
         lblFlightId.Text = Booking.Flight.FlightNo
         lblBaggageKg.Text = Booking.ExtraBaggageKG
         lblPassengers.Text = Booking.NoOfPassengers

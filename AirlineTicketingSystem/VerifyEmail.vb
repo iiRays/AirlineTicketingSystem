@@ -6,6 +6,7 @@
     Private TimeoutTimer As New Windows.Forms.Timer()
     Private Sub VerifyEmail_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblEmail.Text = "Sent to " & User.Email
+        TitleBar.Load(Me)
     End Sub
 
     Private Sub btnVerify_Click(sender As Object, e As EventArgs) Handles btnVerify.Click

@@ -24,6 +24,7 @@
     End Sub
 
     Private Sub FlightDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TitleBar.Load(Me)
         lblSeats.Text = Flight.Bookings.Count & "/" & Flight.Plane.Capacity 'NOTE: Does not account for multiple passengers per booking YET
         If Flight.IsDaily Then
             lblDate.Text = "DAILY"
