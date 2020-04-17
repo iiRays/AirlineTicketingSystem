@@ -24,7 +24,9 @@
             Quick.ShowError("Incorrect fields", errorStr.ToString().Trim)
             Return
         Else
-            BookFlightForm.User = New User()
+            If Not App.IsLoggedIn Then
+                BookFlightForm.User = New User()
+            End If
             With BookFlightForm.User
                 .Name = txtName.Text
                 .Email = txtEmail.Text
@@ -42,6 +44,8 @@
                 End If
 
             End With
+
+
             BookFlightForm.UpdateLabel()
             Me.Close()
         End If

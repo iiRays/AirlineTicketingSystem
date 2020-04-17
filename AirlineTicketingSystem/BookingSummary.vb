@@ -89,6 +89,11 @@
             DB.Insert(Ticket)
         Next
 
+        If App.IsLoggedIn Then
+            DB.Update(user, user.UserID)
+            App.User = DB.Get(Of User)(user.UserID)
+        End If
+
         App.Session.Clear()
 
         Quick.Navigate(Me, New BookingFinish(booking))

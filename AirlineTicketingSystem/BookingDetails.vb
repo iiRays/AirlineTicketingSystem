@@ -38,7 +38,6 @@
     End Sub
 
     Private Sub BookingDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        DB.RefreshContext()
         TitleBar.Load(Me)
         lblFlightId.Text = Booking.Flight.FlightNo
         lblBaggageKg.Text = Booking.ExtraBaggageKG

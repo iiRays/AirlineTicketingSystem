@@ -13,7 +13,6 @@
     End Sub
 
     Public Sub Search(bookingID As String)
-        DB.RefreshContext()
         Dim booking As Booking = DB.Get(Of Booking)(bookingID)
         If booking Is Nothing Then
             Quick.ShowError("Incorrect booking ID", "No booking with this ID can be found.")

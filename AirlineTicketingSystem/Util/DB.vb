@@ -321,12 +321,8 @@
 
         context.SubmitChanges()
 
-        context = New AirlineSystemDataContext()
     End Sub
 
-    Public Shared Sub RefreshContext()
-        context = New AirlineSystemDataContext()
-    End Sub
 
     Public Shared Function GetCount(Of T)() As Integer
 

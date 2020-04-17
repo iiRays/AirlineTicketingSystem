@@ -17,8 +17,6 @@
         Quick.SetFormFont("Poppins", Me)
 
         TitleBar.Load(Me, True, False)
-
-        DB.RefreshContext()
     End Sub
 
     Private Sub btnBookingSearch_Click(sender As Object, e As EventArgs) Handles btnBookingSearch.Click
