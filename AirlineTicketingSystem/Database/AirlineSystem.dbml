@@ -67,6 +67,7 @@
       <Column Name="Model" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="Manufacturer" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
       <Column Name="Capacity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxColumns" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Plane_Flight" Member="Flights" ThisKey="PlaneID" OtherKey="PlaneID" Type="Flight" />
     </Type>
   </Table>

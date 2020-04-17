@@ -1379,6 +1379,8 @@ Partial Public Class Plane
 	
 	Private _Capacity As Integer
 	
+	Private _MaxColumns As Integer
+	
 	Private _Flights As EntitySet(Of Flight)
 	
     #Region "Extensibility Method Definitions"
@@ -1403,6 +1405,10 @@ Partial Public Class Plane
     Partial Private Sub OnCapacityChanging(value As Integer)
     End Sub
     Partial Private Sub OnCapacityChanged()
+    End Sub
+    Partial Private Sub OnMaxColumnsChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnMaxColumnsChanged()
     End Sub
     #End Region
 	
@@ -1473,6 +1479,23 @@ Partial Public Class Plane
 				Me._Capacity = value
 				Me.SendPropertyChanged("Capacity")
 				Me.OnCapacityChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_MaxColumns", DbType:="Int NOT NULL")>  _
+	Public Property MaxColumns() As Integer
+		Get
+			Return Me._MaxColumns
+		End Get
+		Set
+			If ((Me._MaxColumns = value)  _
+						= false) Then
+				Me.OnMaxColumnsChanging(value)
+				Me.SendPropertyChanging
+				Me._MaxColumns = value
+				Me.SendPropertyChanged("MaxColumns")
+				Me.OnMaxColumnsChanged
 			End If
 		End Set
 	End Property
