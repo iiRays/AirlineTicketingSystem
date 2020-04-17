@@ -47,6 +47,22 @@ Public Class Quick
 
     End Function
 
+    Public Shared Function GetRandomInt(from As Integer, until As Integer) As Integer
+        Dim random As New Random()
+        Return random.Next(from, until + 1)
+    End Function
+
+    'For seat generation
+    Public Shared Function IntToChar(num As Integer) As Char
+        If num = 0 OrElse num > 26 Then
+            Throw New Exception("Integer out of alphabetical bounds of ASCII value")
+        End If
+
+        'Return ascii character
+        Return Chr(64 + num)
+    End Function
+
+
     Public Shared Function GetRandomString(size As Integer) As String
         Dim randomNo As New Random()
         Dim stringPool = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"

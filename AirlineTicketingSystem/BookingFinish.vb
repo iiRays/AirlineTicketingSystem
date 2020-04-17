@@ -24,7 +24,7 @@
         Dim counter = 0
         For Each ticket As Ticket In Booking.Tickets
             counter += 1
-            body.AppendLine(counter & ". <b>" & ticket.Name & "</b>, Seat type: " & ticket.Seat)
+            body.AppendLine(counter & ". <b>" & ticket.Name & "</b>, Seat: " & ticket.Seat & "<br>")
         Next
 
         body.AppendLine("<h2>Total: " & Booking.Tickets.Count & " tickets </h2>")

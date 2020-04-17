@@ -84,9 +84,20 @@
         booking.FlightID = flight.FlightID
         booking.Flight = flight
 
+        Dim plane = booking.Flight.Plane
+
         DB.Insert(booking)
-        For Each Ticket As Ticket In passengerList
-            DB.Insert(Ticket)
+        For Each ticket As Ticket In passengerList
+
+            'Generate seat number
+            Dim selectedSeat = ""
+            Do
+                selectedSeat = Quick.GetRandomInt(1, (plane.Capacity / plane.MaxColumns)).ToString & Quick.IntToChar(Quick.GetRandomInt(1, plane.MaxColumns)).ToString
+            Loop While (From dbTicket In DB.context.Tickets Where booking.Flight.Plane.PlaneID = plane.PlaneID And ticket.Seat = selectedSeat).Count > 0 'Loop if this seat already exists (means already booked)
+
+            ticket.Seat = selectedSeat
+
+            DB.Insert(ticket)
         Next
 
         If App.IsLoggedIn Then
@@ -98,4 +109,27 @@
 
         Quick.Navigate(Me, New BookingFinish(booking))
     End Sub
+
+    Private Function GenerateSeat(tickets As List(Of Ticket)) As List(Of Ticket)
+        Dim plane = tickets.First.Booking.Flight.Plane
+
+        ''Attempt to group passengers together
+
+        ''Find a row with available seats
+        'For rowCount As Integer = 1 To (plane.Capacity / plane.MaxColumns)
+        '    Dim rs = From ticket In DB.context.Tickets Where ticket.Booking.Flight.Plane.PlaneID = plane.PlaneID And ticket.Seat.Chars(0).ToString = rowCount.ToString
+
+        '    'If rs = Nothing, then the first seat at row (rowCount) is empty
+        '    If rs.Count = 0 Then
+        '        For columnCount As Integer = 1 To plane.MaxColumns
+        '            ' Loop through each seat in that column
+        '            Dim secondRs = From ticket In DB.context.Tickets Where ticket.Booking.Flight.Plane.PlaneID = plane.PlaneID And ticket.Seat.Chars(0).ToString = rowCount.ToString
+        '        Next
+        '    End If
+        'Next
+        'If number of tickets exceed column count, go the next nearest column
+
+
+
+    End Function
 End Class

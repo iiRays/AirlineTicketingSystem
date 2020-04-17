@@ -45,7 +45,6 @@
                 Quick.ShowError("Missing passengers", "Passenger " & (passengerCount + 1) & " is empty.")
                 Return
             End If
-            ticket.Seat = "ECO"
             ticket.TicketID = Quick.GenerateId(Of Ticket)(DB.GetCount(Of Ticket) + passengerCount)
             passengerList.Add(ticket)
         Next
