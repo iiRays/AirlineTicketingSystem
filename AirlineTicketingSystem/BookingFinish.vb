@@ -16,8 +16,8 @@
         body.AppendLine("<h1>Booking success!</h1>")
         body.AppendLine("Booking ID: <h2>" & Booking.BookingID & "</h2>")
         body.AppendLine("Flight No: <h3>" & Booking.Flight.FlightNo & "</h3>")
-        body.AppendLine("Leaves on <b>" & Booking.Flight.DepartureTime.ToString("dd/MM/yyyy hh:mm ss") & "</b>")
-        body.AppendLine("Arrives on <b>" & Booking.Flight.ArrivalTime.ToString("dd/MM/yyyy hh:mm ss") & "</b>")
+        body.AppendLine("Leaves on <b>" & Booking.Flight.DepartureTime.ToString("dd/MM/yyyy hh:mm ss") & "</b><br>")
+        body.AppendLine("Arrives on <b>" & Booking.Flight.ArrivalTime.ToString("dd/MM/yyyy hh:mm ss") & "</b><br>")
         body.AppendLine("<hr>")
 
         body.AppendLine("<h2>Passengers information</h2>")

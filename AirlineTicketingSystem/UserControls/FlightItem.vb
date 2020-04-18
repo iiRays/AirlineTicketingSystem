@@ -61,7 +61,10 @@
 
         End If
 
-        lblSeats.Text = Flight.Bookings.Count & "/" & CType(DB.Get(Of Plane)(Flight.PlaneID), Plane).Capacity 'NOTE: Does not account for multiple passengers per booking YET
+        Dim totalPassengers = DB.GetTotalPassengers(Flight.FlightID)
+
+        lblSeats.Text = totalPassengers & "/" & CType(DB.Get(Of Plane)(Flight.PlaneID), Plane).Capacity
+
 
         lblPrice.Text = "RM " & Flight.Price
         lblId.Text = Flight.FlightNo

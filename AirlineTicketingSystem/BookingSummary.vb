@@ -93,7 +93,7 @@
             Dim selectedSeat = ""
             Do
                 selectedSeat = Quick.GetRandomInt(1, (plane.Capacity / plane.MaxColumns)).ToString & Quick.IntToChar(Quick.GetRandomInt(1, plane.MaxColumns)).ToString
-            Loop While (From dbTicket In DB.context.Tickets Where booking.Flight.Plane.PlaneID = plane.PlaneID And ticket.Seat = selectedSeat).Count > 0 'Loop if this seat already exists (means already booked)
+            Loop While (From dbTicket In DB.context.Tickets Where dbTicket.Booking.Flight.PlaneID = plane.PlaneID And dbTicket.Seat = selectedSeat).Count > 0 'Loop if this seat already exists (means already booked)
 
             ticket.Seat = selectedSeat
 

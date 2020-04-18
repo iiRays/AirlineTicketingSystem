@@ -1,6 +1,17 @@
 ﻿Public Class DB
     Public Shared context As New AirlineSystemDataContext()
 
+    Public Shared Function GetTotalPassengers(id As String) As Integer
+        Dim bookings = CType(DB.Get(Of Flight)(id), Flight).Bookings.ToList
+        Dim totalPassengers = 0
+        For Each booking In bookings
+            For Each ticket In booking.Tickets
+                totalPassengers += 1
+            Next
+        Next
+
+        Return totalPassengers
+    End Function
 
     Public Shared Function GetExistingFlight(flight As Flight, selectedDate As Date) As Flight
         Dim results = From dbFlight In DB.context.Flights Where dbFlight.FlightNo = flight.FlightNo And dbFlight.DepartureTime.Day = selectedDate.Day And dbFlight.DepartureTime.Month = selectedDate.Month And dbFlight.DepartureTime.Year = selectedDate.Year

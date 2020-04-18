@@ -24,7 +24,16 @@
         End If
 
         Dim selectedDate = New Date(dtpDate.Value.Year, dtpDate.Value.Month, dtpDate.Value.Day)
-        Dim results As List(Of Flight) = (From flight In DB.context.Flights Where txtFrom.Text = (From stops In DB.context.Stops Where stops.IsOrigin = True And stops.RouteID = flight.RouteID).First.City.Name And txtTo.Text = (From stops In DB.context.Stops Where stops.IsOrigin = False And stops.RouteID = flight.RouteID).First.City.Name And flight.Bookings.Count < flight.Plane.Capacity And flight.IsDaily Or (flight.DepartureTime.Day = selectedDate.Day And flight.DepartureTime.Month = selectedDate.Month And flight.DepartureTime.Year = selectedDate.Year)).ToList
+
+        Dim results As List(Of Flight) = (From flight In DB.context.Flights Where txtFrom.Text = (From stops In DB.context.Stops Where stops.IsOrigin = True And stops.RouteID = flight.RouteID).First.City.Name And txtTo.Text = (From stops In DB.context.Stops Where stops.IsOrigin = False And stops.RouteID = flight.RouteID).First.City.Name And flight.IsDaily Or (flight.DepartureTime.Day = selectedDate.Day And flight.DepartureTime.Month = selectedDate.Month And flight.DepartureTime.Year = selectedDate.Year)).ToList
+
+
+
+        For Each flight In results
+            If DB.GetTotalPassengers(flight.FlightID) = flight.Plane.Capacity Then
+                results.Remove(flight)
+            End If
+        Next
 
         App.Session.Add("flightResults", results)
         App.Session.Add("selectedDate", selectedDate)
