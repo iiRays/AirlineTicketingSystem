@@ -65,8 +65,14 @@
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        'Update booking in DB
         Booking.IsCancelled = True
         DB.Update(Booking, Booking.BookingID)
+
+        'Send email
+        Email.Send("Booking cancelled", "<h1>Booking cancelled</h1>We would like to inform you that your booking of <b>" & Booking.BookingID & "</b> to <b><i>" & DB.GetFlightDestination(Booking.FlightID).City.Name & "</i></b> has been cancelled.", Booking.User.Email)
+
+        'Navigate
         BookingDetailsForm.UpdateBooking()
         Me.Close()
     End Sub

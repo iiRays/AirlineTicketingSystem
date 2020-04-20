@@ -5,9 +5,13 @@
         Dim bookings = CType(DB.Get(Of Flight)(id), Flight).Bookings.ToList
         Dim totalPassengers = 0
         For Each booking In bookings
-            For Each ticket In booking.Tickets
-                totalPassengers += 1
-            Next
+            If booking.IsCancelled = False Then
+
+                For Each ticket In booking.Tickets
+                    totalPassengers += 1
+                Next
+            End If
+
         Next
 
         Return totalPassengers
