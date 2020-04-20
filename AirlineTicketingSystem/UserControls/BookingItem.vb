@@ -22,6 +22,12 @@
 		lblArrivalTime.Text = Booking.Flight.ArrivalTime.ToString("HH:mm")
 		lblBookingId.Text = Booking.BookingID
 		lblFlightId.Text = Booking.Flight.FlightNo
+
+		If Booking.IsCancelled Then
+			lblBookingId.ForeColor = Color.OrangeRed
+			lblBookingId.Text = "CANCELLED"
+			lblBookingId.Font = New Font(lblBookingId.Font.FontFamily, 20)
+		End If
 	End Sub
 
 	Private Sub btnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click

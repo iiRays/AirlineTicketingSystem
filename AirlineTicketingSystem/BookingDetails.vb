@@ -49,7 +49,22 @@
         lblDestination.Text = DB.GetFlightDestination(Booking.Flight.FlightID).City.Name
         lblArrivalTime.Text = Booking.Flight.ArrivalTime.ToString("HH:mm")
         lblPaymentDate.Text = Booking.PaymentDate.ToString("d MMM yyyy")
+
+        If Booking.IsCancelled Then
+            lblStatus.Text = "Cancelled"
+            lblStatus.ForeColor = Color.OrangeRed
+            btnCancel.Enabled = False
+            btnCancel.Hide()
+        End If
+
+        If DateAndTime.DateDiff(DateInterval.DayOfYear, DateAndTime.Now(), Booking.Flight.DepartureTime,) < 2 Then
+            'If less than 2 days until departure, don't allow cancellation
+            btnCancel.Enabled = False
+            btnCancel.Hide()
+        End If
     End Sub
+
+
 
     Private Sub LblPrice_Click(sender As Object, e As EventArgs) Handles lblPrice.Click
 
@@ -70,5 +85,20 @@
 
     Private Sub btnViewTickets_Click(sender As Object, e As EventArgs) Handles btnViewTickets.Click
         Quick.Navigate(Me, New TicketList(Booking))
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Dim form As New BookCancel(Booking)
+        form.BookingDetailsForm = Me
+        form.ShowDialog()
+    End Sub
+
+    Public Sub UpdateBooking()
+        If Booking.IsCancelled Then
+            lblStatus.Text = "Cancelled"
+            lblStatus.ForeColor = Color.OrangeRed
+            btnCancel.Enabled = False
+            btnCancel.Hide()
+        End If
     End Sub
 End Class

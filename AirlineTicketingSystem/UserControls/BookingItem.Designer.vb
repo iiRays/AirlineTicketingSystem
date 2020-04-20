@@ -22,7 +22,7 @@ Partial Class BookingItem
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-		Me.Panel2 = New System.Windows.Forms.Panel()
+		Me.pnlBookingId = New System.Windows.Forms.Panel()
 		Me.lblBookingId = New System.Windows.Forms.Label()
 		Me.Panel1 = New System.Windows.Forms.Panel()
 		Me.lblDate = New System.Windows.Forms.Label()
@@ -34,19 +34,19 @@ Partial Class BookingItem
 		Me.lblDepartureTime = New System.Windows.Forms.Label()
 		Me.lblSource = New System.Windows.Forms.Label()
 		Me.lblFlightId = New System.Windows.Forms.Label()
-		Me.Panel2.SuspendLayout()
+		Me.pnlBookingId.SuspendLayout()
 		Me.Panel1.SuspendLayout()
 		Me.SuspendLayout()
 		'
-		'Panel2
+		'pnlBookingId
 		'
-		Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-		Me.Panel2.Controls.Add(Me.lblBookingId)
-		Me.Panel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Panel2.Location = New System.Drawing.Point(3, 3)
-		Me.Panel2.Name = "Panel2"
-		Me.Panel2.Size = New System.Drawing.Size(200, 100)
-		Me.Panel2.TabIndex = 44
+		Me.pnlBookingId.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+		Me.pnlBookingId.Controls.Add(Me.lblBookingId)
+		Me.pnlBookingId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.pnlBookingId.Location = New System.Drawing.Point(3, 3)
+		Me.pnlBookingId.Name = "pnlBookingId"
+		Me.pnlBookingId.Size = New System.Drawing.Size(200, 100)
+		Me.pnlBookingId.TabIndex = 44
 		'
 		'lblBookingId
 		'
@@ -191,18 +191,18 @@ Partial Class BookingItem
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-		Me.Controls.Add(Me.Panel2)
+		Me.Controls.Add(Me.pnlBookingId)
 		Me.Controls.Add(Me.Panel1)
 		Me.Name = "BookingItem"
 		Me.Size = New System.Drawing.Size(1066, 107)
-		Me.Panel2.ResumeLayout(False)
+		Me.pnlBookingId.ResumeLayout(False)
 		Me.Panel1.ResumeLayout(False)
 		Me.Panel1.PerformLayout()
 		Me.ResumeLayout(False)
 
 	End Sub
 
-	Friend WithEvents Panel2 As Panel
+	Friend WithEvents pnlBookingId As Panel
     Friend WithEvents lblBookingId As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents lblDepartureTime As Label

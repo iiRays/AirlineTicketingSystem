@@ -333,6 +333,12 @@
     <Compile Include="AdminRoutesViewSummary.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BookCancel.Designer.vb">
+      <DependentUpon>BookCancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookCancel.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BookingDetails.Designer.vb">
       <DependentUpon>BookingDetails.vb</DependentUpon>
     </Compile>
@@ -682,6 +688,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookFlight2.resx">
       <DependentUpon>BookFlight2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookCancel.resx">
+      <DependentUpon>BookCancel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookingDetails.resx">
       <DependentUpon>BookingDetails.vb</DependentUpon>
