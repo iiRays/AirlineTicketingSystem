@@ -8,7 +8,7 @@
 
         Dim viewAll As Boolean = App.Session.Get("viewAll")
 
-        If (viewAll) Then
+        If viewAll Then
             cities = DB.GetAll(Of City)
         Else
             Dim searchBy As String = App.Session.Get("searchBy")
@@ -19,7 +19,7 @@
 
         For Each city In cities
             Dim cityItem As New CityItem()
-            cityItem.Location = New Point(130, 120 + (loopCount * 250))
+            cityItem.Location = New Point(130, 120 + (loopCount * 100))
             cityItem.City = city
             cityItem.AdminCitiesViewResults = Me
             Me.Controls.Add(cityItem)
@@ -28,6 +28,9 @@
     End Sub
 
     Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        App.Session.Delete("viewAll")
+        App.Session.Delete("searchBy")
+        App.Session.Delete("searchFor")
         Quick.Navigate(Me, New AdminCitiesView)
     End Sub
 End Class

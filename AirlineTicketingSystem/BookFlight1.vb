@@ -75,7 +75,7 @@ Public Class BookFlight1
         If App.Session.Get("Booking") Is Nothing Then
             App.Session.Add("Booking", booking)
         Else
-            App.Session.Set("Booking", booking)
+            App.Session.Update("Booking", booking)
         End If
 
         App.Session.Add("payer", User)

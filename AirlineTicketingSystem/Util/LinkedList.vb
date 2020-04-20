@@ -40,7 +40,7 @@
         Return -1
     End Function
 
-    Public Sub [Set](Tag As String, Item As Object)
+    Public Sub Update(Tag As String, Item As Object)
         Dim temp = Top
         Dim isFound = False
 
@@ -87,6 +87,43 @@
 
         Return
 
+    End Sub
+
+    Public Sub [Set](Tag As String, Item As Object)
+        If (IsEmpty()) Then
+            'List is empty
+            Top = New LinkedNode(Of T)(Tag, Item)
+        ElseIf (Size = 1) Then
+            'List has 1 item
+
+            'If tag is the same, replace
+            If Top.Tag = Tag Then
+                Top.Data = Item
+                Return
+            End If
+
+            Top.Next = New LinkedNode(Of T)(Tag, Item)
+        Else
+            'List is not empty
+            Dim temp = Top
+
+            'Loop until last item
+            While temp.Next IsNot Nothing
+
+                'If tag is the same, replace
+                If temp.Tag = Tag Then
+                    temp.Data = Item
+                    Return
+                End If
+
+                temp = temp.Next
+            End While
+
+            'Append at the end
+            temp.Next = New LinkedNode(Of T)(Tag, Item)
+
+        End If
+        Size += 1
     End Sub
 
     Public Sub Add(Tag As String, Item As Object)

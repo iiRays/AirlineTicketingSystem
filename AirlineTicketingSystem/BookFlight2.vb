@@ -56,7 +56,7 @@
         booking.TotalPrice = CType(App.Session.Get("selectedFlight"), Flight).Price * booking.NoOfPassengers + (15 * booking.ExtraBaggageKG)
 
         'Update session
-        App.Session.Set("Booking", booking)
+        App.Session.Update("Booking", booking)
 
         'Navigate
         Quick.Navigate(Me, New BookingSummary)

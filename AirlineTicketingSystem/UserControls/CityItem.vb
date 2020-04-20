@@ -8,4 +8,9 @@
         lblCountry.Text = City.Country
         lblState.Text = City.State
     End Sub
+
+    Private Sub BtnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
+        App.Session.Add("city", City)
+        Quick.Navigate(AdminCitiesViewResults, New AdminCitiesViewSummary)
+    End Sub
 End Class
