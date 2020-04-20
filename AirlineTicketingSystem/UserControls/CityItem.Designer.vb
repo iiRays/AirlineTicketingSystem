@@ -27,8 +27,8 @@ Partial Class CityItem
         Me.lblCountry = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.lblState = New System.Windows.Forms.Label()
         Me.btnGo = New System.Windows.Forms.Button()
+        Me.lblState = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -91,18 +91,6 @@ Partial Class CityItem
         Me.Panel1.Size = New System.Drawing.Size(850, 75)
         Me.Panel1.TabIndex = 43
         '
-        'lblState
-        '
-        Me.lblState.AutoSize = True
-        Me.lblState.Font = New System.Drawing.Font("Poppins", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.lblState.Location = New System.Drawing.Point(547, 20)
-        Me.lblState.Name = "lblState"
-        Me.lblState.Size = New System.Drawing.Size(90, 39)
-        Me.lblState.TabIndex = 45
-        Me.lblState.Text = "Sabah"
-        Me.lblState.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'btnGo
         '
         Me.btnGo.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -116,6 +104,18 @@ Partial Class CityItem
         Me.btnGo.TabIndex = 45
         Me.btnGo.Text = "go"
         Me.btnGo.UseVisualStyleBackColor = False
+        '
+        'lblState
+        '
+        Me.lblState.AutoSize = True
+        Me.lblState.Font = New System.Drawing.Font("Poppins", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
+        Me.lblState.Location = New System.Drawing.Point(547, 20)
+        Me.lblState.Name = "lblState"
+        Me.lblState.Size = New System.Drawing.Size(90, 39)
+        Me.lblState.TabIndex = 45
+        Me.lblState.Text = "Sabah"
+        Me.lblState.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'CityItem
         '

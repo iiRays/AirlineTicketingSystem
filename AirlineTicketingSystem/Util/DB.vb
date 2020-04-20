@@ -231,11 +231,23 @@
         ElseIf GetType(T) = GetType(Route) Then
             Select Case searchBy
                 Case "routeid"
-                    'Return context.Routes.Where(Function(o) o.RouteID = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From route In context.Routes Where route.RouteID.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "durationhour"
-                    'Return context.Routes.Where(Function(o) o.DurationHour = Convert.ToInt32(searchFor)).ToList().Cast(Of T).ToList()
+                    Return (From route In context.Routes Where route.DurationHour = Convert.ToInt32(searchFor)).Cast(Of T).ToList()
                 Case "durationmins"
-                    'Return context.Routes.Where(Function(o) o.DurationMins = Convert.ToInt32(searchFor)).ToList().Cast(Of T).ToList()
+                    Return (From route In context.Routes Where route.DurationMins = Convert.ToInt32(searchFor)).Cast(Of T).ToList()
+                Case "city id"
+                    Return (From route In context.Routes Where route.RouteID = (From [stop] In context.Stops Where [stop].CityID.Contains(searchFor)).First().RouteID).Cast(Of T).ToList()
+                Case "city name"
+                    Return (From route In context.Routes Where route.RouteID = (From [stop] In context.Stops Where [stop].City.Name.Contains(searchFor)).First().RouteID).Cast(Of T).ToList()
+                Case "source city id"
+                    Return (From route In context.Routes Where route.RouteID = (From [stop] In context.Stops Where [stop].CityID.Contains(searchFor) And [stop].IsOrigin = True).First().RouteID).Cast(Of T).ToList()
+                Case "source city name"
+                    Return (From route In context.Routes Where route.RouteID = (From [stop] In context.Stops Where [stop].City.Name.Contains(searchFor) And [stop].IsOrigin = True).First().RouteID).Cast(Of T).ToList()
+                Case "destination city id"
+                    Return (From route In context.Routes Where route.RouteID = (From [stop] In context.Stops Where [stop].CityID.Contains(searchFor) And [stop].IsOrigin = False).First().RouteID).Cast(Of T).ToList()
+                Case "destination city name"
+                    Return (From route In context.Routes Where route.RouteID = (From [stop] In context.Stops Where [stop].City.Name.Contains(searchFor) And [stop].IsOrigin = False).First().RouteID).Cast(Of T).ToList()
                 Case Else
                     Throw New Exception("Variable type is not present in Airline Database.")
             End Select
@@ -290,6 +302,14 @@
 
     Public Shared Function GetFlightDestination(flightID As String) As [Stop]
         Return (From stops In context.Stops Where stops.RouteID = (From flight In context.Flights Where flight.FlightID = flightID).First().RouteID And stops.IsOrigin = False).First()
+    End Function
+
+    Public Shared Function GetRouteSource(routeId As String) As [Stop]
+        Return (From stops In context.Stops Where stops.RouteID = routeId And stops.IsOrigin = True).First()
+    End Function
+
+    Public Shared Function GetRouteDestination(routeId As String) As [Stop]
+        Return (From stops In context.Stops Where stops.RouteID = routeId And stops.IsOrigin = False).First()
     End Function
 
     Public Shared Sub Update(obj As Object, currentId As String)

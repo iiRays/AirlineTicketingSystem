@@ -27,7 +27,7 @@
     End Sub
 
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim newCity = DB.Get(Of City)(city.CityID)
+        Dim newCity As City = DB.Get(Of City)(city.CityID)
         newCity.Name = txtName.Text
         newCity.Country = txtCountry.Text
         newCity.State = txtState.Text
