@@ -8,11 +8,11 @@
         Quick.Navigate(Me, New AdminDashboard)
     End Sub
 
-    Private Sub BtnFlights_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+    Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Quick.Navigate(Me, New AdminCitiesAdd)
     End Sub
 
-    Private Sub BtnRoutes_Click(sender As Object, e As EventArgs) Handles btnView.Click
+    Private Sub BtnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
         Quick.Navigate(Me, New AdminCitiesView)
     End Sub
 End Class

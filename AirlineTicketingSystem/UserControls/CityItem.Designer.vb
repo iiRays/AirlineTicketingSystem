@@ -28,6 +28,7 @@ Partial Class CityItem
         Me.lblName = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblState = New System.Windows.Forms.Label()
+        Me.btnGo = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -80,13 +81,14 @@ Partial Class CityItem
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.btnGo)
         Me.Panel1.Controls.Add(Me.lblState)
         Me.Panel1.Controls.Add(Me.lblName)
         Me.Panel1.Controls.Add(Me.lblCountry)
         Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(248, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(750, 75)
+        Me.Panel1.Size = New System.Drawing.Size(850, 75)
         Me.Panel1.TabIndex = 43
         '
         'lblState
@@ -101,6 +103,20 @@ Partial Class CityItem
         Me.lblState.Text = "Sabah"
         Me.lblState.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'btnGo
+        '
+        Me.btnGo.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.btnGo.FlatAppearance.BorderSize = 0
+        Me.btnGo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGo.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnGo.ForeColor = System.Drawing.Color.White
+        Me.btnGo.Location = New System.Drawing.Point(722, 6)
+        Me.btnGo.Name = "btnGo"
+        Me.btnGo.Size = New System.Drawing.Size(125, 65)
+        Me.btnGo.TabIndex = 45
+        Me.btnGo.Text = "go"
+        Me.btnGo.UseVisualStyleBackColor = False
+        '
         'CityItem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -108,7 +124,7 @@ Partial Class CityItem
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "CityItem"
-        Me.Size = New System.Drawing.Size(1001, 81)
+        Me.Size = New System.Drawing.Size(1103, 81)
         Me.Panel2.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -122,4 +138,5 @@ Partial Class CityItem
     Friend WithEvents lblName As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents lblState As Label
+    Friend WithEvents btnGo As Button
 End Class

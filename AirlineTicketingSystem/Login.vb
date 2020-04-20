@@ -21,8 +21,15 @@
                 'Perform login
                 App.User = cResult.First()
                 Quick.Print("Login is successful.")
-                Dim form As New HomeUser
-                form.Show()
+
+                If App.User.IsStaff Then
+                    Dim form As New HomeAdmin
+                    form.Show()
+                Else
+                    Dim form As New HomeUser
+                    form.Show()
+                End If
+
                 Me.Close()
             End If
         End If

@@ -24,6 +24,7 @@
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
-        'Quick.Navigate(Me, New AdminCitiesEdit)
+        App.Session.Add("sourceScreen", "add")
+        Quick.Navigate(Me, New AdminCitiesEdit)
     End Sub
 End Class
