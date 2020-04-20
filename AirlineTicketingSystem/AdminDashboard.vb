@@ -18,4 +18,8 @@
     Private Sub BtnCities_Click(sender As Object, e As EventArgs) Handles btnCities.Click
         Quick.Navigate(Me, New AdminCitiesDashboard)
     End Sub
+
+    Private Sub BtnPlanes_Click(sender As Object, e As EventArgs) Handles btnPlanes.Click
+        Quick.Navigate(Me, New AdminPlanesDashboard)
+    End Sub
 End Class

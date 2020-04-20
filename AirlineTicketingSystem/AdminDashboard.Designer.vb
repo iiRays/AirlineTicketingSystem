@@ -27,6 +27,7 @@ Partial Class AdminDashboard
         Me.btnFlights = New System.Windows.Forms.Button()
         Me.btnRoutes = New System.Windows.Forms.Button()
         Me.btnCities = New System.Windows.Forms.Button()
+        Me.btnPlanes = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -61,7 +62,7 @@ Partial Class AdminDashboard
         Me.btnFlights.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFlights.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnFlights.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.btnFlights.Location = New System.Drawing.Point(240, 252)
+        Me.btnFlights.Location = New System.Drawing.Point(120, 252)
         Me.btnFlights.Name = "btnFlights"
         Me.btnFlights.Size = New System.Drawing.Size(225, 250)
         Me.btnFlights.TabIndex = 27
@@ -75,7 +76,7 @@ Partial Class AdminDashboard
         Me.btnRoutes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRoutes.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnRoutes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.btnRoutes.Location = New System.Drawing.Point(510, 252)
+        Me.btnRoutes.Location = New System.Drawing.Point(390, 252)
         Me.btnRoutes.Name = "btnRoutes"
         Me.btnRoutes.Size = New System.Drawing.Size(225, 250)
         Me.btnRoutes.TabIndex = 28
@@ -89,12 +90,26 @@ Partial Class AdminDashboard
         Me.btnCities.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCities.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnCities.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.btnCities.Location = New System.Drawing.Point(778, 252)
+        Me.btnCities.Location = New System.Drawing.Point(658, 252)
         Me.btnCities.Name = "btnCities"
         Me.btnCities.Size = New System.Drawing.Size(225, 250)
         Me.btnCities.TabIndex = 29
         Me.btnCities.Text = "cities"
         Me.btnCities.UseVisualStyleBackColor = False
+        '
+        'btnPlanes
+        '
+        Me.btnPlanes.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.btnPlanes.FlatAppearance.BorderSize = 0
+        Me.btnPlanes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPlanes.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnPlanes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.btnPlanes.Location = New System.Drawing.Point(924, 252)
+        Me.btnPlanes.Name = "btnPlanes"
+        Me.btnPlanes.Size = New System.Drawing.Size(225, 250)
+        Me.btnPlanes.TabIndex = 30
+        Me.btnPlanes.Text = "planes"
+        Me.btnPlanes.UseVisualStyleBackColor = False
         '
         'AdminDashboard
         '
@@ -102,6 +117,7 @@ Partial Class AdminDashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.btnPlanes)
         Me.Controls.Add(Me.btnCities)
         Me.Controls.Add(Me.btnRoutes)
         Me.Controls.Add(Me.btnFlights)
@@ -118,4 +134,5 @@ Partial Class AdminDashboard
     Friend WithEvents btnFlights As Button
     Friend WithEvents btnRoutes As Button
     Friend WithEvents btnCities As Button
+    Friend WithEvents btnPlanes As Button
 End Class
