@@ -2,20 +2,27 @@
 Imports System.Text
 
 Public Class SalesReport
-    Dim db As New AirlineSystemDataContext()
+    Dim dbo As New AirlineSystemDataContext()
     Dim value As Integer = 1
     Dim intCounter As Integer = 30
     Dim total As Integer = 0
 
     Private Sub SalesReport_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        For value As Integer = 2018 To 2020
+        Dim nyear As String = Date.Today.Year.ToString
+
+        For value As Integer = (CInt(nyear) - 2) To CInt(nyear)
             cboYear.Items.Add(value)
         Next
 
+        cboYear.Enabled = False
     End Sub
 
-    Private Sub cboMonth_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMonth.SelectedIndexChanged, cboYear.SelectedIndexChanged
+    Private Sub cboMonth_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMonth.SelectedIndexChanged
+        cboYear.Enabled = True
+    End Sub
+
+    Private Sub cboYear_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMonth.SelectedIndexChanged, cboYear.SelectedIndexChanged
         lstSales.Items.Clear()
         Try
             Dim selectedMonth As Integer = cboMonth.SelectedIndex + 1
@@ -30,8 +37,8 @@ Public Class SalesReport
             'Dim query = From Flights In db.Flights From Bookings In db.Bookings Where Bookings.FlightID = Flights.FlightID And Flights.DepartureTime >= startDate And Flights.DepartureTime <= endDate Group New With {Flights, Bookings} By Flights.FlightNo Into g = Group Select Flight_No = FlightNo, No_Of_Passengers = CType(g.Sum(Function(p) p.Bookings.NoOfPassengers), Int32?), Total_Sales = CType(g.Sum(Function(p) p.Bookings.TotalPrice), Decimal?)
             'ListBox1.DataSource = query.ToList
 
-            For Each row1 In db.Flights
-                For Each row2 In db.Bookings
+            For Each row1 In dbo.Flights
+                For Each row2 In dbo.Bookings
                     Dim dbFlightDepart As String = row1.DepartureTime.ToString("MM/yyyy")
 
                     If startDate.ToString("MM/yyyy") = dbFlightDepart Then
@@ -40,7 +47,7 @@ Public Class SalesReport
                         Dim totalSales As Decimal = 0D
 
                         If row1.FlightID = row2.FlightID Then
-                            For Each row3 In db.Bookings
+                            For Each row3 In dbo.Bookings
                                 passengerNo += row3.NoOfPassengers
                                 totalSales += row3.TotalPrice
                             Next

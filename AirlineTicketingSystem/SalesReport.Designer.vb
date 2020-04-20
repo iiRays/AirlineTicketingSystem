@@ -37,13 +37,15 @@ Partial Class SalesReport
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.printDialog = New System.Windows.Forms.PrintDialog()
+        Me.grpDateSelection = New System.Windows.Forms.GroupBox()
+        Me.grpDateSelection.SuspendLayout()
         Me.SuspendLayout()
         '
         'cboYear
         '
         Me.cboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboYear.FormattingEnabled = True
-        Me.cboYear.Location = New System.Drawing.Point(138, 72)
+        Me.cboYear.Location = New System.Drawing.Point(90, 68)
         Me.cboYear.Name = "cboYear"
         Me.cboYear.Size = New System.Drawing.Size(121, 24)
         Me.cboYear.TabIndex = 17
@@ -51,7 +53,7 @@ Partial Class SalesReport
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(68, 75)
+        Me.Label3.Location = New System.Drawing.Point(20, 71)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(50, 17)
         Me.Label3.TabIndex = 16
@@ -60,7 +62,7 @@ Partial Class SalesReport
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(59, 32)
+        Me.Label4.Location = New System.Drawing.Point(11, 28)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(59, 17)
         Me.Label4.TabIndex = 15
@@ -71,7 +73,7 @@ Partial Class SalesReport
         Me.cboMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboMonth.FormattingEnabled = True
         Me.cboMonth.Items.AddRange(New Object() {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"})
-        Me.cboMonth.Location = New System.Drawing.Point(138, 29)
+        Me.cboMonth.Location = New System.Drawing.Point(90, 25)
         Me.cboMonth.Name = "cboMonth"
         Me.cboMonth.Size = New System.Drawing.Size(121, 24)
         Me.cboMonth.TabIndex = 14
@@ -155,11 +157,24 @@ Partial Class SalesReport
         '
         Me.printDialog.UseEXDialog = True
         '
+        'grpDateSelection
+        '
+        Me.grpDateSelection.Controls.Add(Me.cboYear)
+        Me.grpDateSelection.Controls.Add(Me.cboMonth)
+        Me.grpDateSelection.Controls.Add(Me.Label4)
+        Me.grpDateSelection.Controls.Add(Me.Label3)
+        Me.grpDateSelection.Location = New System.Drawing.Point(48, 12)
+        Me.grpDateSelection.Name = "grpDateSelection"
+        Me.grpDateSelection.Size = New System.Drawing.Size(379, 107)
+        Me.grpDateSelection.TabIndex = 27
+        Me.grpDateSelection.TabStop = False
+        '
         'SalesReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(468, 490)
+        Me.Controls.Add(Me.grpDateSelection)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -167,14 +182,11 @@ Partial Class SalesReport
         Me.Controls.Add(Me.lstSales)
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.lblCount)
-        Me.Controls.Add(Me.cboYear)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.cboMonth)
         Me.Name = "SalesReport"
         Me.Text = "SalesReport"
+        Me.grpDateSelection.ResumeLayout(False)
+        Me.grpDateSelection.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents cboYear As ComboBox
@@ -191,4 +203,5 @@ Partial Class SalesReport
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents printDialog As PrintDialog
+    Friend WithEvents grpDateSelection As GroupBox
 End Class

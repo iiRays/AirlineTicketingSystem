@@ -38,6 +38,11 @@ Partial Class FlightScheduleReport
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.grpDateSelection = New System.Windows.Forms.GroupBox()
+        Me.printDialog = New System.Windows.Forms.PrintDialog()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.grpDateSelection.SuspendLayout()
         Me.SuspendLayout()
         '
         'lstSchedule
@@ -46,12 +51,12 @@ Partial Class FlightScheduleReport
         Me.lstSchedule.ItemHeight = 16
         Me.lstSchedule.Location = New System.Drawing.Point(36, 169)
         Me.lstSchedule.Name = "lstSchedule"
-        Me.lstSchedule.Size = New System.Drawing.Size(385, 276)
+        Me.lstSchedule.Size = New System.Drawing.Size(748, 276)
         Me.lstSchedule.TabIndex = 35
         '
         'btnPrint
         '
-        Me.btnPrint.Location = New System.Drawing.Point(340, 479)
+        Me.btnPrint.Location = New System.Drawing.Point(709, 481)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(75, 23)
         Me.btnPrint.TabIndex = 34
@@ -69,7 +74,7 @@ Partial Class FlightScheduleReport
         '
         Me.cboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboYear.FormattingEnabled = True
-        Me.cboYear.Location = New System.Drawing.Point(132, 96)
+        Me.cboYear.Location = New System.Drawing.Point(88, 64)
         Me.cboYear.Name = "cboYear"
         Me.cboYear.Size = New System.Drawing.Size(121, 24)
         Me.cboYear.TabIndex = 32
@@ -77,7 +82,7 @@ Partial Class FlightScheduleReport
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(62, 99)
+        Me.Label3.Location = New System.Drawing.Point(18, 67)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(50, 17)
         Me.Label3.TabIndex = 31
@@ -86,7 +91,7 @@ Partial Class FlightScheduleReport
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(53, 56)
+        Me.Label4.Location = New System.Drawing.Point(9, 24)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(59, 17)
         Me.Label4.TabIndex = 30
@@ -97,7 +102,7 @@ Partial Class FlightScheduleReport
         Me.cboMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboMonth.FormattingEnabled = True
         Me.cboMonth.Items.AddRange(New Object() {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"})
-        Me.cboMonth.Location = New System.Drawing.Point(132, 53)
+        Me.cboMonth.Location = New System.Drawing.Point(88, 21)
         Me.cboMonth.Name = "cboMonth"
         Me.cboMonth.Size = New System.Drawing.Size(121, 24)
         Me.cboMonth.TabIndex = 29
@@ -115,7 +120,7 @@ Partial Class FlightScheduleReport
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(53, 14)
+        Me.Label1.Location = New System.Drawing.Point(246, 67)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(45, 17)
         Me.Label1.TabIndex = 41
@@ -125,8 +130,7 @@ Partial Class FlightScheduleReport
         '
         Me.cboDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboDay.FormattingEnabled = True
-        Me.cboDay.Items.AddRange(New Object() {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"})
-        Me.cboDay.Location = New System.Drawing.Point(132, 11)
+        Me.cboDay.Location = New System.Drawing.Point(325, 64)
         Me.cboDay.Name = "cboDay"
         Me.cboDay.Size = New System.Drawing.Size(121, 24)
         Me.cboDay.TabIndex = 40
@@ -134,11 +138,11 @@ Partial Class FlightScheduleReport
         'Label7
         '
         Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label7.Location = New System.Drawing.Point(302, 146)
+        Me.Label7.Location = New System.Drawing.Point(291, 146)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(97, 20)
+        Me.Label7.Size = New System.Drawing.Size(173, 20)
         Me.Label7.TabIndex = 39
-        Me.Label7.Text = "Total Sales"
+        Me.Label7.Text = "To"
         '
         'Label6
         '
@@ -147,7 +151,7 @@ Partial Class FlightScheduleReport
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(151, 20)
         Me.Label6.TabIndex = 38
-        Me.Label6.Text = "No Of Passenger(s)"
+        Me.Label6.Text = "From"
         '
         'Label5
         '
@@ -167,28 +171,62 @@ Partial Class FlightScheduleReport
         Me.Label2.TabIndex = 36
         Me.Label2.Text = "No"
         '
+        'grpDateSelection
+        '
+        Me.grpDateSelection.Controls.Add(Me.cboDay)
+        Me.grpDateSelection.Controls.Add(Me.Label1)
+        Me.grpDateSelection.Controls.Add(Me.cboMonth)
+        Me.grpDateSelection.Controls.Add(Me.Label4)
+        Me.grpDateSelection.Controls.Add(Me.cboYear)
+        Me.grpDateSelection.Controls.Add(Me.Label3)
+        Me.grpDateSelection.Location = New System.Drawing.Point(42, 21)
+        Me.grpDateSelection.Name = "grpDateSelection"
+        Me.grpDateSelection.Size = New System.Drawing.Size(742, 107)
+        Me.grpDateSelection.TabIndex = 42
+        Me.grpDateSelection.TabStop = False
+        '
+        'printDialog
+        '
+        Me.printDialog.UseEXDialog = True
+        '
+        'Label8
+        '
+        Me.Label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label8.Location = New System.Drawing.Point(420, 146)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(198, 20)
+        Me.Label8.TabIndex = 43
+        Me.Label8.Text = "Depart Date && Time"
+        '
+        'Label9
+        '
+        Me.Label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label9.Location = New System.Drawing.Point(603, 146)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(181, 20)
+        Me.Label9.TabIndex = 44
+        Me.Label9.Text = "Arrival Date && Time"
+        '
         'FlightScheduleReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(451, 516)
+        Me.ClientSize = New System.Drawing.Size(823, 516)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.grpDateSelection)
         Me.Controls.Add(Me.lstSchedule)
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.lblCount)
-        Me.Controls.Add(Me.cboYear)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.cboMonth)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.cboDay)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label2)
         Me.Name = "FlightScheduleReport"
         Me.Text = "FlightScheduleReport"
+        Me.grpDateSelection.ResumeLayout(False)
+        Me.grpDateSelection.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -207,4 +245,8 @@ Partial Class FlightScheduleReport
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents grpDateSelection As GroupBox
+    Friend WithEvents printDialog As PrintDialog
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
 End Class
