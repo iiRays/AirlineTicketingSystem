@@ -316,37 +316,33 @@
         If TypeOf obj Is Plane Then
             'Update Plane
             Dim plane As Plane = [Get](Of Plane)(currentId)
-            Dim newPlane As Plane = CType(obj, Plane)
-
-            plane.Model = newPlane.Model
-            plane.Manufacturer = newPlane.Manufacturer
-            plane.Capacity = newPlane.Capacity
-
+            plane = CType(obj, Plane)
 
         ElseIf TypeOf obj Is User Then
             'Update User
-            Dim cust As User = [Get](Of User)(currentId)
+            Dim user As User = [Get](Of User)(currentId)
+            user = CType(obj, User)
 
         ElseIf TypeOf obj Is Booking Then
             'Update Booking
             Dim booking As Booking = [Get](Of Booking)(currentId)
-            booking = obj
+            booking = CType(obj, Booking)
         ElseIf TypeOf obj Is City Then
             'Update City
             Dim city As City = [Get](Of City)(currentId)
-            city = obj
+            city = CType(obj, City)
         ElseIf TypeOf obj Is Flight Then
             'Update Flight
-            Dim flight As Plane = [Get](Of Flight)(currentId)
-            flight = obj
+            Dim flight As Flight = [Get](Of Flight)(currentId)
+            flight = CType(obj, Flight)
         ElseIf TypeOf obj Is Route Then
             'Update route
-            Dim route As Plane = [Get](Of Route)(currentId)
-            route = obj
+            Dim route As Route = [Get](Of Route)(currentId)
+            route = CType(obj, Route)
         ElseIf TypeOf obj Is Ticket Then
             'Update ticket
             Dim ticket As Ticket = [Get](Of Ticket)(currentId)
-            ticket = obj
+            ticket = CType(obj, Ticket)
         Else
             Throw New Exception("Object's type is not present in Airline Database.")
         End If
