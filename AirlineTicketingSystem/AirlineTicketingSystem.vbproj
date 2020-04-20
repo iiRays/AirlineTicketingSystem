@@ -117,6 +117,12 @@
     <Compile Include="AdminCitiesDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AdminCitiesEdit.Designer.vb">
+      <DependentUpon>AdminCitiesEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCitiesEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminCitiesView.Designer.vb">
       <DependentUpon>AdminCitiesView.vb</DependentUpon>
     </Compile>
@@ -127,6 +133,12 @@
       <DependentUpon>AdminCitiesViewResults.vb</DependentUpon>
     </Compile>
     <Compile Include="AdminCitiesViewResults.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCitiesViewSummary.Designer.vb">
+      <DependentUpon>AdminCitiesViewSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCitiesViewSummary.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminDashboard.Designer.vb">
@@ -346,11 +358,17 @@
     <EmbeddedResource Include="AdminCitiesDashboard.resx">
       <DependentUpon>AdminCitiesDashboard.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminCitiesEdit.resx">
+      <DependentUpon>AdminCitiesEdit.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminCitiesView.resx">
       <DependentUpon>AdminCitiesView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminCitiesViewResults.resx">
       <DependentUpon>AdminCitiesViewResults.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCitiesViewSummary.resx">
+      <DependentUpon>AdminCitiesViewSummary.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.vb</DependentUpon>

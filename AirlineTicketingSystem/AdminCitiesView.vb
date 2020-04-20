@@ -5,13 +5,14 @@
     End Sub
 
     Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        App.Session.Delete("viewAll")
         Quick.Navigate(Me, New AdminCitiesDashboard)
     End Sub
 
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         App.Session.Add("viewAll", False)
-        App.Session.Add("searchBy", cbSearchBy.SelectedText)
-        App.Session.Add("seearchFor", txtSearchFor.Text)
+        App.Session.Add("searchBy", cbSearchBy.SelectedItem)
+        App.Session.Add("searchFor", txtSearchFor.Text)
         Quick.Navigate(Me, New AdminCitiesViewResults)
     End Sub
 
