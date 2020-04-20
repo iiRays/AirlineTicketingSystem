@@ -8,10 +8,10 @@
     End Sub
 
     Private Sub BtnFlights_Click(sender As Object, e As EventArgs) Handles btnFlights.Click
-        'Quick.Navigate(Me, New ???)
+        Quick.Navigate(Me, New AdminFlightsAdd1)
     End Sub
 
     Private Sub BtnRoutes_Click(sender As Object, e As EventArgs) Handles btnRoutes.Click
-        'Quick.Navigate(Me, New ???)
+        Quick.Navigate(Me, New AdminFlightsView)
     End Sub
 End Class

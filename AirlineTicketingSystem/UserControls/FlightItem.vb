@@ -112,4 +112,7 @@
 
     End Sub
 
+    Private Sub LblDate_Click(sender As Object, e As EventArgs) Handles lblDate.Click
+
+    End Sub
 End Class
