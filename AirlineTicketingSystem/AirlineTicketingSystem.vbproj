@@ -201,6 +201,12 @@
     <Compile Include="Splash.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TicketList.Designer.vb">
+      <DependentUpon>TicketList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TicketList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserControls\BookingItem.Designer.vb">
       <DependentUpon>BookingItem.vb</DependentUpon>
     </Compile>
@@ -229,6 +235,12 @@
       <DependentUpon>PassengerItem.vb</DependentUpon>
     </Compile>
     <Compile Include="UserControls\PassengerItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TicketItem.Designer.vb">
+      <DependentUpon>TicketItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TicketItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Util\App.vb" />
@@ -397,6 +409,9 @@
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TicketList.resx">
+      <DependentUpon>TicketList.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\BookingItem.resx">
       <DependentUpon>BookingItem.vb</DependentUpon>
     </EmbeddedResource>
@@ -441,6 +456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\PassengerItem.resx">
       <DependentUpon>PassengerItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TicketItem.resx">
+      <DependentUpon>TicketItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerifyEmail.resx">
       <DependentUpon>VerifyEmail.vb</DependentUpon>
