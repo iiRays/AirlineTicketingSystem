@@ -12,6 +12,6 @@
     End Sub
 
     Private Sub BtnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
-        'Quick.Navigate(Me, New ???)
+        Quick.Navigate(Me, New AdminRoutesView)
     End Sub
 End Class

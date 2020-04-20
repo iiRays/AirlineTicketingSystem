@@ -171,10 +171,22 @@
     <Compile Include="AdminPlanesAdd.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AdminPlanesAddSummary.Designer.vb">
+      <DependentUpon>AdminPlanesAddSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPlanesAddSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminPlanesDashboard.Designer.vb">
       <DependentUpon>AdminPlanesDashboard.vb</DependentUpon>
     </Compile>
     <Compile Include="AdminPlanesDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPlanesEdit.Designer.vb">
+      <DependentUpon>AdminPlanesEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPlanesEdit.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminPlanesView.Designer.vb">
@@ -187,6 +199,12 @@
       <DependentUpon>AdminPlanesViewResults.vb</DependentUpon>
     </Compile>
     <Compile Include="AdminPlanesViewResults.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPlanesViewSummary.Designer.vb">
+      <DependentUpon>AdminPlanesViewSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPlanesViewSummary.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminRoutesAdd1.Designer.vb">
@@ -351,6 +369,12 @@
     <Compile Include="UserControls\PassengerItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserControls\PlaneItem.Designer.vb">
+      <DependentUpon>PlaneItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PlaneItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControls\RouteItem.Designer.vb">
       <DependentUpon>RouteItem.vb</DependentUpon>
     </Compile>
@@ -506,14 +530,23 @@
     <EmbeddedResource Include="AdminPlanesAdd.resx">
       <DependentUpon>AdminPlanesAdd.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminPlanesAddSummary.resx">
+      <DependentUpon>AdminPlanesAddSummary.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminPlanesDashboard.resx">
       <DependentUpon>AdminPlanesDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPlanesEdit.resx">
+      <DependentUpon>AdminPlanesEdit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPlanesView.resx">
       <DependentUpon>AdminPlanesView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPlanesViewResults.resx">
       <DependentUpon>AdminPlanesViewResults.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPlanesViewSummary.resx">
+      <DependentUpon>AdminPlanesViewSummary.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminRoutesAdd1.resx">
       <DependentUpon>AdminRoutesAdd1.vb</DependentUpon>
@@ -634,6 +667,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\PassengerItem.resx">
       <DependentUpon>PassengerItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PlaneItem.resx">
+      <DependentUpon>PlaneItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\RouteItem.resx">
       <DependentUpon>RouteItem.vb</DependentUpon>

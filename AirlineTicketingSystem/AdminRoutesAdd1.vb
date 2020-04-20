@@ -18,7 +18,7 @@
     End Sub
 
     Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Quick.Navigate(Me, New AdminCitiesView)
+        Quick.Navigate(Me, New AdminRoutesDashboard)
     End Sub
 
     Private Sub AdminRoutesAdd1_Load(sender As Object, e As EventArgs) Handles MyBase.Load

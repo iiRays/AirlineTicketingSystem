@@ -8,7 +8,7 @@
         Quick.Navigate(Me, New AdminCitiesDashboard)
     End Sub
 
-    Private Sub BtnRegister_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+    Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim city As New City
         city.CityID = Quick.GenerateId(Of City)
         city.Name = txtName.Text

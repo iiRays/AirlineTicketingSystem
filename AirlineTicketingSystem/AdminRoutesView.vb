@@ -6,7 +6,7 @@
 
     Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         App.Session.Delete("viewAll")
-        Quick.Navigate(Me, New AdminCitiesDashboard)
+        Quick.Navigate(Me, New AdminRoutesDashboard)
     End Sub
 
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
