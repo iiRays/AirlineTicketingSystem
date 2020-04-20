@@ -56,6 +56,7 @@
     End Sub
 
     Private Sub BookPayerInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TitleBar.Load(Me)
         Dim user = If(BookFlightForm.User Is Nothing, App.User, BookFlightForm.User)
 
         With user
