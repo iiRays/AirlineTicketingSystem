@@ -67,4 +67,8 @@
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnViewFlight.Click
         Quick.Navigate(Me, New FlightDetails(Booking))
     End Sub
+
+    Private Sub btnViewTickets_Click(sender As Object, e As EventArgs) Handles btnViewTickets.Click
+        Quick.Navigate(Me, New TicketList(Booking))
+    End Sub
 End Class

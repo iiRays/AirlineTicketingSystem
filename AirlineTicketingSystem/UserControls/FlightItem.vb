@@ -65,7 +65,7 @@
 
         lblSeats.Text = totalPassengers & "/" & CType(DB.Get(Of Plane)(Flight.PlaneID), Plane).Capacity
 
-
+        lblDate.Text = Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Flight.DepartureTime.Month) & " " & Flight.DepartureTime.Day.ToString
         lblPrice.Text = "RM " & Flight.Price
         lblId.Text = Flight.FlightNo
         lblDuration.Text = Flight.Route.DurationHour.ToString & "h " & Flight.Route.DurationMins.ToString
@@ -112,7 +112,4 @@
 
     End Sub
 
-    Private Sub LblDate_Click(sender As Object, e As EventArgs) Handles lblDate.Click
-
-    End Sub
 End Class

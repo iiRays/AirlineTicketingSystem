@@ -8,6 +8,7 @@
 
 		' Add any initialization after the InitializeComponent() call.
 
+		Me.Ticket = ticket
 	End Sub
 
 

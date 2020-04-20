@@ -25,13 +25,13 @@ Partial Class TicketItem
 		Me.Panel2 = New System.Windows.Forms.Panel()
 		Me.lblTicketId = New System.Windows.Forms.Label()
 		Me.Panel1 = New System.Windows.Forms.Panel()
+		Me.Label1 = New System.Windows.Forms.Label()
 		Me.lblSeatLocation = New System.Windows.Forms.Label()
 		Me.Label3 = New System.Windows.Forms.Label()
 		Me.lblSeatColumn = New System.Windows.Forms.Label()
 		Me.lblNameTitle = New System.Windows.Forms.Label()
 		Me.lblName = New System.Windows.Forms.Label()
 		Me.lblSeatRow = New System.Windows.Forms.Label()
-		Me.Label1 = New System.Windows.Forms.Label()
 		Me.Panel2.SuspendLayout()
 		Me.Panel1.SuspendLayout()
 		Me.SuspendLayout()
@@ -48,7 +48,7 @@ Partial Class TicketItem
 		'
 		'lblTicketId
 		'
-		Me.lblTicketId.Font = New System.Drawing.Font("OCR A Extended", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.lblTicketId.Font = New System.Drawing.Font("OCR A Extended", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.lblTicketId.ForeColor = System.Drawing.Color.White
 		Me.lblTicketId.Location = New System.Drawing.Point(0, 23)
 		Me.lblTicketId.Name = "lblTicketId"
@@ -72,6 +72,18 @@ Partial Class TicketItem
 		Me.Panel1.Name = "Panel1"
 		Me.Panel1.Size = New System.Drawing.Size(1000, 100)
 		Me.Panel1.TabIndex = 45
+		'
+		'Label1
+		'
+		Me.Label1.AutoSize = True
+		Me.Label1.Font = New System.Drawing.Font("Poppins", 20.0!, System.Drawing.FontStyle.Bold)
+		Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
+		Me.Label1.Location = New System.Drawing.Point(629, 29)
+		Me.Label1.Name = "Label1"
+		Me.Label1.Size = New System.Drawing.Size(82, 48)
+		Me.Label1.TabIndex = 56
+		Me.Label1.Text = "Seat"
+		Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
 		'lblSeatLocation
 		'
@@ -123,12 +135,12 @@ Partial Class TicketItem
 		'
 		'lblName
 		'
-		Me.lblName.AutoSize = True
+		Me.lblName.AutoEllipsis = True
 		Me.lblName.Font = New System.Drawing.Font("Poppins", 22.0!, System.Drawing.FontStyle.Bold)
 		Me.lblName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
 		Me.lblName.Location = New System.Drawing.Point(268, 26)
 		Me.lblName.Name = "lblName"
-		Me.lblName.Size = New System.Drawing.Size(202, 53)
+		Me.lblName.Size = New System.Drawing.Size(339, 53)
 		Me.lblName.TabIndex = 44
 		Me.lblName.Text = "Johann Lee "
 		Me.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -144,18 +156,6 @@ Partial Class TicketItem
 		Me.lblSeatRow.TabIndex = 42
 		Me.lblSeatRow.Text = "25"
 		Me.lblSeatRow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-		'
-		'Label1
-		'
-		Me.Label1.AutoSize = True
-		Me.Label1.Font = New System.Drawing.Font("Poppins", 20.0!, System.Drawing.FontStyle.Bold)
-		Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-		Me.Label1.Location = New System.Drawing.Point(629, 29)
-		Me.Label1.Name = "Label1"
-		Me.Label1.Size = New System.Drawing.Size(82, 48)
-		Me.Label1.TabIndex = 56
-		Me.Label1.Text = "Seat"
-		Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
 		'TicketItem
 		'

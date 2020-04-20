@@ -10,14 +10,14 @@
     End Sub
 
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        App.Session.Add("viewAll", False)
-        App.Session.Add("searchBy", cbSearchBy.SelectedItem)
-        App.Session.Add("searchFor", txtSearchFor.Text)
+        App.Session.Set("viewAll", False)
+        App.Session.Set("searchBy", cbSearchBy.SelectedItem)
+        App.Session.Set("searchFor", txtSearchFor.Text)
         Quick.Navigate(Me, New AdminCitiesViewResults)
     End Sub
 
     Private Sub BtnAll_Click(sender As Object, e As EventArgs) Handles btnAll.Click
-        App.Session.Add("viewAll", True)
+        App.Session.Set("viewAll", True)
         Quick.Navigate(Me, New AdminCitiesViewResults)
     End Sub
 End Class

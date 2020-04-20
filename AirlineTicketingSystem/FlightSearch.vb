@@ -18,6 +18,9 @@
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        App.Session.Delete("flightResults")
+        App.Session.Delete("selectedDate")
+
         If dtpDate.Value < (DateAndTime.Now()) Then
             Quick.ShowWarning("Wrong date", "Ensure that your selected date is at least 1 day after today.")
             Return
@@ -27,12 +30,22 @@
 
         Dim results As List(Of Flight) = (From flight In DB.context.Flights Where txtFrom.Text = (From stops In DB.context.Stops Where stops.IsOrigin = True And stops.RouteID = flight.RouteID).First.City.Name And txtTo.Text = (From stops In DB.context.Stops Where stops.IsOrigin = False And stops.RouteID = flight.RouteID).First.City.Name And flight.IsDaily Or (flight.DepartureTime.Day = selectedDate.Day And flight.DepartureTime.Month = selectedDate.Month And flight.DepartureTime.Year = selectedDate.Year)).ToList
 
-
+        Dim filteredResults As New List(Of Flight)
 
         For Each flight In results
-            If DB.GetTotalPassengers(flight.FlightID) = flight.Plane.Capacity Then
-                results.Remove(flight)
+
+            If DB.GetTotalPassengers(flight.FlightID) < flight.Plane.Capacity Then
+
+                If flight.IsDaily AndAlso DB.GetExistingFlight(flight, dtpDate.Value) Is Nothing Then
+                    filteredResults.Add(flight)
+
+                ElseIf flight.IsFlightInstance = True Then
+                    filteredResults.Add(flight)
+                Else
+                    filteredResults.Add(flight)
+                End If
             End If
+
         Next
 
         App.Session.Add("flightResults", results)
