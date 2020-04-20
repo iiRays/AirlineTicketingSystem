@@ -189,10 +189,22 @@
     <Compile Include="BookPayerInfo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FlightScheduleReport.Designer.vb">
+      <DependentUpon>FlightScheduleReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FlightScheduleReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MyBookings.Designer.vb">
       <DependentUpon>MyBookings.vb</DependentUpon>
     </Compile>
     <Compile Include="MyBookings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesReport.Designer.vb">
+      <DependentUpon>SalesReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReport.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Splash.Designer.vb">
@@ -312,6 +324,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -391,8 +404,14 @@
     <EmbeddedResource Include="FlightDetails.resx">
       <DependentUpon>FlightDetails.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FlightScheduleReport.resx">
+      <DependentUpon>FlightScheduleReport.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyBookings.resx">
       <DependentUpon>MyBookings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport.resx">
+      <DependentUpon>SalesReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>
@@ -486,6 +505,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>AirlineSystem.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\TempLogo.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
