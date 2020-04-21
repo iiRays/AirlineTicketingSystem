@@ -25,7 +25,7 @@
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Dim newRoute As Route = DB.Get(Of Route)(route.RouteID)
         Dim newSource As [Stop] = DB.GetRouteSource(route.RouteID)
-        Dim newDesination As [Stop] = DB.GetRouteDestination(route.RouteID)
+        Dim newDestination As [Stop] = DB.GetRouteDestination(route.RouteID)
 
         newRoute.DurationHour = Convert.ToInt32(txtHrs.Text) 'to add validation
         newRoute.DurationMins = Convert.ToInt32(txtMins.Text) 'to add validation
@@ -33,14 +33,28 @@
         Dim source As City = App.Session.Get("source")
         Dim destination As City = App.Session.Get("destination")
 
-        newSource.CityID = source.CityID
+        newSource.City = source 'newSource.CityID = source.CityID
 
-        newDesination.CityID = source.CityID
+        newDestination.City = destination 'newDesination.CityID = destination.CityID
+
+        newRoute.Stops.Clear() '?????
+        newRoute.Stops.Add(newSource) '?????
+        newRoute.Stops.Add(newDestination) '?????
 
         App.Session.Delete("source")
         App.Session.Delete("destination")
 
-        Quick.Navigate(Me, New AdminRoutesViewSummary)
+        If App.Session.Get("sourceScreen") = "add" Then
+            App.Session.Delete("sourceScreen")
+            Quick.Navigate(Me, New AdminRoutesAddSummary)
+
+        ElseIf App.Session.Get("sourceScreen") = "view" Then
+            App.Session.Delete("sourceScreen")
+            Quick.Navigate(Me, New AdminRoutesViewSummary)
+
+        Else
+            Quick.Navigate(Me, New AdminDashboard)
+        End If
     End Sub
 
     Private Sub BtnEditSource_Click(sender As Object, e As EventArgs) Handles btnEditSource.Click

@@ -21,14 +21,18 @@
         route.DurationMins = Convert.ToInt32(txtMins) 'to add validation
 
         Dim sourceStop As New [Stop]
-        sourceStop.RouteID = route.RouteID
-        sourceStop.CityID = source.CityID
+        sourceStop.Route = route 'sourceStop.RouteID = route.RouteID
+        sourceStop.City = source 'sourceStop.CityID = source.CityID
         sourceStop.IsOrigin = True
 
+        route.Stops.Add(sourceStop) '?????
+
         Dim destinationStop As New [Stop]
-        destinationStop.RouteID = route.RouteID
-        destinationStop.CityID = destination.CityID
+        destinationStop.Route = route 'destinationStop.RouteID = route.RouteID
+        destinationStop.City = destination 'destinationStop.CityID = destination.CityID
         destinationStop.IsOrigin = False
+
+        route.Stops.Add(destinationStop) '?????
 
         DB.Insert(route)
         DB.Insert(sourceStop)

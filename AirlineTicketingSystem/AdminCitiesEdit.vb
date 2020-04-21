@@ -34,6 +34,16 @@
         newCity.Latitude = txtLatitude.Text
         newCity.Longitude = txtLongitude.Text
 
-        Quick.Navigate(Me, New AdminCitiesViewSummary)
+        If App.Session.Get("sourceScreen") = "add" Then
+            App.Session.Delete("sourceScreen")
+            Quick.Navigate(Me, New AdminCitiesAddSummary)
+
+        ElseIf App.Session.Get("sourceScreen") = "view" Then
+            App.Session.Delete("sourceScreen")
+            Quick.Navigate(Me, New AdminCitiesViewSummary)
+
+        Else
+            Quick.Navigate(Me, New AdminDashboard)
+        End If
     End Sub
 End Class

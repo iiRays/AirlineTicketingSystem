@@ -32,6 +32,16 @@
         newPlane.Capacity = txtCapacity.Text.ToString() 'to add validation
         newPlane.MaxColumns = txtMaxCols.Text.ToString() 'to add validation
 
-        Quick.Navigate(Me, New AdminPlanesViewSummary)
+        If App.Session.Get("sourceScreen") = "add" Then
+            App.Session.Delete("sourceScreen")
+            Quick.Navigate(Me, New AdminPlanesAddSummary)
+
+        ElseIf App.Session.Get("sourceScreen") = "view" Then
+            App.Session.Delete("sourceScreen")
+            Quick.Navigate(Me, New AdminPlanesViewSummary)
+
+        Else
+            Quick.Navigate(Me, New AdminDashboard)
+        End If
     End Sub
 End Class
