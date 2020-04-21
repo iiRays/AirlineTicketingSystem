@@ -115,6 +115,7 @@ Public Class FlightScheduleReport
         cboYear.SelectedIndex = -1
         cboDay.Enabled = False
         cboYear.Enabled = False
+        lblCount.Text = Nothing
         total = 0
         value = 1
     End Sub

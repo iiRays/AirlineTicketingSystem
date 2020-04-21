@@ -168,9 +168,9 @@ Partial Class SalesReport
         Me.grpDateSelection.Controls.Add(Me.cboMonth)
         Me.grpDateSelection.Controls.Add(Me.Label4)
         Me.grpDateSelection.Controls.Add(Me.Label3)
-        Me.grpDateSelection.Location = New System.Drawing.Point(48, 12)
+        Me.grpDateSelection.Location = New System.Drawing.Point(42, 12)
         Me.grpDateSelection.Name = "grpDateSelection"
-        Me.grpDateSelection.Size = New System.Drawing.Size(379, 107)
+        Me.grpDateSelection.Size = New System.Drawing.Size(385, 107)
         Me.grpDateSelection.TabIndex = 27
         Me.grpDateSelection.TabStop = False
         '
@@ -194,10 +194,11 @@ Partial Class SalesReport
         '
         'lblTotalSales
         '
-        Me.lblTotalSales.Location = New System.Drawing.Point(308, 424)
+        Me.lblTotalSales.Location = New System.Drawing.Point(278, 424)
         Me.lblTotalSales.Name = "lblTotalSales"
-        Me.lblTotalSales.Size = New System.Drawing.Size(119, 16)
+        Me.lblTotalSales.Size = New System.Drawing.Size(149, 16)
         Me.lblTotalSales.TabIndex = 28
+        Me.lblTotalSales.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'SalesReport
         '
