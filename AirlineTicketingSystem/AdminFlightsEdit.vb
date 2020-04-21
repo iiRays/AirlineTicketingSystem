@@ -46,6 +46,8 @@
             newFlight.IsFlightInstance = True
         End If
 
+        DB.Update(newFlight, flight.FlightID)
+
         App.Session.Delete("route")
         App.Session.Delete("plane")
 

@@ -17,8 +17,8 @@
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim route As New Route
         route.RouteID = Quick.GenerateId(Of Route)
-        route.DurationHour = Convert.ToInt32(txtHrs) 'to add validation
-        route.DurationMins = Convert.ToInt32(txtMins) 'to add validation
+        route.DurationHour = Convert.ToInt32(txtHrs.Text) 'to add validation
+        route.DurationMins = Convert.ToInt32(txtMins.Text) 'to add validation
 
         Dim sourceStop As New [Stop]
         sourceStop.Route = route 'sourceStop.RouteID = route.RouteID
@@ -35,8 +35,8 @@
         route.Stops.Add(destinationStop) '?????
 
         DB.Insert(route)
-        DB.Insert(sourceStop)
-        DB.Insert(destinationStop)
+        'DB.Insert(sourceStop)
+        'DB.Insert(destinationStop)
 
         App.Session.Set("route", route)
 

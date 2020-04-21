@@ -41,6 +41,8 @@
         newRoute.Stops.Add(newSource) '?????
         newRoute.Stops.Add(newDestination) '?????
 
+        DB.Update(newRoute, route.RouteID)
+
         App.Session.Delete("source")
         App.Session.Delete("destination")
 
