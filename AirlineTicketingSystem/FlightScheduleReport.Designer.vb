@@ -107,6 +107,9 @@ Partial Class FlightScheduleReport
         Me.cboMonth.Size = New System.Drawing.Size(121, 24)
         Me.cboMonth.TabIndex = 29
         '
+        'doc
+        '
+        '
         'dlgPreview
         '
         Me.dlgPreview.AutoScrollMargin = New System.Drawing.Size(0, 0)
@@ -165,9 +168,9 @@ Partial Class FlightScheduleReport
         'Label2
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label2.Location = New System.Drawing.Point(42, 146)
+        Me.Label2.Location = New System.Drawing.Point(36, 146)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 20)
+        Me.Label2.Size = New System.Drawing.Size(63, 20)
         Me.Label2.TabIndex = 36
         Me.Label2.Text = "No"
         '

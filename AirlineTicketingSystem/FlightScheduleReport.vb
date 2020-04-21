@@ -17,6 +17,7 @@ Public Class FlightScheduleReport
 
         cboYear.Enabled = False
         cboDay.Enabled = False
+        btnPrint.Enabled = False
     End Sub
 
     Public Function GetLastDayOfMonth(intMonth, intYear) As Date
@@ -74,10 +75,18 @@ Public Class FlightScheduleReport
                 Next
             Next
 
-            lblCount.Text = lstSchedule.Items.Count.ToString("0 item(s)")
+            If cnt = 0 Then
+                lstSchedule.Items.Add("No available result found")
+                btnPrint.Enabled = False
+            Else
+                btnPrint.Enabled = True
+            End If
+
+            lblCount.Text = cnt.ToString + " item(s)"
         Catch ex As Exception
 
         End Try
+
     End Sub
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click

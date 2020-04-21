@@ -38,6 +38,7 @@ Partial Class SalesReport
         Me.Label7 = New System.Windows.Forms.Label()
         Me.printDialog = New System.Windows.Forms.PrintDialog()
         Me.grpDateSelection = New System.Windows.Forms.GroupBox()
+        Me.lblTotalSales = New System.Windows.Forms.Label()
         Me.grpDateSelection.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -120,9 +121,9 @@ Partial Class SalesReport
         'Label2
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label2.Location = New System.Drawing.Point(48, 122)
+        Me.Label2.Location = New System.Drawing.Point(42, 122)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 20)
+        Me.Label2.Size = New System.Drawing.Size(63, 20)
         Me.Label2.TabIndex = 23
         Me.Label2.Text = "No"
         '
@@ -149,7 +150,7 @@ Partial Class SalesReport
         Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label7.Location = New System.Drawing.Point(308, 122)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(97, 20)
+        Me.Label7.Size = New System.Drawing.Size(119, 20)
         Me.Label7.TabIndex = 26
         Me.Label7.Text = "Total Sales"
         '
@@ -169,11 +170,19 @@ Partial Class SalesReport
         Me.grpDateSelection.TabIndex = 27
         Me.grpDateSelection.TabStop = False
         '
+        'lblTotalSales
+        '
+        Me.lblTotalSales.Location = New System.Drawing.Point(308, 424)
+        Me.lblTotalSales.Name = "lblTotalSales"
+        Me.lblTotalSales.Size = New System.Drawing.Size(119, 16)
+        Me.lblTotalSales.TabIndex = 28
+        '
         'SalesReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(468, 490)
+        Me.Controls.Add(Me.lblTotalSales)
         Me.Controls.Add(Me.grpDateSelection)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -204,4 +213,5 @@ Partial Class SalesReport
     Friend WithEvents Label7 As Label
     Friend WithEvents printDialog As PrintDialog
     Friend WithEvents grpDateSelection As GroupBox
+    Friend WithEvents lblTotalSales As Label
 End Class

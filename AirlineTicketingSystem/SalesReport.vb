@@ -16,6 +16,7 @@ Public Class SalesReport
         Next
 
         cboYear.Enabled = False
+        btnPrint.Enabled = False
     End Sub
 
     Private Sub cboMonth_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMonth.SelectedIndexChanged
@@ -31,6 +32,7 @@ Public Class SalesReport
             Dim startDate As Date = New DateTime(selectedYear, selectedMonth, 1)
 
             Dim cnt As Integer = 0
+            Dim totalSales As Decimal = 0D
             'Dim passengerNo As Integer = 0
             'Dim totalSales As Integer = 0
 
@@ -44,16 +46,17 @@ Public Class SalesReport
                     If startDate.ToString("MM/yyyy") = dbFlightDepart Then
 
                         Dim passengerNo As Integer = 0
-                        Dim totalSales As Decimal = 0D
+                        Dim sales As Decimal = 0D
 
                         If row1.FlightID = row2.FlightID Then
                             For Each row3 In dbo.Bookings
                                 passengerNo += row3.NoOfPassengers
-                                totalSales += row3.TotalPrice
+                                sales += row3.TotalPrice
                             Next
+                            totalSales += sales
                             cnt += 1
                             total += 1
-                            lstSales.Items.Add(cnt & vbTab & row1.FlightNo & vbTab & passengerNo & vbTab & totalSales.ToString("                   RM 00.00"))
+                            lstSales.Items.Add(cnt & vbTab & row1.FlightNo & vbTab & passengerNo & vbTab & sales.ToString("                   RM 00.00"))
                             Exit For
 
                         End If
@@ -61,7 +64,15 @@ Public Class SalesReport
                 Next
             Next
 
-            lblCount.Text = lstSales.Items.Count.ToString("0 item(s)")
+            If cnt = 0 Then
+                lstSales.Items.Add("No available result found")
+                btnPrint.Enabled = False
+            Else
+                btnPrint.Enabled = True
+            End If
+
+            lblCount.Text = cnt.ToString + " item(s)"
+            lblTotalSales.Text = totalSales.ToString("RM 00.00")
         Catch ex As Exception
 
         End Try
@@ -182,6 +193,8 @@ Public Class SalesReport
         Next
 
         Dim footer As New StringBuilder()
+        footer.AppendLine()
+        footer.AppendFormat(vbTab + vbTab + vbTab + vbTab + vbTab + vbTab + vbTab + vbTab + " Total Sales: {0,2}", lblTotalSales.Text)
         footer.AppendLine()
         footer.AppendFormat("{0,2} record(s) out of", cnt1)
         footer.AppendFormat(" {0,2} record(s)", total)
