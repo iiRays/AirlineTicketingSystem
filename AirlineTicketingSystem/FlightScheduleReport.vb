@@ -61,7 +61,7 @@ Public Class FlightScheduleReport
                         For Each row4 In dbo.Routes
                             Dim dbFlightDepart As String = row1.DepartureTime.ToString("MM/dd/yyyy")
                             If selectedDate.ToString("MM/dd/yyyy") = dbFlightDepart Then
-                                If row1.RouteID = row4.RouteID And row3.CityID = row2.CityID And row4.RouteID = row3.RouteID And row3.IsOrigin = 0 Then
+                                If row1.RouteID = row4.RouteID And row3.CityID = row2.CityID And row4.RouteID = row3.RouteID And row3.IsOrigin = False Then
                                     Dim from As String = DB.GetFlightSource(row1.FlightID).City.Name
                                     Dim destination As String = DB.GetFlightDestination(row1.FlightID).City.Name
                                     cnt += 1

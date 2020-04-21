@@ -16,6 +16,7 @@ Public Class SalesReport
         Next
 
         cboYear.Enabled = False
+        cboDay.Enabled = False
         btnPrint.Enabled = False
     End Sub
 
@@ -23,13 +24,34 @@ Public Class SalesReport
         cboYear.Enabled = True
     End Sub
 
-    Private Sub cboYear_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMonth.SelectedIndexChanged, cboYear.SelectedIndexChanged
+    Public Function GetLastDayOfMonth(intMonth, intYear) As Date
+        GetLastDayOfMonth = DateSerial(intYear, intMonth + 1, 0)
+    End Function
+
+    Private Sub cboYear_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboYear.SelectedIndexChanged
+
+        cboDay.Items.Clear()
+
+        Dim selectedMonth As Integer = cboMonth.SelectedIndex + 1
+        Dim selectedYear As Integer = cboYear.SelectedItem
+        Dim lastDay As Integer = GetLastDayOfMonth(selectedMonth, selectedYear).Day
+
+        For value As Integer = 1 To lastDay
+            cboDay.Items.Add(value)
+        Next
+
+        cboDay.Enabled = True
+
+    End Sub
+
+    Private Sub cboDay_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMonth.SelectedIndexChanged, cboYear.SelectedIndexChanged, cboDay.SelectedIndexChanged
         lstSales.Items.Clear()
         Try
             Dim selectedMonth As Integer = cboMonth.SelectedIndex + 1
             Dim selectedYear As Integer = cboYear.SelectedItem
+            Dim selectedDay As Integer = cboDay.SelectedItem
 
-            Dim startDate As Date = New DateTime(selectedYear, selectedMonth, 1)
+            Dim selectedDate As Date = New DateTime(selectedYear, selectedMonth, selectedDay)
 
             Dim cnt As Integer = 0
             Dim totalSales As Decimal = 0D
@@ -41,14 +63,13 @@ Public Class SalesReport
 
             For Each row1 In dbo.Flights
                 For Each row2 In dbo.Bookings
-                    Dim dbFlightDepart As String = row1.DepartureTime.ToString("MM/yyyy")
-
-                    If startDate.ToString("MM/yyyy") = dbFlightDepart Then
+                    Dim dbFlightDepart As String = row1.DepartureTime.ToString("MM/dd/yyyy")
+                    If selectedDate.ToString("MM/dd/yyyy") = dbFlightDepart Then
 
                         Dim passengerNo As Integer = 0
                         Dim sales As Decimal = 0D
 
-                        If row1.FlightID = row2.FlightID And row2.IsCancelled = 0 Then
+                        If row1.FlightID = row2.FlightID And row2.IsCancelled = False Then
                             For Each row3 In dbo.Bookings
                                 passengerNo += row3.NoOfPassengers
                                 sales += row3.TotalPrice
