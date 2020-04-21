@@ -56,6 +56,7 @@ Partial Class SalesReport
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
         Me.Label3.Location = New System.Drawing.Point(20, 71)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(50, 17)
@@ -65,6 +66,7 @@ Partial Class SalesReport
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.SystemColors.Control
         Me.Label4.Location = New System.Drawing.Point(11, 28)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(59, 17)
@@ -83,6 +85,7 @@ Partial Class SalesReport
         '
         'lblCount
         '
+        Me.lblCount.ForeColor = System.Drawing.SystemColors.Control
         Me.lblCount.Location = New System.Drawing.Point(39, 424)
         Me.lblCount.Name = "lblCount"
         Me.lblCount.Size = New System.Drawing.Size(120, 16)
@@ -123,6 +126,7 @@ Partial Class SalesReport
         'Label2
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
         Me.Label2.Location = New System.Drawing.Point(42, 122)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(63, 20)
@@ -132,6 +136,7 @@ Partial Class SalesReport
         'Label5
         '
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label5.ForeColor = System.Drawing.SystemColors.Control
         Me.Label5.Location = New System.Drawing.Point(99, 122)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(97, 20)
@@ -141,6 +146,7 @@ Partial Class SalesReport
         'Label6
         '
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label6.ForeColor = System.Drawing.SystemColors.Control
         Me.Label6.Location = New System.Drawing.Point(167, 122)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(151, 20)
@@ -150,6 +156,7 @@ Partial Class SalesReport
         'Label7
         '
         Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label7.ForeColor = System.Drawing.SystemColors.Control
         Me.Label7.Location = New System.Drawing.Point(308, 122)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(119, 20)
@@ -186,6 +193,7 @@ Partial Class SalesReport
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(216, 71)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(45, 17)
@@ -194,6 +202,7 @@ Partial Class SalesReport
         '
         'lblTotalSales
         '
+        Me.lblTotalSales.ForeColor = System.Drawing.SystemColors.Control
         Me.lblTotalSales.Location = New System.Drawing.Point(278, 424)
         Me.lblTotalSales.Name = "lblTotalSales"
         Me.lblTotalSales.Size = New System.Drawing.Size(149, 16)
@@ -204,6 +213,7 @@ Partial Class SalesReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(468, 490)
         Me.Controls.Add(Me.lblTotalSales)
         Me.Controls.Add(Me.grpDateSelection)
