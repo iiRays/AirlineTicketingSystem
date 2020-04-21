@@ -22,4 +22,8 @@
     Private Sub BtnPlanes_Click(sender As Object, e As EventArgs) Handles btnPlanes.Click
         Quick.Navigate(Me, New AdminPlanesDashboard)
     End Sub
+
+    Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
+        Quick.Navigate(Me, New AdminReport)
+    End Sub
 End Class

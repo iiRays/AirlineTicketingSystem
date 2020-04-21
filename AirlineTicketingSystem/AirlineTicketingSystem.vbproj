@@ -267,6 +267,12 @@
     <Compile Include="AdminPlanesViewSummary.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AdminReport.Designer.vb">
+      <DependentUpon>AdminReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminRoutesAdd1.Designer.vb">
       <DependentUpon>AdminRoutesAdd1.vb</DependentUpon>
     </Compile>
@@ -655,6 +661,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPlanesViewSummary.resx">
       <DependentUpon>AdminPlanesViewSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminReport.resx">
+      <DependentUpon>AdminReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminRoutesAdd1.resx">
       <DependentUpon>AdminRoutesAdd1.vb</DependentUpon>

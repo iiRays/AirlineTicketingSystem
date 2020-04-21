@@ -65,6 +65,8 @@ Partial Class FlightScheduleReport
         '
         'lblCount
         '
+        Me.lblCount.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.lblCount.ForeColor = System.Drawing.SystemColors.Control
         Me.lblCount.Location = New System.Drawing.Point(33, 448)
         Me.lblCount.Name = "lblCount"
         Me.lblCount.Size = New System.Drawing.Size(120, 16)
@@ -82,6 +84,8 @@ Partial Class FlightScheduleReport
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
         Me.Label3.Location = New System.Drawing.Point(18, 67)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(50, 17)
@@ -91,6 +95,8 @@ Partial Class FlightScheduleReport
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.Control
         Me.Label4.Location = New System.Drawing.Point(9, 24)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(59, 17)
@@ -123,6 +129,8 @@ Partial Class FlightScheduleReport
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(246, 67)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(45, 17)
@@ -140,7 +148,9 @@ Partial Class FlightScheduleReport
         '
         'Label7
         '
+        Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label7.ForeColor = System.Drawing.SystemColors.Control
         Me.Label7.Location = New System.Drawing.Point(291, 146)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(173, 20)
@@ -149,7 +159,9 @@ Partial Class FlightScheduleReport
         '
         'Label6
         '
+        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label6.ForeColor = System.Drawing.SystemColors.Control
         Me.Label6.Location = New System.Drawing.Point(161, 146)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(151, 20)
@@ -158,7 +170,9 @@ Partial Class FlightScheduleReport
         '
         'Label5
         '
+        Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label5.ForeColor = System.Drawing.SystemColors.Control
         Me.Label5.Location = New System.Drawing.Point(93, 146)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(97, 20)
@@ -167,7 +181,9 @@ Partial Class FlightScheduleReport
         '
         'Label2
         '
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
         Me.Label2.Location = New System.Drawing.Point(36, 146)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(63, 20)
@@ -194,7 +210,9 @@ Partial Class FlightScheduleReport
         '
         'Label8
         '
+        Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.Label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label8.ForeColor = System.Drawing.SystemColors.Control
         Me.Label8.Location = New System.Drawing.Point(420, 146)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(198, 20)
@@ -203,7 +221,9 @@ Partial Class FlightScheduleReport
         '
         'Label9
         '
+        Me.Label9.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.Label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label9.ForeColor = System.Drawing.SystemColors.Control
         Me.Label9.Location = New System.Drawing.Point(603, 146)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(181, 20)
@@ -214,6 +234,7 @@ Partial Class FlightScheduleReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(823, 516)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
@@ -225,6 +246,7 @@ Partial Class FlightScheduleReport
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label2)
+        Me.ForeColor = System.Drawing.SystemColors.Control
         Me.Name = "FlightScheduleReport"
         Me.Text = "FlightScheduleReport"
         Me.grpDateSelection.ResumeLayout(False)
