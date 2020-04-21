@@ -56,6 +56,7 @@ Partial Class FlightScheduleReport
         '
         'btnPrint
         '
+        Me.btnPrint.ForeColor = System.Drawing.SystemColors.Desktop
         Me.btnPrint.Location = New System.Drawing.Point(709, 481)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(75, 23)

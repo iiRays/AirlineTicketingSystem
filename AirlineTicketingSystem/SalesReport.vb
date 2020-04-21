@@ -28,7 +28,7 @@ Public Class SalesReport
         GetLastDayOfMonth = DateSerial(intYear, intMonth + 1, 0)
     End Function
 
-    Private Sub cboYear_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboYear.SelectedIndexChanged
+    Private Sub cboYear_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboYear.SelectedIndexChanged, cboMonth.SelectedIndexChanged
 
         cboDay.Items.Clear()
 
