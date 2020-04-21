@@ -369,6 +369,12 @@
     <Compile Include="BookPayerInfo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CancellationReport.Designer.vb">
+      <DependentUpon>CancellationReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CancellationReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FlightScheduleReport.Designer.vb">
       <DependentUpon>FlightScheduleReport.vb</DependentUpon>
     </Compile>
@@ -719,6 +725,9 @@
     <EmbeddedResource Include="BookPayerInfo.resx">
       <DependentUpon>BookPayerInfo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CancellationReport.resx">
+      <DependentUpon>CancellationReport.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FlightDetails.resx">
       <DependentUpon>FlightDetails.vb</DependentUpon>
     </EmbeddedResource>
@@ -847,6 +856,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>AirlineSystem.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Logo.png" />
     <None Include="Resources\TempLogo.png" />
   </ItemGroup>
   <ItemGroup>
