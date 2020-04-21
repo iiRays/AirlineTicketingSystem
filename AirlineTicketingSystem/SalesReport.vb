@@ -48,7 +48,7 @@ Public Class SalesReport
                         Dim passengerNo As Integer = 0
                         Dim sales As Decimal = 0D
 
-                        If row1.FlightID = row2.FlightID Then
+                        If row1.FlightID = row2.FlightID And row2.IsCancelled = 0 Then
                             For Each row3 In dbo.Bookings
                                 passengerNo += row3.NoOfPassengers
                                 sales += row3.TotalPrice
