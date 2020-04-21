@@ -34,7 +34,7 @@
         DB.Insert(sourceStop)
         DB.Insert(destinationStop)
 
-        App.Session.Add("route", route)
+        App.Session.Set("route", route)
 
         App.Session.Delete("source")
         App.Session.Delete("destination")

@@ -19,7 +19,7 @@
 
         DB.Insert(city)
 
-        App.Session.Add("city", city)
+        App.Session.Set("city", city)
 
         Quick.Navigate(Me, New AdminCitiesAddSummary)
     End Sub
