@@ -18,7 +18,7 @@
 
         DB.Insert(plane)
 
-        App.Session.Add("plane", plane)
+        App.Session.Set("plane", plane)
 
         Quick.Navigate(Me, New AdminPlanesAddSummary)
     End Sub

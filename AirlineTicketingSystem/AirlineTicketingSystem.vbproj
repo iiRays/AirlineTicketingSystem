@@ -453,10 +453,22 @@
     <Compile Include="UserControls\PassengerItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserControls\PlaneAddItem.Designer.vb">
+      <DependentUpon>PlaneAddItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PlaneAddItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControls\PlaneItem.Designer.vb">
       <DependentUpon>PlaneItem.vb</DependentUpon>
     </Compile>
     <Compile Include="UserControls\PlaneItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\RouteAddItem.Designer.vb">
+      <DependentUpon>RouteAddItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RouteAddItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\RouteItem.Designer.vb">
@@ -794,8 +806,14 @@
     <EmbeddedResource Include="UserControls\PassengerItem.resx">
       <DependentUpon>PassengerItem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PlaneAddItem.resx">
+      <DependentUpon>PlaneAddItem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\PlaneItem.resx">
       <DependentUpon>PlaneItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\RouteAddItem.resx">
+      <DependentUpon>RouteAddItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\RouteItem.resx">
       <DependentUpon>RouteItem.vb</DependentUpon>
