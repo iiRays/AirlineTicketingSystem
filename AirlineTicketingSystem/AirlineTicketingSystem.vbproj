@@ -838,6 +838,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>AirlineSystem.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Logo.png" />
     <None Include="Resources\TempLogo.png" />
   </ItemGroup>
   <ItemGroup>
