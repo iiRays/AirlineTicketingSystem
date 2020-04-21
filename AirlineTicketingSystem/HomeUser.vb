@@ -1,6 +1,6 @@
 ﻿Public Class HomeUser
     Private Sub btnFlights_Click(sender As Object, e As EventArgs) Handles btnFlights.Click
-        Quick.Navigate(Me, New FlightList)
+        Quick.Navigate(Me, New FlightSearch)
     End Sub
 
     Private Sub HomeUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load

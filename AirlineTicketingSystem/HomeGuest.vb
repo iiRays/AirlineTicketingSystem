@@ -8,9 +8,7 @@
     End Sub
 
     Private Sub BtnFlights_Click(sender As Object, e As EventArgs) Handles btnFlights.Click
-        Dim flightList As New FlightList
-        flightList.Show()
-        Me.Close()
+        Quick.Navigate(Me, New FlightSearch)
     End Sub
 
     Private Sub HomeGuest_Load(sender As Object, e As EventArgs) Handles MyBase.Load
