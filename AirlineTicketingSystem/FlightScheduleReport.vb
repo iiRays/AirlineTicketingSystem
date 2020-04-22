@@ -11,7 +11,7 @@ Public Class FlightScheduleReport
 
         Dim nyear As String = Date.Today.Year.ToString
 
-        For value As Integer = (CInt(nyear) - 2) To CInt(nyear)
+        For value As Integer = (CInt(nyear) - 2) To (CInt(nyear) + 2)
             cboYear.Items.Add(value)
         Next
 
@@ -58,11 +58,12 @@ Public Class FlightScheduleReport
             Dim cnt As Integer = 0
 
             For Each row1 In dbo.Flights
-                For Each row2 In dbo.Cities
-                    For Each row3 In dbo.Stops
-                        For Each row4 In dbo.Routes
-                            Dim dbFlightDepart As String = row1.DepartureTime.ToString("MM/dd/yyyy")
-                            If selectedDate.ToString("MM/dd/yyyy") = dbFlightDepart Then
+
+                Dim dbFlightDepart As String = row1.DepartureTime.ToString("MM/dd/yyyy")
+                If selectedDate.ToString("MM/dd/yyyy") = dbFlightDepart Then
+                    For Each row2 In dbo.Cities
+                        For Each row3 In dbo.Stops
+                            For Each row4 In dbo.Routes
                                 If row1.RouteID = row4.RouteID And row3.CityID = row2.CityID And row4.RouteID = row3.RouteID And row3.IsOrigin = False Then
                                     Dim from As String = DB.GetFlightSource(row1.FlightID).City.Name
                                     Dim destination As String = DB.GetFlightDestination(row1.FlightID).City.Name
@@ -71,11 +72,12 @@ Public Class FlightScheduleReport
                                     lstSchedule.Items.Add(cnt & vbTab & row1.FlightNo & vbTab & from & vbTab & destination.ToString & vbTab & row1.DepartureTime.ToString("MM/dd/yyyy hh:mmtt") & vbTab & row1.ArrivalTime.ToString("MM/dd/yyyy hh:mmtt"))
                                     Exit For
                                 End If
-                            End If
+                            Next
                         Next
                     Next
-                Next
+                End If
             Next
+
 
             If cnt = 0 Then
                 lstSchedule.Items.Add("No available result found")

@@ -11,7 +11,7 @@ Public Class SalesReport
 
         Dim nyear As String = Date.Today.Year.ToString
 
-        For value As Integer = (CInt(nyear) - 2) To CInt(nyear)
+        For value As Integer = (CInt(nyear) - 2) To (CInt(nyear) + 2)
             cboYear.Items.Add(value)
         Next
 
@@ -64,27 +64,28 @@ Public Class SalesReport
             'ListBox1.DataSource = query.ToList
 
             For Each row1 In dbo.Flights
-                For Each row2 In dbo.Bookings
-                    Dim dbFlightDepart As String = row1.DepartureTime.ToString("MM/dd/yyyy")
-                    If selectedDate.ToString("MM/dd/yyyy") = dbFlightDepart Then
 
-                        Dim passengerNo As Integer = 0
-                        Dim sales As Decimal = 0D
+                Dim dbFlightDepart As String = row1.DepartureTime.ToString("MM/dd/yyyy")
+                If selectedDate.ToString("MM/dd/yyyy") = dbFlightDepart Then
 
+                    Dim passengerNo As Integer = 0
+                    Dim sales As Decimal = 0D
+                    For Each row2 In dbo.Bookings
                         If row1.FlightID = row2.FlightID And row2.IsCancelled = False Then
                             For Each row3 In dbo.Bookings
-                                passengerNo += row3.NoOfPassengers
-                                sales += row3.TotalPrice
+                                If row3.FlightID = row1.FlightID Then
+                                    passengerNo += row3.NoOfPassengers
+                                    sales += row3.TotalPrice
+                                End If
                             Next
                             totalSales += sales
                             cnt += 1
                             total += 1
                             lstSales.Items.Add(cnt & vbTab & row1.FlightNo & vbTab & passengerNo & vbTab & sales.ToString("                   RM 00.00"))
                             Exit For
-
                         End If
-                    End If
-                Next
+                    Next
+                End If
             Next
 
             If cnt = 0 Then

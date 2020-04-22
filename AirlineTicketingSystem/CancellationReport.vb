@@ -12,7 +12,7 @@ Public Class CancellationReport
 
         Dim nyear As String = Date.Today.Year.ToString
 
-        For value As Integer = (CInt(nyear) - 2) To CInt(nyear)
+        For value As Integer = (CInt(nyear) - 2) To (CInt(nyear) + 2)
             cboYear.Items.Add(value)
         Next
 
@@ -65,17 +65,19 @@ Public Class CancellationReport
             'ListBox1.DataSource = query.ToList
 
             For Each row1 In dbo.Flights
-                For Each row2 In dbo.Bookings
-                    Dim dbFlightDepart As String = row1.DepartureTime.ToString("MM/dd/yyyy")
-                    If selectedDate.ToString("MM/dd/yyyy") = dbFlightDepart Then
 
-                        Dim passengerNo As Integer = 0
-                        Dim loss As Decimal = 0D
+                Dim dbFlightDepart As String = row1.DepartureTime.ToString("MM/dd/yyyy")
+                If selectedDate.ToString("MM/dd/yyyy") = dbFlightDepart Then
 
+                    Dim passengerNo As Integer = 0
+                    Dim loss As Decimal = 0D
+                    For Each row2 In dbo.Bookings
                         If row1.FlightID = row2.FlightID And row2.IsCancelled = True Then
                             For Each row3 In dbo.Bookings
-                                passengerNo += row3.NoOfPassengers
-                                loss += row3.TotalPrice * 0.1
+                                If row3.FlightID = row1.FlightID Then
+                                    passengerNo += row3.NoOfPassengers
+                                    loss += row3.TotalPrice * 0.1
+                                End If
                             Next
                             totalLoss += loss
                             cnt += 1
@@ -84,8 +86,8 @@ Public Class CancellationReport
                             Exit For
 
                         End If
-                    End If
-                Next
+                    Next
+                End If
             Next
 
             If cnt = 0 Then
