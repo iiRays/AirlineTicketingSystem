@@ -205,6 +205,7 @@ Partial Class AdminRoutesEdit
         'btnEditSource
         '
         Me.btnEditSource.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.btnEditSource.Enabled = False
         Me.btnEditSource.FlatAppearance.BorderSize = 0
         Me.btnEditSource.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEditSource.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
@@ -219,6 +220,7 @@ Partial Class AdminRoutesEdit
         'btnEditDestination
         '
         Me.btnEditDestination.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.btnEditDestination.Enabled = False
         Me.btnEditDestination.FlatAppearance.BorderSize = 0
         Me.btnEditDestination.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEditDestination.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))

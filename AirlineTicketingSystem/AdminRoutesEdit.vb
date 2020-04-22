@@ -60,11 +60,11 @@
     End Sub
 
     Private Sub BtnEditSource_Click(sender As Object, e As EventArgs) Handles btnEditSource.Click
-        Quick.Navigate(Me, New AdminRoutesEditSource)
+        'Quick.Navigate(Me, New AdminRoutesEditSource)
     End Sub
 
     Private Sub BtnEditDestination_Click(sender As Object, e As EventArgs) Handles btnEditDestination.Click
-        Quick.Navigate(Me, New AdminRoutesEditDestination)
+        'Quick.Navigate(Me, New AdminRoutesEditDestination)
     End Sub
 
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click

@@ -322,6 +322,7 @@ Partial Class AdminFlightsEdit
         'btnEditRoute
         '
         Me.btnEditRoute.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.btnEditRoute.Enabled = False
         Me.btnEditRoute.FlatAppearance.BorderSize = 0
         Me.btnEditRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEditRoute.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
@@ -336,6 +337,7 @@ Partial Class AdminFlightsEdit
         'btnEditPlane
         '
         Me.btnEditPlane.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.btnEditPlane.Enabled = False
         Me.btnEditPlane.FlatAppearance.BorderSize = 0
         Me.btnEditPlane.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEditPlane.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))

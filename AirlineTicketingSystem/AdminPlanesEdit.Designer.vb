@@ -92,6 +92,7 @@ Partial Class AdminPlanesEdit
         'txtCapacity
         '
         Me.txtCapacity.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCapacity.Enabled = False
         Me.txtCapacity.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCapacity.Location = New System.Drawing.Point(404, 454)
         Me.txtCapacity.Multiline = True
@@ -116,6 +117,7 @@ Partial Class AdminPlanesEdit
         'txtMaxCols
         '
         Me.txtMaxCols.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtMaxCols.Enabled = False
         Me.txtMaxCols.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMaxCols.Location = New System.Drawing.Point(751, 454)
         Me.txtMaxCols.Multiline = True
