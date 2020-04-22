@@ -219,4 +219,8 @@ Public Class FlightScheduleReport
 
         e.Graphics.DrawString(footer.ToString(), fontBody, Brushes.Black, 50, 1000)
     End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        Quick.Navigate(Me, New AdminReport)
+    End Sub
 End Class

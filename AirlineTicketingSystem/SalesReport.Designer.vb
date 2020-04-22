@@ -41,6 +41,7 @@ Partial Class SalesReport
         Me.cboDay = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblTotalSales = New System.Windows.Forms.Label()
+        Me.btnBack = New System.Windows.Forms.Button()
         Me.grpDateSelection.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -209,12 +210,22 @@ Partial Class SalesReport
         Me.lblTotalSales.TabIndex = 28
         Me.lblTotalSales.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
+        'btnBack
+        '
+        Me.btnBack.Location = New System.Drawing.Point(243, 455)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(75, 23)
+        Me.btnBack.TabIndex = 29
+        Me.btnBack.Text = "Back"
+        Me.btnBack.UseVisualStyleBackColor = True
+        '
         'SalesReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(468, 490)
+        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.lblTotalSales)
         Me.Controls.Add(Me.grpDateSelection)
         Me.Controls.Add(Me.Label7)
@@ -249,4 +260,5 @@ Partial Class SalesReport
     Friend WithEvents lblTotalSales As Label
     Friend WithEvents cboDay As ComboBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnBack As Button
 End Class

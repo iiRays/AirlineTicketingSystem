@@ -42,6 +42,7 @@ Partial Class FlightScheduleReport
         Me.printDialog = New System.Windows.Forms.PrintDialog()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.btnBack = New System.Windows.Forms.Button()
         Me.grpDateSelection.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -56,7 +57,7 @@ Partial Class FlightScheduleReport
         '
         'btnPrint
         '
-        Me.btnPrint.ForeColor = System.Drawing.SystemColors.Desktop
+        Me.btnPrint.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnPrint.Location = New System.Drawing.Point(709, 481)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(75, 23)
@@ -231,12 +232,23 @@ Partial Class FlightScheduleReport
         Me.Label9.TabIndex = 44
         Me.Label9.Text = "Arrival Date && Time"
         '
+        'btnBack
+        '
+        Me.btnBack.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnBack.Location = New System.Drawing.Point(592, 481)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(75, 23)
+        Me.btnBack.TabIndex = 45
+        Me.btnBack.Text = "Back"
+        Me.btnBack.UseVisualStyleBackColor = True
+        '
         'FlightScheduleReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(823, 516)
+        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.grpDateSelection)
@@ -275,4 +287,5 @@ Partial Class FlightScheduleReport
     Friend WithEvents printDialog As PrintDialog
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
+    Friend WithEvents btnBack As Button
 End Class

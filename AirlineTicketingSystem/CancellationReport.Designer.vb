@@ -41,6 +41,7 @@ Partial Class CancellationReport
         Me.lstLoss = New System.Windows.Forms.ListBox()
         Me.btnPrint = New System.Windows.Forms.Button()
         Me.lblCount = New System.Windows.Forms.Label()
+        Me.btnBack = New System.Windows.Forms.Button()
         Me.grpDateSelection.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -209,12 +210,23 @@ Partial Class CancellationReport
         Me.lblCount.Size = New System.Drawing.Size(120, 16)
         Me.lblCount.TabIndex = 29
         '
+        'btnBack
+        '
+        Me.btnBack.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnBack.Location = New System.Drawing.Point(273, 454)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(75, 23)
+        Me.btnBack.TabIndex = 46
+        Me.btnBack.Text = "Back"
+        Me.btnBack.UseVisualStyleBackColor = True
+        '
         'CancellationReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(484, 489)
+        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.lblTotalLoss)
         Me.Controls.Add(Me.grpDateSelection)
         Me.Controls.Add(Me.Label7)
@@ -250,4 +262,5 @@ Partial Class CancellationReport
     Friend WithEvents lstLoss As ListBox
     Friend WithEvents btnPrint As Button
     Friend WithEvents lblCount As Label
+    Friend WithEvents btnBack As Button
 End Class
