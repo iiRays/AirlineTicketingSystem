@@ -10,6 +10,6 @@
 
     Private Sub BtnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
         App.Session.Add("booking", Booking)
-        Quick.Navigate(AdminCitiesViewResults, New AdminBookingsViewSummary)
+        Quick.Navigate(AdminBookingsViewResults, New AdminBookingsViewSummary)
     End Sub
 End Class

@@ -179,12 +179,6 @@
     <Compile Include="AdminDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminFlightList.Designer.vb">
-      <DependentUpon>AdminFlightList.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AdminFlightList.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="AdminFlightsAdd1.Designer.vb">
       <DependentUpon>AdminFlightsAdd1.vb</DependentUpon>
     </Compile>
@@ -213,12 +207,6 @@
       <DependentUpon>AdminFlightsDashboard.vb</DependentUpon>
     </Compile>
     <Compile Include="AdminFlightsDashboard.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminFlightSearch.Designer.vb">
-      <DependentUpon>AdminFlightSearch.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AdminFlightSearch.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminFlightsEdit.Designer.vb">
@@ -369,6 +357,30 @@
       <DependentUpon>AdminRoutesViewSummary.vb</DependentUpon>
     </Compile>
     <Compile Include="AdminRoutesViewSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUsersDashboard.Designer.vb">
+      <DependentUpon>AdminUsersDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsersDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUsersView.Designer.vb">
+      <DependentUpon>AdminUsersView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsersView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUsersViewResults.Designer.vb">
+      <DependentUpon>AdminUsersViewResults.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsersViewResults.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUsersViewSummary.Designer.vb">
+      <DependentUpon>AdminUsersViewSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsersViewSummary.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BookCancel.Designer.vb">
@@ -527,6 +539,12 @@
     <Compile Include="UserControls\TicketViewItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserControls\UserItem.Designer.vb">
+      <DependentUpon>UserItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Util\App.vb" />
     <Compile Include="Util\Email.vb" />
     <Compile Include="Util\LinkedList.vb" />
@@ -673,9 +691,6 @@
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminFlightList.resx">
-      <DependentUpon>AdminFlightList.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AdminFlightsAdd1.resx">
       <DependentUpon>AdminFlightsAdd1.vb</DependentUpon>
     </EmbeddedResource>
@@ -690,9 +705,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminFlightsDashboard.resx">
       <DependentUpon>AdminFlightsDashboard.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminFlightSearch.resx">
-      <DependentUpon>AdminFlightSearch.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminFlightsEdit.resx">
       <DependentUpon>AdminFlightsEdit.vb</DependentUpon>
@@ -768,6 +780,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminRoutesViewSummary.resx">
       <DependentUpon>AdminRoutesViewSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUsersDashboard.resx">
+      <DependentUpon>AdminUsersDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUsersView.resx">
+      <DependentUpon>AdminUsersView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUsersViewResults.resx">
+      <DependentUpon>AdminUsersViewResults.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUsersViewSummary.resx">
+      <DependentUpon>AdminUsersViewSummary.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookFlight1.resx">
       <DependentUpon>BookFlight1.vb</DependentUpon>
@@ -885,6 +909,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\TicketViewItem.resx">
       <DependentUpon>TicketViewItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserItem.resx">
+      <DependentUpon>UserItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerifyEmail.resx">
       <DependentUpon>VerifyEmail.vb</DependentUpon>

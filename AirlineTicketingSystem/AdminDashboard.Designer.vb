@@ -30,6 +30,7 @@ Partial Class AdminDashboard
         Me.btnPlanes = New System.Windows.Forms.Button()
         Me.btnReport = New System.Windows.Forms.Button()
         Me.btnBookings = New System.Windows.Forms.Button()
+        Me.btnUsers = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -64,7 +65,7 @@ Partial Class AdminDashboard
         Me.btnFlights.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFlights.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnFlights.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.btnFlights.Location = New System.Drawing.Point(48, 244)
+        Me.btnFlights.Location = New System.Drawing.Point(12, 243)
         Me.btnFlights.Name = "btnFlights"
         Me.btnFlights.Size = New System.Drawing.Size(225, 250)
         Me.btnFlights.TabIndex = 27
@@ -78,7 +79,7 @@ Partial Class AdminDashboard
         Me.btnRoutes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRoutes.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnRoutes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.btnRoutes.Location = New System.Drawing.Point(294, 244)
+        Me.btnRoutes.Location = New System.Drawing.Point(258, 243)
         Me.btnRoutes.Name = "btnRoutes"
         Me.btnRoutes.Size = New System.Drawing.Size(225, 250)
         Me.btnRoutes.TabIndex = 28
@@ -92,7 +93,7 @@ Partial Class AdminDashboard
         Me.btnCities.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCities.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnCities.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.btnCities.Location = New System.Drawing.Point(536, 244)
+        Me.btnCities.Location = New System.Drawing.Point(500, 243)
         Me.btnCities.Name = "btnCities"
         Me.btnCities.Size = New System.Drawing.Size(225, 250)
         Me.btnCities.TabIndex = 29
@@ -106,7 +107,7 @@ Partial Class AdminDashboard
         Me.btnPlanes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPlanes.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnPlanes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.btnPlanes.Location = New System.Drawing.Point(776, 244)
+        Me.btnPlanes.Location = New System.Drawing.Point(740, 243)
         Me.btnPlanes.Name = "btnPlanes"
         Me.btnPlanes.Size = New System.Drawing.Size(225, 250)
         Me.btnPlanes.TabIndex = 30
@@ -134,19 +135,34 @@ Partial Class AdminDashboard
         Me.btnBookings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBookings.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnBookings.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.btnBookings.Location = New System.Drawing.Point(1021, 244)
+        Me.btnBookings.Location = New System.Drawing.Point(981, 243)
         Me.btnBookings.Name = "btnBookings"
         Me.btnBookings.Size = New System.Drawing.Size(225, 250)
         Me.btnBookings.TabIndex = 32
         Me.btnBookings.Text = "bookings"
         Me.btnBookings.UseVisualStyleBackColor = False
         '
+        'btnUsers
+        '
+        Me.btnUsers.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.btnUsers.FlatAppearance.BorderSize = 0
+        Me.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUsers.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnUsers.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.btnUsers.Location = New System.Drawing.Point(1224, 243)
+        Me.btnUsers.Name = "btnUsers"
+        Me.btnUsers.Size = New System.Drawing.Size(225, 250)
+        Me.btnUsers.TabIndex = 33
+        Me.btnUsers.Text = "users"
+        Me.btnUsers.UseVisualStyleBackColor = False
+        '
         'AdminDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1438, 681)
+        Me.ClientSize = New System.Drawing.Size(1474, 681)
+        Me.Controls.Add(Me.btnUsers)
         Me.Controls.Add(Me.btnBookings)
         Me.Controls.Add(Me.btnReport)
         Me.Controls.Add(Me.btnPlanes)
@@ -169,4 +185,5 @@ Partial Class AdminDashboard
     Friend WithEvents btnPlanes As Button
     Friend WithEvents btnReport As Button
     Friend WithEvents btnBookings As Button
+    Friend WithEvents btnUsers As Button
 End Class
