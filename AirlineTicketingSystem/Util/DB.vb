@@ -180,6 +180,8 @@
                     Return (From booking In context.Bookings Where booking.BookingID.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "userid"
                     Return (From booking In context.Bookings Where booking.UserID.ToLower().Contains(searchFor)).Cast(Of T).ToList()
+                Case "flightid"
+                    Return (From booking In context.Bookings Where booking.FlightID.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "noofpassengers"
                     Return (From booking In context.Bookings Where booking.NoOfPassengers = Convert.ToDecimal(searchFor)).Cast(Of T).ToList()
                 Case "totalprice"
@@ -192,6 +194,8 @@
                     Return (From booking In context.Bookings Where booking.IsCancelled = Convert.ToBoolean(searchFor)).Cast(Of T).ToList()
                 Case "extrabaggagekg"
                     Return (From booking In context.Bookings Where booking.ExtraBaggageKG = Convert.ToDecimal(searchFor)).Cast(Of T).ToList()
+                Case "flightno"
+                    Return (From booking In context.Bookings Where booking.Flight.FlightNo.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case Else
                     Throw New Exception("Variable type is not present in Airline Database.")
             End Select
