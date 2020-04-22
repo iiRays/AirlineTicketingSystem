@@ -26,4 +26,12 @@
     Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
         Quick.Navigate(Me, New AdminReport)
     End Sub
+
+    Private Sub BtnBookings_Click(sender As Object, e As EventArgs) Handles btnBookings.Click
+        Quick.Navigate(Me, New AdminBookingsDashboard)
+    End Sub
+
+    Private Sub BtnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
+        Quick.Navigate(Me, New AdminUsersDashboard)
+    End Sub
 End Class

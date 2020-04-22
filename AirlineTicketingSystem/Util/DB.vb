@@ -133,13 +133,15 @@
         If GetType(T) = GetType(Plane) Then
             Select Case searchBy
                 Case "planeid"
-                    'Return context.Planes.Where(Function(o) o.PlaneID = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From plane In context.Planes Where plane.PlaneID.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "model"
-                    'Return context.Planes.Where(Function(o) o.Model = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From plane In context.Planes Where plane.Model.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "manufacturer"
-                    'Return context.Planes.Where(Function(o) o.Manufacturer = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From plane In context.Planes Where plane.Manufacturer.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "capacity"
-                    'Return context.Planes.Where(Function(o) o.Capacity = Convert.ToInt32(searchFor)).ToList().Cast(Of T).ToList()
+                    Return (From plane In context.Planes Where plane.Capacity = Convert.ToDecimal(searchFor)).Cast(Of T).ToList()
+                Case "maxcolumns"
+                    Return (From plane In context.Planes Where plane.MaxColumns = Convert.ToDecimal(searchFor)).Cast(Of T).ToList()
                 Case Else
                     Throw New Exception("Variable type is not present in Airline Database.")
             End Select
@@ -147,27 +149,27 @@
         ElseIf GetType(T) = GetType(User) Then 'no searching by password/salt
             Select Case searchBy
                 Case "userid"
-                    'Return context.Users.Where(Function(o) o.UserID = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From user In context.Users Where user.UserID.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "name"
-                    'Return context.Users.Where(Function(o) o.Name = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From user In context.Users Where user.Name.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "gender"
-                    'Return context.Users.Where(Function(o) o.Gender = Convert.ToChar(searchFor)).ToList().Cast(Of T).ToList()
+                    Return (From user In context.Users Where user.Gender = Convert.ToChar(searchFor)).Cast(Of T).ToList()
                 Case "email"
-                    'Return context.Users.Where(Function(o) o.Email = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From user In context.Users Where user.Email.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "isregistered"
-                    'Return context.Users.Where(Function(o) o.IsRegistered = Convert.ToBoolean(searchFor)).ToList().Cast(Of T).ToList()
+                    Return (From user In context.Users Where user.IsRegistered = Convert.ToBoolean(searchFor)).Cast(Of T).ToList()
                 Case "dateofbirth"
-                    'Return context.Users.Where(Function(o) o.DateOfBirth = Convert.ToDateTime(searchFor)).ToList().Cast(Of T).ToList()
+                    Return (From user In context.Users Where user.UserID = Convert.ToDateTime(searchFor)).Cast(Of T).ToList()
                 Case "phoneno"
-                    'Return context.Users.Where(Function(o) o.PhoneNo = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From user In context.Users Where user.PhoneNo.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "creditcardno"
-                    'Return context.Users.Where(Function(o) o.CreditCardNo = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From user In context.Users Where user.CreditCardNo.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "country"
-                    'Return context.Users.Where(Function(o) o.Country = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From user In context.Users Where user.Country.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "city"
-                    'Return context.Users.Where(Function(o) o.City = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From user In context.Users Where user.City.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "isstaff"
-                    'Return context.Users.Where(Function(o) o.IsStaff = Convert.ToBoolean(searchFor)).ToList().Cast(Of T).ToList()
+                    Return (From user In context.Users Where user.IsStaff = Convert.ToBoolean(searchFor)).Cast(Of T).ToList()
                 Case Else
                     Throw New Exception("Variable type is not present in Airline Database.")
             End Select
@@ -175,21 +177,25 @@
         ElseIf GetType(T) = GetType(Booking) Then
             Select Case searchBy
                 Case "bookingid"
-                    'Return context.Bookings.Where(Function(o) o.BookingID = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From booking In context.Bookings Where booking.BookingID.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "userid"
-                    'Return context.Bookings.Where(Function(o) o.UserID = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From booking In context.Bookings Where booking.UserID.ToLower().Contains(searchFor)).Cast(Of T).ToList()
+                Case "flightid"
+                    Return (From booking In context.Bookings Where booking.FlightID.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "noofpassengers"
-                    'Return context.Bookings.Where(Function(o) o.NoOfPassengers = Convert.ToInt32(searchFor)).ToList().Cast(Of T).ToList()
+                    Return (From booking In context.Bookings Where booking.NoOfPassengers = Convert.ToDecimal(searchFor)).Cast(Of T).ToList()
                 Case "totalprice"
-                    'Return context.Bookings.Where(Function(o) o.TotalPrice = Convert.ToDecimal(searchFor)).ToList().Cast(Of T).ToList()
+                    Return (From booking In context.Bookings Where booking.TotalPrice = Convert.ToDecimal(searchFor)).Cast(Of T).ToList()
                 Case "paymentdate"
-                    'Return context.Bookings.Where(Function(o) o.PaymentDate = Convert.ToDateTime(searchFor)).ToList().Cast(Of T).ToList()
+                    Return (From booking In context.Bookings Where booking.PaymentDate = Convert.ToDateTime(searchFor)).Cast(Of T).ToList()
                 Case "creditcardno"
-                    'Return context.Bookings.Where(Function(o) o.CreditCardNo = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From booking In context.Bookings Where booking.CreditCardNo.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "iscancelled"
-                    'Return context.Bookings.Where(Function(o) o.IsCancelled = Convert.ToBoolean(searchFor)).ToList().Cast(Of T).ToList()
+                    Return (From booking In context.Bookings Where booking.IsCancelled = Convert.ToBoolean(searchFor)).Cast(Of T).ToList()
                 Case "extrabaggagekg"
-                    'Return context.Bookings.Where(Function(o) o.ExtraBaggageKG = Convert.ToInt32(searchFor)).ToList().Cast(Of T).ToList()
+                    Return (From booking In context.Bookings Where booking.ExtraBaggageKG = Convert.ToDecimal(searchFor)).Cast(Of T).ToList()
+                Case "flightno"
+                    Return (From booking In context.Bookings Where booking.Flight.FlightNo.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case Else
                     Throw New Exception("Variable type is not present in Airline Database.")
             End Select
@@ -215,19 +221,19 @@
         ElseIf GetType(T) = GetType(Flight) Then
             Select Case searchBy
                 Case "flightid"
-                    'Return context.Flights.Where(Function(o) o.FlightID = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From flight In context.Flights Where flight.FlightID.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "routeid"
-                    'Return context.Flights.Where(Function(o) o.RouteID = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From flight In context.Flights Where flight.RouteID.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "planeid"
-                    'Return context.Flights.Where(Function(o) o.PlaneID = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From flight In context.Flights Where flight.PlaneID.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "departuretime"
-                    'Return context.Flights.Where(Function(o) o.DepartureTime = Convert.ToDateTime(searchFor)).ToList().Cast(Of T).ToList()
+                    Return (From flight In context.Flights Where flight.DepartureTime = Convert.ToDateTime(searchFor)).Cast(Of T).ToList()
                 Case "arrivaltime"
-                    'Return context.Flights.Where(Function(o) o.ArrivalTime = Convert.ToDateTime(searchFor)).ToList().Cast(Of T).ToList()
+                    Return (From flight In context.Flights Where flight.ArrivalTime = Convert.ToDateTime(searchFor)).Cast(Of T).ToList()
                 Case "price"
-                    'Return context.Flights.Where(Function(o) o.Price = Convert.ToDecimal(searchFor)).ToList().Cast(Of T).ToList()
+                    Return (From flight In context.Flights Where flight.Price = Convert.ToDecimal(searchFor)).Cast(Of T).ToList()
                 Case "isdaily"
-                    'Return context.Flights.Where(Function(o) o.IsDaily = Convert.ToBoolean(searchFor)).ToList().Cast(Of T).ToList()
+                    Return (From flight In context.Flights Where flight.IsDaily = Convert.ToBoolean(searchFor)).Cast(Of T).ToList()
                 Case Else
                     Throw New Exception("Variable type is not present in Airline Database.")
             End Select
@@ -259,13 +265,13 @@
         ElseIf GetType(T) = GetType(Ticket) Then
             Select Case searchBy
                 Case "ticketid"
-                    'Return context.Tickets.Where(Function(o) o.TicketID = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From ticket In context.Tickets Where ticket.TicketID.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "bookingid"
-                    'Return context.Tickets.Where(Function(o) o.BookingID = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From ticket In context.Tickets Where ticket.BookingID.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "name"
-                    'Return context.Tickets.Where(Function(o) o.Name = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From ticket In context.Tickets Where ticket.Name.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "seat"
-                    'Return context.Tickets.Where(Function(o) o.Seat = searchFor).ToList().Cast(Of T).ToList()
+                    Return (From ticket In context.Tickets Where ticket.Seat.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case Else
                     Throw New Exception("Variable type is not present in Airline Database.")
             End Select

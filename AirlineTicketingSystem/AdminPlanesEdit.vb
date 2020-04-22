@@ -7,8 +7,8 @@
         txtID.Text = plane.PlaneID
         txtModel.Text = plane.Model
         txtManufacturer.Text = plane.Manufacturer
-        txtCapacity.Text = plane.Capacity.ToString()
-        txtMaxCols.Text = plane.MaxColumns.ToString()
+        'txtCapacity.Text = plane.Capacity.ToString()
+        'txtMaxCols.Text = plane.MaxColumns.ToString()
     End Sub
 
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
