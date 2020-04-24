@@ -25,6 +25,7 @@ Partial Class AdminUsersDashboard
         Me.btnView = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.lblTitle = New System.Windows.Forms.Label()
+        Me.btnRegister = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnView
@@ -34,7 +35,7 @@ Partial Class AdminUsersDashboard
         Me.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnView.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnView.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.btnView.Location = New System.Drawing.Point(523, 232)
+        Me.btnView.Location = New System.Drawing.Point(630, 233)
         Me.btnView.Name = "btnView"
         Me.btnView.Size = New System.Drawing.Size(225, 250)
         Me.btnView.TabIndex = 52
@@ -67,12 +68,27 @@ Partial Class AdminUsersDashboard
         Me.lblTitle.Text = "users dashboard"
         Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'btnRegister
+        '
+        Me.btnRegister.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.btnRegister.FlatAppearance.BorderSize = 0
+        Me.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRegister.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnRegister.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.btnRegister.Location = New System.Drawing.Point(377, 233)
+        Me.btnRegister.Name = "btnRegister"
+        Me.btnRegister.Size = New System.Drawing.Size(225, 250)
+        Me.btnRegister.TabIndex = 53
+        Me.btnRegister.Text = "register staff member"
+        Me.btnRegister.UseVisualStyleBackColor = False
+        '
         'AdminUsersDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.btnRegister)
         Me.Controls.Add(Me.btnView)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.lblTitle)
@@ -86,4 +102,5 @@ Partial Class AdminUsersDashboard
     Friend WithEvents btnView As Button
     Friend WithEvents btnBack As Button
     Friend WithEvents lblTitle As Label
+    Friend WithEvents btnRegister As Button
 End Class

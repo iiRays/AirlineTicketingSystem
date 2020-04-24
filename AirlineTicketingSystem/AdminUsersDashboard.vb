@@ -11,4 +11,8 @@
     Private Sub BtnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
         Quick.Navigate(Me, New AdminUsersView)
     End Sub
+
+    Private Sub BtnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
+        Quick.Navigate(Me, New AdminUsersRegister)
+    End Sub
 End Class

@@ -365,6 +365,18 @@
     <Compile Include="AdminUsersDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AdminUsersRegister.Designer.vb">
+      <DependentUpon>AdminUsersRegister.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsersRegister.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUsersRegisterSummary.Designer.vb">
+      <DependentUpon>AdminUsersRegisterSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsersRegisterSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminUsersView.Designer.vb">
       <DependentUpon>AdminUsersView.vb</DependentUpon>
     </Compile>
@@ -789,6 +801,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUsersDashboard.resx">
       <DependentUpon>AdminUsersDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUsersRegister.resx">
+      <DependentUpon>AdminUsersRegister.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUsersRegisterSummary.resx">
+      <DependentUpon>AdminUsersRegisterSummary.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUsersView.resx">
       <DependentUpon>AdminUsersView.vb</DependentUpon>
