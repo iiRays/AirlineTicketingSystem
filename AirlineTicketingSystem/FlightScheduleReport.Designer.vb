@@ -260,6 +260,7 @@ Partial Class FlightScheduleReport
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label2)
         Me.ForeColor = System.Drawing.SystemColors.Control
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FlightScheduleReport"
         Me.Text = "FlightScheduleReport"
         Me.grpDateSelection.ResumeLayout(False)

@@ -449,6 +449,12 @@
     <Compile Include="Splash.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserReport.Designer.vb">
+      <DependentUpon>UserReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TicketList.Designer.vb">
       <DependentUpon>TicketList.vb</DependentUpon>
     </Compile>
@@ -834,6 +840,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserReport.resx">
+      <DependentUpon>UserReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TicketList.resx">
       <DependentUpon>TicketList.vb</DependentUpon>

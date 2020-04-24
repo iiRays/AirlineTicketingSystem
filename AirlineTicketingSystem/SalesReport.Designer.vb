@@ -235,6 +235,7 @@ Partial Class SalesReport
         Me.Controls.Add(Me.lstSales)
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.lblCount)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "SalesReport"
         Me.Text = "SalesReport"
         Me.grpDateSelection.ResumeLayout(False)

@@ -27,6 +27,7 @@ Partial Class AdminReport
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.btnFlightSch = New System.Windows.Forms.Button()
         Me.btnDailyCancel = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnSalesDaily
@@ -101,12 +102,28 @@ Partial Class AdminReport
         Me.btnDailyCancel.Text = "daily cancellation report"
         Me.btnDailyCancel.UseVisualStyleBackColor = False
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.Button1.Location = New System.Drawing.Point(1331, 293)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(300, 308)
+        Me.Button1.TabIndex = 37
+        Me.Button1.Text = "user report"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'AdminReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1366, 669)
+        Me.ClientSize = New System.Drawing.Size(1694, 669)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnDailyCancel)
         Me.Controls.Add(Me.btnFlightSch)
         Me.Controls.Add(Me.btnSalesDaily)
@@ -124,4 +141,5 @@ Partial Class AdminReport
     Friend WithEvents lblTitle As Label
     Friend WithEvents btnFlightSch As Button
     Friend WithEvents btnDailyCancel As Button
+    Friend WithEvents Button1 As Button
 End Class

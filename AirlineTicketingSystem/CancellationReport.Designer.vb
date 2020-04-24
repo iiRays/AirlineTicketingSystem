@@ -236,6 +236,7 @@ Partial Class CancellationReport
         Me.Controls.Add(Me.lstLoss)
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.lblCount)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "CancellationReport"
         Me.Text = "CancellationReport"
         Me.grpDateSelection.ResumeLayout(False)

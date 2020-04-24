@@ -20,4 +20,8 @@
     Private Sub btnDailyCancel_Click(sender As Object, e As EventArgs) Handles btnDailyCancel.Click
         Quick.Navigate(Me, New CancellationReport)
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Quick.Navigate(Me, New UserReport)
+    End Sub
 End Class
