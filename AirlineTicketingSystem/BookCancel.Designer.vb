@@ -55,8 +55,8 @@ Partial Class BookCancel
 		Me.lblDesc.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
 		Me.lblDesc.Size = New System.Drawing.Size(566, 147)
 		Me.lblDesc.TabIndex = 58
-		Me.lblDesc.Text = "Once cancelled, the booking will no longer be valid. This action is irreversible." &
-	""
+		Me.lblDesc.Text = "Once cancelled, the booking will no longer be valid and you'll be refunded 10%. T" &
+	"his action is irreversible."
 		Me.lblDesc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
 		'pnlCancelContainer

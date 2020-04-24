@@ -25,6 +25,7 @@ Partial Class PassengerItem
 		Me.Label3 = New System.Windows.Forms.Label()
 		Me.txtName = New System.Windows.Forms.TextBox()
 		Me.lblName = New System.Windows.Forms.Label()
+		Me.cboSeat = New System.Windows.Forms.ComboBox()
 		Me.SuspendLayout()
 		'
 		'Label3
@@ -64,16 +65,28 @@ Partial Class PassengerItem
 		Me.lblName.Text = "name 1"
 		Me.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
+		'cboSeat
+		'
+		Me.cboSeat.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+		Me.cboSeat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+		Me.cboSeat.Font = New System.Drawing.Font("Poppins", 18.0!)
+		Me.cboSeat.FormattingEnabled = True
+		Me.cboSeat.Location = New System.Drawing.Point(661, 19)
+		Me.cboSeat.Name = "cboSeat"
+		Me.cboSeat.Size = New System.Drawing.Size(137, 50)
+		Me.cboSeat.TabIndex = 61
+		'
 		'PassengerItem
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.Color.White
+		Me.Controls.Add(Me.cboSeat)
 		Me.Controls.Add(Me.txtName)
 		Me.Controls.Add(Me.lblName)
 		Me.Controls.Add(Me.Label3)
 		Me.Name = "PassengerItem"
-		Me.Size = New System.Drawing.Size(655, 84)
+		Me.Size = New System.Drawing.Size(840, 84)
 		Me.ResumeLayout(False)
 		Me.PerformLayout()
 
@@ -81,4 +94,5 @@ Partial Class PassengerItem
 	Friend WithEvents Label3 As Label
     Friend WithEvents txtName As TextBox
     Friend WithEvents lblName As Label
+	Friend WithEvents cboSeat As ComboBox
 End Class

@@ -73,12 +73,12 @@ Public Class BookFlight1
         booking.IsCancelled = False
 
         If App.Session.Get("Booking") Is Nothing Then
-            App.Session.Add("Booking", booking)
+            App.Session.Set("Booking", booking)
         Else
             App.Session.Update("Booking", booking)
         End If
 
-        App.Session.Add("payer", User)
+        App.Session.Set("payer", User)
 
         'Save form state before proceeding
 

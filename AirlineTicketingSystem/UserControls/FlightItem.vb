@@ -3,7 +3,7 @@
     Public FlightList As FlightList
     Public SelectedDate As Date
     Private Sub btnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
-        App.Session.Add("selectedFlight", Flight)
+        App.Session.Set("selectedFlight", Flight)
         Quick.Navigate(FlightList, New FlightDetails())
     End Sub
 
