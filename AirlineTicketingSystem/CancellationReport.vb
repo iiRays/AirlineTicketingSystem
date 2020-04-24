@@ -9,7 +9,7 @@ Public Class CancellationReport
     Dim total As Integer = 0
 
     Private Sub CancellationReport_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        TitleBar.Load(Me)
         Dim nyear As String = Date.Today.Year.ToString
 
         For value As Integer = (CInt(nyear) - 2) To (CInt(nyear) + 2)

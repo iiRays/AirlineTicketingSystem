@@ -8,7 +8,7 @@ Public Class UserReport
     Dim total As Integer = 0
 
     Private Sub UserReport_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        TitleBar.Load(Me)
         Dim cnt As Integer = 0
         btnPrint.Enabled = False
         cboCategory.SelectedIndex = 0

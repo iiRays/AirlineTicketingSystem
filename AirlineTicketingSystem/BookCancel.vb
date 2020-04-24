@@ -56,6 +56,7 @@
     End Sub
 
     Private Sub BookingCancel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TitleBar.Load(Me)
         pnlCancel.Location = New Point(0, pnlCancel.Location.Y)
         btnCancel.Hide()
     End Sub

@@ -12,6 +12,7 @@
     End Sub
 
     Private Sub BookingFinish_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TitleBar.Load(Me)
         Dim body As New System.Text.StringBuilder
         body.AppendLine("<h1>Booking success!</h1>")
         body.AppendLine("Booking ID: <h2>" & Booking.BookingID & "</h2>")

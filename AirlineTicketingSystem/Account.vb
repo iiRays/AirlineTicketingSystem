@@ -10,6 +10,7 @@
             txtCountry.Text = If(user IsNot Nothing AndAlso .Country IsNot Nothing, .Country, "")
             dtpDate.Value = If(user IsNot Nothing AndAlso .DateOfBirth IsNot Nothing, .DateOfBirth, DateAndTime.Now())
             txtCreditCardNo.Text = If(user IsNot Nothing AndAlso .CreditCardNo IsNot Nothing, .CreditCardNo, "")
+            lblFlightHours.Text = GetTotalFlightHours()
         End With
 
         If user IsNot Nothing Then
@@ -76,4 +77,14 @@
             Quick.Navigate(Me, New HomeUser)
         End If
     End Sub
+
+    Public Function GetTotalFlightHours() As Integer
+        Dim hours = 0
+        For Each booking In App.User.Bookings
+            ' Get the difference in hours between flight departure & arrival
+            hours += DateAndTime.DateDiff(DateInterval.Hour, booking.Flight.DepartureTime, booking.Flight.ArrivalTime)
+        Next
+
+        Return hours
+    End Function
 End Class

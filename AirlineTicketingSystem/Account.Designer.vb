@@ -45,6 +45,8 @@ Partial Class Account
         Me.txtCountry = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtCity = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.lblFlightHours = New System.Windows.Forms.Label()
         Me.pnlGender.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -54,23 +56,22 @@ Partial Class Account
         Me.pnlGender.Controls.Add(Me.rbMale)
         Me.pnlGender.Controls.Add(Me.rbNonBinary)
         Me.pnlGender.Controls.Add(Me.rbFemale)
-        Me.pnlGender.Location = New System.Drawing.Point(329, 514)
-        Me.pnlGender.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlGender.Location = New System.Drawing.Point(240, 418)
         Me.pnlGender.Name = "pnlGender"
-        Me.pnlGender.Size = New System.Drawing.Size(500, 62)
-        Me.pnlGender.TabIndex = 58
+        Me.pnlGender.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.pnlGender.Size = New System.Drawing.Size(382, 50)
+        Me.pnlGender.TabIndex = 3
         '
         'rbMale
         '
         Me.rbMale.AutoSize = True
         Me.rbMale.BackColor = System.Drawing.Color.White
-        Me.rbMale.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbMale.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbMale.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.rbMale.Location = New System.Drawing.Point(13, 6)
-        Me.rbMale.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbMale.Location = New System.Drawing.Point(10, 11)
         Me.rbMale.Name = "rbMale"
-        Me.rbMale.Size = New System.Drawing.Size(83, 40)
-        Me.rbMale.TabIndex = 41
+        Me.rbMale.Size = New System.Drawing.Size(77, 29)
+        Me.rbMale.TabIndex = 0
         Me.rbMale.TabStop = True
         Me.rbMale.Text = "Male"
         Me.rbMale.UseVisualStyleBackColor = False
@@ -79,13 +80,12 @@ Partial Class Account
         '
         Me.rbNonBinary.AutoSize = True
         Me.rbNonBinary.BackColor = System.Drawing.Color.White
-        Me.rbNonBinary.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbNonBinary.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbNonBinary.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.rbNonBinary.Location = New System.Drawing.Point(285, 6)
-        Me.rbNonBinary.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbNonBinary.Location = New System.Drawing.Point(200, 11)
         Me.rbNonBinary.Name = "rbNonBinary"
-        Me.rbNonBinary.Size = New System.Drawing.Size(155, 40)
-        Me.rbNonBinary.TabIndex = 43
+        Me.rbNonBinary.Size = New System.Drawing.Size(138, 29)
+        Me.rbNonBinary.TabIndex = 2
         Me.rbNonBinary.TabStop = True
         Me.rbNonBinary.Text = "Non-Binary"
         Me.rbNonBinary.UseVisualStyleBackColor = False
@@ -94,13 +94,12 @@ Partial Class Account
         '
         Me.rbFemale.AutoSize = True
         Me.rbFemale.BackColor = System.Drawing.Color.White
-        Me.rbFemale.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbFemale.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbFemale.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.rbFemale.Location = New System.Drawing.Point(132, 5)
-        Me.rbFemale.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbFemale.Location = New System.Drawing.Point(93, 11)
         Me.rbFemale.Name = "rbFemale"
-        Me.rbFemale.Size = New System.Drawing.Size(109, 40)
-        Me.rbFemale.TabIndex = 42
+        Me.rbFemale.Size = New System.Drawing.Size(101, 29)
+        Me.rbFemale.TabIndex = 1
         Me.rbFemale.TabStop = True
         Me.rbFemale.Text = "Female"
         Me.rbFemale.UseVisualStyleBackColor = False
@@ -108,13 +107,12 @@ Partial Class Account
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.Color.White
-        Me.Label4.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(101, 514)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(76, 418)
         Me.Label4.Name = "Label4"
-        Me.Label4.Padding = New System.Windows.Forms.Padding(27, 0, 0, 0)
-        Me.Label4.Size = New System.Drawing.Size(233, 62)
+        Me.Label4.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
+        Me.Label4.Size = New System.Drawing.Size(165, 50)
         Me.Label4.TabIndex = 57
         Me.Label4.Text = "gender"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -122,13 +120,12 @@ Partial Class Account
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(101, 250)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(76, 203)
         Me.Label3.Name = "Label3"
-        Me.Label3.Padding = New System.Windows.Forms.Padding(27, 0, 0, 0)
-        Me.Label3.Size = New System.Drawing.Size(233, 62)
+        Me.Label3.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
+        Me.Label3.Size = New System.Drawing.Size(165, 50)
         Me.Label3.TabIndex = 56
         Me.Label3.Text = "name"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -136,28 +133,25 @@ Partial Class Account
         'txtName
         '
         Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtName.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtName.Location = New System.Drawing.Point(329, 250)
-        Me.txtName.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtName.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtName.Location = New System.Drawing.Point(240, 203)
         Me.txtName.Multiline = True
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(500, 62)
-        Me.txtName.TabIndex = 55
+        Me.txtName.Size = New System.Drawing.Size(382, 50)
+        Me.txtName.TabIndex = 0
         Me.txtName.Tag = ""
-        Me.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnBack
         '
         Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnBack.FlatAppearance.BorderSize = 0
         Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBack.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnBack.ForeColor = System.Drawing.Color.White
-        Me.btnBack.Location = New System.Drawing.Point(45, 37)
-        Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBack.Location = New System.Drawing.Point(34, 30)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(200, 92)
-        Me.btnBack.TabIndex = 53
+        Me.btnBack.Size = New System.Drawing.Size(150, 75)
+        Me.btnBack.TabIndex = 10
         Me.btnBack.Text = "back"
         Me.btnBack.UseVisualStyleBackColor = False
         '
@@ -166,38 +160,35 @@ Partial Class Account
         Me.btnUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnUpdate.FlatAppearance.BorderSize = 0
         Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUpdate.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnUpdate.ForeColor = System.Drawing.Color.White
-        Me.btnUpdate.Location = New System.Drawing.Point(735, 673)
-        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnUpdate.Location = New System.Drawing.Point(1041, 563)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(220, 92)
-        Me.btnUpdate.TabIndex = 52
+        Me.btnUpdate.Size = New System.Drawing.Size(165, 75)
+        Me.btnUpdate.TabIndex = 9
         Me.btnUpdate.Text = "update"
         Me.btnUpdate.UseVisualStyleBackColor = False
         '
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.lblTitle.Location = New System.Drawing.Point(719, 43)
-        Me.lblTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTitle.Location = New System.Drawing.Point(542, 41)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(203, 70)
+        Me.lblTitle.Size = New System.Drawing.Size(169, 46)
         Me.lblTitle.TabIndex = 45
         Me.lblTitle.Text = "account"
         '
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(101, 337)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(76, 274)
         Me.Label1.Name = "Label1"
-        Me.Label1.Padding = New System.Windows.Forms.Padding(27, 0, 0, 0)
-        Me.Label1.Size = New System.Drawing.Size(233, 62)
+        Me.Label1.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
+        Me.Label1.Size = New System.Drawing.Size(165, 50)
         Me.Label1.TabIndex = 60
         Me.Label1.Text = "email"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -205,25 +196,23 @@ Partial Class Account
         'txtEmail
         '
         Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtEmail.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Location = New System.Drawing.Point(329, 337)
-        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Location = New System.Drawing.Point(240, 274)
         Me.txtEmail.Multiline = True
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(500, 62)
-        Me.txtEmail.TabIndex = 59
+        Me.txtEmail.Size = New System.Drawing.Size(382, 50)
+        Me.txtEmail.TabIndex = 1
         Me.txtEmail.Tag = ""
         '
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(101, 427)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(76, 347)
         Me.Label2.Name = "Label2"
-        Me.Label2.Padding = New System.Windows.Forms.Padding(27, 0, 0, 0)
-        Me.Label2.Size = New System.Drawing.Size(233, 62)
+        Me.Label2.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
+        Me.Label2.Size = New System.Drawing.Size(165, 50)
         Me.Label2.TabIndex = 62
         Me.Label2.Text = "password"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -231,48 +220,45 @@ Partial Class Account
         'txtPassword
         '
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPassword.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(329, 427)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.Location = New System.Drawing.Point(240, 347)
         Me.txtPassword.Multiline = True
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(500, 62)
-        Me.txtPassword.TabIndex = 61
+        Me.txtPassword.Size = New System.Drawing.Size(382, 50)
+        Me.txtPassword.TabIndex = 2
         Me.txtPassword.Tag = ""
         '
         'dtpDate
         '
         Me.dtpDate.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText
         Me.dtpDate.CalendarTitleForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.dtpDate.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpDate.Location = New System.Drawing.Point(1149, 254)
-        Me.dtpDate.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtpDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpDate.Location = New System.Drawing.Point(863, 211)
         Me.dtpDate.Name = "dtpDate"
-        Me.dtpDate.Size = New System.Drawing.Size(364, 37)
-        Me.dtpDate.TabIndex = 65
+        Me.dtpDate.Size = New System.Drawing.Size(274, 30)
+        Me.dtpDate.TabIndex = 5
         '
         'txtDate
         '
         Me.txtDate.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtDate.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDate.Location = New System.Drawing.Point(1108, 247)
-        Me.txtDate.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDate.Location = New System.Drawing.Point(840, 201)
         Me.txtDate.Multiline = True
         Me.txtDate.Name = "txtDate"
-        Me.txtDate.Size = New System.Drawing.Size(500, 62)
-        Me.txtDate.TabIndex = 64
+        Me.txtDate.Size = New System.Drawing.Size(362, 50)
+        Me.txtDate.TabIndex = 4
         Me.txtDate.Tag = ""
         '
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.Color.White
-        Me.Label5.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(875, 247)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(656, 201)
         Me.Label5.Name = "Label5"
-        Me.Label5.Padding = New System.Windows.Forms.Padding(27, 0, 0, 0)
-        Me.Label5.Size = New System.Drawing.Size(233, 62)
+        Me.Label5.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
+        Me.Label5.Size = New System.Drawing.Size(185, 50)
         Me.Label5.TabIndex = 63
         Me.Label5.Text = "date of birth"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -280,39 +266,37 @@ Partial Class Account
         'Label6
         '
         Me.Label6.BackColor = System.Drawing.Color.White
-        Me.Label6.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(876, 338)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(656, 418)
         Me.Label6.Name = "Label6"
-        Me.Label6.Padding = New System.Windows.Forms.Padding(27, 0, 0, 0)
-        Me.Label6.Size = New System.Drawing.Size(247, 62)
+        Me.Label6.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
+        Me.Label6.Size = New System.Drawing.Size(185, 50)
         Me.Label6.TabIndex = 67
         Me.Label6.Text = "credit card no."
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txtCreditCardNo
         '
+        Me.txtCreditCardNo.BackColor = System.Drawing.SystemColors.Window
         Me.txtCreditCardNo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCreditCardNo.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCreditCardNo.Location = New System.Drawing.Point(1121, 338)
-        Me.txtCreditCardNo.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCreditCardNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCreditCardNo.Location = New System.Drawing.Point(840, 418)
         Me.txtCreditCardNo.Multiline = True
         Me.txtCreditCardNo.Name = "txtCreditCardNo"
-        Me.txtCreditCardNo.Size = New System.Drawing.Size(487, 62)
-        Me.txtCreditCardNo.TabIndex = 66
+        Me.txtCreditCardNo.Size = New System.Drawing.Size(365, 50)
+        Me.txtCreditCardNo.TabIndex = 8
         Me.txtCreditCardNo.Tag = ""
         '
         'Label7
         '
         Me.Label7.BackColor = System.Drawing.Color.White
-        Me.Label7.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(876, 428)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(656, 274)
         Me.Label7.Name = "Label7"
-        Me.Label7.Padding = New System.Windows.Forms.Padding(27, 0, 0, 0)
-        Me.Label7.Size = New System.Drawing.Size(233, 62)
+        Me.Label7.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
+        Me.Label7.Size = New System.Drawing.Size(185, 50)
         Me.Label7.TabIndex = 69
         Me.Label7.Text = "country"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -320,25 +304,23 @@ Partial Class Account
         'txtCountry
         '
         Me.txtCountry.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCountry.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCountry.Location = New System.Drawing.Point(1104, 428)
-        Me.txtCountry.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCountry.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCountry.Location = New System.Drawing.Point(840, 274)
         Me.txtCountry.Multiline = True
         Me.txtCountry.Name = "txtCountry"
-        Me.txtCountry.Size = New System.Drawing.Size(500, 62)
-        Me.txtCountry.TabIndex = 68
+        Me.txtCountry.Size = New System.Drawing.Size(362, 50)
+        Me.txtCountry.TabIndex = 6
         Me.txtCountry.Tag = ""
         '
         'Label8
         '
         Me.Label8.BackColor = System.Drawing.Color.White
-        Me.Label8.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(876, 514)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(656, 344)
         Me.Label8.Name = "Label8"
-        Me.Label8.Padding = New System.Windows.Forms.Padding(27, 0, 0, 0)
-        Me.Label8.Size = New System.Drawing.Size(233, 62)
+        Me.Label8.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
+        Me.Label8.Size = New System.Drawing.Size(185, 50)
         Me.Label8.TabIndex = 71
         Me.Label8.Text = "city"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -346,21 +328,47 @@ Partial Class Account
         'txtCity
         '
         Me.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCity.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCity.Location = New System.Drawing.Point(1104, 514)
-        Me.txtCity.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCity.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCity.Location = New System.Drawing.Point(840, 344)
         Me.txtCity.Multiline = True
         Me.txtCity.Name = "txtCity"
-        Me.txtCity.Size = New System.Drawing.Size(500, 62)
-        Me.txtCity.TabIndex = 70
+        Me.txtCity.Size = New System.Drawing.Size(362, 50)
+        Me.txtCity.TabIndex = 7
         Me.txtCity.Tag = ""
+        '
+        'Label9
+        '
+        Me.Label9.BackColor = System.Drawing.Color.White
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(76, 563)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
+        Me.Label9.Size = New System.Drawing.Size(195, 50)
+        Me.Label9.TabIndex = 73
+        Me.Label9.Text = "You have flown"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFlightHours
+        '
+        Me.lblFlightHours.BackColor = System.Drawing.Color.White
+        Me.lblFlightHours.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.lblFlightHours.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
+        Me.lblFlightHours.Location = New System.Drawing.Point(268, 563)
+        Me.lblFlightHours.Name = "lblFlightHours"
+        Me.lblFlightHours.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
+        Me.lblFlightHours.Size = New System.Drawing.Size(354, 50)
+        Me.lblFlightHours.TabIndex = 74
+        Me.lblFlightHours.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Account
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1685, 838)
+        Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.lblFlightHours)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.txtCity)
         Me.Controls.Add(Me.Label7)
@@ -381,7 +389,6 @@ Partial Class Account
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.lblTitle)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Account"
         Me.Text = "Account"
         Me.pnlGender.ResumeLayout(False)
@@ -414,4 +421,6 @@ Partial Class Account
     Friend WithEvents txtCountry As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents txtCity As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents lblFlightHours As Label
 End Class

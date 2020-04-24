@@ -41,7 +41,7 @@ Partial Class HomeUser
         Me.btnAccount.Location = New System.Drawing.Point(773, 253)
         Me.btnAccount.Name = "btnAccount"
         Me.btnAccount.Size = New System.Drawing.Size(225, 250)
-        Me.btnAccount.TabIndex = 33
+        Me.btnAccount.TabIndex = 2
         Me.btnAccount.Text = "account"
         Me.btnAccount.UseVisualStyleBackColor = False
         '
@@ -55,7 +55,7 @@ Partial Class HomeUser
         Me.btnMyBookings.Location = New System.Drawing.Point(505, 253)
         Me.btnMyBookings.Name = "btnMyBookings"
         Me.btnMyBookings.Size = New System.Drawing.Size(225, 250)
-        Me.btnMyBookings.TabIndex = 32
+        Me.btnMyBookings.TabIndex = 1
         Me.btnMyBookings.Text = "my bookings"
         Me.btnMyBookings.UseVisualStyleBackColor = False
         '
@@ -69,7 +69,7 @@ Partial Class HomeUser
         Me.btnFlights.Location = New System.Drawing.Point(235, 253)
         Me.btnFlights.Name = "btnFlights"
         Me.btnFlights.Size = New System.Drawing.Size(225, 250)
-        Me.btnFlights.TabIndex = 31
+        Me.btnFlights.TabIndex = 0
         Me.btnFlights.Text = "flights"
         Me.btnFlights.UseVisualStyleBackColor = False
         '
@@ -90,11 +90,11 @@ Partial Class HomeUser
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblLoginMsg.AutoSize = True
         Me.lblLoginMsg.BackColor = System.Drawing.Color.Transparent
-        Me.lblLoginMsg.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.lblLoginMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
         Me.lblLoginMsg.ForeColor = System.Drawing.Color.Snow
         Me.lblLoginMsg.Location = New System.Drawing.Point(951, 594)
         Me.lblLoginMsg.Name = "lblLoginMsg"
-        Me.lblLoginMsg.Size = New System.Drawing.Size(145, 36)
+        Me.lblLoginMsg.Size = New System.Drawing.Size(136, 25)
         Me.lblLoginMsg.TabIndex = 34
         Me.lblLoginMsg.Text = "Logged in as"
         Me.lblLoginMsg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -104,7 +104,7 @@ Partial Class HomeUser
         Me.lblUsername.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblUsername.BackColor = System.Drawing.Color.Transparent
-        Me.lblUsername.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.lblUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
         Me.lblUsername.ForeColor = System.Drawing.Color.Salmon
         Me.lblUsername.Location = New System.Drawing.Point(572, 630)
         Me.lblUsername.Name = "lblUsername"
@@ -117,12 +117,12 @@ Partial Class HomeUser
         Me.btnLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnLogout.FlatAppearance.BorderSize = 0
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogout.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnLogout.ForeColor = System.Drawing.Color.White
         Me.btnLogout.Location = New System.Drawing.Point(1102, 594)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(150, 75)
-        Me.btnLogout.TabIndex = 36
+        Me.btnLogout.TabIndex = 3
         Me.btnLogout.Text = "logout"
         Me.btnLogout.UseVisualStyleBackColor = False
         '

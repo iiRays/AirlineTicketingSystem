@@ -95,7 +95,7 @@
             Do
                 selectedSeat = Quick.GetRandomInt(1, (plane.Capacity / plane.MaxColumns)).ToString & Quick.IntToChar(Quick.GetRandomInt(1, plane.MaxColumns)).ToString
 
-                result = (From dbTicket In DB.context.Tickets Where dbTicket.Booking.Flight.FlightID = flight.FlightID And dbTicket.Seat = selectedSeat).First
+                result = (From dbTicket In DB.context.Tickets Where dbTicket.Booking.Flight.FlightID = flight.FlightID And dbTicket.Seat = selectedSeat).FirstOrDefault
 
             Loop While result IsNot Nothing 'Loop if this seat already exists (means already booked)
 
