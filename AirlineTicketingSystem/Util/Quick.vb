@@ -1,6 +1,28 @@
-﻿Imports System.Text.RegularExpressions
+﻿Imports System.Runtime.Serialization
+Imports System.Text.RegularExpressions
 Public Class Quick
     'This class aids in shortening code
+
+
+    Public Shared Function Clone(Of T)(source As T) As T
+        'Code possible thanks to Venugopal @ https://stackoverflow.com/questions/9233046/duplicate-object-and-working-with-duplicate-without-changing-original
+        If GetType(T).IsSerializable = False Then
+            Throw New ArgumentException("Cannot serialize")
+        End If
+
+        If Object.ReferenceEquals(source, Nothing) Then
+            Return CType(Nothing, T)
+        End If
+
+        Dim formatter As IFormatter = New Formatters.Binary.BinaryFormatter()
+        Dim stream = New System.IO.MemoryStream()
+        Using stream
+            formatter.Serialize(stream, source)
+            stream.Seek(0, System.IO.SeekOrigin.Begin)
+            Return CType(formatter.Deserialize(stream), T)
+        End Using
+    End Function
+
 
     'Closes a form
     Public Shared Function CloseForm(ByVal sender As Object, ByVal e As EventArgs)

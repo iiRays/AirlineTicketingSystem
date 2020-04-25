@@ -24,20 +24,14 @@
             If existingFlight Is Nothing Then
                 'Flight instance does not exist
 
-                'Copy references
-                flightInstance.Route = Flight.Route
-                flightInstance.Plane = Flight.Plane
+                ''Copy references
+                'flightInstance.Route = Flight.Route
+                'flightInstance.Plane = Flight.Plane
 
                 'Copy flight details
-                flightInstance.FlightNo = Flight.FlightNo
+                flightInstance = Quick.Clone(Of Flight)(Flight)
                 flightInstance.IsDaily = False
-                flightInstance.PlaneID = Flight.PlaneID
-                flightInstance.RouteID = Flight.RouteID
-                flightInstance.Price = Flight.Price
-                flightInstance.FlightID = Flight.FlightID
                 flightInstance.IsFlightInstance = True
-
-
 
                 'Create flight instance on the selected date
                 Dim dayDifference = 0
