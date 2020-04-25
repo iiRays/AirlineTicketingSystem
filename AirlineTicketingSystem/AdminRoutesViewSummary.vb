@@ -12,7 +12,7 @@
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
-        App.Session.Add("sourceScreen", "view")
+        App.Session.Set("sourceScreen", "view")
         Quick.Navigate(Me, New AdminRoutesEdit)
     End Sub
 

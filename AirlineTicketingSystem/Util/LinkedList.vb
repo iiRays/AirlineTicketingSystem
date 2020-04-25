@@ -126,28 +126,28 @@
         Size += 1
     End Sub
 
-    Public Sub Add(Tag As String, Item As Object)
-        If (IsEmpty()) Then
-            'List is empty
-            Top = New LinkedNode(Of T)(Tag, Item)
-        ElseIf (Size = 1) Then
-            'List has 1 item
-            Top.Next = New LinkedNode(Of T)(Tag, Item)
-        Else
-            'List is not empty
-            Dim temp = Top
+    'Public Sub Add(Tag As String, Item As Object)
+    '    If (IsEmpty()) Then
+    '        'List is empty
+    '        Top = New LinkedNode(Of T)(Tag, Item)
+    '    ElseIf (Size = 1) Then
+    '        'List has 1 item
+    '        Top.Next = New LinkedNode(Of T)(Tag, Item)
+    '    Else
+    '        'List is not empty
+    '        Dim temp = Top
 
-            'Loop until last item
-            While temp.Next IsNot Nothing
-                temp = temp.Next
-            End While
+    '        'Loop until last item
+    '        While temp.Next IsNot Nothing
+    '            temp = temp.Next
+    '        End While
 
-            'Append at the end
-            temp.Next = New LinkedNode(Of T)(Tag, Item)
+    '        'Append at the end
+    '        temp.Next = New LinkedNode(Of T)(Tag, Item)
 
-        End If
-        Size += 1
-    End Sub
+    '    End If
+    '    Size += 1
+    'End Sub
 
     Public Sub Clear()
         Size = 0

@@ -109,7 +109,6 @@
             App.User = DB.Get(Of User)(user.UserID)
         End If
 
-        App.Session.Clear()
 
         Quick.Navigate(Me, New BookingFinish(booking))
     End Sub
@@ -136,4 +135,8 @@
 
 
     End Function
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Quick.Navigate(Me, New FlightList)
+    End Sub
 End Class

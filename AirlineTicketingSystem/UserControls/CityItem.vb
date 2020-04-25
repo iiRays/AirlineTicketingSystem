@@ -10,7 +10,7 @@
     End Sub
 
     Private Sub BtnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
-        App.Session.Add("city", City)
+        App.Session.Set("city", City)
         Quick.Navigate(AdminCitiesViewResults, New AdminCitiesViewSummary)
     End Sub
 End Class

@@ -9,7 +9,7 @@
     End Sub
 
     Private Sub BtnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
-        App.Session.Add("flight", Flight)
+        App.Session.Set("flight", Flight)
         Quick.Navigate(AdminFlightsViewResults, New AdminFlightsViewSummary)
     End Sub
 End Class

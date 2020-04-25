@@ -14,7 +14,7 @@
 
     'Unneeded methods but may prove useful
     Public Shared Sub SaveState(form As Form)
-        App.Session.Add(form.Name, form)
+        App.Session.Set(form.Name, form)
     End Sub
 
     Public Shared Function RestoreState(form As Form) As Form

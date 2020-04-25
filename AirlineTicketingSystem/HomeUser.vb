@@ -25,4 +25,8 @@
     Private Sub BtnMyBookings_Click(sender As Object, e As EventArgs) Handles btnMyBookings.Click
         Quick.Navigate(Me, New MyBookings)
     End Sub
+
+    Private Sub btnBookingSearch_Click(sender As Object, e As EventArgs) Handles btnBookingSearch.Click
+        Quick.Navigate(Me, New BookingSearch)
+    End Sub
 End Class

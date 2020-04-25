@@ -58,11 +58,29 @@ Public Class BookFlight1
             errorStr.AppendLine(" - We only allow a maximum of 50 kg per booking.")
         End If
 
+        If DB.GetExistingFlight(Flight, Flight.DepartureTime.Date) IsNot Nothing Then
+            'If this flight already exists
+
+            Dim passengerCount = DB.GetTotalPassengers(Flight.FlightID)
+            If peopleCount > passengerCount Then
+                'Add in the selected passenger count with the total passengers already booked to ensure not overbooked
+                errorStr.AppendLine(" - The maximum passengers you can book is " & (Flight.Plane.Capacity - passengerCount))
+            End If
+
+        Else
+            'Since this flight has 0 passengers, limit to the capacity
+            If peopleCount > Flight.Plane.Capacity Then
+                errorStr.AppendLine(" - The maximum passengers you can book is " & Flight.Plane.Capacity)
+            End If
+        End If
+
         If errorStr.ToString.Trim.Length > 0 Then
             'Has error
             Quick.ShowError("Incorrect fields", errorStr.ToString().Trim)
             Return
         End If
+
+
 
 
         Dim booking As New Booking()

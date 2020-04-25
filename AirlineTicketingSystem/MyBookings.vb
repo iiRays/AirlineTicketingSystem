@@ -2,7 +2,10 @@
     Private Sub MyBookings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TitleBar.Load(Me)
         Dim user As User = App.User
-        Dim bookingList As List(Of Booking) = user.Bookings.ToList
+
+        Dim bookingList As List(Of Booking) = (From booking In DB.context.Bookings Where booking.UserID = user.UserID Order By booking.PaymentDate).ToList
+        bookingList.Reverse()
+
         Dim loopCount = 0
 
         For Each booking As Booking In bookingList

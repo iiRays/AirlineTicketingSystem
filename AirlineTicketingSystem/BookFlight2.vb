@@ -24,18 +24,28 @@ Public Class BookFlight2
         Next
     End Sub
 
-    Public Sub TakeSeat(seat As String, sender As Object)
+    Public Sub TakeSeat(newSeat As String, previousSeat As String, senderName As String)
         'Removes the seat from all dropdownlists except sender
 
-        For Each cControl In Me.Controls
-            If TypeOf cControl Is ComboBox Then
-                Dim cboSeats = CType(cControl, ComboBox)
-                If cboSeats IsNot sender Then
-                    cboSeats.Items.Remove(seat)
+        If newSeat Is previousSeat Then
+            Return
+        End If
+
+        For counter As Integer = 1 To booking.NoOfPassengers
+            Dim passengerItem As PassengerItem = CType(Me.Controls("passengerItem" & counter), PassengerItem)
+            If passengerItem.Name IsNot senderName Then
+                passengerItem.cboSeat.Items.Remove(newSeat)
+                'Add back previous one
+
+                If previousSeat IsNot Nothing AndAlso previousSeat IsNot "" Then
+                    passengerItem.cboSeat.Items.Add(previousSeat)
 
                 End If
+
             End If
         Next
+
+
     End Sub
 
     Private Sub BookFlight2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -58,7 +68,7 @@ Public Class BookFlight2
             Dim passengerItem As New PassengerItem()
             passengerItem.Location = New Point(138, 193 + (passengerCount * 100))
             passengerItem.lblName.Text = "name " & (passengerCount + 1)
-            passengerItem.Name = "txtPassenger" & (passengerCount + 1)
+            passengerItem.Name = "passengerItem" & (passengerCount + 1)
             passengerItem.bookFlightForm = Me
             For Each seat In AllSeatList
                 passengerItem.cboSeat.Items.Add(seat)
@@ -70,7 +80,7 @@ Public Class BookFlight2
 
         'Fill in the first passenger with user name is logged in
         If App.User IsNot Nothing Then
-            CType(Me.Controls("txtPassenger1"), PassengerItem).txtName.Text = App.User.Name
+            CType(Me.Controls("passengerItem1"), PassengerItem).txtName.Text = App.User.Name
         End If
 
     End Sub
@@ -86,7 +96,7 @@ Public Class BookFlight2
 
         For passengerCount As Integer = 0 To booking.NoOfPassengers - 1 Step 1
             Dim ticket As New Ticket()
-            Dim passengerItem As PassengerItem = CType(Me.Controls("txtPassenger" & (passengerCount + 1)), PassengerItem)
+            Dim passengerItem As PassengerItem = CType(Me.Controls("passengerItem" & (passengerCount + 1)), PassengerItem)
             ticket.BookingID = booking.BookingID
             ticket.Name = passengerItem.txtName.Text
             If ticket.Name.Length = 0 Then
@@ -110,7 +120,7 @@ Public Class BookFlight2
         End If
 
         'Add passenger names
-        App.Session.Add("passengerList", passengerList)
+        App.Session.Set("passengerList", passengerList)
 
         'Calculate price
         booking.TotalPrice = CType(App.Session.Get("selectedFlight"), Flight).Price * booking.NoOfPassengers + (15 * booking.ExtraBaggageKG)

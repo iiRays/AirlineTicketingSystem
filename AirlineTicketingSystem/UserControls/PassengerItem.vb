@@ -1,5 +1,6 @@
 ﻿Public Class PassengerItem
     Public bookFlightForm As BookFlight2
+    Private currentlySelectedSeat As String
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lblName.Click
 
     End Sub
@@ -13,6 +14,7 @@
     End Sub
 
     Private Sub cboSeat_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboSeat.SelectedIndexChanged
-        bookFlightForm.TakeSeat(cboSeat.SelectedItem.ToString, sender)
+        bookFlightForm.TakeSeat(cboSeat.SelectedItem.ToString, currentlySelectedSeat, Me.Name)
+        currentlySelectedSeat = cboSeat.SelectedItem.ToString
     End Sub
 End Class

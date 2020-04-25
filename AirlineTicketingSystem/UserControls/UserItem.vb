@@ -8,7 +8,7 @@
         lblIsStaff.Text = User.IsStaff.ToString()
     End Sub
     Private Sub BtnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
-        App.Session.Add("user", User)
+        App.Session.Set("user", User)
         Quick.Navigate(AdminUsersViewResults, New AdminUsersViewSummary)
     End Sub
 End Class

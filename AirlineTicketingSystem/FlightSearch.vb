@@ -48,8 +48,8 @@
 
         Next
 
-        App.Session.Add("flightResults", results)
-        App.Session.Add("selectedDate", selectedDate)
+        App.Session.Set("flightResults", results)
+        App.Session.Set("selectedDate", selectedDate)
 
         Quick.Navigate(Me, New FlightList)
     End Sub

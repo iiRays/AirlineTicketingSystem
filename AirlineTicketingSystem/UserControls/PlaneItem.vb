@@ -8,7 +8,7 @@
         lblCapacity.Text = Plane.Capacity.ToString("0 persons")
     End Sub
     Private Sub BtnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
-        App.Session.Add("plane", Plane)
+        App.Session.Set("plane", Plane)
         Quick.Navigate(AdminCitiesViewResults, New AdminPlanesViewSummary)
     End Sub
 End Class

@@ -8,7 +8,7 @@
     End Sub
 
     Private Sub BtnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
-        App.Session.Add("route", Route)
+        App.Session.Set("route", Route)
         Quick.Navigate(AdminRoutesViewResults, New AdminRoutesViewSummary)
     End Sub
 End Class
