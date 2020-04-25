@@ -14,4 +14,8 @@
     Private Sub BtnAccount_Click(sender As Object, e As EventArgs) Handles btnAccount.Click
         Quick.Navigate(Me, New Account)
     End Sub
+
+    Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+
+    End Sub
 End Class

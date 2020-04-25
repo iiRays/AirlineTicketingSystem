@@ -14,11 +14,10 @@
     Private Sub HomeGuest_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
 
-        TitleBar.Load(Me, True, False)
+        TitleBar.Load(Me, True, True)
     End Sub
 
     Private Sub btnBookingSearch_Click(sender As Object, e As EventArgs) Handles btnBookingSearch.Click
         Quick.Navigate(Me, New BookingSearch)
     End Sub
-
 End Class

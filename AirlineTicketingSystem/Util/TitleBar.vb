@@ -12,6 +12,13 @@
         Me.IsFormDraggable = IsFormDraggable
         Me.RemoveBorder = True
 
+        Me.Form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Form.WindowState = FormWindowState.Normal
+        Me.Form.MinimizeBox = False
+        Me.Form.MinimumSize = New Size(1280, 720)
+        Me.Form.MaximizeBox = False
+        Me.Form.MaximumSize = New Size(1280, 720)
+
         LoadTitleBar()
     End Sub
 
@@ -19,6 +26,13 @@
         Me.Form = Form
         Me.IsFormDraggable = IsFormDraggable
         Me.RemoveBorder = RemoveBorder
+
+        Me.Form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Form.WindowState = FormWindowState.Normal
+        Me.Form.MinimizeBox = False
+        Me.Form.MinimumSize = New Size(1280, 720)
+        Me.Form.MaximizeBox = False
+        Me.Form.MaximumSize = New Size(1280, 720)
 
         LoadTitleBar()
     End Sub
