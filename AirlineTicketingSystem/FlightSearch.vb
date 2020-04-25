@@ -27,11 +27,11 @@ Public Class FlightSearch
         End If
 
         If txtFrom.Text = "" Then
-            errorMsg.Add(" - Please fill in the origin city (To)")
+            errorMsg.Add(" - Please fill in the origin city (From)")
         End If
 
         If txtTo.Text = "" Then
-            errorMsg.Add(" - Please fill in the destination city (From)")
+            errorMsg.Add(" - Please fill in the destination city (To)")
         End If
 
         If errorMsg.ShowIfError Then
