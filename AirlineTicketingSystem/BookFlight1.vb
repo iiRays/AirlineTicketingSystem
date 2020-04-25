@@ -26,11 +26,7 @@ Public Class BookFlight1
         lblDepartureTime.Text = Flight.DepartureTime.ToString("HH:mm")
         lblDestination.Text = DB.GetFlightDestination(Flight.FlightID).City.Name
         lblSource.Text = DB.GetFlightSource(Flight.FlightID).City.Name
-        If Flight.IsDaily Then
-            lblDate.Text = "DAILY"
-        Else
-            lblDate.Text = Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Flight.DepartureTime.Month) & " " & Flight.DepartureTime.Day.ToString
-        End If
+        lblDate.Text = Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Flight.DepartureTime.Month) & " " & Flight.DepartureTime.Day.ToString
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnNext.Click
@@ -57,20 +53,20 @@ Public Class BookFlight1
         If kgCount > 50 And hasKgErrors = False Then
             errorStr.AppendLine(" - We only allow a maximum of 50 kg per booking.")
         End If
-
+        Dim plane = DB.Get(Of Plane)(Flight.PlaneID)
         If DB.GetExistingFlight(Flight, Flight.DepartureTime.Date) IsNot Nothing Then
             'If this flight already exists
 
             Dim passengerCount = DB.GetTotalPassengers(Flight.FlightID)
-            If (peopleCount + passengerCount) > Flight.Plane.Capacity Then
+            If (peopleCount + passengerCount) > plane.Capacity Then
                 'Add in the selected passenger count with the total passengers already booked to ensure not overbooked
-                errorStr.AppendLine(" - The maximum passengers you can book is " & (Flight.Plane.Capacity - passengerCount))
+                errorStr.AppendLine(" - The maximum passengers you can book is " & plane.Capacity - passengerCount)
             End If
 
         Else
             'Since this flight has 0 passengers, limit to the capacity
-            If peopleCount > Flight.Plane.Capacity Then
-                errorStr.AppendLine(" - The maximum passengers you can book is " & Flight.Plane.Capacity)
+            If peopleCount > DB.Get(Of Plane)(Flight.PlaneID).Capacity Then
+                errorStr.AppendLine(" - The maximum passengers you can book is " & plane.Capacity)
             End If
         End If
 
@@ -89,6 +85,8 @@ Public Class BookFlight1
         booking.CreditCardNo = User.CreditCardNo
         booking.ExtraBaggageKG = kgCount
         booking.IsCancelled = False
+        booking.FlightID = Flight.FlightID
+
 
         If App.Session.Get("Booking") Is Nothing Then
             App.Session.Set("Booking", booking)

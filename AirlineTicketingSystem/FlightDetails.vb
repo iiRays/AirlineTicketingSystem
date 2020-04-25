@@ -24,9 +24,12 @@
     End Sub
 
     Private Sub FlightDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim route = DB.Get(Of Route)(Flight.RouteID)
+        Dim plane = DB.Get(Of Plane)(Flight.PlaneID)
+
         Dim totalPassengers = DB.GetTotalPassengers(Flight.FlightID)
         TitleBar.Load(Me)
-        lblSeats.Text = totalPassengers & "/" & Flight.Plane.Capacity 'NOTE: Does not account for multiple passengers per booking YET
+        lblSeats.Text = totalPassengers & "/" & DB.Get(Of Plane)(Flight.PlaneID).Capacity
         If Flight.IsDaily Then
             lblDate.Text = "DAILY"
             lblSeats.Hide()
@@ -35,7 +38,7 @@
             lblDate.Text = Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Flight.DepartureTime.Month) & " " & Flight.DepartureTime.Day.ToString
         End If
         lblId.Text = Flight.FlightNo
-        lblDuration.Text = Flight.Route.DurationHour.ToString & "h " & Flight.Route.DurationMins.ToString & "m approx."
+        lblDuration.Text = route.DurationHour.ToString & "h " & route.DurationMins.ToString & "m approx."
         lblSource.Text = DB.GetFlightSource(Flight.FlightID).City.Name
         lblDepartureTime.Text = Flight.DepartureTime.ToString("h:mm tt")
         lblDestination.Text = DB.GetFlightDestination(Flight.FlightID).City.Name
@@ -50,7 +53,7 @@
             btnEdit.Hide()
         End If
 
-        If IsBooking = False OrElse totalPassengers >= Flight.Plane.Capacity Then
+        If IsBooking = False OrElse totalPassengers >= plane.Capacity Then
             btnGo.Hide()
         End If
 

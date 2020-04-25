@@ -18,8 +18,11 @@
         Else
             lblDate.Text = flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(flight.DepartureTime.Month) & " " & flight.DepartureTime.Day.ToString
         End If
+
+        Dim route = DB.Get(Of Route)(flight.RouteID)
+
         lblId.Text = flight.FlightNo
-        lblDuration.Text = flight.Route.DurationHour.ToString & "h " & flight.Route.DurationMins.ToString
+        lblDuration.Text = route.DurationHour.ToString & "h " & route.DurationMins.ToString
         lblSource.Text = DB.GetFlightSource(flight.FlightID).City.Name
         lblDepartureTime.Text = flight.DepartureTime.ToString("HH:mm")
         lblDestination.Text = DB.GetFlightDestination(flight.FlightID).City.Name
@@ -72,7 +75,6 @@
             flight.FlightID = Quick.GenerateId(Of Flight)()
 
 
-            DB.Insert(flight)
         Else
             If existingFlight.Bookings.Count = existingFlight.Plane.Capacity Then
                 ' Flight is full
@@ -85,10 +87,7 @@
         booking.User = user
         booking.UserID = user.UserID
 
-        booking.FlightID = flight.FlightID
-        booking.Flight = flight
 
-        Dim plane = booking.Flight.Plane
 
         DB.Insert(booking)
         For Each ticket As Ticket In passengerList

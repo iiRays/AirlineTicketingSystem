@@ -6,12 +6,13 @@ Public Class BookFlight2
 
     Private Sub LoadAllSeats()
         Dim flight As Flight = App.Session.Get("selectedFlight")
-        Dim totalRows = flight.Plane.Capacity / flight.Plane.MaxColumns
+        Dim plane = DB.Get(Of Plane)(flight.PlaneID)
+        Dim totalRows = plane.Capacity / plane.MaxColumns
 
         For counter As Integer = 1 To totalRows
             'For each row 1-end
 
-            For columnCounter As Integer = 1 To flight.Plane.MaxColumns
+            For columnCounter As Integer = 1 To plane.MaxColumns
                 'For each column A-end
                 Dim seat = counter & Quick.IntToChar(columnCounter)
                 If (From dbTicket In DB.context.Tickets Where dbTicket.Booking.Flight.FlightID = flight.FlightID And dbTicket.Seat = seat).FirstOrDefault Is Nothing Then

@@ -51,7 +51,7 @@
                 'Flight instance exists, so we use that instance
                 flightInstance = existingFlight
             End If
-
+            flightInstance.IsDaily = False
             'Update flight in the list
             Flight = flightInstance
 
