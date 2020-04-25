@@ -40,7 +40,31 @@ Public Class FlightSearch
 
         Dim selectedDate = New Date(dtpDate.Value.Year, dtpDate.Value.Month, dtpDate.Value.Day)
 
-        Dim results As List(Of Flight) = (From flight In DB.context.Flights Where txtFrom.Text = (From stops In DB.context.Stops Where stops.IsOrigin = True And stops.RouteID = flight.RouteID).First.City.Name And txtTo.Text = (From stops In DB.context.Stops Where stops.IsOrigin = False And stops.RouteID = flight.RouteID).First.City.Name And flight.IsDaily Or (flight.DepartureTime.Day = selectedDate.Day And flight.DepartureTime.Month = selectedDate.Month And flight.DepartureTime.Year = selectedDate.Year)).ToList
+        Dim results As List(Of Flight) = (From flight In DB.context.Flights Where txtFrom.Text.ToUpper = (From stops In DB.context.Stops Where stops.IsOrigin = True And stops.RouteID = flight.RouteID).First.City.Name.ToUpper And txtTo.Text.ToUpper = (From stops In DB.context.Stops Where stops.IsOrigin = False And stops.RouteID = flight.RouteID).First.City.Name.ToUpper And (flight.IsDaily Or (flight.DepartureTime.Day = selectedDate.Day And flight.DepartureTime.Month = selectedDate.Month And flight.DepartureTime.Year = selectedDate.Year))).ToList
+
+        Dim errorStr = New ErrorMsg()
+
+        If results.Count = 0 Then
+            'Check if city exists
+            If (From city In DB.context.Cities Where city.Name = txtFrom.Text).FirstOrDefault Is Nothing Then
+                errorStr.Add("Origin city does not exist.")
+            End If
+
+            If (From city In DB.context.Cities Where city.Name = txtTo.Text).FirstOrDefault Is Nothing Then
+                errorStr.Add("Destination city does not exist.")
+            End If
+
+            If errorStr.ShowIfError Then
+                Return
+            End If
+
+            'City exists but no route is made
+            errorStr.Add("Seems like there's no flights between these cities")
+        End If
+
+        If errorStr.ShowIfError Then
+            Return
+        End If
 
         Dim filteredResults As New List(Of Flight)
 
@@ -58,6 +82,11 @@ Public Class FlightSearch
                 End If
             End If
         Next
+
+
+
+
+
 
         App.Session.Set("flightResults", results)
         App.Session.Set("selectedDate", selectedDate)
