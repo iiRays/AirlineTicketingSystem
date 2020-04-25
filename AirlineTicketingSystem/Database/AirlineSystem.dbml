@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AirlineSystem" Class="AirlineSystemDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AirlineSystem" Class="AirlineSystemDataContext" Serialization="Unidirectional" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database\AirlineSystem.mdf;Integrated Security=True" SettingsObjectName="AirlineTicketingSystem.My.MySettings" SettingsPropertyName="AirlineSystemConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Booking" Member="Bookings">
     <Type Name="Booking">

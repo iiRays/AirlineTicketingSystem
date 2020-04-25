@@ -65,8 +65,12 @@
         Dim existingFlight = DB.GetExistingFlight(flight, CType(App.Session.Get("selectedDate"), Date))
 
         If existingFlight Is Nothing Then
+
+            Dim dailyFlight = App.Session.Get("selectedFlight")
+
             'If this flight doesn't exist
             flight.FlightID = Quick.GenerateId(Of Flight)()
+
 
             DB.Insert(flight)
         Else

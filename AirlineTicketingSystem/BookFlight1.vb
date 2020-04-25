@@ -62,7 +62,7 @@ Public Class BookFlight1
             'If this flight already exists
 
             Dim passengerCount = DB.GetTotalPassengers(Flight.FlightID)
-            If peopleCount > passengerCount Then
+            If (peopleCount + passengerCount) > Flight.Plane.Capacity Then
                 'Add in the selected passenger count with the total passengers already booked to ensure not overbooked
                 errorStr.AppendLine(" - The maximum passengers you can book is " & (Flight.Plane.Capacity - passengerCount))
             End If

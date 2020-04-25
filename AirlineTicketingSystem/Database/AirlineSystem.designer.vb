@@ -20,6 +20,7 @@ Imports System.Data.Linq.Mapping
 Imports System.Linq
 Imports System.Linq.Expressions
 Imports System.Reflection
+Imports System.Runtime.Serialization
 
 
 <Global.System.Data.Linq.Mapping.DatabaseAttribute(Name:="AirlineSystem")>  _
@@ -155,7 +156,8 @@ Partial Public Class AirlineSystemDataContext
 	End Property
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Booking")>  _
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Booking"),  _
+ Global.System.Runtime.Serialization.DataContractAttribute()>  _
 Partial Public Class Booking
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
@@ -184,6 +186,8 @@ Partial Public Class Booking
 	Private _User As EntityRef(Of User)
 	
 	Private _Flight As EntityRef(Of Flight)
+	
+	Private serializing As Boolean
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -232,13 +236,11 @@ Partial Public Class Booking
 	
 	Public Sub New()
 		MyBase.New
-		Me._Tickets = New EntitySet(Of Ticket)(AddressOf Me.attach_Tickets, AddressOf Me.detach_Tickets)
-		Me._User = CType(Nothing, EntityRef(Of User))
-		Me._Flight = CType(Nothing, EntityRef(Of Flight))
-		OnCreated
+		Me.Initialize
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_BookingID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_BookingID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=1)>  _
 	Public Property BookingID() As String
 		Get
 			Return Me._BookingID
@@ -254,7 +256,8 @@ Partial Public Class Booking
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UserID", DbType:="VarChar(10)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UserID", DbType:="VarChar(10)"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=2)>  _
 	Public Property UserID() As String
 		Get
 			Return Me._UserID
@@ -273,7 +276,8 @@ Partial Public Class Booking
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FlightID", DbType:="VarChar(10)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FlightID", DbType:="VarChar(10)"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=3)>  _
 	Public Property FlightID() As String
 		Get
 			Return Me._FlightID
@@ -292,7 +296,8 @@ Partial Public Class Booking
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_NoOfPassengers", DbType:="Int NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_NoOfPassengers", DbType:="Int NOT NULL"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=4)>  _
 	Public Property NoOfPassengers() As Integer
 		Get
 			Return Me._NoOfPassengers
@@ -309,7 +314,8 @@ Partial Public Class Booking
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_TotalPrice", DbType:="Decimal(8,2) NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_TotalPrice", DbType:="Decimal(8,2) NOT NULL"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=5)>  _
 	Public Property TotalPrice() As Decimal
 		Get
 			Return Me._TotalPrice
@@ -326,7 +332,8 @@ Partial Public Class Booking
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PaymentDate", DbType:="DateTime NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PaymentDate", DbType:="DateTime NOT NULL"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=6)>  _
 	Public Property PaymentDate() As Date
 		Get
 			Return Me._PaymentDate
@@ -343,7 +350,8 @@ Partial Public Class Booking
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CreditCardNo", DbType:="VarChar(20)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CreditCardNo", DbType:="VarChar(20)"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=7)>  _
 	Public Property CreditCardNo() As String
 		Get
 			Return Me._CreditCardNo
@@ -359,7 +367,8 @@ Partial Public Class Booking
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsCancelled", DbType:="Bit NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsCancelled", DbType:="Bit NOT NULL"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=8)>  _
 	Public Property IsCancelled() As Boolean
 		Get
 			Return Me._IsCancelled
@@ -376,7 +385,8 @@ Partial Public Class Booking
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ExtraBaggageKG", DbType:="Int NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ExtraBaggageKG", DbType:="Int NOT NULL"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=9)>  _
 	Public Property ExtraBaggageKG() As Integer
 		Get
 			Return Me._ExtraBaggageKG
@@ -393,9 +403,14 @@ Partial Public Class Booking
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Booking_Ticket", Storage:="_Tickets", ThisKey:="BookingID", OtherKey:="BookingID")>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Booking_Ticket", Storage:="_Tickets", ThisKey:="BookingID", OtherKey:="BookingID"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=10, EmitDefaultValue:=false)>  _
 	Public Property Tickets() As EntitySet(Of Ticket)
 		Get
+			If (Me.serializing  _
+						AndAlso (Me._Tickets.HasLoadedOrAssignedValues = false)) Then
+				Return Nothing
+			End If
 			Return Me._Tickets
 		End Get
 		Set
@@ -486,9 +501,35 @@ Partial Public Class Booking
 		Me.SendPropertyChanging
 		entity.Booking = Nothing
 	End Sub
+	
+	Private Sub Initialize()
+		Me._Tickets = New EntitySet(Of Ticket)(AddressOf Me.attach_Tickets, AddressOf Me.detach_Tickets)
+		Me._User = CType(Nothing, EntityRef(Of User))
+		Me._Flight = CType(Nothing, EntityRef(Of Flight))
+		OnCreated
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnDeserializingAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnDeserializing(ByVal context As StreamingContext)
+		Me.Initialize
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnSerializingAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnSerializing(ByVal context As StreamingContext)
+		Me.serializing = true
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnSerializedAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnSerialized(ByVal context As StreamingContext)
+		Me.serializing = false
+	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.[User]")>  _
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.[User]"),  _
+ Global.System.Runtime.Serialization.DataContractAttribute()>  _
 Partial Public Class User
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
@@ -521,6 +562,8 @@ Partial Public Class User
 	Private _IsStaff As Boolean
 	
 	Private _Bookings As EntitySet(Of Booking)
+	
+	Private serializing As Boolean
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -585,11 +628,11 @@ Partial Public Class User
 	
 	Public Sub New()
 		MyBase.New
-		Me._Bookings = New EntitySet(Of Booking)(AddressOf Me.attach_Bookings, AddressOf Me.detach_Bookings)
-		OnCreated
+		Me.Initialize
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UserID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UserID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=1)>  _
 	Public Property UserID() As String
 		Get
 			Return Me._UserID
@@ -605,7 +648,8 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Name", DbType:="VarChar(30) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Name", DbType:="VarChar(30) NOT NULL", CanBeNull:=false),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=2)>  _
 	Public Property Name() As String
 		Get
 			Return Me._Name
@@ -621,7 +665,8 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Password", DbType:="VarChar(100)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Password", DbType:="VarChar(100)"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=3)>  _
 	Public Property Password() As String
 		Get
 			Return Me._Password
@@ -637,7 +682,8 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PasswordSalt", DbType:="VarChar(100)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PasswordSalt", DbType:="VarChar(100)"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=4)>  _
 	Public Property PasswordSalt() As String
 		Get
 			Return Me._PasswordSalt
@@ -653,7 +699,8 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Gender", DbType:="Char(1)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Gender", DbType:="Char(1)"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=5)>  _
 	Public Property Gender() As System.Nullable(Of Char)
 		Get
 			Return Me._Gender
@@ -669,7 +716,8 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Email", DbType:="VarChar(35) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Email", DbType:="VarChar(35) NOT NULL", CanBeNull:=false),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=6)>  _
 	Public Property Email() As String
 		Get
 			Return Me._Email
@@ -685,7 +733,8 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsRegistered", DbType:="Bit NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsRegistered", DbType:="Bit NOT NULL"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=7)>  _
 	Public Property IsRegistered() As Boolean
 		Get
 			Return Me._IsRegistered
@@ -702,7 +751,8 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DateOfBirth", DbType:="Date")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DateOfBirth", DbType:="Date"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=8)>  _
 	Public Property DateOfBirth() As System.Nullable(Of Date)
 		Get
 			Return Me._DateOfBirth
@@ -718,7 +768,8 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PhoneNo", DbType:="VarChar(12)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PhoneNo", DbType:="VarChar(12)"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=9)>  _
 	Public Property PhoneNo() As String
 		Get
 			Return Me._PhoneNo
@@ -734,7 +785,8 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CreditCardNo", DbType:="VarChar(20)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CreditCardNo", DbType:="VarChar(20)"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=10)>  _
 	Public Property CreditCardNo() As String
 		Get
 			Return Me._CreditCardNo
@@ -750,7 +802,8 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Country", DbType:="VarChar(35)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Country", DbType:="VarChar(35)"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=11)>  _
 	Public Property Country() As String
 		Get
 			Return Me._Country
@@ -766,7 +819,8 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_City", DbType:="VarChar(25)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_City", DbType:="VarChar(25)"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=12)>  _
 	Public Property City() As String
 		Get
 			Return Me._City
@@ -782,7 +836,8 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsStaff", DbType:="Bit NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsStaff", DbType:="Bit NOT NULL"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=13)>  _
 	Public Property IsStaff() As Boolean
 		Get
 			Return Me._IsStaff
@@ -799,9 +854,14 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="User_Booking", Storage:="_Bookings", ThisKey:="UserID", OtherKey:="UserID")>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="User_Booking", Storage:="_Bookings", ThisKey:="UserID", OtherKey:="UserID"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=14, EmitDefaultValue:=false)>  _
 	Public Property Bookings() As EntitySet(Of Booking)
 		Get
+			If (Me.serializing  _
+						AndAlso (Me._Bookings.HasLoadedOrAssignedValues = false)) Then
+				Return Nothing
+			End If
 			Return Me._Bookings
 		End Get
 		Set
@@ -836,9 +896,33 @@ Partial Public Class User
 		Me.SendPropertyChanging
 		entity.User = Nothing
 	End Sub
+	
+	Private Sub Initialize()
+		Me._Bookings = New EntitySet(Of Booking)(AddressOf Me.attach_Bookings, AddressOf Me.detach_Bookings)
+		OnCreated
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnDeserializingAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnDeserializing(ByVal context As StreamingContext)
+		Me.Initialize
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnSerializingAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnSerializing(ByVal context As StreamingContext)
+		Me.serializing = true
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnSerializedAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnSerialized(ByVal context As StreamingContext)
+		Me.serializing = false
+	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.City")>  _
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.City"),  _
+ Global.System.Runtime.Serialization.DataContractAttribute()>  _
 Partial Public Class City
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
@@ -857,6 +941,8 @@ Partial Public Class City
 	Private _Latitude As String
 	
 	Private _Stops As EntitySet(Of [Stop])
+	
+	Private serializing As Boolean
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -893,11 +979,11 @@ Partial Public Class City
 	
 	Public Sub New()
 		MyBase.New
-		Me._Stops = New EntitySet(Of [Stop])(AddressOf Me.attach_Stops, AddressOf Me.detach_Stops)
-		OnCreated
+		Me.Initialize
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CityID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CityID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=1)>  _
 	Public Property CityID() As String
 		Get
 			Return Me._CityID
@@ -913,7 +999,8 @@ Partial Public Class City
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Name", DbType:="VarChar(25) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Name", DbType:="VarChar(25) NOT NULL", CanBeNull:=false),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=2)>  _
 	Public Property Name() As String
 		Get
 			Return Me._Name
@@ -929,7 +1016,8 @@ Partial Public Class City
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Country", DbType:="VarChar(35) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Country", DbType:="VarChar(35) NOT NULL", CanBeNull:=false),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=3)>  _
 	Public Property Country() As String
 		Get
 			Return Me._Country
@@ -945,7 +1033,8 @@ Partial Public Class City
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_State", DbType:="VarChar(30) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_State", DbType:="VarChar(30) NOT NULL", CanBeNull:=false),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=4)>  _
 	Public Property State() As String
 		Get
 			Return Me._State
@@ -961,7 +1050,8 @@ Partial Public Class City
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Longitude", DbType:="VarChar(15) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Longitude", DbType:="VarChar(15) NOT NULL", CanBeNull:=false),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=5)>  _
 	Public Property Longitude() As String
 		Get
 			Return Me._Longitude
@@ -977,7 +1067,8 @@ Partial Public Class City
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Latitude", DbType:="VarChar(15) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Latitude", DbType:="VarChar(15) NOT NULL", CanBeNull:=false),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=6)>  _
 	Public Property Latitude() As String
 		Get
 			Return Me._Latitude
@@ -993,9 +1084,14 @@ Partial Public Class City
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="City_Stop", Storage:="_Stops", ThisKey:="CityID", OtherKey:="CityID")>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="City_Stop", Storage:="_Stops", ThisKey:="CityID", OtherKey:="CityID"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=7, EmitDefaultValue:=false)>  _
 	Public Property Stops() As EntitySet(Of [Stop])
 		Get
+			If (Me.serializing  _
+						AndAlso (Me._Stops.HasLoadedOrAssignedValues = false)) Then
+				Return Nothing
+			End If
 			Return Me._Stops
 		End Get
 		Set
@@ -1030,9 +1126,33 @@ Partial Public Class City
 		Me.SendPropertyChanging
 		entity.City = Nothing
 	End Sub
+	
+	Private Sub Initialize()
+		Me._Stops = New EntitySet(Of [Stop])(AddressOf Me.attach_Stops, AddressOf Me.detach_Stops)
+		OnCreated
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnDeserializingAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnDeserializing(ByVal context As StreamingContext)
+		Me.Initialize
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnSerializingAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnSerializing(ByVal context As StreamingContext)
+		Me.serializing = true
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnSerializedAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnSerialized(ByVal context As StreamingContext)
+		Me.serializing = false
+	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Flight")>  _
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Flight"),  _
+ Global.System.Runtime.Serialization.DataContractAttribute()>  _
 Partial Public Class Flight
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
@@ -1061,6 +1181,8 @@ Partial Public Class Flight
 	Private _Plane As EntityRef(Of Plane)
 	
 	Private _Route As EntityRef(Of Route)
+	
+	Private serializing As Boolean
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -1109,13 +1231,11 @@ Partial Public Class Flight
 	
 	Public Sub New()
 		MyBase.New
-		Me._Bookings = New EntitySet(Of Booking)(AddressOf Me.attach_Bookings, AddressOf Me.detach_Bookings)
-		Me._Plane = CType(Nothing, EntityRef(Of Plane))
-		Me._Route = CType(Nothing, EntityRef(Of Route))
-		OnCreated
+		Me.Initialize
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FlightID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FlightID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=1)>  _
 	Public Property FlightID() As String
 		Get
 			Return Me._FlightID
@@ -1131,7 +1251,8 @@ Partial Public Class Flight
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_RouteID", DbType:="VarChar(10)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_RouteID", DbType:="VarChar(10)"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=2)>  _
 	Public Property RouteID() As String
 		Get
 			Return Me._RouteID
@@ -1150,7 +1271,8 @@ Partial Public Class Flight
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PlaneID", DbType:="VarChar(10)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PlaneID", DbType:="VarChar(10)"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=3)>  _
 	Public Property PlaneID() As String
 		Get
 			Return Me._PlaneID
@@ -1169,7 +1291,8 @@ Partial Public Class Flight
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FlightNo", DbType:="VarChar(10) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FlightNo", DbType:="VarChar(10) NOT NULL", CanBeNull:=false),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=4)>  _
 	Public Property FlightNo() As String
 		Get
 			Return Me._FlightNo
@@ -1185,7 +1308,8 @@ Partial Public Class Flight
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DepartureTime", DbType:="DateTime NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DepartureTime", DbType:="DateTime NOT NULL"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=5)>  _
 	Public Property DepartureTime() As Date
 		Get
 			Return Me._DepartureTime
@@ -1202,7 +1326,8 @@ Partial Public Class Flight
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ArrivalTime", DbType:="DateTime NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ArrivalTime", DbType:="DateTime NOT NULL"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=6)>  _
 	Public Property ArrivalTime() As Date
 		Get
 			Return Me._ArrivalTime
@@ -1219,7 +1344,8 @@ Partial Public Class Flight
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Price", DbType:="Decimal(7,2) NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Price", DbType:="Decimal(7,2) NOT NULL"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=7)>  _
 	Public Property Price() As Decimal
 		Get
 			Return Me._Price
@@ -1236,7 +1362,8 @@ Partial Public Class Flight
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsDaily", DbType:="Bit NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsDaily", DbType:="Bit NOT NULL"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=8)>  _
 	Public Property IsDaily() As Boolean
 		Get
 			Return Me._IsDaily
@@ -1253,7 +1380,8 @@ Partial Public Class Flight
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsFlightInstance", DbType:="Bit NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsFlightInstance", DbType:="Bit NOT NULL"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=9)>  _
 	Public Property IsFlightInstance() As Boolean
 		Get
 			Return Me._IsFlightInstance
@@ -1270,9 +1398,14 @@ Partial Public Class Flight
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Flight_Booking", Storage:="_Bookings", ThisKey:="FlightID", OtherKey:="FlightID")>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Flight_Booking", Storage:="_Bookings", ThisKey:="FlightID", OtherKey:="FlightID"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=10, EmitDefaultValue:=false)>  _
 	Public Property Bookings() As EntitySet(Of Booking)
 		Get
+			If (Me.serializing  _
+						AndAlso (Me._Bookings.HasLoadedOrAssignedValues = false)) Then
+				Return Nothing
+			End If
 			Return Me._Bookings
 		End Get
 		Set
@@ -1363,9 +1496,35 @@ Partial Public Class Flight
 		Me.SendPropertyChanging
 		entity.Flight = Nothing
 	End Sub
+	
+	Private Sub Initialize()
+		Me._Bookings = New EntitySet(Of Booking)(AddressOf Me.attach_Bookings, AddressOf Me.detach_Bookings)
+		Me._Plane = CType(Nothing, EntityRef(Of Plane))
+		Me._Route = CType(Nothing, EntityRef(Of Route))
+		OnCreated
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnDeserializingAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnDeserializing(ByVal context As StreamingContext)
+		Me.Initialize
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnSerializingAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnSerializing(ByVal context As StreamingContext)
+		Me.serializing = true
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnSerializedAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnSerialized(ByVal context As StreamingContext)
+		Me.serializing = false
+	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Plane")>  _
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Plane"),  _
+ Global.System.Runtime.Serialization.DataContractAttribute()>  _
 Partial Public Class Plane
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
@@ -1382,6 +1541,8 @@ Partial Public Class Plane
 	Private _MaxColumns As Integer
 	
 	Private _Flights As EntitySet(Of Flight)
+	
+	Private serializing As Boolean
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -1414,11 +1575,11 @@ Partial Public Class Plane
 	
 	Public Sub New()
 		MyBase.New
-		Me._Flights = New EntitySet(Of Flight)(AddressOf Me.attach_Flights, AddressOf Me.detach_Flights)
-		OnCreated
+		Me.Initialize
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PlaneID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PlaneID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=1)>  _
 	Public Property PlaneID() As String
 		Get
 			Return Me._PlaneID
@@ -1434,7 +1595,8 @@ Partial Public Class Plane
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Model", DbType:="VarChar(30) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Model", DbType:="VarChar(30) NOT NULL", CanBeNull:=false),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=2)>  _
 	Public Property Model() As String
 		Get
 			Return Me._Model
@@ -1450,7 +1612,8 @@ Partial Public Class Plane
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Manufacturer", DbType:="VarChar(25) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Manufacturer", DbType:="VarChar(25) NOT NULL", CanBeNull:=false),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=3)>  _
 	Public Property Manufacturer() As String
 		Get
 			Return Me._Manufacturer
@@ -1466,7 +1629,8 @@ Partial Public Class Plane
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Capacity", DbType:="Int NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Capacity", DbType:="Int NOT NULL"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=4)>  _
 	Public Property Capacity() As Integer
 		Get
 			Return Me._Capacity
@@ -1483,7 +1647,8 @@ Partial Public Class Plane
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_MaxColumns", DbType:="Int NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_MaxColumns", DbType:="Int NOT NULL"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=5)>  _
 	Public Property MaxColumns() As Integer
 		Get
 			Return Me._MaxColumns
@@ -1500,9 +1665,14 @@ Partial Public Class Plane
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Plane_Flight", Storage:="_Flights", ThisKey:="PlaneID", OtherKey:="PlaneID")>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Plane_Flight", Storage:="_Flights", ThisKey:="PlaneID", OtherKey:="PlaneID"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=6, EmitDefaultValue:=false)>  _
 	Public Property Flights() As EntitySet(Of Flight)
 		Get
+			If (Me.serializing  _
+						AndAlso (Me._Flights.HasLoadedOrAssignedValues = false)) Then
+				Return Nothing
+			End If
 			Return Me._Flights
 		End Get
 		Set
@@ -1537,9 +1707,33 @@ Partial Public Class Plane
 		Me.SendPropertyChanging
 		entity.Plane = Nothing
 	End Sub
+	
+	Private Sub Initialize()
+		Me._Flights = New EntitySet(Of Flight)(AddressOf Me.attach_Flights, AddressOf Me.detach_Flights)
+		OnCreated
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnDeserializingAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnDeserializing(ByVal context As StreamingContext)
+		Me.Initialize
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnSerializingAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnSerializing(ByVal context As StreamingContext)
+		Me.serializing = true
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnSerializedAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnSerialized(ByVal context As StreamingContext)
+		Me.serializing = false
+	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Route")>  _
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Route"),  _
+ Global.System.Runtime.Serialization.DataContractAttribute()>  _
 Partial Public Class Route
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
@@ -1554,6 +1748,8 @@ Partial Public Class Route
 	Private _Flights As EntitySet(Of Flight)
 	
 	Private _Stops As EntitySet(Of [Stop])
+	
+	Private serializing As Boolean
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -1578,12 +1774,11 @@ Partial Public Class Route
 	
 	Public Sub New()
 		MyBase.New
-		Me._Flights = New EntitySet(Of Flight)(AddressOf Me.attach_Flights, AddressOf Me.detach_Flights)
-		Me._Stops = New EntitySet(Of [Stop])(AddressOf Me.attach_Stops, AddressOf Me.detach_Stops)
-		OnCreated
+		Me.Initialize
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_RouteID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_RouteID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=1)>  _
 	Public Property RouteID() As String
 		Get
 			Return Me._RouteID
@@ -1599,7 +1794,8 @@ Partial Public Class Route
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DurationHour", DbType:="Int NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DurationHour", DbType:="Int NOT NULL"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=2)>  _
 	Public Property DurationHour() As Integer
 		Get
 			Return Me._DurationHour
@@ -1616,7 +1812,8 @@ Partial Public Class Route
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DurationMins", DbType:="Int NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DurationMins", DbType:="Int NOT NULL"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=3)>  _
 	Public Property DurationMins() As Integer
 		Get
 			Return Me._DurationMins
@@ -1633,9 +1830,14 @@ Partial Public Class Route
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Route_Flight", Storage:="_Flights", ThisKey:="RouteID", OtherKey:="RouteID")>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Route_Flight", Storage:="_Flights", ThisKey:="RouteID", OtherKey:="RouteID"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=4, EmitDefaultValue:=false)>  _
 	Public Property Flights() As EntitySet(Of Flight)
 		Get
+			If (Me.serializing  _
+						AndAlso (Me._Flights.HasLoadedOrAssignedValues = false)) Then
+				Return Nothing
+			End If
 			Return Me._Flights
 		End Get
 		Set
@@ -1643,9 +1845,14 @@ Partial Public Class Route
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Route_Stop", Storage:="_Stops", ThisKey:="RouteID", OtherKey:="RouteID")>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Route_Stop", Storage:="_Stops", ThisKey:="RouteID", OtherKey:="RouteID"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=5, EmitDefaultValue:=false)>  _
 	Public Property Stops() As EntitySet(Of [Stop])
 		Get
+			If (Me.serializing  _
+						AndAlso (Me._Stops.HasLoadedOrAssignedValues = false)) Then
+				Return Nothing
+			End If
 			Return Me._Stops
 		End Get
 		Set
@@ -1690,9 +1897,34 @@ Partial Public Class Route
 		Me.SendPropertyChanging
 		entity.Route = Nothing
 	End Sub
+	
+	Private Sub Initialize()
+		Me._Flights = New EntitySet(Of Flight)(AddressOf Me.attach_Flights, AddressOf Me.detach_Flights)
+		Me._Stops = New EntitySet(Of [Stop])(AddressOf Me.attach_Stops, AddressOf Me.detach_Stops)
+		OnCreated
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnDeserializingAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnDeserializing(ByVal context As StreamingContext)
+		Me.Initialize
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnSerializingAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnSerializing(ByVal context As StreamingContext)
+		Me.serializing = true
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnSerializedAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnSerialized(ByVal context As StreamingContext)
+		Me.serializing = false
+	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Stop")>  _
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Stop"),  _
+ Global.System.Runtime.Serialization.DataContractAttribute()>  _
 Partial Public Class [Stop]
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
@@ -1731,12 +1963,11 @@ Partial Public Class [Stop]
 	
 	Public Sub New()
 		MyBase.New
-		Me._City = CType(Nothing, EntityRef(Of City))
-		Me._Route = CType(Nothing, EntityRef(Of Route))
-		OnCreated
+		Me.Initialize
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_RouteID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_RouteID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=1)>  _
 	Public Property RouteID() As String
 		Get
 			Return Me._RouteID
@@ -1755,7 +1986,8 @@ Partial Public Class [Stop]
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CityID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CityID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=2)>  _
 	Public Property CityID() As String
 		Get
 			Return Me._CityID
@@ -1774,7 +2006,8 @@ Partial Public Class [Stop]
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsOrigin", DbType:="Bit NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsOrigin", DbType:="Bit NOT NULL"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=3)>  _
 	Public Property IsOrigin() As Boolean
 		Get
 			Return Me._IsOrigin
@@ -1864,9 +2097,22 @@ Partial Public Class [Stop]
 			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
 		End If
 	End Sub
+	
+	Private Sub Initialize()
+		Me._City = CType(Nothing, EntityRef(Of City))
+		Me._Route = CType(Nothing, EntityRef(Of Route))
+		OnCreated
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnDeserializingAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnDeserializing(ByVal context As StreamingContext)
+		Me.Initialize
+	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Ticket")>  _
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Ticket"),  _
+ Global.System.Runtime.Serialization.DataContractAttribute()>  _
 Partial Public Class Ticket
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
@@ -1909,11 +2155,11 @@ Partial Public Class Ticket
 	
 	Public Sub New()
 		MyBase.New
-		Me._Booking = CType(Nothing, EntityRef(Of Booking))
-		OnCreated
+		Me.Initialize
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_TicketID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_TicketID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=1)>  _
 	Public Property TicketID() As String
 		Get
 			Return Me._TicketID
@@ -1929,7 +2175,8 @@ Partial Public Class Ticket
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_BookingID", DbType:="VarChar(10)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_BookingID", DbType:="VarChar(10)"),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=2)>  _
 	Public Property BookingID() As String
 		Get
 			Return Me._BookingID
@@ -1948,7 +2195,8 @@ Partial Public Class Ticket
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Name", DbType:="VarChar(30) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Name", DbType:="VarChar(30) NOT NULL", CanBeNull:=false),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=3)>  _
 	Public Property Name() As String
 		Get
 			Return Me._Name
@@ -1964,7 +2212,8 @@ Partial Public Class Ticket
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Seat", DbType:="VarChar(5) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Seat", DbType:="VarChar(5) NOT NULL", CanBeNull:=false),  _
+	 Global.System.Runtime.Serialization.DataMemberAttribute(Order:=4)>  _
 	Public Property Seat() As String
 		Get
 			Return Me._Seat
@@ -2024,5 +2273,16 @@ Partial Public Class Ticket
 					= false) Then
 			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
 		End If
+	End Sub
+	
+	Private Sub Initialize()
+		Me._Booking = CType(Nothing, EntityRef(Of Booking))
+		OnCreated
+	End Sub
+	
+	<Global.System.Runtime.Serialization.OnDeserializingAttribute(),  _
+	 Global.System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)>  _
+	Public Sub OnDeserializing(ByVal context As StreamingContext)
+		Me.Initialize
 	End Sub
 End Class
