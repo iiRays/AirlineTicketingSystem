@@ -66,11 +66,11 @@ Partial Class Account
         '
         Me.rbMale.AutoSize = True
         Me.rbMale.BackColor = System.Drawing.Color.White
-        Me.rbMale.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbMale.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.rbMale.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.rbMale.Location = New System.Drawing.Point(10, 11)
+        Me.rbMale.Location = New System.Drawing.Point(7, 7)
         Me.rbMale.Name = "rbMale"
-        Me.rbMale.Size = New System.Drawing.Size(77, 29)
+        Me.rbMale.Size = New System.Drawing.Size(83, 40)
         Me.rbMale.TabIndex = 0
         Me.rbMale.TabStop = True
         Me.rbMale.Text = "Male"
@@ -80,11 +80,11 @@ Partial Class Account
         '
         Me.rbNonBinary.AutoSize = True
         Me.rbNonBinary.BackColor = System.Drawing.Color.White
-        Me.rbNonBinary.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbNonBinary.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.rbNonBinary.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.rbNonBinary.Location = New System.Drawing.Point(200, 11)
+        Me.rbNonBinary.Location = New System.Drawing.Point(211, 7)
         Me.rbNonBinary.Name = "rbNonBinary"
-        Me.rbNonBinary.Size = New System.Drawing.Size(138, 29)
+        Me.rbNonBinary.Size = New System.Drawing.Size(155, 40)
         Me.rbNonBinary.TabIndex = 2
         Me.rbNonBinary.TabStop = True
         Me.rbNonBinary.Text = "Non-Binary"
@@ -94,11 +94,11 @@ Partial Class Account
         '
         Me.rbFemale.AutoSize = True
         Me.rbFemale.BackColor = System.Drawing.Color.White
-        Me.rbFemale.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbFemale.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.rbFemale.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.rbFemale.Location = New System.Drawing.Point(93, 11)
+        Me.rbFemale.Location = New System.Drawing.Point(96, 7)
         Me.rbFemale.Name = "rbFemale"
-        Me.rbFemale.Size = New System.Drawing.Size(101, 29)
+        Me.rbFemale.Size = New System.Drawing.Size(109, 40)
         Me.rbFemale.TabIndex = 1
         Me.rbFemale.TabStop = True
         Me.rbFemale.Text = "Female"
@@ -107,7 +107,7 @@ Partial Class Account
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.Color.White
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label4.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(76, 418)
         Me.Label4.Name = "Label4"
@@ -120,7 +120,7 @@ Partial Class Account
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(76, 203)
         Me.Label3.Name = "Label3"
@@ -133,7 +133,7 @@ Partial Class Account
         'txtName
         '
         Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtName.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtName.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.txtName.Location = New System.Drawing.Point(240, 203)
         Me.txtName.Multiline = True
         Me.txtName.Name = "txtName"
@@ -146,7 +146,7 @@ Partial Class Account
         Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnBack.FlatAppearance.BorderSize = 0
         Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnBack.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnBack.ForeColor = System.Drawing.Color.White
         Me.btnBack.Location = New System.Drawing.Point(34, 30)
         Me.btnBack.Name = "btnBack"
@@ -160,7 +160,7 @@ Partial Class Account
         Me.btnUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnUpdate.FlatAppearance.BorderSize = 0
         Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnUpdate.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnUpdate.ForeColor = System.Drawing.Color.White
         Me.btnUpdate.Location = New System.Drawing.Point(1041, 563)
         Me.btnUpdate.Name = "btnUpdate"
@@ -172,18 +172,18 @@ Partial Class Account
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.lblTitle.Location = New System.Drawing.Point(542, 41)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(169, 46)
+        Me.lblTitle.Size = New System.Drawing.Size(205, 70)
         Me.lblTitle.TabIndex = 45
-        Me.lblTitle.Text = "account"
+        Me.lblTitle.Text = "Account"
         '
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(76, 274)
         Me.Label1.Name = "Label1"
@@ -196,7 +196,7 @@ Partial Class Account
         'txtEmail
         '
         Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.txtEmail.Location = New System.Drawing.Point(240, 274)
         Me.txtEmail.Multiline = True
         Me.txtEmail.Name = "txtEmail"
@@ -207,7 +207,7 @@ Partial Class Account
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(76, 347)
         Me.Label2.Name = "Label2"
@@ -220,7 +220,7 @@ Partial Class Account
         'txtPassword
         '
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.txtPassword.Location = New System.Drawing.Point(240, 347)
         Me.txtPassword.Multiline = True
         Me.txtPassword.Name = "txtPassword"
@@ -242,7 +242,7 @@ Partial Class Account
         'txtDate
         '
         Me.txtDate.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDate.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.txtDate.Location = New System.Drawing.Point(840, 201)
         Me.txtDate.Multiline = True
         Me.txtDate.Name = "txtDate"
@@ -253,7 +253,7 @@ Partial Class Account
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.Color.White
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label5.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(656, 201)
         Me.Label5.Name = "Label5"
@@ -266,7 +266,7 @@ Partial Class Account
         'Label6
         '
         Me.Label6.BackColor = System.Drawing.Color.White
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label6.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label6.Location = New System.Drawing.Point(656, 418)
         Me.Label6.Name = "Label6"
@@ -280,7 +280,7 @@ Partial Class Account
         '
         Me.txtCreditCardNo.BackColor = System.Drawing.SystemColors.Window
         Me.txtCreditCardNo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCreditCardNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCreditCardNo.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.txtCreditCardNo.Location = New System.Drawing.Point(840, 418)
         Me.txtCreditCardNo.Multiline = True
         Me.txtCreditCardNo.Name = "txtCreditCardNo"
@@ -291,7 +291,7 @@ Partial Class Account
         'Label7
         '
         Me.Label7.BackColor = System.Drawing.Color.White
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label7.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label7.Location = New System.Drawing.Point(656, 274)
         Me.Label7.Name = "Label7"
@@ -304,7 +304,7 @@ Partial Class Account
         'txtCountry
         '
         Me.txtCountry.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCountry.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCountry.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.txtCountry.Location = New System.Drawing.Point(840, 274)
         Me.txtCountry.Multiline = True
         Me.txtCountry.Name = "txtCountry"
@@ -315,7 +315,7 @@ Partial Class Account
         'Label8
         '
         Me.Label8.BackColor = System.Drawing.Color.White
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label8.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label8.Location = New System.Drawing.Point(656, 344)
         Me.Label8.Name = "Label8"
@@ -328,7 +328,7 @@ Partial Class Account
         'txtCity
         '
         Me.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCity.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCity.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.txtCity.Location = New System.Drawing.Point(840, 344)
         Me.txtCity.Multiline = True
         Me.txtCity.Name = "txtCity"
@@ -339,12 +339,12 @@ Partial Class Account
         'Label9
         '
         Me.Label9.BackColor = System.Drawing.Color.White
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label9.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label9.Location = New System.Drawing.Point(76, 563)
         Me.Label9.Name = "Label9"
         Me.Label9.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-        Me.Label9.Size = New System.Drawing.Size(195, 50)
+        Me.Label9.Size = New System.Drawing.Size(207, 50)
         Me.Label9.TabIndex = 73
         Me.Label9.Text = "You have flown"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -352,9 +352,9 @@ Partial Class Account
         'lblFlightHours
         '
         Me.lblFlightHours.BackColor = System.Drawing.Color.White
-        Me.lblFlightHours.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.lblFlightHours.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.lblFlightHours.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.lblFlightHours.Location = New System.Drawing.Point(268, 563)
+        Me.lblFlightHours.Location = New System.Drawing.Point(280, 563)
         Me.lblFlightHours.Name = "lblFlightHours"
         Me.lblFlightHours.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.lblFlightHours.Size = New System.Drawing.Size(354, 50)

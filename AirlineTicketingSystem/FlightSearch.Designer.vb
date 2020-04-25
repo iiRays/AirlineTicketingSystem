@@ -38,11 +38,11 @@ Partial Class FlightSearch
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.lblTitle.Location = New System.Drawing.Point(531, 49)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(131, 46)
+        Me.lblTitle.Size = New System.Drawing.Size(160, 70)
         Me.lblTitle.TabIndex = 28
         Me.lblTitle.Text = "flights"
         Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -52,7 +52,7 @@ Partial Class FlightSearch
         Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.btnBack.FlatAppearance.BorderSize = 0
         Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnBack.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnBack.ForeColor = System.Drawing.Color.White
         Me.btnBack.Location = New System.Drawing.Point(38, 33)
         Me.btnBack.Name = "btnBack"
@@ -64,7 +64,7 @@ Partial Class FlightSearch
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(289, 183)
         Me.Label3.Name = "Label3"
@@ -77,7 +77,7 @@ Partial Class FlightSearch
         'txtFrom
         '
         Me.txtFrom.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtFrom.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFrom.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.txtFrom.Location = New System.Drawing.Point(410, 183)
         Me.txtFrom.Multiline = True
         Me.txtFrom.Name = "txtFrom"
@@ -88,7 +88,7 @@ Partial Class FlightSearch
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(403, 389)
         Me.Label2.Name = "Label2"
@@ -101,7 +101,7 @@ Partial Class FlightSearch
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(289, 288)
         Me.Label1.Name = "Label1"
@@ -125,7 +125,7 @@ Partial Class FlightSearch
         'txtTo
         '
         Me.txtTo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtTo.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTo.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.txtTo.Location = New System.Drawing.Point(410, 288)
         Me.txtTo.Multiline = True
         Me.txtTo.Name = "txtTo"
@@ -138,7 +138,7 @@ Partial Class FlightSearch
         Me.btnSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.btnSearch.FlatAppearance.BorderSize = 0
         Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnSearch.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnSearch.ForeColor = System.Drawing.Color.White
         Me.btnSearch.Location = New System.Drawing.Point(501, 489)
         Me.btnSearch.Name = "btnSearch"
@@ -152,17 +152,17 @@ Partial Class FlightSearch
         Me.dtpDate.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText
         Me.dtpDate.CalendarTitleForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.dtpDate.CustomFormat = "d MMM yyyy"
-        Me.dtpDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpDate.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpDate.Location = New System.Drawing.Point(534, 407)
+        Me.dtpDate.Location = New System.Drawing.Point(534, 403)
         Me.dtpDate.Name = "dtpDate"
-        Me.dtpDate.Size = New System.Drawing.Size(274, 35)
+        Me.dtpDate.Size = New System.Drawing.Size(274, 43)
         Me.dtpDate.TabIndex = 3
         '
         'txtDate
         '
         Me.txtDate.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDate.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.txtDate.Location = New System.Drawing.Point(524, 389)
         Me.txtDate.Multiline = True
         Me.txtDate.Name = "txtDate"

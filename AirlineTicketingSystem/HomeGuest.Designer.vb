@@ -72,7 +72,7 @@ Partial Class HomeGuest
         Me.btnBookingSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnBookingSearch.FlatAppearance.BorderSize = 0
         Me.btnBookingSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBookingSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnBookingSearch.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnBookingSearch.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.btnBookingSearch.Location = New System.Drawing.Point(44, 68)
         Me.btnBookingSearch.Name = "btnBookingSearch"

@@ -37,7 +37,7 @@ Partial Class VerifyEmail
         Me.btnVerify.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnVerify.FlatAppearance.BorderSize = 0
         Me.btnVerify.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnVerify.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnVerify.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnVerify.ForeColor = System.Drawing.Color.White
         Me.btnVerify.Location = New System.Drawing.Point(679, 476)
         Me.btnVerify.Name = "btnVerify"
@@ -49,7 +49,7 @@ Partial Class VerifyEmail
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(343, 369)
         Me.Label3.Name = "Label3"
@@ -62,10 +62,10 @@ Partial Class VerifyEmail
         'txtCode
         '
         Me.txtCode.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCode.Font = New System.Drawing.Font("Poppins", 32.25!, System.Drawing.FontStyle.Bold)
         Me.txtCode.Location = New System.Drawing.Point(518, 369)
         Me.txtCode.Name = "txtCode"
-        Me.txtCode.Size = New System.Drawing.Size(421, 49)
+        Me.txtCode.Size = New System.Drawing.Size(421, 65)
         Me.txtCode.TabIndex = 0
         Me.txtCode.Tag = ""
         '
@@ -74,7 +74,7 @@ Partial Class VerifyEmail
         Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnCancel.FlatAppearance.BorderSize = 0
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnCancel.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnCancel.ForeColor = System.Drawing.Color.White
         Me.btnCancel.Location = New System.Drawing.Point(36, 33)
         Me.btnCancel.Name = "btnCancel"
@@ -87,12 +87,12 @@ Partial Class VerifyEmail
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.BackColor = System.Drawing.Color.Transparent
-        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Bold)
+        Me.lblTitle.Font = New System.Drawing.Font("Poppins", 24.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.White
         Me.lblTitle.Location = New System.Drawing.Point(459, 129)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-        Me.lblTitle.Size = New System.Drawing.Size(307, 39)
+        Me.lblTitle.Size = New System.Drawing.Size(335, 58)
         Me.lblTitle.TabIndex = 55
         Me.lblTitle.Text = "Verify your email"
         Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -100,7 +100,7 @@ Partial Class VerifyEmail
         'lblEmail
         '
         Me.lblEmail.BackColor = System.Drawing.Color.Transparent
-        Me.lblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
+        Me.lblEmail.Font = New System.Drawing.Font("Poppins", 18.0!)
         Me.lblEmail.ForeColor = System.Drawing.Color.White
         Me.lblEmail.Location = New System.Drawing.Point(9, 189)
         Me.lblEmail.Name = "lblEmail"
@@ -113,7 +113,7 @@ Partial Class VerifyEmail
         'lblDesc
         '
         Me.lblDesc.BackColor = System.Drawing.Color.Transparent
-        Me.lblDesc.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
+        Me.lblDesc.Font = New System.Drawing.Font("Poppins", 18.0!)
         Me.lblDesc.ForeColor = System.Drawing.Color.White
         Me.lblDesc.Location = New System.Drawing.Point(258, 222)
         Me.lblDesc.Name = "lblDesc"
@@ -129,7 +129,7 @@ Partial Class VerifyEmail
         Me.btnReset.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnReset.FlatAppearance.BorderSize = 0
         Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnReset.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnReset.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnReset.ForeColor = System.Drawing.Color.White
         Me.btnReset.Location = New System.Drawing.Point(436, 476)
         Me.btnReset.Name = "btnReset"

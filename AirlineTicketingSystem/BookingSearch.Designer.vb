@@ -33,7 +33,7 @@ Partial Class BookingSearch
         Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnBack.FlatAppearance.BorderSize = 0
         Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnBack.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnBack.ForeColor = System.Drawing.Color.White
         Me.btnBack.Location = New System.Drawing.Point(36, 33)
         Me.btnBack.Name = "btnBack"
@@ -45,7 +45,7 @@ Partial Class BookingSearch
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(394, 303)
         Me.Label3.Name = "Label3"
@@ -58,10 +58,10 @@ Partial Class BookingSearch
         'txtBookingID
         '
         Me.txtBookingID.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBookingID.Font = New System.Drawing.Font("Microsoft Sans Serif", 37.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBookingID.Font = New System.Drawing.Font("Poppins", 37.5!, System.Drawing.FontStyle.Bold)
         Me.txtBookingID.Location = New System.Drawing.Point(569, 303)
         Me.txtBookingID.Name = "txtBookingID"
-        Me.txtBookingID.Size = New System.Drawing.Size(302, 57)
+        Me.txtBookingID.Size = New System.Drawing.Size(302, 75)
         Me.txtBookingID.TabIndex = 0
         Me.txtBookingID.Tag = ""
         '
@@ -70,7 +70,7 @@ Partial Class BookingSearch
         Me.btSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btSearch.FlatAppearance.BorderSize = 0
         Me.btSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btSearch.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btSearch.ForeColor = System.Drawing.Color.White
         Me.btSearch.Location = New System.Drawing.Point(554, 404)
         Me.btSearch.Name = "btSearch"
