@@ -11,8 +11,10 @@
         Quick.Navigate(Me, New FlightSearch)
     End Sub
 
-    Private Sub HomeGuest_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub HomeGuest_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
         Quick.SetFormFont("Poppins", Me)
+
+
 
         TitleBar.Load(Me, True, True)
     End Sub
