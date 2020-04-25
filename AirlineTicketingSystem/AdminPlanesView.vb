@@ -2,11 +2,13 @@
     Private Sub AdminPlanesView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
         TitleBar.Load(Me, True, False)
+
+        cbSearchBy.SelectedIndex = 0
     End Sub
 
     Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         App.Session.Delete("viewAll")
-        Quick.Navigate(Me, New AdminCitiesDashboard)
+        Quick.Navigate(Me, New AdminPlanesDashboard)
     End Sub
 
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click

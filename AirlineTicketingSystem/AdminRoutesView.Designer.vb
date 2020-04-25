@@ -88,7 +88,7 @@ Partial Class AdminRoutesView
         '
         'cbSearchBy
         '
-        Me.cbSearchBy.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbSearchBy.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSearchBy.FormattingEnabled = True
         Me.cbSearchBy.Items.AddRange(New Object() {"RouteID", "DurationHour", "DurationMins", "City ID", "City Name", "Source City ID", "Source City Name", "Destination City ID", "Destination City Name"})
         Me.cbSearchBy.Location = New System.Drawing.Point(319, 270)

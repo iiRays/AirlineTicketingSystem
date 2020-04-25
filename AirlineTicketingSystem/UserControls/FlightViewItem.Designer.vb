@@ -25,12 +25,12 @@ Partial Class FlightViewItem
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblId = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnGo = New System.Windows.Forms.Button()
+        Me.lblDate = New System.Windows.Forms.Label()
         Me.lblDestination = New System.Windows.Forms.Label()
         Me.lblTo = New System.Windows.Forms.Label()
         Me.lblSource = New System.Windows.Forms.Label()
         Me.lblFrom = New System.Windows.Forms.Label()
-        Me.lblDate = New System.Windows.Forms.Label()
+        Me.btnGo = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -47,11 +47,11 @@ Partial Class FlightViewItem
         '
         'lblId
         '
-        Me.lblId.Font = New System.Drawing.Font("OCR A Extended", 39.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblId.Font = New System.Drawing.Font("OCR A Extended", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblId.ForeColor = System.Drawing.Color.White
-        Me.lblId.Location = New System.Drawing.Point(16, 11)
+        Me.lblId.Location = New System.Drawing.Point(3, 11)
         Me.lblId.Name = "lblId"
-        Me.lblId.Size = New System.Drawing.Size(225, 54)
+        Me.lblId.Size = New System.Drawing.Size(248, 54)
         Me.lblId.TabIndex = 41
         Me.lblId.Text = "00144"
         Me.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -68,22 +68,20 @@ Partial Class FlightViewItem
         Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(250, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(950, 75)
+        Me.Panel1.Size = New System.Drawing.Size(1000, 75)
         Me.Panel1.TabIndex = 45
         '
-        'btnGo
+        'lblDate
         '
-        Me.btnGo.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.btnGo.FlatAppearance.BorderSize = 0
-        Me.btnGo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGo.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
-        Me.btnGo.ForeColor = System.Drawing.Color.White
-        Me.btnGo.Location = New System.Drawing.Point(822, 3)
-        Me.btnGo.Name = "btnGo"
-        Me.btnGo.Size = New System.Drawing.Size(125, 65)
-        Me.btnGo.TabIndex = 45
-        Me.btnGo.Text = "go"
-        Me.btnGo.UseVisualStyleBackColor = False
+        Me.lblDate.AutoSize = True
+        Me.lblDate.Font = New System.Drawing.Font("Poppins", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
+        Me.lblDate.Location = New System.Drawing.Point(702, 20)
+        Me.lblDate.Name = "lblDate"
+        Me.lblDate.Size = New System.Drawing.Size(129, 34)
+        Me.lblDate.TabIndex = 52
+        Me.lblDate.Text = "22 Mar 2020"
+        Me.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblDestination
         '
@@ -133,17 +131,19 @@ Partial Class FlightViewItem
         Me.lblFrom.Text = "from"
         Me.lblFrom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblDate
+        'btnGo
         '
-        Me.lblDate.AutoSize = True
-        Me.lblDate.Font = New System.Drawing.Font("Poppins", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.lblDate.Location = New System.Drawing.Point(687, 20)
-        Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(129, 34)
-        Me.lblDate.TabIndex = 52
-        Me.lblDate.Text = "22 Mar 2020"
-        Me.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnGo.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.btnGo.FlatAppearance.BorderSize = 0
+        Me.btnGo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGo.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnGo.ForeColor = System.Drawing.Color.White
+        Me.btnGo.Location = New System.Drawing.Point(872, 6)
+        Me.btnGo.Name = "btnGo"
+        Me.btnGo.Size = New System.Drawing.Size(125, 65)
+        Me.btnGo.TabIndex = 45
+        Me.btnGo.Text = "go"
+        Me.btnGo.UseVisualStyleBackColor = False
         '
         'FlightViewItem
         '
@@ -152,7 +152,7 @@ Partial Class FlightViewItem
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "FlightViewItem"
-        Me.Size = New System.Drawing.Size(1204, 85)
+        Me.Size = New System.Drawing.Size(1253, 85)
         Me.Panel2.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
