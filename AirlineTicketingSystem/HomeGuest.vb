@@ -15,6 +15,8 @@
         Quick.SetFormFont("Poppins", Me)
         Me.DoubleBuffered = True
         TitleBar.Load(Me, True, True)
+
+
     End Sub
 
     Private Sub btnBookingSearch_Click(sender As Object, e As EventArgs) Handles btnBookingSearch.Click

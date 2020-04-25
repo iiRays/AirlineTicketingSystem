@@ -1,5 +1,5 @@
 ﻿Public Class FlightItem
-    Public Flight As Flight
+    Public Flight As New Flight()
     Public FlightList As FlightList
     Public SelectedDate As Date
     Private Sub btnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
@@ -21,6 +21,8 @@
             SelectedDate = New Date(SelectedDate.Year, SelectedDate.Month, SelectedDate.Day, Flight.DepartureTime.Hour, Flight.DepartureTime.Minute, Flight.DepartureTime.Second)
             Dim existingFlight = DB.GetExistingFlight(Flight, SelectedDate)
 
+
+
             If existingFlight Is Nothing Then
                 'Flight instance does not exist
 
@@ -29,9 +31,8 @@
                 flightInstance.IsDaily = False
                 flightInstance.IsFlightInstance = True
 
-                ''Copy references
-                flightInstance.Route = Flight.Route
-                flightInstance.Plane = Flight.Plane
+                flightInstance.RouteID = Flight.RouteID
+                flightInstance.PlaneID = Flight.PlaneID
 
 
                 'Create flight instance on the selected date
@@ -41,6 +42,7 @@
                     'If the time crosses 1 day
                     dayDifference = 1
                 End If
+
 
                 flightInstance.DepartureTime = New Date(SelectedDate.Year, SelectedDate.Month, SelectedDate.Day, Flight.DepartureTime.Hour, Flight.DepartureTime.Minute, Flight.DepartureTime.Second)
                 flightInstance.ArrivalTime = New Date(SelectedDate.Year, SelectedDate.Month, SelectedDate.Day + dayDifference, Flight.ArrivalTime.Hour, Flight.ArrivalTime.Minute, Flight.ArrivalTime.Second)
@@ -63,7 +65,7 @@
         lblDate.Text = Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Flight.DepartureTime.Month) & " " & Flight.DepartureTime.Day.ToString
         lblPrice.Text = "RM " & Flight.Price
         lblId.Text = Flight.FlightNo
-        lblDuration.Text = Flight.Route.DurationHour.ToString & "h " & Flight.Route.DurationMins.ToString
+        lblDuration.Text = DB.Get(Of Route)(Flight.RouteID).DurationHour.ToString & "h " & DB.Get(Of Route)(Flight.RouteID).DurationMins.ToString
         lblSource.Text = DB.GetFlightSource(Flight.FlightID).City.Name
         lblDepartureTime.Text = Flight.DepartureTime.ToString("HH:mm")
         lblDestination.Text = DB.GetFlightDestination(Flight.FlightID).City.Name

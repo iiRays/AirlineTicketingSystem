@@ -50,7 +50,7 @@
 
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
         booking.PaymentDate = DateAndTime.Now()
-        booking.FlightID = flight.FlightID
+        booking.Flight = flight
 
         Dim user As User = App.Session.Get("payer")
 

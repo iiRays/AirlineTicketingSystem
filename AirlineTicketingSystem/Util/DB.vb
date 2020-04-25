@@ -2,7 +2,8 @@
     Public Shared context As New AirlineSystemDataContext()
 
     Public Shared Function GetTotalPassengers(id As String) As Integer
-        Dim bookings = CType(DB.Get(Of Flight)(id), Flight).Bookings.ToList
+        Dim bookings = (From flight In context.Flights Where flight.FlightID = id).First.Bookings.ToList
+
         Dim totalPassengers = 0
         For Each booking In bookings
             If booking.IsCancelled = False Then
@@ -11,7 +12,7 @@
                     totalPassengers += 1
                 Next
             End If
-
+            context.SubmitChanges()
         Next
 
         Return totalPassengers
@@ -57,8 +58,9 @@
 
         Try
             context.SubmitChanges()
-        Catch ex As SqlClient.SqlException
-            Quick.Print(ex.Message)
+        Catch ex As Data.Linq.DuplicateKeyException
+            Quick.Print(ex.Object.ToString + "caused" + ex.Message.ToString)
+            Throw New Exception("Cannot insert data")
         End Try
 
 
