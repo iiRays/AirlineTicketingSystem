@@ -135,6 +135,7 @@ Partial Class Account
         Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtName.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.txtName.Location = New System.Drawing.Point(240, 203)
+        Me.txtName.MaxLength = 30
         Me.txtName.Multiline = True
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(382, 50)
@@ -198,6 +199,7 @@ Partial Class Account
         Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtEmail.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.txtEmail.Location = New System.Drawing.Point(240, 274)
+        Me.txtEmail.MaxLength = 35
         Me.txtEmail.Multiline = True
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(382, 50)
@@ -222,6 +224,7 @@ Partial Class Account
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPassword.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.txtPassword.Location = New System.Drawing.Point(240, 347)
+        Me.txtPassword.MaxLength = 100
         Me.txtPassword.Multiline = True
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(382, 50)
@@ -282,6 +285,7 @@ Partial Class Account
         Me.txtCreditCardNo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCreditCardNo.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.txtCreditCardNo.Location = New System.Drawing.Point(840, 418)
+        Me.txtCreditCardNo.MaxLength = 20
         Me.txtCreditCardNo.Multiline = True
         Me.txtCreditCardNo.Name = "txtCreditCardNo"
         Me.txtCreditCardNo.Size = New System.Drawing.Size(365, 50)
@@ -306,6 +310,7 @@ Partial Class Account
         Me.txtCountry.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCountry.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.txtCountry.Location = New System.Drawing.Point(840, 274)
+        Me.txtCountry.MaxLength = 35
         Me.txtCountry.Multiline = True
         Me.txtCountry.Name = "txtCountry"
         Me.txtCountry.Size = New System.Drawing.Size(362, 50)
@@ -330,6 +335,7 @@ Partial Class Account
         Me.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCity.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.txtCity.Location = New System.Drawing.Point(840, 344)
+        Me.txtCity.MaxLength = 25
         Me.txtCity.Multiline = True
         Me.txtCity.Name = "txtCity"
         Me.txtCity.Size = New System.Drawing.Size(362, 50)

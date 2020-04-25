@@ -79,7 +79,7 @@ Partial Class BookPayerInfo
         Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtName.Font = New System.Drawing.Font("Poppins", 28.5!, System.Drawing.FontStyle.Bold)
         Me.txtName.Location = New System.Drawing.Point(164, 172)
-        Me.txtName.MaxLength = 19
+        Me.txtName.MaxLength = 30
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(432, 57)
         Me.txtName.TabIndex = 0
@@ -103,7 +103,7 @@ Partial Class BookPayerInfo
         Me.txtCountry.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCountry.Font = New System.Drawing.Font("Poppins", 28.5!, System.Drawing.FontStyle.Bold)
         Me.txtCountry.Location = New System.Drawing.Point(776, 175)
-        Me.txtCountry.MaxLength = 19
+        Me.txtCountry.MaxLength = 35
         Me.txtCountry.Name = "txtCountry"
         Me.txtCountry.Size = New System.Drawing.Size(232, 57)
         Me.txtCountry.TabIndex = 4
@@ -127,7 +127,7 @@ Partial Class BookPayerInfo
         Me.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCity.Font = New System.Drawing.Font("Poppins", 28.5!, System.Drawing.FontStyle.Bold)
         Me.txtCity.Location = New System.Drawing.Point(776, 256)
-        Me.txtCity.MaxLength = 19
+        Me.txtCity.MaxLength = 25
         Me.txtCity.Name = "txtCity"
         Me.txtCity.Size = New System.Drawing.Size(232, 57)
         Me.txtCity.TabIndex = 5
@@ -175,7 +175,7 @@ Partial Class BookPayerInfo
         Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtEmail.Font = New System.Drawing.Font("Poppins", 28.5!, System.Drawing.FontStyle.Bold)
         Me.txtEmail.Location = New System.Drawing.Point(164, 250)
-        Me.txtEmail.MaxLength = 50
+        Me.txtEmail.MaxLength = 35
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(432, 57)
         Me.txtEmail.TabIndex = 1
@@ -330,7 +330,7 @@ Partial Class BookPayerInfo
         Me.txtCard.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCard.Font = New System.Drawing.Font("Poppins", 28.5!, System.Drawing.FontStyle.Bold)
         Me.txtCard.Location = New System.Drawing.Point(853, 394)
-        Me.txtCard.MaxLength = 19
+        Me.txtCard.MaxLength = 20
         Me.txtCard.Name = "txtCard"
         Me.txtCard.Size = New System.Drawing.Size(291, 57)
         Me.txtCard.TabIndex = 6

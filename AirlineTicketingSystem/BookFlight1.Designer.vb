@@ -248,6 +248,7 @@ Partial Class BookFlight1
         Me.txtPeople.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPeople.Font = New System.Drawing.Font("Microsoft Sans Serif", 37.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPeople.Location = New System.Drawing.Point(943, 363)
+        Me.txtPeople.MaxLength = 10
         Me.txtPeople.Name = "txtPeople"
         Me.txtPeople.Size = New System.Drawing.Size(170, 57)
         Me.txtPeople.TabIndex = 0
@@ -271,7 +272,7 @@ Partial Class BookFlight1
         Me.txtLuggageKg.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtLuggageKg.Font = New System.Drawing.Font("Microsoft Sans Serif", 37.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLuggageKg.Location = New System.Drawing.Point(943, 435)
-        Me.txtLuggageKg.MaxLength = 19
+        Me.txtLuggageKg.MaxLength = 10
         Me.txtLuggageKg.Name = "txtLuggageKg"
         Me.txtLuggageKg.Size = New System.Drawing.Size(170, 57)
         Me.txtLuggageKg.TabIndex = 1

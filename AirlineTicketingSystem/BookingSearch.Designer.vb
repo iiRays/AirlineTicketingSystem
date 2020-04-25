@@ -60,6 +60,7 @@ Partial Class BookingSearch
         Me.txtBookingID.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtBookingID.Font = New System.Drawing.Font("Poppins", 37.5!, System.Drawing.FontStyle.Bold)
         Me.txtBookingID.Location = New System.Drawing.Point(569, 303)
+        Me.txtBookingID.MaxLength = 10
         Me.txtBookingID.Name = "txtBookingID"
         Me.txtBookingID.Size = New System.Drawing.Size(302, 75)
         Me.txtBookingID.TabIndex = 0
