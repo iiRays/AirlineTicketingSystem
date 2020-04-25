@@ -113,6 +113,7 @@
             App.User = DB.Get(Of User)(user.UserID)
         End If
 
+        App.Session.Clear()
 
         Quick.Navigate(Me, New BookingFinish(booking))
     End Sub

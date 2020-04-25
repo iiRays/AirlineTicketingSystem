@@ -15,7 +15,7 @@
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        App.Session.Clear()
+        App.User = Nothing
         Quick.Navigate(Me, New HomeGuest)
     End Sub
 
