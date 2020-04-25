@@ -23,25 +23,25 @@
     End Sub
 
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim newRoute As Route = DB.Get(Of Route)(route.RouteID)
-        Dim newSource As [Stop] = DB.GetRouteSource(route.RouteID)
-        Dim newDestination As [Stop] = DB.GetRouteDestination(route.RouteID)
+        'Dim newRoute As Route = DB.Get(Of Route)(route.RouteID)
+        'Dim newSource As [Stop] = DB.GetRouteSource(route.RouteID)
+        ' Dim newDestination As [Stop] = DB.GetRouteDestination(route.RouteID)
 
-        newRoute.DurationHour = Convert.ToInt32(txtHrs.Text) 'to add validation
-        newRoute.DurationMins = Convert.ToInt32(txtMins.Text) 'to add validation
+        'newRoute.DurationHour = Convert.ToInt32(txtHrs.Text) 'to add validation
+        'newRoute.DurationMins = Convert.ToInt32(txtMins.Text) 'to add validation
 
-        Dim source As City = App.Session.Get("source")
-        Dim destination As City = App.Session.Get("destination")
+        'Dim source As City = App.Session.Get("source")
+        'Dim destination As City = App.Session.Get("destination")
 
-        newSource.City = source 'newSource.CityID = source.CityID
+        'newSource.City = source 'newSource.CityID = source.CityID
 
-        newDestination.City = destination 'newDesination.CityID = destination.CityID
+        'newDestination.City = destination 'newDesination.CityID = destination.CityID
 
-        newRoute.Stops.Clear() '?????
-        newRoute.Stops.Add(newSource) '?????
-        newRoute.Stops.Add(newDestination) '?????
+        'newRoute.Stops.Clear() '?????
+        'newRoute.Stops.Add(newSource) '?????
+        'newRoute.Stops.Add(newDestination) '?????
 
-        DB.Update(newRoute, route.RouteID)
+        'DB.Update(newRoute, route.RouteID)
 
         App.Session.Delete("source")
         App.Session.Delete("destination")

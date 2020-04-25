@@ -35,9 +35,6 @@ Partial Class AdminFlightsAdd3
         Me.txtFlightNo = New System.Windows.Forms.TextBox()
         Me.dtpDeparture = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.dtpArrival = New System.Windows.Forms.DateTimePicker()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -54,7 +51,7 @@ Partial Class AdminFlightsAdd3
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdd.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnAdd.ForeColor = System.Drawing.Color.White
-        Me.btnAdd.Location = New System.Drawing.Point(776, 574)
+        Me.btnAdd.Location = New System.Drawing.Point(775, 538)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(165, 75)
         Me.btnAdd.TabIndex = 80
@@ -66,7 +63,7 @@ Partial Class AdminFlightsAdd3
         Me.Label4.BackColor = System.Drawing.Color.White
         Me.Label4.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(267, 493)
+        Me.Label4.Location = New System.Drawing.Point(266, 457)
         Me.Label4.Name = "Label4"
         Me.Label4.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.Label4.Size = New System.Drawing.Size(130, 65)
@@ -78,7 +75,7 @@ Partial Class AdminFlightsAdd3
         '
         Me.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPrice.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrice.Location = New System.Drawing.Point(393, 493)
+        Me.txtPrice.Location = New System.Drawing.Point(392, 457)
         Me.txtPrice.Multiline = True
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.Size = New System.Drawing.Size(200, 65)
@@ -90,7 +87,7 @@ Partial Class AdminFlightsAdd3
         Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(266, 196)
+        Me.Label1.Location = New System.Drawing.Point(266, 232)
         Me.Label1.Name = "Label1"
         Me.Label1.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label1.Size = New System.Drawing.Size(200, 60)
@@ -103,7 +100,7 @@ Partial Class AdminFlightsAdd3
         Me.txtPlaneId.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPlaneId.Enabled = False
         Me.txtPlaneId.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPlaneId.Location = New System.Drawing.Point(462, 196)
+        Me.txtPlaneId.Location = New System.Drawing.Point(462, 232)
         Me.txtPlaneId.Multiline = True
         Me.txtPlaneId.Name = "txtPlaneId"
         Me.txtPlaneId.Size = New System.Drawing.Size(479, 60)
@@ -115,7 +112,7 @@ Partial Class AdminFlightsAdd3
         Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(266, 119)
+        Me.Label3.Location = New System.Drawing.Point(266, 155)
         Me.Label3.Name = "Label3"
         Me.Label3.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label3.Size = New System.Drawing.Size(200, 60)
@@ -128,7 +125,7 @@ Partial Class AdminFlightsAdd3
         Me.txtRouteId.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtRouteId.Enabled = False
         Me.txtRouteId.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRouteId.Location = New System.Drawing.Point(462, 119)
+        Me.txtRouteId.Location = New System.Drawing.Point(462, 155)
         Me.txtRouteId.Multiline = True
         Me.txtRouteId.Name = "txtRouteId"
         Me.txtRouteId.Size = New System.Drawing.Size(479, 60)
@@ -154,7 +151,7 @@ Partial Class AdminFlightsAdd3
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.lblTitle.Location = New System.Drawing.Point(487, 28)
+        Me.lblTitle.Location = New System.Drawing.Point(483, 33)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(262, 70)
         Me.lblTitle.TabIndex = 70
@@ -166,7 +163,7 @@ Partial Class AdminFlightsAdd3
         Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(266, 269)
+        Me.Label2.Location = New System.Drawing.Point(266, 305)
         Me.Label2.Name = "Label2"
         Me.Label2.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label2.Size = New System.Drawing.Size(200, 60)
@@ -178,7 +175,7 @@ Partial Class AdminFlightsAdd3
         '
         Me.txtFlightNo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtFlightNo.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFlightNo.Location = New System.Drawing.Point(462, 269)
+        Me.txtFlightNo.Location = New System.Drawing.Point(462, 305)
         Me.txtFlightNo.Multiline = True
         Me.txtFlightNo.Name = "txtFlightNo"
         Me.txtFlightNo.Size = New System.Drawing.Size(479, 60)
@@ -190,7 +187,7 @@ Partial Class AdminFlightsAdd3
         Me.dtpDeparture.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText
         Me.dtpDeparture.CalendarTitleForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.dtpDeparture.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpDeparture.Location = New System.Drawing.Point(500, 355)
+        Me.dtpDeparture.Location = New System.Drawing.Point(500, 391)
         Me.dtpDeparture.Name = "dtpDeparture"
         Me.dtpDeparture.Size = New System.Drawing.Size(226, 37)
         Me.dtpDeparture.TabIndex = 83
@@ -200,7 +197,7 @@ Partial Class AdminFlightsAdd3
         Me.Label5.BackColor = System.Drawing.Color.White
         Me.Label5.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(266, 344)
+        Me.Label5.Location = New System.Drawing.Point(266, 380)
         Me.Label5.Name = "Label5"
         Me.Label5.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label5.Size = New System.Drawing.Size(228, 60)
@@ -208,47 +205,12 @@ Partial Class AdminFlightsAdd3
         Me.Label5.Text = "departure time"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'dtpArrival
-        '
-        Me.dtpArrival.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText
-        Me.dtpArrival.CalendarTitleForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.dtpArrival.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpArrival.Location = New System.Drawing.Point(500, 429)
-        Me.dtpArrival.Name = "dtpArrival"
-        Me.dtpArrival.Size = New System.Drawing.Size(226, 37)
-        Me.dtpArrival.TabIndex = 86
-        '
-        'Label6
-        '
-        Me.Label6.BackColor = System.Drawing.Color.White
-        Me.Label6.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(266, 418)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-        Me.Label6.Size = New System.Drawing.Size(228, 60)
-        Me.Label6.TabIndex = 88
-        Me.Label6.Text = "arrival time"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label7
-        '
-        Me.Label7.BackColor = System.Drawing.Color.White
-        Me.Label7.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(488, 418)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-        Me.Label7.Size = New System.Drawing.Size(453, 60)
-        Me.Label7.TabIndex = 89
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
         'Label8
         '
         Me.Label8.BackColor = System.Drawing.Color.White
         Me.Label8.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(488, 344)
+        Me.Label8.Location = New System.Drawing.Point(488, 380)
         Me.Label8.Name = "Label8"
         Me.Label8.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label8.Size = New System.Drawing.Size(453, 60)
@@ -260,7 +222,7 @@ Partial Class AdminFlightsAdd3
         Me.Label9.BackColor = System.Drawing.Color.White
         Me.Label9.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold)
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(615, 493)
+        Me.Label9.Location = New System.Drawing.Point(614, 457)
         Me.Label9.Name = "Label9"
         Me.Label9.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.Label9.Size = New System.Drawing.Size(130, 65)
@@ -272,7 +234,7 @@ Partial Class AdminFlightsAdd3
         '
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(741, 493)
+        Me.TextBox1.Location = New System.Drawing.Point(740, 457)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(200, 65)
@@ -284,7 +246,7 @@ Partial Class AdminFlightsAdd3
         Me.pnlGender.BackColor = System.Drawing.Color.White
         Me.pnlGender.Controls.Add(Me.rbDailyYes)
         Me.pnlGender.Controls.Add(Me.rbDailyNo)
-        Me.pnlGender.Location = New System.Drawing.Point(724, 493)
+        Me.pnlGender.Location = New System.Drawing.Point(723, 457)
         Me.pnlGender.Name = "pnlGender"
         Me.pnlGender.Size = New System.Drawing.Size(217, 65)
         Me.pnlGender.TabIndex = 93
@@ -326,11 +288,8 @@ Partial Class AdminFlightsAdd3
         Me.Controls.Add(Me.pnlGender)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.dtpArrival)
         Me.Controls.Add(Me.dtpDeparture)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtFlightNo)
@@ -365,9 +324,6 @@ Partial Class AdminFlightsAdd3
     Friend WithEvents txtFlightNo As TextBox
     Friend WithEvents dtpDeparture As DateTimePicker
     Friend WithEvents Label5 As Label
-    Friend WithEvents dtpArrival As DateTimePicker
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents TextBox1 As TextBox

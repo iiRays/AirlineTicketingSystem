@@ -1,5 +1,12 @@
 ﻿Public Class AdminRoutesAdd1
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        For Each control In Me.Controls
+            If TypeOf control Is CityAddItem Then
+                Me.Controls.Remove(control)
+                control.Dispose()
+            End If
+        Next
+
         Dim searchBy As String = cbSearchBy.SelectedItem
         Dim searchFor As String = If(String.IsNullOrEmpty(txtSearchFor.Text), "", txtSearchFor.Text)
 

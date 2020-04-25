@@ -19,7 +19,6 @@
         txtPlaneId.Text = plane.PlaneID
         txtFlightNo.Text = flight.FlightNo
         dtpDeparture.Value = flight.DepartureTime
-        dtpArrival.Value = flight.ArrivalTime
         txtPrice.Text = flight.Price.ToString("0.00")
         If flight.IsDaily Then
             rbDailyYes.Checked = True
@@ -31,36 +30,61 @@
     End Sub
 
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim newFlight As Flight = DB.Get(Of Flight)(flight.FlightID)
-        newFlight.Route = App.Session.Get("route")
-        newFlight.Plane = App.Session.Get("plane")
-        newFlight.FlightNo = txtFlightNo.Text
-        newFlight.DepartureTime = dtpDeparture.Value 'to add validation
-        newFlight.ArrivalTime = dtpArrival.Value 'to add validation
-        newFlight.Price = Convert.ToDecimal(txtPrice.Text) 'to add validation
-        If rbDailyYes.Checked Then
-            newFlight.IsDaily = True
-            newFlight.IsFlightInstance = False
-        ElseIf rbDailyNo.Checked Then
-            newFlight.IsDaily = False
-            newFlight.IsFlightInstance = True
+        Dim flightNo As String = txtFlightNo.Text
+        Dim priceStr As String = txtPrice.Text
+        Dim price As Decimal
+
+        Dim errorMsg As String = ""
+        Dim errorsFound As Boolean = False
+
+        If String.IsNullOrEmpty(flightNo) Then
+            errorMsg += "- [Flight no] must not be empty." & vbNewLine
         End If
 
-        DB.Update(newFlight, flight.FlightID)
+        If String.IsNullOrEmpty(priceStr) Then
+            errorMsg += "- [Price] must not be empty." & vbNewLine
+        End If
 
-        App.Session.Delete("route")
-        App.Session.Delete("plane")
+        Try
+            price = Convert.ToDecimal(priceStr)
+        Catch ex As Exception
+            errorMsg += "- [Price] should be numeric." & vbNewLine
+        End Try
 
-        If App.Session.Get("sourceScreen") = "add" Then
-            App.Session.Delete("sourceScreen")
-            Quick.Navigate(Me, New AdminFlightsAddSummary)
+        If Not errorMsg = "" Then
+            errorsFound = True
+        End If
 
-        ElseIf App.Session.Get("sourceScreen") = "view" Then
-            App.Session.Delete("sourceScreen")
-            Quick.Navigate(Me, New AdminFlightsViewSummary)
+        If Not errorsFound Then
+            Dim newFlight As Flight = DB.Get(Of Flight)(flight.FlightID)
+            newFlight.FlightNo = flightNo
+            newFlight.Price = price
+            If rbDailyYes.Checked Then
+                newFlight.IsDaily = True
+                newFlight.IsFlightInstance = False
+            ElseIf rbDailyNo.Checked Then
+                newFlight.IsDaily = False
+                newFlight.IsFlightInstance = True
+            End If
 
+            DB.Update(newFlight, flight.FlightID)
+
+            App.Session.Delete("route")
+            App.Session.Delete("plane")
+
+            If App.Session.Get("sourceScreen") = "add" Then
+                App.Session.Delete("sourceScreen")
+                Quick.Navigate(Me, New AdminFlightsAddSummary)
+
+            ElseIf App.Session.Get("sourceScreen") = "view" Then
+                App.Session.Delete("sourceScreen")
+                Quick.Navigate(Me, New AdminFlightsViewSummary)
+
+            Else
+                Quick.Navigate(Me, New AdminDashboard)
+            End If
         Else
-            Quick.Navigate(Me, New AdminDashboard)
+            MessageBox.Show("Errors found:" & vbNewLine & errorMsg, "Errors found!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
 

@@ -15,34 +15,70 @@
     End Sub
 
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        Dim route As New Route
-        route.RouteID = Quick.GenerateId(Of Route)
-        route.DurationHour = Convert.ToInt32(txtHrs.Text) 'to add validation
-        route.DurationMins = Convert.ToInt32(txtMins.Text) 'to add validation
+        Dim hrsStr As String = txtHrs.Text
+        Dim minsStr As String = txtMins.Text
+        Dim hrs As Integer
+        Dim mins As Integer
 
-        Dim sourceStop As New [Stop]
-        sourceStop.Route = route 'sourceStop.RouteID = route.RouteID
-        sourceStop.City = source 'sourceStop.CityID = source.CityID
-        sourceStop.IsOrigin = True
+        Dim errorMsg As String = ""
+        Dim errorsFound As Boolean = False
 
-        route.Stops.Add(sourceStop) '?????
+        If String.IsNullOrEmpty(hrsStr) Then
+            errorMsg += "- [Hrs] must not be empty." & vbNewLine
+        End If
 
-        Dim destinationStop As New [Stop]
-        destinationStop.Route = route 'destinationStop.RouteID = route.RouteID
-        destinationStop.City = destination 'destinationStop.CityID = destination.CityID
-        destinationStop.IsOrigin = False
+        If String.IsNullOrEmpty(minsStr) Then
+            errorMsg += "- [Mins] must not be empty." & vbNewLine
+        End If
 
-        route.Stops.Add(destinationStop) '?????
+        Try
+            hrs = Convert.ToInt32(hrsStr)
+        Catch ex As Exception
+            errorMsg += "- [Hrs] must be numeric." & vbNewLine
+        End Try
 
-        DB.Insert(route)
-        'DB.Insert(sourceStop)
-        'DB.Insert(destinationStop)
+        Try
+            mins = Convert.ToInt32(mins)
+        Catch ex As Exception
+            errorMsg += "- [Mins] must be numeric." & vbNewLine
+        End Try
 
-        App.Session.Set("route", route)
+        If Not errorMsg = "" Then
+            errorsFound = True
+        End If
 
-        App.Session.Delete("source")
-        App.Session.Delete("destination")
+        If Not errorsFound Then
+            Dim route As New Route
+            route.RouteID = Quick.GenerateId(Of Route)
+            route.DurationHour = hrs
+            route.DurationMins = mins
 
-        Quick.Navigate(Me, New AdminRoutesAddSummary)
+            Dim sourceStop As New [Stop]
+            sourceStop.Route = route 'sourceStop.RouteID = route.RouteID
+            sourceStop.City = source 'sourceStop.CityID = source.CityID
+            sourceStop.IsOrigin = True
+
+            route.Stops.Add(sourceStop) '?????
+
+            Dim destinationStop As New [Stop]
+            destinationStop.Route = route 'destinationStop.RouteID = route.RouteID
+            destinationStop.City = destination 'destinationStop.CityID = destination.CityID
+            destinationStop.IsOrigin = False
+
+            route.Stops.Add(destinationStop) '?????
+
+            DB.Insert(route)
+            'DB.Insert(sourceStop)
+            'DB.Insert(destinationStop)
+
+            App.Session.Set("route", route)
+
+            App.Session.Delete("source")
+            App.Session.Delete("destination")
+
+            Quick.Navigate(Me, New AdminRoutesAddSummary)
+        Else
+            MessageBox.Show("Errors found:" & vbNewLine & errorMsg, "Errors found!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
 End Class

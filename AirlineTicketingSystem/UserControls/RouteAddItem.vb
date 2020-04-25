@@ -11,7 +11,7 @@
     End Sub
 
     Private Sub BtnSelect_Click(sender As Object, e As EventArgs) Handles btnSelect.Click
-        If Form = "AdminFlightAdd1" Then
+        If Form = "AdminFlightsAdd1" Then
             App.Session.Set("route", Route)
             Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminFlightsAdd2)
         ElseIf Form = "AdminFlightsEditRoute" Then
