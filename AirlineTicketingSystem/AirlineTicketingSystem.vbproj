@@ -572,6 +572,13 @@
     </Compile>
     <Compile Include="Util\App.vb" />
     <Compile Include="Util\Email.vb" />
+    <Compile Include="Util\ErrorMsg.vb" />
+    <Compile Include="Util\ErrorDialog.Designer.vb">
+      <DependentUpon>ErrorDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Util\ErrorDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Util\LinkedList.vb" />
     <Compile Include="BookFlight1.Designer.vb">
       <DependentUpon>BookFlight1.vb</DependentUpon>
@@ -948,6 +955,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserItem.resx">
       <DependentUpon>UserItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Util\ErrorDialog.resx">
+      <DependentUpon>ErrorDialog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerifyEmail.resx">
       <DependentUpon>VerifyEmail.vb</DependentUpon>

@@ -1,4 +1,6 @@
-﻿Public Class FlightSearch
+﻿Imports System.Text
+
+Public Class FlightSearch
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
 
         Dim user = App.User
@@ -18,11 +20,21 @@
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        App.Session.Delete("flightResults")
-        App.Session.Delete("selectedDate")
+        Dim errorMsg As New ErrorMsg()
 
         If dtpDate.Value < (DateAndTime.Now()) Then
-            Quick.ShowWarning("Wrong date", "Ensure that your selected date is at least 1 day after today.")
+            errorMsg.Add(" - Ensure that your selected date is at least 1 day after today.")
+        End If
+
+        If txtFrom.Text = "" Then
+            errorMsg.Add(" - Please fill in the origin city (To)")
+        End If
+
+        If txtTo.Text = "" Then
+            errorMsg.Add(" - Please fill in the destination city (From)")
+        End If
+
+        If errorMsg.ShowIfError Then
             Return
         End If
 
@@ -45,7 +57,6 @@
                     filteredResults.Add(flight)
                 End If
             End If
-
         Next
 
         App.Session.Set("flightResults", results)

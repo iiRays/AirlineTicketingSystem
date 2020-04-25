@@ -5,6 +5,11 @@ Imports Newtonsoft.Json
 Public Class Quick
     'This class aids in shortening code
 
+    Public Shared Sub CenterForm(Form As Form)
+        'Code possible thanks to Passant @ https://stackoverflow.com/questions/19392083/center-form-on-screen-or-on-parent
+        Dim rect = If(Form.ParentForm IsNot Nothing, Form.ParentForm.RectangleToScreen(Form.ParentForm.ClientRectangle), Screen.FromPoint(Form.Location).WorkingArea)
+        Form.Location = New Point(rect.Left + (rect.Width - Form.Width) \ 2, rect.Top + (rect.Height - Form.Height) \ 2)
+    End Sub
 
     Public Shared Function Clone(Of T)(source As T) As T
         Return JsonConvert.DeserializeObject(Of T)(JsonConvert.SerializeObject(source))
@@ -94,8 +99,9 @@ Public Class Quick
     End Sub
 
     Public Shared Sub ShowError(title As String, message As String)
-        'Code possible thanks to Dot Net Perls @ https://www.dotnetperls.com/messagebox-show-vbnet
-        MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1)
+        Dim errorMsg As New ErrorMsg()
+        errorMsg.Add(message)
+        errorMsg.ShowIfError()
     End Sub
 
     Public Shared Sub ShowWarning(title As String, message As String)

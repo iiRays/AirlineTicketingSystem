@@ -2,15 +2,15 @@
     Private Form As Form
     Private IsFormDraggable As Boolean
     Private IsMouseDown = False
-    Private RemoveBorder As Boolean
+    Private RemoveBorder As Boolean = True
     Private X As Integer
     Private Y As Integer
 
     'Constructors
-    Public Sub New(Form As Form, IsFormDraggable As Boolean)
+    Public Sub New(Form As Form, IsFormDraggable As Boolean, resizable As Boolean, RemoveBorder As Boolean)
         Me.Form = Form
         Me.IsFormDraggable = IsFormDraggable
-        Me.RemoveBorder = True
+        Me.RemoveBorder = RemoveBorder
 
         Me.Form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Form.WindowState = FormWindowState.Normal
@@ -18,6 +18,23 @@
         Me.Form.MinimumSize = New Size(1280, 720)
         Me.Form.MaximizeBox = False
         Me.Form.MaximumSize = New Size(1280, 720)
+
+        LoadTitleBar()
+    End Sub
+
+    Public Sub New(Form As Form, resizable As Boolean)
+        Me.Form = Form
+        Me.IsFormDraggable = True
+
+        Me.Form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Form.WindowState = FormWindowState.Normal
+        Me.Form.MinimizeBox = False
+        Me.Form.MaximizeBox = False
+
+        If resizable = False Then
+            Me.Form.MaximumSize = New Size(1280, 720)
+            Me.Form.MinimumSize = New Size(1280, 720)
+        End If
 
         LoadTitleBar()
     End Sub
@@ -38,6 +55,10 @@
     End Sub
 
     'Static load methods
+    Public Shared Sub LoadResizable(Form As Form)
+        Dim CustomBar = New TitleBar(Form, True)
+    End Sub
+
     Public Shared Sub Load(Form As Form)
         Dim CustomBar = New TitleBar(Form, True)
     End Sub
@@ -52,8 +73,10 @@
 
     'Private nonstatic methods
     Private Sub LoadTitleBar()
-        Dim btColor = Color.White
+        'Center form
+        Quick.CenterForm(Form)
 
+        Dim btColor = Color.White
         If RemoveBorder Then
             Form.FormBorderStyle = FormBorderStyle.None
         End If

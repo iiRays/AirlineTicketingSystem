@@ -50,6 +50,7 @@ Public Class BookFlight2
     End Sub
 
     Private Sub BookFlight2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        btnNext.Hide()
         LoadAllSeats()
         TitleBar.Load(Me)
         Dim exists = True
@@ -75,6 +76,8 @@ Public Class BookFlight2
                 passengerItem.cboSeat.Items.Add(seat)
             Next
 
+            AddHandler passengerItem.txtName.TextChanged, AddressOf LockButton
+            AddHandler passengerItem.cboSeat.SelectedIndexChanged, AddressOf LockButton
 
             Me.Controls.Add(passengerItem)
         Next
@@ -84,6 +87,30 @@ Public Class BookFlight2
             CType(Me.Controls("passengerItem1"), PassengerItem).txtName.Text = App.User.Name
         End If
 
+    End Sub
+
+    Private Sub LockButton()
+        Dim hasError = False
+        For passengerCount As Integer = 0 To booking.NoOfPassengers - 1 Step 1
+            Dim ticket As New Ticket()
+            Dim passengerItem As PassengerItem = CType(Me.Controls("passengerItem" & (passengerCount + 1)), PassengerItem)
+            ticket.BookingID = booking.BookingID
+            ticket.Name = passengerItem.txtName.Text
+            If ticket.Name.Length = 0 Then
+                hasError = True
+            End If
+
+            If passengerItem.cboSeat.SelectedItem Is Nothing Then
+                hasError = True
+            End If
+
+        Next
+
+        If hasError Then
+            btnNext.Hide()
+        Else
+            btnNext.Show()
+        End If
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -115,7 +142,7 @@ Public Class BookFlight2
             passengerList.Add(ticket)
         Next
 
-        If errorMsg.Length > 0 Then
+        If errorMsg.ToString.Trim.Length > 0 Then
             Quick.ShowError("Error", errorMsg.ToString)
             Return
         End If
