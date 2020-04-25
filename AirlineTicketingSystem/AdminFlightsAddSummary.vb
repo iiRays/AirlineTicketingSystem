@@ -9,7 +9,10 @@
         lblDestination.Text = DB.GetFlightDestination(Flight.FlightID).City.Name
         lblHrs.Text = Flight.Route.DurationHour.ToString()
         lblMins.Text = Flight.Route.DurationMins.ToString()
-        lblDate.Text = Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Flight.DepartureTime.Month).ToString("MMM") & " " & Flight.DepartureTime.Day.ToString
+        lblDate.Text = flight.DepartureTime.DayOfWeek.ToString.Substring(0, 3) & ", " &
+            flight.DepartureTime.Day.ToString() & " " &
+            DateAndTime.MonthName(flight.DepartureTime.Month).Substring(0, 3) & " " &
+            flight.DepartureTime.Year.ToString()
         lblCapacity.Text = Flight.Plane.Capacity.ToString()
         lblRouteId.Text = Flight.RouteID
         lblPlaneId.Text = Flight.PlaneID

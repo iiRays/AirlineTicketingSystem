@@ -90,10 +90,12 @@
 
     Private Sub BtnEditRoute_Click(sender As Object, e As EventArgs) Handles btnEditRoute.Click
         'Quick.Navigate(Me, New AdminFlightsEditRoute)
+        MessageBox.Show("[Route] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
     End Sub
 
     Private Sub btnEditPlane_Click(sender As Object, e As EventArgs) Handles btnEditPlane.Click
         'Quick.Navigate(Me, New AdminFlightsEditPlane)
+        MessageBox.Show("[Plane] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
     End Sub
 
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
@@ -108,5 +110,25 @@
         Else
             Quick.Navigate(Me, New AdminDashboard)
         End If
+    End Sub
+
+    Private Sub TxtRouteId_DoubleClick(sender As Object, e As EventArgs) Handles txtRouteId.DoubleClick
+        MessageBox.Show("[Route ID] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+    End Sub
+
+    Private Sub TxtPlaneId_DoubleClick(sender As Object, e As EventArgs) Handles txtPlaneId.DoubleClick
+        MessageBox.Show("[Plane ID] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+    End Sub
+
+    Private Sub RbDailyYes_Click(sender As Object, e As EventArgs) Handles rbDailyYes.Click
+        MessageBox.Show("[Is daily] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+    End Sub
+
+    Private Sub RbDailyNo_Click(sender As Object, e As EventArgs) Handles rbDailyNo.Click
+        MessageBox.Show("[Is daily] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+    End Sub
+
+    Private Sub DtpDeparture_Click(sender As Object, e As EventArgs) Handles dtpDeparture.Click
+        MessageBox.Show("[Departure time] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
     End Sub
 End Class

@@ -15,19 +15,19 @@
             App.Session.Set("source", City)
             Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminRoutesAdd2)
         ElseIf Form = "AdminRoutesAdd2" Then
-            App.Session.Set("destination", City)
-            Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminRoutesAdd3)
-        ElseIf Form = "AdminRoutesEditSource" Then
-            App.Session.Set("source", City)
-            Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminRoutesEdit)
-        ElseIf Form = "AdminRoutesEditDestination" Then
             Dim source As City = App.Session.Get("source")
             If source.CityID = City.CityID Then
                 MessageBox.Show("Errors found:" & vbNewLine & "- [Destination city] cannot be the same as [source city].", "Errors found!", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
                 App.Session.Set("destination", City)
-                Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminRoutesEdit)
+                Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminRoutesAdd3)
             End If
+        ElseIf Form = "AdminRoutesEditSource" Then
+            App.Session.Set("source", City)
+            Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminRoutesEdit)
+        ElseIf Form = "AdminRoutesEditDestination" Then
+            App.Session.Set("destination", City)
+            Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminRoutesEdit)
         End If
     End Sub
 End Class
