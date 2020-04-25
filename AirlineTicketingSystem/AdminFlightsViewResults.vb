@@ -19,7 +19,7 @@
 
         For Each flight In flights
             Dim flightViewItem As New FlightViewItem()
-            flightViewItem.Location = New Point(130, 120 + (loopCount * 100))
+            flightViewItem.Location = New Point(0, 120 + (loopCount * 100))
             flightViewItem.Flight = flight
             flightViewItem.AdminFlightsViewResults = Me
             Me.Controls.Add(flightViewItem)

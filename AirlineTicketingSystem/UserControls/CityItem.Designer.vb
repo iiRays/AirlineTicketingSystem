@@ -45,11 +45,11 @@ Partial Class CityItem
         '
         'lblId
         '
-        Me.lblId.Font = New System.Drawing.Font("OCR A Extended", 39.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblId.Font = New System.Drawing.Font("OCR A Extended", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblId.ForeColor = System.Drawing.Color.White
-        Me.lblId.Location = New System.Drawing.Point(16, 11)
+        Me.lblId.Location = New System.Drawing.Point(3, 11)
         Me.lblId.Name = "lblId"
-        Me.lblId.Size = New System.Drawing.Size(225, 54)
+        Me.lblId.Size = New System.Drawing.Size(248, 54)
         Me.lblId.TabIndex = 41
         Me.lblId.Text = "00144"
         Me.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter

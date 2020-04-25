@@ -13,16 +13,16 @@
     Private Sub BtnSelect_Click(sender As Object, e As EventArgs) Handles btnSelect.Click
         If Form = "AdminRoutesAdd1" Then
             App.Session.Set("source", City)
-            Quick.Navigate(AdminRoutesAdd1, New AdminRoutesAdd2)
+            Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminRoutesAdd2)
         ElseIf Form = "AdminRoutesAdd2" Then
             App.Session.Set("destination", City)
-            Quick.Navigate(AdminRoutesAdd2, New AdminRoutesAdd3)
+            Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminRoutesAdd3)
         ElseIf Form = "AdminRoutesEditSource" Then
             App.Session.Set("source", City)
-            Quick.Navigate(AdminRoutesEditSource, New AdminRoutesEdit)
+            Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminRoutesEdit)
         ElseIf Form = "AdminRoutesEditDestination" Then
             App.Session.Set("destination", City)
-            Quick.Navigate(AdminRoutesEditDestination, New AdminRoutesEdit)
+            Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminRoutesEdit)
         End If
     End Sub
 End Class

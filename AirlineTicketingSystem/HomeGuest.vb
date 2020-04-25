@@ -13,9 +13,7 @@
 
     Private Sub HomeGuest_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
         Quick.SetFormFont("Poppins", Me)
-
-
-
+        Me.DoubleBuffered = True
         TitleBar.Load(Me, True, True)
     End Sub
 

@@ -5,6 +5,7 @@
 
     Private Sub HomeUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblUsername.Text &= App.User.Name
+        Me.DoubleBuffered = True
         TitleBar.Load(Me)
     End Sub
 

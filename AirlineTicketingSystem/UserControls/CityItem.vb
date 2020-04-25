@@ -11,6 +11,6 @@
 
     Private Sub BtnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
         App.Session.Set("city", City)
-        Quick.Navigate(AdminCitiesViewResults, New AdminCitiesViewSummary)
+        Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminCitiesViewSummary)
     End Sub
 End Class

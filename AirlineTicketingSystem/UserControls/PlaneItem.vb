@@ -9,6 +9,6 @@
     End Sub
     Private Sub BtnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
         App.Session.Set("plane", Plane)
-        Quick.Navigate(AdminCitiesViewResults, New AdminPlanesViewSummary)
+        Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminPlanesViewSummary)
     End Sub
 End Class

@@ -10,6 +10,6 @@
 
     Private Sub BtnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
         App.Session.Set("booking", Booking)
-        Quick.Navigate(AdminBookingsViewResults, New AdminBookingsViewSummary)
+        Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminBookingsViewSummary)
     End Sub
 End Class

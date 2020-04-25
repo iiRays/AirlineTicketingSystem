@@ -5,11 +5,14 @@
         lblId.Text = Flight.FlightID
         lblSource.Text = DB.GetFlightSource(Flight.FlightID).City.Name
         lblDestination.Text = DB.GetFlightDestination(Flight.FlightID).City.Name
-        lblDate.Text = Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Flight.DepartureTime.Month).ToString("MMM") & " " & Flight.DepartureTime.Day.ToString
+        lblDate.Text = Flight.DepartureTime.DayOfWeek.ToString.Substring(0, 3) & ", " &
+            Flight.DepartureTime.Day.ToString() & " " &
+            DateAndTime.MonthName(Flight.DepartureTime.Month).Substring(0, 3) & " " &
+            Flight.DepartureTime.Year.ToString()
     End Sub
 
     Private Sub BtnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
         App.Session.Set("flight", Flight)
-        Quick.Navigate(AdminFlightsViewResults, New AdminFlightsViewSummary)
+        Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminFlightsViewSummary)
     End Sub
 End Class

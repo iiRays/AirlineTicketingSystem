@@ -9,6 +9,6 @@
 
     Private Sub BtnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
         App.Session.Set("route", Route)
-        Quick.Navigate(AdminRoutesViewResults, New AdminRoutesViewSummary)
+        Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminRoutesViewSummary)
     End Sub
 End Class

@@ -88,7 +88,7 @@ Partial Class AdminUsersView
         '
         'cbSearchBy
         '
-        Me.cbSearchBy.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbSearchBy.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSearchBy.FormattingEnabled = True
         Me.cbSearchBy.Items.AddRange(New Object() {"UserID", "Name", "Gender", "Email", "IsRegistered", "DateOfBirth", "PhoneNo", "CreditCardNo", "Country", "City", "IsStaff"})
         Me.cbSearchBy.Location = New System.Drawing.Point(311, 263)

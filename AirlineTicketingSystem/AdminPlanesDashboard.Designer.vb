@@ -53,7 +53,7 @@ Partial Class AdminPlanesDashboard
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(225, 250)
         Me.btnAdd.TabIndex = 48
-        Me.btnAdd.Text = "add a planes"
+        Me.btnAdd.Text = "add a plane"
         Me.btnAdd.UseVisualStyleBackColor = False
         '
         'btnBack

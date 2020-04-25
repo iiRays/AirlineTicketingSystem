@@ -24,5 +24,7 @@
     Private Sub AdminRoutesAdd1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
         TitleBar.Load(Me, True, False)
+
+        cbSearchBy.SelectedIndex = 0
     End Sub
 End Class
