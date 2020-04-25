@@ -69,6 +69,7 @@ Partial Class AdminRoutesEdit
         'txtHrs
         '
         Me.txtHrs.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtHrs.Enabled = False
         Me.txtHrs.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHrs.Location = New System.Drawing.Point(351, 447)
         Me.txtHrs.Multiline = True
@@ -93,6 +94,7 @@ Partial Class AdminRoutesEdit
         'txtMins
         '
         Me.txtMins.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtMins.Enabled = False
         Me.txtMins.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMins.Location = New System.Drawing.Point(698, 447)
         Me.txtMins.Multiline = True

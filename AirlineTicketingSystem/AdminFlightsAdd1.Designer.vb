@@ -100,7 +100,7 @@ Partial Class AdminFlightsAdd1
         '
         Me.cbSearchBy.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSearchBy.FormattingEnabled = True
-        Me.cbSearchBy.Items.AddRange(New Object() {"CityID", "Name", "Country", "State", "Longitude", "Latitude"})
+        Me.cbSearchBy.Items.AddRange(New Object() {"RouteID", "DurationHour", "DurationMins", "City ID", "City Name", "Source City ID", "Source City Name", "Destination City ID", "Destination City Name"})
         Me.cbSearchBy.Location = New System.Drawing.Point(228, 256)
         Me.cbSearchBy.Name = "cbSearchBy"
         Me.cbSearchBy.Size = New System.Drawing.Size(300, 44)

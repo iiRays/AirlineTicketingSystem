@@ -27,25 +27,66 @@
     End Sub
 
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim newCity As City = DB.Get(Of City)(city.CityID)
-        newCity.Name = txtName.Text
-        newCity.Country = txtCountry.Text
-        newCity.State = txtState.Text
-        newCity.Latitude = txtLatitude.Text
-        newCity.Longitude = txtLongitude.Text
+        Dim name As String = txtName.Text
+        Dim country As String = txtCountry.Text
+        Dim state As String = txtState.Text
+        Dim latitude As String = txtLatitude.Text
+        Dim longitude As String = txtLongitude.Text
 
-        DB.Update(newCity, city.CityID)
+        Dim errorMsg As String = ""
+        Dim errorsFound As Boolean = False
 
-        If App.Session.Get("sourceScreen") = "add" Then
-            App.Session.Delete("sourceScreen")
-            Quick.Navigate(Me, New AdminCitiesAddSummary)
+        If String.IsNullOrEmpty(name) Then
+            errorMsg += "- [Name] must not be empty." & vbNewLine
+        End If
 
-        ElseIf App.Session.Get("sourceScreen") = "view" Then
-            App.Session.Delete("sourceScreen")
-            Quick.Navigate(Me, New AdminCitiesViewSummary)
+        If String.IsNullOrEmpty(country) Then
+            errorMsg += "- [Country] must not be empty." & vbNewLine
+        End If
 
+        If String.IsNullOrEmpty(state) Then
+            errorMsg += "- [State] must not be empty." & vbNewLine
+        End If
+
+        Try
+            Dim latitudeDec = Convert.ToDecimal(latitude)
+        Catch ex As Exception
+            errorMsg += "- [Latitude] must be numeric." & vbNewLine
+        End Try
+
+        Try
+            Dim longitudeDec = Convert.ToDecimal(longitude)
+        Catch ex As Exception
+            errorMsg += "- [Longitude] must be numeric." & vbNewLine
+        End Try
+
+        If Not errorMsg = "" Then
+            errorsFound = True
+        End If
+
+        If Not errorsFound Then
+            Dim newCity As City = DB.Get(Of City)(city.CityID)
+            newCity.Name = name
+            newCity.Country = country
+            newCity.State = state
+            newCity.Latitude = latitude
+            newCity.Longitude = longitude
+
+            DB.Update(newCity, city.CityID)
+
+            If App.Session.Get("sourceScreen") = "add" Then
+                App.Session.Delete("sourceScreen")
+                Quick.Navigate(Me, New AdminCitiesAddSummary)
+
+            ElseIf App.Session.Get("sourceScreen") = "view" Then
+                App.Session.Delete("sourceScreen")
+                Quick.Navigate(Me, New AdminCitiesViewSummary)
+
+            Else
+                Quick.Navigate(Me, New AdminDashboard)
+            End If
         Else
-            Quick.Navigate(Me, New AdminDashboard)
+            MessageBox.Show("Errors found:" & vbNewLine & errorMsg, "Errors found!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
 End Class

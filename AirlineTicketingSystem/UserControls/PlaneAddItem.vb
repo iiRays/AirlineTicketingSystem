@@ -10,7 +10,7 @@
     End Sub
 
     Private Sub BtnSelect_Click(sender As Object, e As EventArgs) Handles btnSelect.Click
-        If Form = "AdminFlightAdd2" Then
+        If Form = "AdminFlightsAdd2" Then
             App.Session.Set("plane", Plane)
             Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminFlightsAdd3)
         ElseIf Form = "AdminFlightsEditPlane" Then
