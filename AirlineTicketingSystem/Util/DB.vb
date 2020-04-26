@@ -58,9 +58,8 @@
 
         Try
             context.SubmitChanges()
-        Catch ex As Data.Linq.DuplicateKeyException
-            Quick.Print(ex.Object.ToString + "caused" + ex.Message.ToString)
-            Throw New Exception("Cannot insert data")
+        Catch ex As Exception
+            Quick.CatchUnknownException(ex)
         End Try
 
 
