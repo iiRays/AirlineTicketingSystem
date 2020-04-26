@@ -159,7 +159,10 @@ Public Class BookFlight2
         booking.TotalPrice = CType(App.Session.Get("selectedFlight"), Flight).Price * booking.NoOfPassengers + (15 * booking.ExtraBaggageKG)
 
         'Update session
-        App.Session.Update("Booking", booking)
+        App.Session.Set("Booking", booking)
+
+        Dim testB As Booking = App.Session.Get("Booking")
+        Dim testPasse As List(Of Ticket) = App.Session.Get("passengerList")
 
         'Navigate
         Quick.Navigate(Me, New BookingSummary)

@@ -119,6 +119,14 @@
                 temp = temp.Next
             End While
 
+            'Reached at the end of the list
+
+            'If tag is the same, replace
+            If temp.Tag = Tag Then
+                temp.Data = Item
+                Return
+            End If
+
             'Append at the end
             temp.Next = New LinkedNode(Of T)(Tag, Item)
 
