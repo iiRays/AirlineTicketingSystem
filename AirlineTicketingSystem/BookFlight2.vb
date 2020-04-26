@@ -133,6 +133,10 @@ Public Class BookFlight2
                 ticket.TicketID = Quick.GenerateId(Of Ticket)(DB.GetCount(Of Ticket) + passengerCount)
             End If
 
+            If Quick.HasInvalidChar(ticket.Name) Then
+                errorMsg.AppendLine("- Passenger " & (passengerCount + 1) & "'s name should contain alphabets only.")
+            End If
+
             If passengerItem.cboSeat.SelectedItem Is Nothing Then
                 errorMsg.AppendLine("Passenger " & (passengerCount + 1) & "'s seat hasn't been chosen.")
             Else

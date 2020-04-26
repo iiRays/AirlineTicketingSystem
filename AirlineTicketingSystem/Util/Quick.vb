@@ -5,6 +5,9 @@ Imports Newtonsoft.Json
 Public Class Quick
     'This class aids in shortening code
 
+    Public Shared Function HasInvalidChar(str As String) As Boolean
+        Return If(str Like "*#*", True, If(str Like "*[/#%$@&*!]*", True, False))
+    End Function
     Public Shared Sub CenterForm(Form As Form)
         'Code possible thanks to Passant @ https://stackoverflow.com/questions/19392083/center-form-on-screen-or-on-parent
         Dim rect = If(Form.ParentForm IsNot Nothing, Form.ParentForm.RectangleToScreen(Form.ParentForm.ClientRectangle), Screen.FromPoint(Form.Location).WorkingArea)

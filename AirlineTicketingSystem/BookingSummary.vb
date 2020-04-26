@@ -28,6 +28,7 @@
         lblDestination.Text = DB.GetFlightDestination(flight.FlightID).City.Name
         lblArrivalTime.Text = flight.ArrivalTime.ToString("HH:mm")
         lblDuration.Text = flight.ArrivalTime.Subtract(flight.DepartureTime).Hours & "h " & flight.ArrivalTime.Subtract(flight.DepartureTime).Minutes & "M"
+        lblLuggageKg.Text = booking.ExtraBaggageKG & " kg"
 
         'Get panel reference
         Dim namePanel As Panel = Me.Controls("panelPassengers")

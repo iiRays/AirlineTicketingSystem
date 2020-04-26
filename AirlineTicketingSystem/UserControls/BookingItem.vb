@@ -13,13 +13,11 @@
 
 	Private Sub BookingItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 		lblSource.Text = DB.GetFlightSource(Booking.Flight.FlightID).City.Name
-		If Booking.Flight.IsDaily Then
-			lblDate.Text = "DAILY"
-		Else
-			lblDate.Text = Booking.Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Booking.Flight.DepartureTime.Month) & " " & Booking.Flight.DepartureTime.Day.ToString
-		End If
+		lblDate.Text = Booking.Flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(Booking.Flight.DepartureTime.Month) & " " & Booking.Flight.DepartureTime.Day.ToString
+
 		lblDestination.Text = DB.GetFlightDestination(Booking.Flight.FlightID).City.Name
 		lblArrivalTime.Text = Booking.Flight.ArrivalTime.ToString("HH:mm")
+		lblDepartureTime.Text = Booking.Flight.DepartureTime.ToString("HH:mm")
 		lblBookingId.Text = Booking.BookingID
 		lblFlightId.Text = Booking.Flight.FlightNo
 

@@ -13,7 +13,7 @@
         errorStr.AppendLine(If(txtCity.Text = "", "- Please enter the city for your address", ""))
         errorStr.AppendLine(If(txtCountry.Text = "", "- Please enter the country for your address", ""))
         errorStr.AppendLine(If(Not Quick.CheckRegex("[0-9]{4}\-[0-9]{4}\-[0-9]{4}\-[0-9]{4}", txtCard.Text), "- Ensure that your credit card number is following this format: XXXX-XXXX-XXXX-XXXX.", ""))
-
+        errorStr.AppendLine(If(Quick.HasInvalidChar(txtName.Text), "- Name must contain alphabets only", ""))
         'Must be 18 years old or above
         Dim birthdate = New Date(dtpDate.Value.Year, dtpDate.Value.Month, dtpDate.Value.Day)
         errorStr.AppendLine(If(DateAndTime.DateDiff(DateInterval.Year, birthdate, DateAndTime.Now()) < 18, "- You must be 18 years old or above", ""))
