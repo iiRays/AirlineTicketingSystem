@@ -1,7 +1,7 @@
 ﻿Public Class AdminUsersViewResults
     Private Sub AdminUsersViewResults_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        TitleBar.Load(Me, True)
 
         Dim users As List(Of User) = New List(Of User)
         Dim loopCount As Integer = 0

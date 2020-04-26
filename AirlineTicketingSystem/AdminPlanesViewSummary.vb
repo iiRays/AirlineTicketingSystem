@@ -2,7 +2,8 @@
     Private plane As Plane = App.Session.Get("plane")
     Private Sub AdminPlanesViewSummary_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        Me.DoubleBuffered = True
+        TitleBar.Load(Me, True)
 
         lblId.Text = plane.PlaneID
         lblModel.Text = plane.Model

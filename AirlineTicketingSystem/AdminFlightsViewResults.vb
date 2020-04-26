@@ -1,7 +1,7 @@
 ﻿Public Class AdminFlightsViewResults
     Private Sub AdminFlightsViewResults_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        TitleBar.Load(Me, True)
 
         Dim flights As List(Of Flight) = New List(Of Flight)
         Dim loopCount As Integer = 0

@@ -1,7 +1,7 @@
 ﻿Public Class AdminRoutesViewResults
     Private Sub AdminRoutesViewResults_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        TitleBar.Load(Me, True)
 
         Dim routes As List(Of Route) = New List(Of Route)
         Dim loopCount As Integer = 0

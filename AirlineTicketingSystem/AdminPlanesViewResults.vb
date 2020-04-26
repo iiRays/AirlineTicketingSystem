@@ -1,7 +1,7 @@
 ﻿Public Class AdminPlanesViewResults
     Private Sub AdminPlanesViewResults_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        TitleBar.Load(Me, True)
 
         Dim planes As List(Of Plane) = New List(Of Plane)
         Dim loopCount As Integer = 0

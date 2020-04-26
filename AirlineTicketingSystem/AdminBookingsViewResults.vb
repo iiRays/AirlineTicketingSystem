@@ -1,7 +1,7 @@
 ﻿Public Class AdminBookingsViewResults
     Private Sub AdminBookingsViewResults_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        TitleBar.Load(Me, True)
 
         Dim bookings As List(Of Booking) = New List(Of Booking)
         Dim loopCount As Integer = 0
