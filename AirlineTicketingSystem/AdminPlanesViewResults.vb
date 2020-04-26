@@ -28,9 +28,9 @@
     End Sub
 
     Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        App.Session.Delete("viewAll")
-        App.Session.Delete("searchBy")
-        App.Session.Delete("searchFor")
+        'App.Session.Delete("viewAll")
+        'App.Session.Delete("searchBy")
+        'App.Session.Delete("searchFor")
         Quick.Navigate(Me, New AdminPlanesView)
     End Sub
 End Class

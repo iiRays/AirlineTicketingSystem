@@ -22,6 +22,7 @@ Partial Class BookingSearch
 	'Do not modify it using the code editor.
 	<System.Diagnostics.DebuggerStepThrough()> _
 	Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BookingSearch))
         Me.btnBack = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtBookingID = New System.Windows.Forms.TextBox()
@@ -33,11 +34,11 @@ Partial Class BookingSearch
         Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnBack.FlatAppearance.BorderSize = 0
         Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBack.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnBack.Font = New System.Drawing.Font("Poppins", 25.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnBack.ForeColor = System.Drawing.Color.White
-        Me.btnBack.Location = New System.Drawing.Point(36, 33)
+        Me.btnBack.Location = New System.Drawing.Point(56, 44)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(150, 75)
+        Me.btnBack.Size = New System.Drawing.Size(175, 75)
         Me.btnBack.TabIndex = 2
         Me.btnBack.Text = "back"
         Me.btnBack.UseVisualStyleBackColor = False
@@ -47,7 +48,7 @@ Partial Class BookingSearch
         Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(394, 303)
+        Me.Label3.Location = New System.Drawing.Point(397, 338)
         Me.Label3.Name = "Label3"
         Me.Label3.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label3.Size = New System.Drawing.Size(175, 75)
@@ -59,7 +60,7 @@ Partial Class BookingSearch
         '
         Me.txtBookingID.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtBookingID.Font = New System.Drawing.Font("Poppins", 37.5!, System.Drawing.FontStyle.Bold)
-        Me.txtBookingID.Location = New System.Drawing.Point(569, 303)
+        Me.txtBookingID.Location = New System.Drawing.Point(572, 338)
         Me.txtBookingID.MaxLength = 10
         Me.txtBookingID.Name = "txtBookingID"
         Me.txtBookingID.Size = New System.Drawing.Size(302, 75)
@@ -71,11 +72,11 @@ Partial Class BookingSearch
         Me.btSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btSearch.FlatAppearance.BorderSize = 0
         Me.btSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btSearch.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btSearch.Font = New System.Drawing.Font("Poppins", 25.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btSearch.ForeColor = System.Drawing.Color.White
-        Me.btSearch.Location = New System.Drawing.Point(554, 404)
+        Me.btSearch.Location = New System.Drawing.Point(552, 443)
         Me.btSearch.Name = "btSearch"
-        Me.btSearch.Size = New System.Drawing.Size(150, 75)
+        Me.btSearch.Size = New System.Drawing.Size(175, 75)
         Me.btSearch.TabIndex = 1
         Me.btSearch.Text = "search"
         Me.btSearch.UseVisualStyleBackColor = False
@@ -85,6 +86,7 @@ Partial Class BookingSearch
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.btSearch)
         Me.Controls.Add(Me.Label3)

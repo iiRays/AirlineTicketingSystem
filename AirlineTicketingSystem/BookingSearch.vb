@@ -1,11 +1,12 @@
 ﻿Public Class BookingSearch
     Private Sub BookingSearch_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.DoubleBuffered = True
         TitleBar.Load(Me)
         'AddHandler txtBookingID., AddressOf btSearch_Click
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Quick.Navigate(Me, New HomeGuest)
+        Quick.Navigate(Me, New HomeUser)
     End Sub
 
     Private Sub btSearch_Click(sender As Object, e As EventArgs) Handles btSearch.Click
