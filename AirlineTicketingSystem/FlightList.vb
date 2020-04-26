@@ -1,5 +1,6 @@
 ﻿Public Class FlightList
     Private Sub FlightList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         'Get list of flights that are not instances of daily flights
         Dim flights As List(Of Flight) = App.Session.Get("flightResults")
         Dim loopCount = 0
@@ -17,7 +18,7 @@
                 flightNoList.Add(flight.FlightNo)
                 Dim flightItem As New FlightItem()
                 flightItem.SelectedDate = App.Session.Get("selectedDate")
-                flightItem.Location = New Point(130, 120 + (loopCount * 250))
+                flightItem.Location = New Point(100, 150 + (loopCount * 250))
                 flightItem.Flight = flight 'Pass in flight data to each flight item
                 flightItem.FlightList = Me 'So that you can close this screen from the flightItems
                 Me.Controls.Add(flightItem)

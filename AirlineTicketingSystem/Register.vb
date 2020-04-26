@@ -57,6 +57,7 @@ Public Class Register
     End Sub
 
     Private Sub Register_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.DoubleBuffered = True
         TitleBar.Load(Me)
     End Sub
 End Class

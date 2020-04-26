@@ -80,6 +80,7 @@ Partial Class HomeGuest
         Me.btnBookingSearch.TabIndex = 34
         Me.btnBookingSearch.Text = "Search booking"
         Me.btnBookingSearch.UseVisualStyleBackColor = False
+        Me.btnBookingSearch.Visible = False
         '
         'HomeGuest
         '

@@ -16,6 +16,7 @@ Public Class FlightSearch
     End Sub
 
     Private Sub FlightSearch_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.DoubleBuffered = True
         TitleBar.Load(Me)
     End Sub
 

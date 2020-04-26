@@ -22,6 +22,7 @@ Partial Class Register
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Register))
         Me.btnRedirect = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnRegister = New System.Windows.Forms.Button()
@@ -31,7 +32,6 @@ Partial Class Register
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.lblTitle = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -45,12 +45,13 @@ Partial Class Register
         'btnRedirect
         '
         Me.btnRedirect.AutoSize = True
+        Me.btnRedirect.BackColor = System.Drawing.Color.Transparent
         Me.btnRedirect.FlatAppearance.BorderSize = 0
         Me.btnRedirect.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRedirect.Font = New System.Drawing.Font("Poppins", 18.0!, CType(((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic) _
                 Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle))
         Me.btnRedirect.ForeColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.btnRedirect.Location = New System.Drawing.Point(539, 538)
+        Me.btnRedirect.Location = New System.Drawing.Point(529, 562)
         Me.btnRedirect.Name = "btnRedirect"
         Me.btnRedirect.Size = New System.Drawing.Size(102, 52)
         Me.btnRedirect.TabIndex = 5
@@ -62,11 +63,11 @@ Partial Class Register
         Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnBack.FlatAppearance.BorderSize = 0
         Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBack.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnBack.Font = New System.Drawing.Font("Poppins", 25.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnBack.ForeColor = System.Drawing.Color.White
-        Me.btnBack.Location = New System.Drawing.Point(33, 30)
+        Me.btnBack.Location = New System.Drawing.Point(52, 48)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(150, 75)
+        Me.btnBack.Size = New System.Drawing.Size(175, 75)
         Me.btnBack.TabIndex = 6
         Me.btnBack.Text = "back"
         Me.btnBack.UseVisualStyleBackColor = False
@@ -76,11 +77,11 @@ Partial Class Register
         Me.btnRegister.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnRegister.FlatAppearance.BorderSize = 0
         Me.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRegister.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnRegister.Font = New System.Drawing.Font("Poppins", 25.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnRegister.ForeColor = System.Drawing.Color.White
-        Me.btnRegister.Location = New System.Drawing.Point(805, 543)
+        Me.btnRegister.Location = New System.Drawing.Point(786, 562)
         Me.btnRegister.Name = "btnRegister"
-        Me.btnRegister.Size = New System.Drawing.Size(165, 75)
+        Me.btnRegister.Size = New System.Drawing.Size(175, 75)
         Me.btnRegister.TabIndex = 4
         Me.btnRegister.Text = "register"
         Me.btnRegister.UseVisualStyleBackColor = False
@@ -88,9 +89,10 @@ Partial Class Register
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Poppins", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(294, 543)
+        Me.Label5.Location = New System.Drawing.Point(284, 567)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(239, 42)
         Me.Label5.TabIndex = 33
@@ -101,7 +103,7 @@ Partial Class Register
         '
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPassword.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.txtPassword.Location = New System.Drawing.Point(470, 347)
+        Me.txtPassword.Location = New System.Drawing.Point(459, 372)
         Me.txtPassword.MaxLength = 100
         Me.txtPassword.Multiline = True
         Me.txtPassword.Name = "txtPassword"
@@ -114,7 +116,7 @@ Partial Class Register
         Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(295, 347)
+        Me.Label2.Location = New System.Drawing.Point(284, 372)
         Me.Label2.Name = "Label2"
         Me.Label2.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label2.Size = New System.Drawing.Size(175, 75)
@@ -127,7 +129,7 @@ Partial Class Register
         Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(295, 245)
+        Me.Label1.Location = New System.Drawing.Point(284, 274)
         Me.Label1.Name = "Label1"
         Me.Label1.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label1.Size = New System.Drawing.Size(175, 75)
@@ -138,7 +140,7 @@ Partial Class Register
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(470, 360)
+        Me.TextBox1.Location = New System.Drawing.Point(459, 389)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(1, 1)
@@ -150,7 +152,7 @@ Partial Class Register
         '
         Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtEmail.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.txtEmail.Location = New System.Drawing.Point(470, 245)
+        Me.txtEmail.Location = New System.Drawing.Point(459, 274)
         Me.txtEmail.MaxLength = 35
         Me.txtEmail.Multiline = True
         Me.txtEmail.Name = "txtEmail"
@@ -158,23 +160,12 @@ Partial Class Register
         Me.txtEmail.TabIndex = 1
         Me.txtEmail.Tag = ""
         '
-        'lblTitle
-        '
-        Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
-        Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.lblTitle.Location = New System.Drawing.Point(545, 45)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(199, 70)
-        Me.lblTitle.TabIndex = 27
-        Me.lblTitle.Text = "Register"
-        '
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(295, 140)
+        Me.Label3.Location = New System.Drawing.Point(284, 176)
         Me.Label3.Name = "Label3"
         Me.Label3.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label3.Size = New System.Drawing.Size(175, 75)
@@ -186,7 +177,7 @@ Partial Class Register
         '
         Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtName.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.txtName.Location = New System.Drawing.Point(470, 140)
+        Me.txtName.Location = New System.Drawing.Point(459, 176)
         Me.txtName.MaxLength = 30
         Me.txtName.Multiline = True
         Me.txtName.Name = "txtName"
@@ -199,7 +190,7 @@ Partial Class Register
         Me.Label4.BackColor = System.Drawing.Color.White
         Me.Label4.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(296, 447)
+        Me.Label4.Location = New System.Drawing.Point(286, 471)
         Me.Label4.Name = "Label4"
         Me.Label4.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label4.Size = New System.Drawing.Size(175, 75)
@@ -214,7 +205,7 @@ Partial Class Register
         Me.pnlGender.Controls.Add(Me.rbNonBinary)
         Me.pnlGender.Controls.Add(Me.rbFemale)
         Me.pnlGender.Font = New System.Drawing.Font("Poppins", 8.25!)
-        Me.pnlGender.Location = New System.Drawing.Point(470, 447)
+        Me.pnlGender.Location = New System.Drawing.Point(460, 471)
         Me.pnlGender.Name = "pnlGender"
         Me.pnlGender.Size = New System.Drawing.Size(500, 75)
         Me.pnlGender.TabIndex = 3
@@ -266,6 +257,7 @@ Partial Class Register
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.pnlGender)
         Me.Controls.Add(Me.Label4)
@@ -280,7 +272,6 @@ Partial Class Register
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.txtEmail)
-        Me.Controls.Add(Me.lblTitle)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Name = "Register"
         Me.Text = "Register"
@@ -300,7 +291,6 @@ Partial Class Register
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents txtEmail As TextBox
-    Friend WithEvents lblTitle As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents txtName As TextBox
     Friend WithEvents Label4 As Label
