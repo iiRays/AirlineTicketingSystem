@@ -159,7 +159,11 @@
                 Case "email"
                     Return (From user In context.Users Where user.Email.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "isregistered"
-                    Return (From user In context.Users Where user.IsRegistered = Convert.ToBoolean(searchFor)).Cast(Of T).ToList()
+                    If searchFor = "true" Or searchFor = "false" Then
+                        Return (From user In context.Users Where user.IsRegistered = Convert.ToBoolean(searchFor)).Cast(Of T).ToList()
+                    Else
+                        Return New List(Of T)
+                    End If
                 Case "dateofbirth"
                     Return (From user In context.Users Where user.UserID = Convert.ToDateTime(searchFor)).Cast(Of T).ToList()
                 Case "phoneno"
@@ -171,7 +175,11 @@
                 Case "city"
                     Return (From user In context.Users Where user.City.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "isstaff"
-                    Return (From user In context.Users Where user.IsStaff = Convert.ToBoolean(searchFor)).Cast(Of T).ToList()
+                    If searchFor = "true" Or searchFor = "false" Then
+                        Return (From user In context.Users Where user.IsStaff = Convert.ToBoolean(searchFor)).Cast(Of T).ToList()
+                    Else
+                        Return New List(Of T)
+                    End If
                 Case Else
                     Throw New Exception("Variable type is not present in Airline Database.")
             End Select
@@ -193,7 +201,11 @@
                 Case "creditcardno"
                     Return (From booking In context.Bookings Where booking.CreditCardNo.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case "iscancelled"
-                    Return (From booking In context.Bookings Where booking.IsCancelled = Convert.ToBoolean(searchFor)).Cast(Of T).ToList()
+                    If searchFor = "true" Or searchFor = "false" Then
+                        Return (From booking In context.Bookings Where booking.IsCancelled = Convert.ToBoolean(searchFor)).Cast(Of T).ToList()
+                    Else
+                        Return New List(Of T)
+                    End If
                 Case "extrabaggagekg"
                     Return (From booking In context.Bookings Where booking.ExtraBaggageKG = Convert.ToDecimal(searchFor)).Cast(Of T).ToList()
                 Case "flightno"
@@ -235,7 +247,13 @@
                 Case "price"
                     Return (From flight In context.Flights Where flight.Price = Convert.ToDecimal(searchFor)).Cast(Of T).ToList()
                 Case "isdaily"
-                    Return (From flight In context.Flights Where flight.IsDaily = Convert.ToBoolean(searchFor)).Cast(Of T).ToList()
+                    If searchFor = "true" Or searchFor = "false" Then
+                        Return (From flight In context.Flights Where flight.IsDaily = Convert.ToBoolean(searchFor)).Cast(Of T).ToList()
+                    Else
+                        Return New List(Of T)
+                    End If
+                Case "flightno"
+                    Return (From flight In context.Flights Where flight.FlightNo.ToLower().Contains(searchFor)).Cast(Of T).ToList()
                 Case Else
                     Throw New Exception("Variable type is not present in Airline Database.")
             End Select

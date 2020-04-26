@@ -90,7 +90,7 @@ Partial Class AdminFlightsView
         '
         Me.cbSearchBy.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSearchBy.FormattingEnabled = True
-        Me.cbSearchBy.Items.AddRange(New Object() {"FlightID", "RouteID", "PlaneID", "FlightNo", "Price", "IsDaily", "IsFlightInstance"})
+        Me.cbSearchBy.Items.AddRange(New Object() {"FlightID", "RouteID", "PlaneID", "FlightNo", "Price", "IsDaily"})
         Me.cbSearchBy.Location = New System.Drawing.Point(323, 275)
         Me.cbSearchBy.Name = "cbSearchBy"
         Me.cbSearchBy.Size = New System.Drawing.Size(350, 50)
