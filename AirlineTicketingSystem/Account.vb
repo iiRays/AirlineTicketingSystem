@@ -1,5 +1,6 @@
 ﻿Public Class Account
     Private Sub Account_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.DoubleBuffered = True
         TitleBar.Load(Me)
         Dim user = If(App.User Is Nothing, App.User, App.User)
 
