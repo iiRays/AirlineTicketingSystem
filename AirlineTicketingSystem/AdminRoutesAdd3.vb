@@ -74,8 +74,8 @@
 
             App.Session.Set("route", route)
 
-            App.Session.Delete("source")
-            App.Session.Delete("destination")
+            'App.Session.Delete("source")
+            'App.Session.Delete("destination")
 
             Quick.Navigate(Me, New AdminRoutesAddSummary)
         Else
