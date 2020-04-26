@@ -30,7 +30,11 @@
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Quick.Navigate(Me, New HomeUser)
+        If App.User.IsStaff Then
+            Quick.Navigate(Me, New HomeAdmin)
+        Else
+            Quick.Navigate(Me, New HomeUser)
+        End If
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
@@ -74,7 +78,11 @@
             End With
 
             DB.Update(App.User, App.User.UserID)
-            Quick.Navigate(Me, New HomeUser)
+            If App.User.IsStaff Then
+                Quick.Navigate(Me, New HomeAdmin)
+            Else
+                Quick.Navigate(Me, New HomeUser)
+            End If
         End If
     End Sub
 

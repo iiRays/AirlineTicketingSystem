@@ -118,7 +118,7 @@ Partial Class AdminFlightsEdit
         Me.dtpDeparture.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpDeparture.Location = New System.Drawing.Point(491, 384)
         Me.dtpDeparture.Name = "dtpDeparture"
-        Me.dtpDeparture.Size = New System.Drawing.Size(226, 37)
+        Me.dtpDeparture.Size = New System.Drawing.Size(317, 37)
         Me.dtpDeparture.TabIndex = 105
         '
         'Label8

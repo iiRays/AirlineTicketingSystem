@@ -89,4 +89,8 @@
             MessageBox.Show("Errors found:" & vbNewLine & errorMsg, "Errors found!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
+
+    Private Sub TxtID_DoubleClick(sender As Object, e As EventArgs) Handles txtID.DoubleClick
+        MessageBox.Show("[City ID] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+    End Sub
 End Class

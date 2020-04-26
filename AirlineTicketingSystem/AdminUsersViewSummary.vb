@@ -9,7 +9,7 @@
         lblGender.Text = user.Gender.ToString()
         lblEmail.Text = user.Email
         lblIsRegistered.Text = user.IsRegistered.ToString()
-        lblDateOfBirth.Text = If(user.DateOfBirth IsNot Nothing, user.DateOfBirth.ToString("dd MMM yyyy"), "N/A")
+        lblDateOfBirth.Text = If(user.DateOfBirth IsNot Nothing, user.DateOfBirth, "N/A")
         lblPhoneNo.Text = If(user.PhoneNo IsNot Nothing, user.PhoneNo, "N/A")
         lblCreditCardNo.Text = If(user.CreditCardNo IsNot Nothing, user.CreditCardNo, "N/A")
         lblCountry.Text = If(user.Country IsNot Nothing, user.Country, "N/A")

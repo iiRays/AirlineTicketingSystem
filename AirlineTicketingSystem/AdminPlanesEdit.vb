@@ -66,4 +66,16 @@
             MessageBox.Show("Errors found:" & vbNewLine & errorMsg, "Errors found!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
+
+    Private Sub TxtID_DoubleClick(sender As Object, e As EventArgs) Handles txtID.DoubleClick
+        MessageBox.Show("[Plane ID] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+    End Sub
+
+    Private Sub TxtCapacity_DoubleClick(sender As Object, e As EventArgs) Handles txtCapacity.DoubleClick
+        MessageBox.Show("[Capacity] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+    End Sub
+
+    Private Sub TxtMaxCols_DoubleClick(sender As Object, e As EventArgs) Handles txtMaxCols.DoubleClick
+        MessageBox.Show("[Max cols] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+    End Sub
 End Class

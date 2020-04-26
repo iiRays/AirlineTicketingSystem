@@ -33,7 +33,7 @@
         End If
 
         If Not errorsFound Then
-            Dim user As User
+            Dim user As New User
             user.UserID = Quick.GenerateId(Of User)
             user.Name = txtName.Text
             user.Email = txtEmail.Text
@@ -47,6 +47,8 @@
             ElseIf rbNonBinary.Checked Then
                 user.Gender = Convert.ToChar("N")
             End If
+            user.IsRegistered = True
+            user.IsStaff = True
 
             DB.Insert(user)
 

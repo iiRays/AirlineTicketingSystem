@@ -38,7 +38,7 @@
         End Try
 
         Try
-            mins = Convert.ToInt32(mins)
+            mins = Convert.ToInt32(minsStr)
         Catch ex As Exception
             errorMsg += "- [Mins] must be numeric." & vbNewLine
         End Try
