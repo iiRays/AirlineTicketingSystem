@@ -28,6 +28,7 @@
         Dim plane = DB.Get(Of Plane)(Flight.PlaneID)
 
         Dim totalPassengers = DB.GetTotalPassengers(Flight.FlightID)
+        Me.DoubleBuffered = True
         TitleBar.Load(Me)
         lblSeats.Text = totalPassengers & "/" & DB.Get(Of Plane)(Flight.PlaneID).Capacity
         If Flight.IsDaily Then
@@ -48,9 +49,9 @@
 
         'Whether to show Edit Flight button or not
         If (App.Session.Get("role") = "staff") Then
-            btnEdit.Show()
+            btnGo.Hide()
         Else
-            btnEdit.Hide()
+            btnGo.Show()
         End If
 
         If IsBooking = False OrElse totalPassengers >= plane.Capacity Then
@@ -71,9 +72,6 @@
         End If
     End Sub
 
-    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
-
-    End Sub
 
     Private Sub btnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
         Quick.Navigate(Me, New BookFlight1)
