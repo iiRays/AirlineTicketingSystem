@@ -76,8 +76,8 @@
 
             App.Session.Set("flight", flight)
 
-            App.Session.Delete("route")
-            App.Session.Delete("plane")
+            'App.Session.Delete("route")
+            'App.Session.Delete("plane")
 
             Quick.Navigate(Me, New AdminFlightsAddSummary)
         Else
