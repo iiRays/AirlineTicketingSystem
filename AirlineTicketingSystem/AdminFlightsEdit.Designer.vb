@@ -22,6 +22,7 @@ Partial Class AdminFlightsEdit
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminFlightsEdit))
         Me.pnlGender = New System.Windows.Forms.Panel()
         Me.rbDailyYes = New System.Windows.Forms.RadioButton()
         Me.rbDailyNo = New System.Windows.Forms.RadioButton()
@@ -40,7 +41,6 @@ Partial Class AdminFlightsEdit
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtRouteId = New System.Windows.Forms.TextBox()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.lblTitle = New System.Windows.Forms.Label()
         Me.btnEditRoute = New System.Windows.Forms.Button()
         Me.btnEditPlane = New System.Windows.Forms.Button()
         Me.pnlGender.SuspendLayout()
@@ -51,7 +51,7 @@ Partial Class AdminFlightsEdit
         Me.pnlGender.BackColor = System.Drawing.Color.White
         Me.pnlGender.Controls.Add(Me.rbDailyYes)
         Me.pnlGender.Controls.Add(Me.rbDailyNo)
-        Me.pnlGender.Location = New System.Drawing.Point(715, 449)
+        Me.pnlGender.Location = New System.Drawing.Point(714, 486)
         Me.pnlGender.Name = "pnlGender"
         Me.pnlGender.Size = New System.Drawing.Size(217, 65)
         Me.pnlGender.TabIndex = 113
@@ -91,7 +91,7 @@ Partial Class AdminFlightsEdit
         Me.Label9.BackColor = System.Drawing.Color.White
         Me.Label9.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold)
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(606, 449)
+        Me.Label9.Location = New System.Drawing.Point(605, 486)
         Me.Label9.Name = "Label9"
         Me.Label9.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.Label9.Size = New System.Drawing.Size(130, 65)
@@ -103,7 +103,7 @@ Partial Class AdminFlightsEdit
         '
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(732, 449)
+        Me.TextBox1.Location = New System.Drawing.Point(731, 486)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(200, 65)
@@ -116,7 +116,7 @@ Partial Class AdminFlightsEdit
         Me.dtpDeparture.CalendarTitleForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.dtpDeparture.Enabled = False
         Me.dtpDeparture.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpDeparture.Location = New System.Drawing.Point(491, 384)
+        Me.dtpDeparture.Location = New System.Drawing.Point(490, 421)
         Me.dtpDeparture.Name = "dtpDeparture"
         Me.dtpDeparture.Size = New System.Drawing.Size(317, 37)
         Me.dtpDeparture.TabIndex = 105
@@ -127,7 +127,7 @@ Partial Class AdminFlightsEdit
         Me.Label8.Enabled = False
         Me.Label8.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(479, 373)
+        Me.Label8.Location = New System.Drawing.Point(478, 410)
         Me.Label8.Name = "Label8"
         Me.Label8.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label8.Size = New System.Drawing.Size(453, 60)
@@ -139,7 +139,7 @@ Partial Class AdminFlightsEdit
         Me.Label5.BackColor = System.Drawing.Color.White
         Me.Label5.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(257, 373)
+        Me.Label5.Location = New System.Drawing.Point(256, 410)
         Me.Label5.Name = "Label5"
         Me.Label5.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label5.Size = New System.Drawing.Size(228, 60)
@@ -152,7 +152,7 @@ Partial Class AdminFlightsEdit
         Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(257, 298)
+        Me.Label2.Location = New System.Drawing.Point(256, 335)
         Me.Label2.Name = "Label2"
         Me.Label2.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label2.Size = New System.Drawing.Size(200, 60)
@@ -164,7 +164,7 @@ Partial Class AdminFlightsEdit
         '
         Me.txtFlightNo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtFlightNo.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFlightNo.Location = New System.Drawing.Point(453, 298)
+        Me.txtFlightNo.Location = New System.Drawing.Point(452, 335)
         Me.txtFlightNo.Multiline = True
         Me.txtFlightNo.Name = "txtFlightNo"
         Me.txtFlightNo.Size = New System.Drawing.Size(479, 60)
@@ -176,11 +176,11 @@ Partial Class AdminFlightsEdit
         Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnSave.FlatAppearance.BorderSize = 0
         Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSave.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnSave.Font = New System.Drawing.Font("Poppins", 25.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnSave.ForeColor = System.Drawing.Color.White
-        Me.btnSave.Location = New System.Drawing.Point(767, 530)
+        Me.btnSave.Location = New System.Drawing.Point(756, 567)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(165, 75)
+        Me.btnSave.Size = New System.Drawing.Size(175, 75)
         Me.btnSave.TabIndex = 102
         Me.btnSave.Text = "save"
         Me.btnSave.UseVisualStyleBackColor = False
@@ -190,7 +190,7 @@ Partial Class AdminFlightsEdit
         Me.Label4.BackColor = System.Drawing.Color.White
         Me.Label4.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(258, 449)
+        Me.Label4.Location = New System.Drawing.Point(257, 486)
         Me.Label4.Name = "Label4"
         Me.Label4.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.Label4.Size = New System.Drawing.Size(130, 65)
@@ -202,7 +202,7 @@ Partial Class AdminFlightsEdit
         '
         Me.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPrice.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrice.Location = New System.Drawing.Point(384, 449)
+        Me.txtPrice.Location = New System.Drawing.Point(383, 486)
         Me.txtPrice.Multiline = True
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.Size = New System.Drawing.Size(200, 65)
@@ -214,7 +214,7 @@ Partial Class AdminFlightsEdit
         Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(257, 225)
+        Me.Label1.Location = New System.Drawing.Point(256, 262)
         Me.Label1.Name = "Label1"
         Me.Label1.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label1.Size = New System.Drawing.Size(200, 60)
@@ -227,7 +227,7 @@ Partial Class AdminFlightsEdit
         Me.txtPlaneId.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPlaneId.Enabled = False
         Me.txtPlaneId.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPlaneId.Location = New System.Drawing.Point(453, 225)
+        Me.txtPlaneId.Location = New System.Drawing.Point(452, 262)
         Me.txtPlaneId.Multiline = True
         Me.txtPlaneId.Name = "txtPlaneId"
         Me.txtPlaneId.Size = New System.Drawing.Size(479, 60)
@@ -239,7 +239,7 @@ Partial Class AdminFlightsEdit
         Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(257, 148)
+        Me.Label3.Location = New System.Drawing.Point(256, 185)
         Me.Label3.Name = "Label3"
         Me.Label3.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label3.Size = New System.Drawing.Size(200, 60)
@@ -252,7 +252,7 @@ Partial Class AdminFlightsEdit
         Me.txtRouteId.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtRouteId.Enabled = False
         Me.txtRouteId.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRouteId.Location = New System.Drawing.Point(453, 148)
+        Me.txtRouteId.Location = New System.Drawing.Point(452, 185)
         Me.txtRouteId.Multiline = True
         Me.txtRouteId.Name = "txtRouteId"
         Me.txtRouteId.Size = New System.Drawing.Size(479, 60)
@@ -264,26 +264,14 @@ Partial Class AdminFlightsEdit
         Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnCancel.FlatAppearance.BorderSize = 0
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancel.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnCancel.Font = New System.Drawing.Font("Poppins", 25.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnCancel.ForeColor = System.Drawing.Color.White
-        Me.btnCancel.Location = New System.Drawing.Point(26, 22)
+        Me.btnCancel.Location = New System.Drawing.Point(44, 35)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(150, 75)
+        Me.btnCancel.Size = New System.Drawing.Size(175, 75)
         Me.btnCancel.TabIndex = 95
         Me.btnCancel.Text = "cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
-        '
-        'lblTitle
-        '
-        Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.lblTitle.Location = New System.Drawing.Point(491, 22)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(261, 70)
-        Me.lblTitle.TabIndex = 94
-        Me.lblTitle.Text = "edit a flight"
-        Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnEditRoute
         '
@@ -293,7 +281,7 @@ Partial Class AdminFlightsEdit
         Me.btnEditRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEditRoute.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnEditRoute.ForeColor = System.Drawing.Color.White
-        Me.btnEditRoute.Location = New System.Drawing.Point(949, 148)
+        Me.btnEditRoute.Location = New System.Drawing.Point(948, 185)
         Me.btnEditRoute.Name = "btnEditRoute"
         Me.btnEditRoute.Size = New System.Drawing.Size(165, 60)
         Me.btnEditRoute.TabIndex = 114
@@ -308,7 +296,7 @@ Partial Class AdminFlightsEdit
         Me.btnEditPlane.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEditPlane.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnEditPlane.ForeColor = System.Drawing.Color.White
-        Me.btnEditPlane.Location = New System.Drawing.Point(949, 225)
+        Me.btnEditPlane.Location = New System.Drawing.Point(948, 262)
         Me.btnEditPlane.Name = "btnEditPlane"
         Me.btnEditPlane.Size = New System.Drawing.Size(165, 60)
         Me.btnEditPlane.TabIndex = 115
@@ -320,6 +308,7 @@ Partial Class AdminFlightsEdit
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.btnEditPlane)
         Me.Controls.Add(Me.btnEditRoute)
@@ -339,7 +328,6 @@ Partial Class AdminFlightsEdit
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtRouteId)
         Me.Controls.Add(Me.btnCancel)
-        Me.Controls.Add(Me.lblTitle)
         Me.Name = "AdminFlightsEdit"
         Me.Text = "AdminFlightsEdit"
         Me.pnlGender.ResumeLayout(False)
@@ -367,7 +355,6 @@ Partial Class AdminFlightsEdit
     Friend WithEvents Label3 As Label
     Friend WithEvents txtRouteId As TextBox
     Friend WithEvents btnCancel As Button
-    Friend WithEvents lblTitle As Label
     Friend WithEvents btnEditRoute As Button
     Friend WithEvents btnEditPlane As Button
 End Class

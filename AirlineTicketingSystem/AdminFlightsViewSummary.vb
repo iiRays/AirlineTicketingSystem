@@ -2,7 +2,8 @@
     Private flight As Flight = App.Session.Get("flight")
     Private Sub AdminFlightsViewSummary_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        Me.DoubleBuffered = True
+        TitleBar.Load(Me, True)
 
         lblId.Text = flight.FlightID
         lblSource.Text = DB.GetFlightSource(flight.FlightID).City.Name

@@ -2,7 +2,8 @@
     Private flight As Flight = App.Session.Get("flight")
     Private Sub AdminFlightsEdit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        Me.DoubleBuffered = True
+        TitleBar.Load(Me, True)
 
         If App.Session.Get("route") Is Nothing Then
             App.Session.Set("route", flight.Route)

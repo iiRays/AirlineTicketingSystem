@@ -2,7 +2,8 @@
     Private city As City = App.Session.Get("city")
     Private Sub AdminCitiesEdit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        Me.DoubleBuffered = True
+        TitleBar.Load(Me, True)
 
         txtID.Text = city.CityID
         txtName.Text = city.Name

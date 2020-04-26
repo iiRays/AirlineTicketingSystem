@@ -22,6 +22,7 @@ Partial Class AdminFlightsAddSummary
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminFlightsAddSummary))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblIsInstance = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -50,7 +51,6 @@ Partial Class AdminFlightsAddSummary
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblId = New System.Windows.Forms.Label()
         Me.lblSource = New System.Windows.Forms.Label()
-        Me.lblTitle = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnUndo = New System.Windows.Forms.Button()
         Me.btnEdit = New System.Windows.Forms.Button()
@@ -88,7 +88,7 @@ Partial Class AdminFlightsAddSummary
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.lblId)
         Me.Panel1.Controls.Add(Me.lblSource)
-        Me.Panel1.Location = New System.Drawing.Point(263, 160)
+        Me.Panel1.Location = New System.Drawing.Point(156, 238)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(750, 375)
         Me.Panel1.TabIndex = 91
@@ -443,25 +443,13 @@ Partial Class AdminFlightsAddSummary
         Me.lblSource.Text = "Kuala Lumpur"
         Me.lblSource.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblTitle
-        '
-        Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.lblTitle.Location = New System.Drawing.Point(462, 27)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(348, 70)
-        Me.lblTitle.TabIndex = 90
-        Me.lblTitle.Text = "flight summary"
-        Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(478, 115)
+        Me.Label7.Location = New System.Drawing.Point(371, 193)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(323, 42)
         Me.Label7.TabIndex = 94
@@ -475,7 +463,7 @@ Partial Class AdminFlightsAddSummary
         Me.btnUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUndo.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnUndo.ForeColor = System.Drawing.Color.White
-        Me.btnUndo.Location = New System.Drawing.Point(378, 558)
+        Me.btnUndo.Location = New System.Drawing.Point(943, 238)
         Me.btnUndo.Name = "btnUndo"
         Me.btnUndo.Size = New System.Drawing.Size(150, 75)
         Me.btnUndo.TabIndex = 97
@@ -489,7 +477,7 @@ Partial Class AdminFlightsAddSummary
         Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEdit.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnEdit.ForeColor = System.Drawing.Color.White
-        Me.btnEdit.Location = New System.Drawing.Point(562, 558)
+        Me.btnEdit.Location = New System.Drawing.Point(943, 341)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(150, 75)
         Me.btnEdit.TabIndex = 96
@@ -503,7 +491,7 @@ Partial Class AdminFlightsAddSummary
         Me.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOk.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnOk.ForeColor = System.Drawing.Color.White
-        Me.btnOk.Location = New System.Drawing.Point(744, 558)
+        Me.btnOk.Location = New System.Drawing.Point(943, 537)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(150, 75)
         Me.btnOk.TabIndex = 95
@@ -515,13 +503,13 @@ Partial Class AdminFlightsAddSummary
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.btnUndo)
         Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.lblTitle)
         Me.Name = "AdminFlightsAddSummary"
         Me.Text = "AdminFlightsAddSummary"
         Me.Panel1.ResumeLayout(False)
@@ -558,7 +546,6 @@ Partial Class AdminFlightsAddSummary
     Friend WithEvents Label1 As Label
     Friend WithEvents lblId As Label
     Friend WithEvents lblSource As Label
-    Friend WithEvents lblTitle As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents btnUndo As Button
     Friend WithEvents btnEdit As Button

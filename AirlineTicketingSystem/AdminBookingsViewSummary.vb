@@ -2,7 +2,8 @@
     Private booking As Booking = App.Session.Get("booking")
     Private Sub AdminBookingsViewSummary_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        Me.DoubleBuffered = True
+        TitleBar.Load(Me, True)
 
         lblId.Text = booking.BookingID
         lblUserId.Text = booking.UserID

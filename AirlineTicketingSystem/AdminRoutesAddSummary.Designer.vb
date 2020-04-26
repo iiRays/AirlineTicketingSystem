@@ -22,6 +22,7 @@ Partial Class AdminRoutesAddSummary
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminRoutesAddSummary))
         Me.btnUndo = New System.Windows.Forms.Button()
         Me.btnEdit = New System.Windows.Forms.Button()
         Me.btnOk = New System.Windows.Forms.Button()
@@ -36,7 +37,6 @@ Partial Class AdminRoutesAddSummary
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblId = New System.Windows.Forms.Label()
         Me.lblSource = New System.Windows.Forms.Label()
-        Me.lblTitle = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -47,7 +47,7 @@ Partial Class AdminRoutesAddSummary
         Me.btnUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUndo.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnUndo.ForeColor = System.Drawing.Color.White
-        Me.btnUndo.Location = New System.Drawing.Point(378, 507)
+        Me.btnUndo.Location = New System.Drawing.Point(773, 270)
         Me.btnUndo.Name = "btnUndo"
         Me.btnUndo.Size = New System.Drawing.Size(150, 75)
         Me.btnUndo.TabIndex = 80
@@ -61,7 +61,7 @@ Partial Class AdminRoutesAddSummary
         Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEdit.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnEdit.ForeColor = System.Drawing.Color.White
-        Me.btnEdit.Location = New System.Drawing.Point(562, 507)
+        Me.btnEdit.Location = New System.Drawing.Point(773, 368)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(150, 75)
         Me.btnEdit.TabIndex = 79
@@ -75,7 +75,7 @@ Partial Class AdminRoutesAddSummary
         Me.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOk.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnOk.ForeColor = System.Drawing.Color.White
-        Me.btnOk.Location = New System.Drawing.Point(744, 507)
+        Me.btnOk.Location = New System.Drawing.Point(773, 491)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(150, 75)
         Me.btnOk.TabIndex = 78
@@ -88,7 +88,7 @@ Partial Class AdminRoutesAddSummary
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(464, 139)
+        Me.Label5.Location = New System.Drawing.Point(413, 225)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(325, 42)
         Me.Label5.TabIndex = 77
@@ -107,7 +107,7 @@ Partial Class AdminRoutesAddSummary
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.lblId)
         Me.Panel1.Controls.Add(Me.lblSource)
-        Me.Panel1.Location = New System.Drawing.Point(450, 184)
+        Me.Panel1.Location = New System.Drawing.Point(399, 270)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(350, 296)
         Me.Panel1.TabIndex = 76
@@ -228,30 +228,18 @@ Partial Class AdminRoutesAddSummary
         Me.lblSource.Text = "Kuala Lumpur"
         Me.lblSource.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblTitle
-        '
-        Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.lblTitle.Location = New System.Drawing.Point(459, 34)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(351, 70)
-        Me.lblTitle.TabIndex = 75
-        Me.lblTitle.Text = "route summary"
-        Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'AdminRoutesAddSummary
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.btnUndo)
         Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.lblTitle)
         Me.Name = "AdminRoutesAddSummary"
         Me.Text = "AdminRoutesAddSummary"
         Me.Panel1.ResumeLayout(False)
@@ -273,7 +261,6 @@ Partial Class AdminRoutesAddSummary
     Friend WithEvents Label1 As Label
     Friend WithEvents lblId As Label
     Friend WithEvents lblSource As Label
-    Friend WithEvents lblTitle As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents lblDestination As Label
 End Class

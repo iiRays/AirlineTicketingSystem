@@ -2,7 +2,8 @@
     Private user As User = App.Session.Get("user")
     Private Sub AdminUsersViewSummary_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        Me.DoubleBuffered = True
+        TitleBar.Load(Me, True)
 
         lblId.Text = user.UserID
         lblName.Text = user.Name

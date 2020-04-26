@@ -22,8 +22,11 @@ Partial Class AdminUsersViewSummary
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminUsersViewSummary))
         Me.btnBack = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblIsStaff = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblPhoneNo = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -43,9 +46,6 @@ Partial Class AdminUsersViewSummary
         Me.Label7 = New System.Windows.Forms.Label()
         Me.lblIsRegistered = New System.Windows.Forms.Label()
         Me.lblId = New System.Windows.Forms.Label()
-        Me.lblTitle = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.lblIsStaff = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -54,11 +54,11 @@ Partial Class AdminUsersViewSummary
         Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnBack.FlatAppearance.BorderSize = 0
         Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBack.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnBack.Font = New System.Drawing.Font("Poppins", 25.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnBack.ForeColor = System.Drawing.Color.White
-        Me.btnBack.Location = New System.Drawing.Point(22, 24)
+        Me.btnBack.Location = New System.Drawing.Point(42, 33)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(150, 75)
+        Me.btnBack.Size = New System.Drawing.Size(175, 75)
         Me.btnBack.TabIndex = 92
         Me.btnBack.Text = "back"
         Me.btnBack.UseVisualStyleBackColor = False
@@ -87,10 +87,36 @@ Partial Class AdminUsersViewSummary
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.lblIsRegistered)
         Me.Panel1.Controls.Add(Me.lblId)
-        Me.Panel1.Location = New System.Drawing.Point(352, 138)
+        Me.Panel1.Location = New System.Drawing.Point(389, 180)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(550, 471)
         Me.Panel1.TabIndex = 90
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(28, 410)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(93, 36)
+        Me.Label4.TabIndex = 80
+        Me.Label4.Text = "Is staff?"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblIsStaff
+        '
+        Me.lblIsStaff.AutoSize = True
+        Me.lblIsStaff.BackColor = System.Drawing.Color.Transparent
+        Me.lblIsStaff.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIsStaff.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
+        Me.lblIsStaff.Location = New System.Drawing.Point(195, 410)
+        Me.lblIsStaff.Name = "lblIsStaff"
+        Me.lblIsStaff.Size = New System.Drawing.Size(69, 36)
+        Me.lblIsStaff.TabIndex = 79
+        Me.lblIsStaff.Text = "False"
+        Me.lblIsStaff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2
         '
@@ -338,59 +364,20 @@ Partial Class AdminUsersViewSummary
         Me.lblId.Text = "001"
         Me.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblTitle
-        '
-        Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.lblTitle.Location = New System.Drawing.Point(475, 29)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(331, 70)
-        Me.lblTitle.TabIndex = 89
-        Me.lblTitle.Text = "user summary"
-        Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(28, 410)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(93, 36)
-        Me.Label4.TabIndex = 80
-        Me.Label4.Text = "Is staff?"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lblIsStaff
-        '
-        Me.lblIsStaff.AutoSize = True
-        Me.lblIsStaff.BackColor = System.Drawing.Color.Transparent
-        Me.lblIsStaff.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIsStaff.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.lblIsStaff.Location = New System.Drawing.Point(195, 410)
-        Me.lblIsStaff.Name = "lblIsStaff"
-        Me.lblIsStaff.Size = New System.Drawing.Size(69, 36)
-        Me.lblIsStaff.TabIndex = 79
-        Me.lblIsStaff.Text = "False"
-        Me.lblIsStaff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'AdminUsersViewSummary
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.lblTitle)
         Me.Name = "AdminUsersViewSummary"
         Me.Text = "AdminUsersViewSummary"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -415,7 +402,6 @@ Partial Class AdminUsersViewSummary
     Friend WithEvents Label7 As Label
     Friend WithEvents lblIsRegistered As Label
     Friend WithEvents lblId As Label
-    Friend WithEvents lblTitle As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents lblIsStaff As Label
 End Class

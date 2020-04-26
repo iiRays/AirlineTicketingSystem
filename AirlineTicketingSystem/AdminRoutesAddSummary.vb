@@ -2,7 +2,8 @@
     Private route As Route = App.Session.Get("route")
     Private Sub AdminRoutesAddSummary_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        Me.DoubleBuffered = True
+        TitleBar.Load(Me, True)
 
         lblId.Text = route.RouteID
         lblSource.Text = DB.GetRouteSource(route.RouteID).City.Name

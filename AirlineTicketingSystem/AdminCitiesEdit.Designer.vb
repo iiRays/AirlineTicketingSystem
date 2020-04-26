@@ -22,6 +22,7 @@ Partial Class AdminCitiesEdit
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminCitiesEdit))
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtLatitude = New System.Windows.Forms.TextBox()
@@ -34,7 +35,6 @@ Partial Class AdminCitiesEdit
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.lblTitle = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
@@ -44,11 +44,11 @@ Partial Class AdminCitiesEdit
         Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnSave.FlatAppearance.BorderSize = 0
         Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSave.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnSave.Font = New System.Drawing.Font("Poppins", 25.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnSave.ForeColor = System.Drawing.Color.White
-        Me.btnSave.Location = New System.Drawing.Point(794, 557)
+        Me.btnSave.Location = New System.Drawing.Point(783, 594)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(165, 75)
+        Me.btnSave.Size = New System.Drawing.Size(175, 75)
         Me.btnSave.TabIndex = 69
         Me.btnSave.Text = "save"
         Me.btnSave.UseVisualStyleBackColor = False
@@ -58,7 +58,7 @@ Partial Class AdminCitiesEdit
         Me.Label5.BackColor = System.Drawing.Color.White
         Me.Label5.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(285, 477)
+        Me.Label5.Location = New System.Drawing.Point(284, 516)
         Me.Label5.Name = "Label5"
         Me.Label5.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.Label5.Size = New System.Drawing.Size(130, 65)
@@ -70,7 +70,7 @@ Partial Class AdminCitiesEdit
         '
         Me.txtLatitude.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtLatitude.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLatitude.Location = New System.Drawing.Point(412, 477)
+        Me.txtLatitude.Location = New System.Drawing.Point(411, 516)
         Me.txtLatitude.Multiline = True
         Me.txtLatitude.Name = "txtLatitude"
         Me.txtLatitude.Size = New System.Drawing.Size(200, 65)
@@ -82,7 +82,7 @@ Partial Class AdminCitiesEdit
         Me.Label4.BackColor = System.Drawing.Color.White
         Me.Label4.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(633, 477)
+        Me.Label4.Location = New System.Drawing.Point(632, 516)
         Me.Label4.Name = "Label4"
         Me.Label4.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.Label4.Size = New System.Drawing.Size(130, 65)
@@ -94,7 +94,7 @@ Partial Class AdminCitiesEdit
         '
         Me.txtLongitude.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtLongitude.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLongitude.Location = New System.Drawing.Point(759, 477)
+        Me.txtLongitude.Location = New System.Drawing.Point(758, 516)
         Me.txtLongitude.Multiline = True
         Me.txtLongitude.Name = "txtLongitude"
         Me.txtLongitude.Size = New System.Drawing.Size(200, 65)
@@ -106,7 +106,7 @@ Partial Class AdminCitiesEdit
         Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(284, 388)
+        Me.Label2.Location = New System.Drawing.Point(283, 425)
         Me.Label2.Name = "Label2"
         Me.Label2.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label2.Size = New System.Drawing.Size(175, 75)
@@ -118,7 +118,7 @@ Partial Class AdminCitiesEdit
         '
         Me.txtState.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtState.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtState.Location = New System.Drawing.Point(459, 388)
+        Me.txtState.Location = New System.Drawing.Point(458, 425)
         Me.txtState.Multiline = True
         Me.txtState.Name = "txtState"
         Me.txtState.Size = New System.Drawing.Size(500, 75)
@@ -130,7 +130,7 @@ Partial Class AdminCitiesEdit
         Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(284, 299)
+        Me.Label1.Location = New System.Drawing.Point(283, 335)
         Me.Label1.Name = "Label1"
         Me.Label1.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label1.Size = New System.Drawing.Size(175, 75)
@@ -142,7 +142,7 @@ Partial Class AdminCitiesEdit
         '
         Me.txtCountry.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCountry.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCountry.Location = New System.Drawing.Point(459, 299)
+        Me.txtCountry.Location = New System.Drawing.Point(458, 335)
         Me.txtCountry.Multiline = True
         Me.txtCountry.Name = "txtCountry"
         Me.txtCountry.Size = New System.Drawing.Size(500, 75)
@@ -154,7 +154,7 @@ Partial Class AdminCitiesEdit
         Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(284, 210)
+        Me.Label3.Location = New System.Drawing.Point(283, 244)
         Me.Label3.Name = "Label3"
         Me.Label3.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label3.Size = New System.Drawing.Size(175, 75)
@@ -166,7 +166,7 @@ Partial Class AdminCitiesEdit
         '
         Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtName.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtName.Location = New System.Drawing.Point(459, 210)
+        Me.txtName.Location = New System.Drawing.Point(458, 244)
         Me.txtName.Multiline = True
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(500, 75)
@@ -178,33 +178,21 @@ Partial Class AdminCitiesEdit
         Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnCancel.FlatAppearance.BorderSize = 0
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancel.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnCancel.Font = New System.Drawing.Font("Poppins", 25.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnCancel.ForeColor = System.Drawing.Color.White
-        Me.btnCancel.Location = New System.Drawing.Point(39, 31)
+        Me.btnCancel.Location = New System.Drawing.Point(45, 37)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(150, 75)
+        Me.btnCancel.Size = New System.Drawing.Size(175, 75)
         Me.btnCancel.TabIndex = 58
         Me.btnCancel.Text = "cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
-        '
-        'lblTitle
-        '
-        Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.lblTitle.Location = New System.Drawing.Point(504, 31)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(231, 70)
-        Me.lblTitle.TabIndex = 57
-        Me.lblTitle.Text = "edit a city"
-        Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label6
         '
         Me.Label6.BackColor = System.Drawing.Color.White
         Me.Label6.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(284, 120)
+        Me.Label6.Location = New System.Drawing.Point(283, 157)
         Me.Label6.Name = "Label6"
         Me.Label6.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label6.Size = New System.Drawing.Size(175, 75)
@@ -217,7 +205,7 @@ Partial Class AdminCitiesEdit
         Me.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID.Enabled = False
         Me.txtID.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtID.Location = New System.Drawing.Point(459, 120)
+        Me.txtID.Location = New System.Drawing.Point(458, 157)
         Me.txtID.Multiline = True
         Me.txtID.Name = "txtID"
         Me.txtID.Size = New System.Drawing.Size(500, 75)
@@ -229,6 +217,7 @@ Partial Class AdminCitiesEdit
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtID)
@@ -244,7 +233,6 @@ Partial Class AdminCitiesEdit
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.btnCancel)
-        Me.Controls.Add(Me.lblTitle)
         Me.Name = "AdminCitiesEdit"
         Me.Text = "AdminCitiesEdit"
         Me.ResumeLayout(False)
@@ -264,7 +252,6 @@ Partial Class AdminCitiesEdit
     Friend WithEvents Label3 As Label
     Friend WithEvents txtName As TextBox
     Friend WithEvents btnCancel As Button
-    Friend WithEvents lblTitle As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents txtID As TextBox
 End Class

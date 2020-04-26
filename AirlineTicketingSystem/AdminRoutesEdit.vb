@@ -2,7 +2,8 @@
     Private route As Route = App.Session.Get("route")
     Private Sub AdminRoutesEdit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        Me.DoubleBuffered = True
+        TitleBar.Load(Me, True)
 
         If App.Session.Get("source") Is Nothing Then
             App.Session.Set("source", DB.GetRouteSource(route.RouteID).City)
