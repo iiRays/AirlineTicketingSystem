@@ -19,7 +19,7 @@
             'Send welcome email
             Email.Send("Welcome to Ao Zora!", "Hey " & User.Name & "! Welcome to your new journey with us across the blue (ao) skies (zora). We hope you will have a great time with us.", User.Email)
             RegistrationForm.Close()
-            Quick.Navigate(Me, New Login)
+            Quick.Navigate(Me, New VerifyEmailSuccess)
         Else
             Quick.ShowError("Invalid code", "The verification code that you have entered is incorrect.")
         End If

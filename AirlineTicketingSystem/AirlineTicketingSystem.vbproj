@@ -679,6 +679,12 @@
     <Compile Include="VerifyEmail.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="VerifyEmailSuccess.Designer.vb">
+      <DependentUpon>VerifyEmailSuccess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VerifyEmailSuccess.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Account.resx">
@@ -961,6 +967,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VerifyEmail.resx">
       <DependentUpon>VerifyEmail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerifyEmailSuccess.resx">
+      <DependentUpon>VerifyEmailSuccess.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
