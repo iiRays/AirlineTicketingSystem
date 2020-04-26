@@ -2,11 +2,12 @@
 
     Private Sub AdminDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        Me.DoubleBuffered = True
+        TitleBar.Load(Me, True)
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Quick.Navigate(Me, New HomeAdmin)
+        Quick.Navigate(Me, New AdminDashboard)
     End Sub
 
     Private Sub btnDaily_Click(sender As Object, e As EventArgs) Handles btnSalesDaily.Click

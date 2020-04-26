@@ -43,12 +43,18 @@ Partial Class UserReport
         '
         'btnBack
         '
-        Me.btnBack.Location = New System.Drawing.Point(232, 454)
+        Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.btnBack.FlatAppearance.BorderSize = 0
+        Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBack.Font = New System.Drawing.Font("Poppins", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.btnBack.ForeColor = System.Drawing.Color.White
+        Me.btnBack.Location = New System.Drawing.Point(139, 363)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(75, 23)
+        Me.btnBack.Size = New System.Drawing.Size(80, 40)
         Me.btnBack.TabIndex = 39
         Me.btnBack.Text = "Back"
-        Me.btnBack.UseVisualStyleBackColor = True
+        Me.btnBack.UseVisualStyleBackColor = False
         '
         'grpDateSelection
         '
@@ -56,46 +62,56 @@ Partial Class UserReport
         Me.grpDateSelection.Controls.Add(Me.Label3)
         Me.grpDateSelection.Controls.Add(Me.cboCategory)
         Me.grpDateSelection.Controls.Add(Me.Label1)
-        Me.grpDateSelection.Location = New System.Drawing.Point(31, 12)
+        Me.grpDateSelection.Location = New System.Drawing.Point(23, 10)
+        Me.grpDateSelection.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.grpDateSelection.Name = "grpDateSelection"
-        Me.grpDateSelection.Size = New System.Drawing.Size(385, 91)
+        Me.grpDateSelection.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.grpDateSelection.Size = New System.Drawing.Size(289, 74)
         Me.grpDateSelection.TabIndex = 37
         Me.grpDateSelection.TabStop = False
         '
         'txtSearch
         '
-        Me.txtSearch.Location = New System.Drawing.Point(124, 54)
+        Me.txtSearch.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearch.Location = New System.Drawing.Point(96, 44)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(218, 22)
+        Me.txtSearch.Size = New System.Drawing.Size(164, 24)
         Me.txtSearch.TabIndex = 19
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(16, 57)
+        Me.Label3.Location = New System.Drawing.Point(4, 46)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(102, 17)
+        Me.Label3.Size = New System.Drawing.Size(90, 19)
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "Search Name :"
         '
         'cboCategory
         '
         Me.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboCategory.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboCategory.FormattingEnabled = True
         Me.cboCategory.Items.AddRange(New Object() {"All", "Staffs", "Customers"})
-        Me.cboCategory.Location = New System.Drawing.Point(124, 21)
+        Me.cboCategory.Location = New System.Drawing.Point(98, 12)
+        Me.cboCategory.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cboCategory.Name = "cboCategory"
-        Me.cboCategory.Size = New System.Drawing.Size(98, 24)
+        Me.cboCategory.Size = New System.Drawing.Size(74, 27)
         Me.cboCategory.TabIndex = 17
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(44, 24)
+        Me.Label1.Location = New System.Drawing.Point(27, 15)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(73, 17)
+        Me.Label1.Size = New System.Drawing.Size(67, 19)
         Me.Label1.TabIndex = 16
         Me.Label1.Text = "Category :"
         '
@@ -106,30 +122,36 @@ Partial Class UserReport
         'Label6
         '
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label6.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label6.Location = New System.Drawing.Point(269, 121)
+        Me.Label6.Location = New System.Drawing.Point(202, 98)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(147, 20)
+        Me.Label6.Size = New System.Drawing.Size(111, 17)
         Me.Label6.TabIndex = 35
         Me.Label6.Text = "Contact No."
         '
         'Label5
         '
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label5.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label5.Location = New System.Drawing.Point(88, 121)
+        Me.Label5.Location = New System.Drawing.Point(66, 98)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(231, 20)
+        Me.Label5.Size = New System.Drawing.Size(174, 17)
         Me.Label5.TabIndex = 34
         Me.Label5.Text = "Name"
         '
         'Label2
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label2.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(31, 121)
+        Me.Label2.Location = New System.Drawing.Point(23, 98)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(63, 20)
+        Me.Label2.Size = New System.Drawing.Size(48, 17)
         Me.Label2.TabIndex = 33
         Me.Label2.Text = "No"
         '
@@ -138,28 +160,38 @@ Partial Class UserReport
         '
         'lstStatistic
         '
+        Me.lstStatistic.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstStatistic.FormattingEnabled = True
-        Me.lstStatistic.ItemHeight = 16
-        Me.lstStatistic.Location = New System.Drawing.Point(31, 144)
+        Me.lstStatistic.ItemHeight = 19
+        Me.lstStatistic.Location = New System.Drawing.Point(23, 117)
+        Me.lstStatistic.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lstStatistic.Name = "lstStatistic"
-        Me.lstStatistic.Size = New System.Drawing.Size(385, 276)
+        Me.lstStatistic.Size = New System.Drawing.Size(290, 232)
         Me.lstStatistic.TabIndex = 32
         '
         'btnPrint
         '
-        Me.btnPrint.Location = New System.Drawing.Point(335, 454)
+        Me.btnPrint.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.btnPrint.FlatAppearance.BorderSize = 0
+        Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrint.Font = New System.Drawing.Font("Poppins", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.btnPrint.ForeColor = System.Drawing.Color.White
+        Me.btnPrint.Location = New System.Drawing.Point(232, 363)
+        Me.btnPrint.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(75, 23)
+        Me.btnPrint.Size = New System.Drawing.Size(80, 40)
         Me.btnPrint.TabIndex = 31
         Me.btnPrint.Text = "Print"
-        Me.btnPrint.UseVisualStyleBackColor = True
+        Me.btnPrint.UseVisualStyleBackColor = False
         '
         'lblCount
         '
+        Me.lblCount.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCount.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblCount.Location = New System.Drawing.Point(28, 423)
+        Me.lblCount.Location = New System.Drawing.Point(20, 363)
+        Me.lblCount.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblCount.Name = "lblCount"
-        Me.lblCount.Size = New System.Drawing.Size(120, 16)
+        Me.lblCount.Size = New System.Drawing.Size(90, 13)
         Me.lblCount.TabIndex = 30
         '
         'dlgPreview
@@ -173,12 +205,12 @@ Partial Class UserReport
         Me.dlgPreview.Name = "PrintPreviewDialog1"
         Me.dlgPreview.Visible = False
         '
-        'StatisticReport
+        'UserReport
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(449, 488)
+        Me.ClientSize = New System.Drawing.Size(337, 420)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.grpDateSelection)
         Me.Controls.Add(Me.Label6)
@@ -188,7 +220,8 @@ Partial Class UserReport
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.lblCount)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Name = "StatisticReport"
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Name = "UserReport"
         Me.Text = "StatisticReport"
         Me.grpDateSelection.ResumeLayout(False)
         Me.grpDateSelection.PerformLayout()
