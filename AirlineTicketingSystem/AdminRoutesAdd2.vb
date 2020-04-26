@@ -31,7 +31,8 @@
 
     Private Sub AdminRoutesAdd2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        Me.DoubleBuffered = True
+        TitleBar.Load(Me, True)
 
         cbSearchBy.SelectedIndex = 0
     End Sub

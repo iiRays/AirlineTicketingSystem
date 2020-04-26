@@ -3,7 +3,8 @@
     Dim destination As City = App.Session.Get("destination")
     Private Sub AdminRoutesAdd3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        Me.DoubleBuffered = True
+        TitleBar.Load(Me, True)
 
         txtSource.Text = source.Name
         txtDestination.Text = destination.Name

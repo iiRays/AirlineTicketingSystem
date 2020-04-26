@@ -3,7 +3,8 @@
     Dim plane As Plane = App.Session.Get("plane")
     Private Sub AdminFlightsAdd3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        Me.DoubleBuffered = True
+        TitleBar.Load(Me, True)
 
         txtRouteId.Text = route.RouteID
         txtPlaneId.Text = plane.PlaneID

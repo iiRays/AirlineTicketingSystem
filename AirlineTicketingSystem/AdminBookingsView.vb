@@ -1,7 +1,10 @@
 ﻿Public Class AdminBookingsView
     Private Sub AdminBookingsView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        Me.DoubleBuffered = True
+        TitleBar.Load(Me, True)
+
+        cbSearchBy.SelectedIndex = 0
     End Sub
 
     Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click

@@ -1,7 +1,8 @@
 ﻿Public Class AdminUsersRegister
     Private Sub AdminUsersRegister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
-        TitleBar.Load(Me, True, False)
+        Me.DoubleBuffered = True
+        TitleBar.Load(Me, True)
         rbMale.Checked = True
     End Sub
 
