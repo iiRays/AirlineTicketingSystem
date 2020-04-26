@@ -5,6 +5,7 @@ Public Class BookFlight1
     Public User As User
 
     Private Sub BookFlight1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.DoubleBuffered = True
         TitleBar.Load(Me)
         'Check for existing
         If App.Session.Get("Booking") IsNot Nothing Then

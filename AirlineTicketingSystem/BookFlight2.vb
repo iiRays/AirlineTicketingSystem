@@ -52,6 +52,7 @@ Public Class BookFlight2
     Private Sub BookFlight2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         btnNext.Hide()
         LoadAllSeats()
+        Me.DoubleBuffered = True
         TitleBar.Load(Me)
         Dim exists = True
         Dim generatedId = ""
@@ -68,7 +69,7 @@ Public Class BookFlight2
         For passengerCount As Integer = 0 To booking.NoOfPassengers - 1 Step 1
             'Add single passenger name textbox
             Dim passengerItem As New PassengerItem()
-            passengerItem.Location = New Point(138, 193 + (passengerCount * 100))
+            passengerItem.Location = New Point(138, 213 + (passengerCount * 100))
             passengerItem.lblName.Text = "name " & (passengerCount + 1)
             passengerItem.Name = "passengerItem" & (passengerCount + 1)
             passengerItem.bookFlightForm = Me

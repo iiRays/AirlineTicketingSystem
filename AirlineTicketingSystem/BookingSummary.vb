@@ -11,6 +11,7 @@
     End Sub
 
     Private Sub BookingSummary_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.DoubleBuffered = True
         TitleBar.Load(Me)
         lblPrice.Text = CType(App.Session.Get("Booking"), Booking).TotalPrice
         If flight.IsDaily Then

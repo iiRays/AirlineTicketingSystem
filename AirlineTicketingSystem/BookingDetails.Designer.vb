@@ -22,6 +22,7 @@ Partial Class BookingDetails
 	'Do not modify it using the code editor.
 	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BookingDetails))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblBaggageKg = New System.Windows.Forms.Label()
@@ -47,7 +48,6 @@ Partial Class BookingDetails
         Me.lblDate = New System.Windows.Forms.Label()
         Me.btnViewTickets = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
-        Me.lblTitle = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -77,9 +77,9 @@ Partial Class BookingDetails
         Me.Panel1.Controls.Add(Me.lblSource)
         Me.Panel1.Controls.Add(Me.lblPaymentDate)
         Me.Panel1.Controls.Add(Me.lblDate)
-        Me.Panel1.Location = New System.Drawing.Point(109, 161)
+        Me.Panel1.Location = New System.Drawing.Point(131, 190)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1000, 425)
+        Me.Panel1.Size = New System.Drawing.Size(1000, 367)
         Me.Panel1.TabIndex = 44
         '
         'Label9
@@ -201,7 +201,7 @@ Partial Class BookingDetails
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(436, 263)
+        Me.Label5.Location = New System.Drawing.Point(434, 216)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(148, 42)
         Me.Label5.TabIndex = 56
@@ -213,7 +213,7 @@ Partial Class BookingDetails
         Me.lblArrivalTime.AutoSize = True
         Me.lblArrivalTime.Font = New System.Drawing.Font("Poppins", 25.0!, System.Drawing.FontStyle.Bold)
         Me.lblArrivalTime.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.lblArrivalTime.Location = New System.Drawing.Point(433, 341)
+        Me.lblArrivalTime.Location = New System.Drawing.Point(431, 294)
         Me.lblArrivalTime.Name = "lblArrivalTime"
         Me.lblArrivalTime.Size = New System.Drawing.Size(106, 60)
         Me.lblArrivalTime.TabIndex = 55
@@ -225,7 +225,7 @@ Partial Class BookingDetails
         Me.lblDestination.AutoSize = True
         Me.lblDestination.Font = New System.Drawing.Font("Poppins", 32.0!, System.Drawing.FontStyle.Bold)
         Me.lblDestination.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.lblDestination.Location = New System.Drawing.Point(430, 289)
+        Me.lblDestination.Location = New System.Drawing.Point(428, 242)
         Me.lblDestination.Name = "lblDestination"
         Me.lblDestination.Size = New System.Drawing.Size(345, 76)
         Me.lblDestination.TabIndex = 54
@@ -237,7 +237,7 @@ Partial Class BookingDetails
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(40, 263)
+        Me.Label4.Location = New System.Drawing.Point(38, 216)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(206, 42)
         Me.Label4.TabIndex = 53
@@ -286,7 +286,7 @@ Partial Class BookingDetails
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(873, 264)
+        Me.Label2.Location = New System.Drawing.Point(872, 245)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(102, 42)
         Me.Label2.TabIndex = 49
@@ -297,7 +297,7 @@ Partial Class BookingDetails
         '
         Me.lblPassengers.Font = New System.Drawing.Font("Poppins", 40.0!, System.Drawing.FontStyle.Bold)
         Me.lblPassengers.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.lblPassengers.Location = New System.Drawing.Point(876, 289)
+        Me.lblPassengers.Location = New System.Drawing.Point(875, 270)
         Me.lblPassengers.Name = "lblPassengers"
         Me.lblPassengers.Size = New System.Drawing.Size(93, 95)
         Me.lblPassengers.TabIndex = 48
@@ -309,7 +309,7 @@ Partial Class BookingDetails
         Me.lblDepartureTime.AutoSize = True
         Me.lblDepartureTime.Font = New System.Drawing.Font("Poppins", 25.0!, System.Drawing.FontStyle.Bold)
         Me.lblDepartureTime.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.lblDepartureTime.Location = New System.Drawing.Point(37, 341)
+        Me.lblDepartureTime.Location = New System.Drawing.Point(35, 294)
         Me.lblDepartureTime.Name = "lblDepartureTime"
         Me.lblDepartureTime.Size = New System.Drawing.Size(112, 60)
         Me.lblDepartureTime.TabIndex = 45
@@ -321,7 +321,7 @@ Partial Class BookingDetails
         Me.lblSource.AutoSize = True
         Me.lblSource.Font = New System.Drawing.Font("Poppins", 32.0!, System.Drawing.FontStyle.Bold)
         Me.lblSource.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.lblSource.Location = New System.Drawing.Point(34, 289)
+        Me.lblSource.Location = New System.Drawing.Point(32, 242)
         Me.lblSource.Name = "lblSource"
         Me.lblSource.Size = New System.Drawing.Size(343, 76)
         Me.lblSource.TabIndex = 44
@@ -360,7 +360,7 @@ Partial Class BookingDetails
         Me.btnViewTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnViewTickets.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnViewTickets.ForeColor = System.Drawing.Color.White
-        Me.btnViewTickets.Location = New System.Drawing.Point(884, 592)
+        Me.btnViewTickets.Location = New System.Drawing.Point(906, 574)
         Me.btnViewTickets.Name = "btnViewTickets"
         Me.btnViewTickets.Size = New System.Drawing.Size(225, 75)
         Me.btnViewTickets.TabIndex = 0
@@ -372,26 +372,14 @@ Partial Class BookingDetails
         Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnBack.FlatAppearance.BorderSize = 0
         Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBack.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnBack.Font = New System.Drawing.Font("Poppins", 25.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnBack.ForeColor = System.Drawing.Color.White
-        Me.btnBack.Location = New System.Drawing.Point(25, 27)
+        Me.btnBack.Location = New System.Drawing.Point(56, 42)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(150, 75)
+        Me.btnBack.Size = New System.Drawing.Size(175, 75)
         Me.btnBack.TabIndex = 2
         Me.btnBack.Text = "back"
         Me.btnBack.UseVisualStyleBackColor = False
-        '
-        'lblTitle
-        '
-        Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
-        Me.lblTitle.ForeColor = System.Drawing.Color.White
-        Me.lblTitle.Location = New System.Drawing.Point(453, 32)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(348, 70)
-        Me.lblTitle.TabIndex = 42
-        Me.lblTitle.Text = "Booking Details"
-        Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnCancel
         '
@@ -400,7 +388,7 @@ Partial Class BookingDetails
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnCancel.ForeColor = System.Drawing.Color.White
-        Me.btnCancel.Location = New System.Drawing.Point(630, 592)
+        Me.btnCancel.Location = New System.Drawing.Point(640, 574)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(248, 75)
         Me.btnCancel.TabIndex = 1
@@ -412,18 +400,17 @@ Partial Class BookingDetails
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnBack)
-        Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.btnViewTickets)
         Me.Name = "BookingDetails"
         Me.Text = "BookingDetails"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -445,9 +432,8 @@ Partial Class BookingDetails
 	Friend WithEvents lblPaymentDate As Label
 	Friend WithEvents lblDate As Label
 	Friend WithEvents btnBack As Button
-	Friend WithEvents lblTitle As Label
-	Friend WithEvents Label7 As Label
-	Friend WithEvents lblFlightId As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents lblFlightId As Label
 	Friend WithEvents btnViewFlight As Button
 	Friend WithEvents lblStatus As Label
 	Friend WithEvents Label8 As Label

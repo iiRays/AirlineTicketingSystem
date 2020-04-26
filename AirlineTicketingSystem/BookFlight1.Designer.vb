@@ -22,8 +22,8 @@ Partial Class BookFlight1
 	'Do not modify it using the code editor.
 	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BookFlight1))
         Me.btnBack = New System.Windows.Forms.Button()
-        Me.lblTitle = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblId = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -50,33 +50,21 @@ Partial Class BookFlight1
         Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.btnBack.FlatAppearance.BorderSize = 0
         Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBack.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnBack.Font = New System.Drawing.Font("Poppins", 25.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnBack.ForeColor = System.Drawing.Color.White
-        Me.btnBack.Location = New System.Drawing.Point(27, 27)
+        Me.btnBack.Location = New System.Drawing.Point(59, 40)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(150, 75)
+        Me.btnBack.Size = New System.Drawing.Size(175, 75)
         Me.btnBack.TabIndex = 3
         Me.btnBack.Text = "back"
         Me.btnBack.UseVisualStyleBackColor = False
-        '
-        'lblTitle
-        '
-        Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
-        Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.lblTitle.Location = New System.Drawing.Point(496, 32)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(249, 70)
-        Me.lblTitle.TabIndex = 39
-        Me.lblTitle.Text = "book flight"
-        Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.Panel2.Controls.Add(Me.lblId)
         Me.Panel2.Font = New System.Drawing.Font("Poppins", 8.25!)
-        Me.Panel2.Location = New System.Drawing.Point(100, 140)
+        Me.Panel2.Location = New System.Drawing.Point(100, 177)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(200, 115)
         Me.Panel2.TabIndex = 44
@@ -102,7 +90,7 @@ Partial Class BookFlight1
         Me.Panel1.Controls.Add(Me.lblSource)
         Me.Panel1.Controls.Add(Me.lblDate)
         Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel1.Location = New System.Drawing.Point(100, 140)
+        Me.Panel1.Location = New System.Drawing.Point(100, 177)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1000, 115)
         Me.Panel1.TabIndex = 43
@@ -172,11 +160,11 @@ Partial Class BookFlight1
         Me.btnNext.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.btnNext.FlatAppearance.BorderSize = 0
         Me.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnNext.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnNext.Font = New System.Drawing.Font("Poppins", 25.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnNext.ForeColor = System.Drawing.Color.White
-        Me.btnNext.Location = New System.Drawing.Point(1058, 585)
+        Me.btnNext.Location = New System.Drawing.Point(1028, 564)
         Me.btnNext.Name = "btnNext"
-        Me.btnNext.Size = New System.Drawing.Size(150, 75)
+        Me.btnNext.Size = New System.Drawing.Size(175, 75)
         Me.btnNext.TabIndex = 2
         Me.btnNext.Text = "next"
         Me.btnNext.UseVisualStyleBackColor = False
@@ -184,9 +172,10 @@ Partial Class BookFlight1
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(97, 293)
+        Me.Label5.Location = New System.Drawing.Point(99, 314)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(307, 70)
         Me.Label5.TabIndex = 59
@@ -200,7 +189,7 @@ Partial Class BookFlight1
         Me.btnPayerInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPayerInfo.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnPayerInfo.ForeColor = System.Drawing.Color.White
-        Me.btnPayerInfo.Location = New System.Drawing.Point(109, 366)
+        Me.btnPayerInfo.Location = New System.Drawing.Point(111, 387)
         Me.btnPayerInfo.Name = "btnPayerInfo"
         Me.btnPayerInfo.Size = New System.Drawing.Size(248, 58)
         Me.btnPayerInfo.TabIndex = 72
@@ -209,9 +198,10 @@ Partial Class BookFlight1
         '
         'lblInfoStatus
         '
+        Me.lblInfoStatus.BackColor = System.Drawing.Color.Transparent
         Me.lblInfoStatus.Font = New System.Drawing.Font("Poppins", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.lblInfoStatus.ForeColor = System.Drawing.Color.Red
-        Me.lblInfoStatus.Location = New System.Drawing.Point(363, 369)
+        Me.lblInfoStatus.ForeColor = System.Drawing.Color.DarkRed
+        Me.lblInfoStatus.Location = New System.Drawing.Point(365, 390)
         Me.lblInfoStatus.Name = "lblInfoStatus"
         Me.lblInfoStatus.Size = New System.Drawing.Size(214, 52)
         Me.lblInfoStatus.TabIndex = 62
@@ -221,9 +211,10 @@ Partial Class BookFlight1
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(765, 293)
+        Me.Label6.Location = New System.Drawing.Point(767, 314)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(287, 70)
         Me.Label6.TabIndex = 74
@@ -235,7 +226,7 @@ Partial Class BookFlight1
         Me.Label4.BackColor = System.Drawing.Color.White
         Me.Label4.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(655, 363)
+        Me.Label4.Location = New System.Drawing.Point(657, 384)
         Me.Label4.Name = "Label4"
         Me.Label4.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label4.Size = New System.Drawing.Size(291, 57)
@@ -247,7 +238,7 @@ Partial Class BookFlight1
         '
         Me.txtPeople.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPeople.Font = New System.Drawing.Font("Microsoft Sans Serif", 37.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPeople.Location = New System.Drawing.Point(943, 363)
+        Me.txtPeople.Location = New System.Drawing.Point(945, 384)
         Me.txtPeople.MaxLength = 10
         Me.txtPeople.Name = "txtPeople"
         Me.txtPeople.Size = New System.Drawing.Size(170, 57)
@@ -259,7 +250,7 @@ Partial Class BookFlight1
         Me.lblLuggage.BackColor = System.Drawing.Color.White
         Me.lblLuggage.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.lblLuggage.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.lblLuggage.Location = New System.Drawing.Point(656, 435)
+        Me.lblLuggage.Location = New System.Drawing.Point(658, 456)
         Me.lblLuggage.Name = "lblLuggage"
         Me.lblLuggage.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.lblLuggage.Size = New System.Drawing.Size(290, 57)
@@ -271,7 +262,7 @@ Partial Class BookFlight1
         '
         Me.txtLuggageKg.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtLuggageKg.Font = New System.Drawing.Font("Microsoft Sans Serif", 37.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLuggageKg.Location = New System.Drawing.Point(943, 435)
+        Me.txtLuggageKg.Location = New System.Drawing.Point(945, 456)
         Me.txtLuggageKg.MaxLength = 10
         Me.txtLuggageKg.Name = "txtLuggageKg"
         Me.txtLuggageKg.Size = New System.Drawing.Size(170, 57)
@@ -283,6 +274,7 @@ Partial Class BookFlight1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.lblLuggage)
         Me.Controls.Add(Me.txtLuggageKg)
@@ -296,7 +288,6 @@ Partial Class BookFlight1
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnBack)
-        Me.Controls.Add(Me.lblTitle)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Name = "BookFlight1"
         Me.Text = "Book Flight"
@@ -309,9 +300,8 @@ Partial Class BookFlight1
     End Sub
 
     Friend WithEvents btnBack As Button
-	Friend WithEvents lblTitle As Label
-	Friend WithEvents Panel2 As Panel
-	Friend WithEvents lblId As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents lblId As Label
 	Friend WithEvents Panel1 As Panel
 	Friend WithEvents lblArrival As Label
 	Friend WithEvents lblDestination As Label

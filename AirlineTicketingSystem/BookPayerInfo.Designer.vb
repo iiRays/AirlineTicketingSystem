@@ -22,7 +22,7 @@ Partial Class BookPayerInfo
 	'Do not modify it using the code editor.
 	<System.Diagnostics.DebuggerStepThrough()> _
 	Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BookPayerInfo))
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -49,24 +49,12 @@ Partial Class BookPayerInfo
         Me.pnlGender.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Poppins", 30.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(574, 27)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(237, 70)
-        Me.Label1.TabIndex = 62
-        Me.Label1.Text = "Payer Info"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(45, 172)
+        Me.Label3.Location = New System.Drawing.Point(88, 240)
         Me.Label3.Name = "Label3"
         Me.Label3.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label3.Size = New System.Drawing.Size(122, 57)
@@ -78,7 +66,7 @@ Partial Class BookPayerInfo
         '
         Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtName.Font = New System.Drawing.Font("Poppins", 28.5!, System.Drawing.FontStyle.Bold)
-        Me.txtName.Location = New System.Drawing.Point(164, 172)
+        Me.txtName.Location = New System.Drawing.Point(207, 240)
         Me.txtName.MaxLength = 30
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(432, 57)
@@ -90,7 +78,7 @@ Partial Class BookPayerInfo
         Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(634, 175)
+        Me.Label2.Location = New System.Drawing.Point(677, 243)
         Me.Label2.Name = "Label2"
         Me.Label2.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label2.Size = New System.Drawing.Size(145, 57)
@@ -102,7 +90,7 @@ Partial Class BookPayerInfo
         '
         Me.txtCountry.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCountry.Font = New System.Drawing.Font("Poppins", 28.5!, System.Drawing.FontStyle.Bold)
-        Me.txtCountry.Location = New System.Drawing.Point(776, 175)
+        Me.txtCountry.Location = New System.Drawing.Point(819, 243)
         Me.txtCountry.MaxLength = 35
         Me.txtCountry.Name = "txtCountry"
         Me.txtCountry.Size = New System.Drawing.Size(232, 57)
@@ -114,7 +102,7 @@ Partial Class BookPayerInfo
         Me.Label4.BackColor = System.Drawing.Color.White
         Me.Label4.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(634, 256)
+        Me.Label4.Location = New System.Drawing.Point(677, 324)
         Me.Label4.Name = "Label4"
         Me.Label4.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label4.Size = New System.Drawing.Size(145, 57)
@@ -126,7 +114,7 @@ Partial Class BookPayerInfo
         '
         Me.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCity.Font = New System.Drawing.Font("Poppins", 28.5!, System.Drawing.FontStyle.Bold)
-        Me.txtCity.Location = New System.Drawing.Point(776, 256)
+        Me.txtCity.Location = New System.Drawing.Point(819, 324)
         Me.txtCity.MaxLength = 25
         Me.txtCity.Name = "txtCity"
         Me.txtCity.Size = New System.Drawing.Size(232, 57)
@@ -136,9 +124,10 @@ Partial Class BookPayerInfo
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Poppins", 20.0!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(631, 124)
+        Me.Label5.Location = New System.Drawing.Point(674, 192)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(133, 48)
         Me.Label5.TabIndex = 69
@@ -148,9 +137,10 @@ Partial Class BookPayerInfo
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Poppins", 20.0!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(45, 124)
+        Me.Label6.Location = New System.Drawing.Point(88, 192)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(148, 48)
         Me.Label6.TabIndex = 70
@@ -162,7 +152,7 @@ Partial Class BookPayerInfo
         Me.Label7.BackColor = System.Drawing.Color.White
         Me.Label7.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(45, 250)
+        Me.Label7.Location = New System.Drawing.Point(88, 318)
         Me.Label7.Name = "Label7"
         Me.Label7.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label7.Size = New System.Drawing.Size(122, 57)
@@ -174,7 +164,7 @@ Partial Class BookPayerInfo
         '
         Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtEmail.Font = New System.Drawing.Font("Poppins", 28.5!, System.Drawing.FontStyle.Bold)
-        Me.txtEmail.Location = New System.Drawing.Point(164, 250)
+        Me.txtEmail.Location = New System.Drawing.Point(207, 318)
         Me.txtEmail.MaxLength = 35
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(432, 57)
@@ -188,7 +178,7 @@ Partial Class BookPayerInfo
         Me.pnlGender.Controls.Add(Me.rbNonBinary)
         Me.pnlGender.Controls.Add(Me.rbFemale)
         Me.pnlGender.Font = New System.Drawing.Font("Poppins", 28.5!)
-        Me.pnlGender.Location = New System.Drawing.Point(211, 326)
+        Me.pnlGender.Location = New System.Drawing.Point(254, 394)
         Me.pnlGender.Name = "pnlGender"
         Me.pnlGender.Size = New System.Drawing.Size(385, 57)
         Me.pnlGender.TabIndex = 2
@@ -240,7 +230,7 @@ Partial Class BookPayerInfo
         Me.Label8.BackColor = System.Drawing.Color.White
         Me.Label8.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(45, 326)
+        Me.Label8.Location = New System.Drawing.Point(88, 394)
         Me.Label8.Name = "Label8"
         Me.Label8.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label8.Size = New System.Drawing.Size(167, 57)
@@ -255,7 +245,7 @@ Partial Class BookPayerInfo
         Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOK.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnOK.ForeColor = System.Drawing.Color.White
-        Me.btnOK.Location = New System.Drawing.Point(688, 513)
+        Me.btnOK.Location = New System.Drawing.Point(671, 562)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(91, 52)
         Me.btnOK.TabIndex = 8
@@ -269,7 +259,7 @@ Partial Class BookPayerInfo
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnCancel.ForeColor = System.Drawing.Color.White
-        Me.btnCancel.Location = New System.Drawing.Point(531, 513)
+        Me.btnCancel.Location = New System.Drawing.Point(514, 562)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(140, 52)
         Me.btnCancel.TabIndex = 7
@@ -281,7 +271,7 @@ Partial Class BookPayerInfo
         Me.Label9.BackColor = System.Drawing.Color.White
         Me.Label9.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(44, 400)
+        Me.Label9.Location = New System.Drawing.Point(87, 468)
         Me.Label9.Name = "Label9"
         Me.Label9.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label9.Size = New System.Drawing.Size(200, 57)
@@ -293,7 +283,7 @@ Partial Class BookPayerInfo
         '
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 37.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(240, 400)
+        Me.TextBox1.Location = New System.Drawing.Point(283, 468)
         Me.TextBox1.MaxLength = 19
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(356, 57)
@@ -307,7 +297,7 @@ Partial Class BookPayerInfo
         Me.dtpDate.CustomFormat = "d MMM yyyy"
         Me.dtpDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpDate.Location = New System.Drawing.Point(284, 409)
+        Me.dtpDate.Location = New System.Drawing.Point(327, 477)
         Me.dtpDate.Name = "dtpDate"
         Me.dtpDate.Size = New System.Drawing.Size(274, 35)
         Me.dtpDate.TabIndex = 3
@@ -317,7 +307,7 @@ Partial Class BookPayerInfo
         Me.Label10.BackColor = System.Drawing.Color.White
         Me.Label10.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(634, 394)
+        Me.Label10.Location = New System.Drawing.Point(677, 466)
         Me.Label10.Name = "Label10"
         Me.Label10.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
         Me.Label10.Size = New System.Drawing.Size(222, 57)
@@ -329,7 +319,7 @@ Partial Class BookPayerInfo
         '
         Me.txtCard.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCard.Font = New System.Drawing.Font("Poppins", 28.5!, System.Drawing.FontStyle.Bold)
-        Me.txtCard.Location = New System.Drawing.Point(853, 394)
+        Me.txtCard.Location = New System.Drawing.Point(896, 466)
         Me.txtCard.MaxLength = 20
         Me.txtCard.Name = "txtCard"
         Me.txtCard.Size = New System.Drawing.Size(291, 57)
@@ -339,9 +329,10 @@ Partial Class BookPayerInfo
         'Label11
         '
         Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Poppins", 20.0!, System.Drawing.FontStyle.Bold)
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(631, 346)
+        Me.Label11.Location = New System.Drawing.Point(674, 418)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(206, 48)
         Me.Label11.TabIndex = 82
@@ -353,7 +344,8 @@ Partial Class BookPayerInfo
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1350, 598)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.txtCard)
@@ -374,7 +366,6 @@ Partial Class BookPayerInfo
         Me.Controls.Add(Me.txtCountry)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtName)
-        Me.Controls.Add(Me.Label1)
         Me.Name = "BookPayerInfo"
         Me.Text = "BookPayerInfo"
         Me.pnlGender.ResumeLayout(False)
@@ -383,10 +374,8 @@ Partial Class BookPayerInfo
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
-	Friend WithEvents Label3 As Label
-	Friend WithEvents txtName As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtName As TextBox
 	Friend WithEvents Label2 As Label
 	Friend WithEvents txtCountry As TextBox
 	Friend WithEvents Label4 As Label
