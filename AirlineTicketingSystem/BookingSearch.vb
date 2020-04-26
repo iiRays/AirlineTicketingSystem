@@ -6,7 +6,11 @@
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Quick.Navigate(Me, New HomeUser)
+        If App.IsLoggedIn Then
+            Quick.Navigate(Me, New HomeUser)
+        Else
+            Quick.Navigate(Me, New HomeGuest)
+        End If
     End Sub
 
     Private Sub btSearch_Click(sender As Object, e As EventArgs) Handles btSearch.Click
