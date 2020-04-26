@@ -54,7 +54,7 @@ Partial Class AdminDashboard
         Me.btnCities.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCities.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnCities.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.btnCities.Location = New System.Drawing.Point(279, 522)
+        Me.btnCities.Location = New System.Drawing.Point(282, 486)
         Me.btnCities.Name = "btnCities"
         Me.btnCities.Size = New System.Drawing.Size(352, 100)
         Me.btnCities.TabIndex = 29
@@ -82,7 +82,7 @@ Partial Class AdminDashboard
         Me.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUsers.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnUsers.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.btnUsers.Location = New System.Drawing.Point(646, 522)
+        Me.btnUsers.Location = New System.Drawing.Point(649, 486)
         Me.btnUsers.Name = "btnUsers"
         Me.btnUsers.Size = New System.Drawing.Size(352, 100)
         Me.btnUsers.TabIndex = 33
@@ -96,7 +96,7 @@ Partial Class AdminDashboard
         Me.btnFlights.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFlights.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnFlights.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.btnFlights.Location = New System.Drawing.Point(279, 292)
+        Me.btnFlights.Location = New System.Drawing.Point(282, 256)
         Me.btnFlights.Name = "btnFlights"
         Me.btnFlights.Size = New System.Drawing.Size(352, 100)
         Me.btnFlights.TabIndex = 27
@@ -110,7 +110,7 @@ Partial Class AdminDashboard
         Me.btnRoutes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRoutes.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnRoutes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.btnRoutes.Location = New System.Drawing.Point(279, 405)
+        Me.btnRoutes.Location = New System.Drawing.Point(282, 369)
         Me.btnRoutes.Name = "btnRoutes"
         Me.btnRoutes.Size = New System.Drawing.Size(352, 100)
         Me.btnRoutes.TabIndex = 28
@@ -124,7 +124,7 @@ Partial Class AdminDashboard
         Me.btnPlanes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPlanes.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnPlanes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.btnPlanes.Location = New System.Drawing.Point(646, 292)
+        Me.btnPlanes.Location = New System.Drawing.Point(649, 256)
         Me.btnPlanes.Name = "btnPlanes"
         Me.btnPlanes.Size = New System.Drawing.Size(352, 100)
         Me.btnPlanes.TabIndex = 30
@@ -138,7 +138,7 @@ Partial Class AdminDashboard
         Me.btnBookings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBookings.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnBookings.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.btnBookings.Location = New System.Drawing.Point(646, 405)
+        Me.btnBookings.Location = New System.Drawing.Point(649, 369)
         Me.btnBookings.Name = "btnBookings"
         Me.btnBookings.Size = New System.Drawing.Size(352, 100)
         Me.btnBookings.TabIndex = 32

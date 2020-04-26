@@ -19,7 +19,7 @@
 
         For Each city In cities
             Dim cityItem As New CityItem()
-            cityItem.Location = New Point(130, 120 + (loopCount * 100))
+            cityItem.Location = New Point(50, 120 + (loopCount * 100))
             cityItem.City = city
             cityItem.AdminCitiesViewResults = Me
             Me.Controls.Add(cityItem)

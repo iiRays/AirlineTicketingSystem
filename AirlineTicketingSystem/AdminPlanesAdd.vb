@@ -16,30 +16,30 @@
         Dim capacity As Integer
         Dim maxCols As Integer
 
-        Dim errorMsg As String = ""
+        Dim errors As New List(Of String)
         Dim errorsFound As Boolean = False
 
         If String.IsNullOrEmpty(model) Then
-            errorMsg += "- [Model] must not be empty." & vbNewLine
+            errors.Add("- [Model] must not be empty.")
         End If
 
         If String.IsNullOrEmpty(manufacturer) Then
-            errorMsg += "- [Manufacturer] must not be empty." & vbNewLine
+            errors.Add("- [Manufacturer] must not be empty.")
         End If
 
         Try
             capacity = Convert.ToInt32(capacityStr)
         Catch ex As Exception
-            errorMsg += "- [Capacity] must be numeric." & vbNewLine
+            errors.Add("- [Capacity] must be numeric.")
         End Try
 
         Try
             maxCols = Convert.ToInt32(maxColsStr)
         Catch ex As Exception
-            errorMsg += "- [Max cols] must be numeric." & vbNewLine
+            errors.Add("- [Max cols] must be numeric.")
         End Try
 
-        If Not errorMsg = "" Then
+        If Not errors.Count = 0 Then
             errorsFound = True
         End If
 
@@ -57,7 +57,7 @@
 
             Quick.Navigate(Me, New AdminPlanesAddSummary)
         Else
-            MessageBox.Show("Errors found:" & vbNewLine & errorMsg, "Errors found!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Quick.ShowErrors("Errors found!", errors)
         End If
     End Sub
 End Class

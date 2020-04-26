@@ -20,30 +20,30 @@
         Dim hrs As Integer
         Dim mins As Integer
 
-        Dim errorMsg As String = ""
+        Dim errors As New List(Of String)
         Dim errorsFound As Boolean = False
 
         If String.IsNullOrEmpty(hrsStr) Then
-            errorMsg += "- [Hrs] must not be empty." & vbNewLine
+            errors.Add("- [Hrs] must not be empty.")
         End If
 
         If String.IsNullOrEmpty(minsStr) Then
-            errorMsg += "- [Mins] must not be empty." & vbNewLine
+            errors.Add("- [Mins] must not be empty.")
         End If
 
         Try
             hrs = Convert.ToInt32(hrsStr)
         Catch ex As Exception
-            errorMsg += "- [Hrs] must be numeric." & vbNewLine
+            errors.Add("- [Hrs] must be numeric.")
         End Try
 
         Try
             mins = Convert.ToInt32(minsStr)
         Catch ex As Exception
-            errorMsg += "- [Mins] must be numeric." & vbNewLine
+            errors.Add("- [Mins] must be numeric.")
         End Try
 
-        If Not errorMsg = "" Then
+        If Not errors.Count = 0 Then
             errorsFound = True
         End If
 
@@ -78,7 +78,7 @@
 
             Quick.Navigate(Me, New AdminRoutesAddSummary)
         Else
-            MessageBox.Show("Errors found:" & vbNewLine & errorMsg, "Errors found!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Quick.ShowErrors("Errors found!", errors)
         End If
     End Sub
 End Class

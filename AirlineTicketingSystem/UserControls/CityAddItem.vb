@@ -17,7 +17,7 @@
         ElseIf Form = "AdminRoutesAdd2" Then
             Dim source As City = App.Session.Get("source")
             If source.CityID = City.CityID Then
-                MessageBox.Show("Errors found:" & vbNewLine & "- [Destination city] cannot be the same as [source city].", "Errors found!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Quick.ShowError("Errors found!", "- [Destination city] cannot be the same as [source city].")
             Else
                 App.Session.Set("destination", City)
                 Quick.Navigate(DirectCast(sender, Button).FindForm, New AdminRoutesAdd3)

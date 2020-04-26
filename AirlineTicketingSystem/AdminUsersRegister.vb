@@ -2,6 +2,7 @@
     Private Sub AdminUsersRegister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Quick.SetFormFont("Poppins", Me)
         TitleBar.Load(Me, True, False)
+        rbMale.Checked = True
     End Sub
 
     Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -13,22 +14,22 @@
         Dim email As String = txtEmail.Text
         Dim passwordText As String = txtPassword.Text
 
-        Dim errorMsg As String = ""
+        Dim errors As New List(Of String)
         Dim errorsFound As Boolean = False
 
         If String.IsNullOrEmpty(name) Then
-            errorMsg += "- [Name] must not be empty." & vbNewLine
+            errors.Add("- [Name] must not be empty.")
         End If
 
         If String.IsNullOrEmpty(email) Then
-            errorMsg += "- [Email] must not be empty." & vbNewLine
+            errors.Add("- [Email] must not be empty.")
         End If
 
         If String.IsNullOrEmpty(passwordText) Then
-            errorMsg += "- [Password] must not be empty." & vbNewLine
+            errors.Add("- [Password] must not be empty.")
         End If
 
-        If Not errorMsg = "" Then
+        If Not errors.Count = 0 Then
             errorsFound = True
         End If
 
@@ -56,7 +57,7 @@
 
             Quick.Navigate(Me, New AdminUsersRegisterSummary)
         Else
-            MessageBox.Show("Errors found:" & vbNewLine & errorMsg, "Errors found!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Quick.ShowErrors("Errors found!", errors)
         End If
     End Sub
 End Class

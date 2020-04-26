@@ -36,7 +36,7 @@ Partial Class HomeAdmin
         Me.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAccount.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnAccount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.btnAccount.Location = New System.Drawing.Point(832, 325)
+        Me.btnAccount.Location = New System.Drawing.Point(831, 293)
         Me.btnAccount.Name = "btnAccount"
         Me.btnAccount.Size = New System.Drawing.Size(300, 300)
         Me.btnAccount.TabIndex = 33
@@ -50,7 +50,7 @@ Partial Class HomeAdmin
         Me.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDashboard.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.btnDashboard.Location = New System.Drawing.Point(502, 273)
+        Me.btnDashboard.Location = New System.Drawing.Point(501, 241)
         Me.btnDashboard.Name = "btnDashboard"
         Me.btnDashboard.Size = New System.Drawing.Size(300, 300)
         Me.btnDashboard.TabIndex = 32
@@ -64,7 +64,7 @@ Partial Class HomeAdmin
         Me.btnFlights.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFlights.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnFlights.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.btnFlights.Location = New System.Drawing.Point(175, 228)
+        Me.btnFlights.Location = New System.Drawing.Point(174, 196)
         Me.btnFlights.Name = "btnFlights"
         Me.btnFlights.Size = New System.Drawing.Size(300, 300)
         Me.btnFlights.TabIndex = 31

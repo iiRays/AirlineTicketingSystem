@@ -29,18 +29,18 @@
         Dim model As String = txtModel.Text
         Dim manufacturer As String = txtManufacturer.Text
 
-        Dim errorMsg As String = ""
+        Dim errors As New List(Of String)
         Dim errorsFound As Boolean = False
 
         If String.IsNullOrEmpty(model) Then
-            errorMsg += "- [Model] must not be empty." & vbNewLine
+            errors.Add("- [Model] must not be empty.")
         End If
 
         If String.IsNullOrEmpty(manufacturer) Then
-            errorMsg += "- [Manufacturer] must not be empty." & vbNewLine
+            errors.Add("- [Manufacturer] must not be empty.")
         End If
 
-        If Not errorMsg = "" Then
+        If Not errors.Count = 0 Then
             errorsFound = True
         End If
 
@@ -63,19 +63,19 @@
                 Quick.Navigate(Me, New AdminDashboard)
             End If
         Else
-            MessageBox.Show("Errors found:" & vbNewLine & errorMsg, "Errors found!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Quick.ShowErrors("Errors found!", errors)
         End If
     End Sub
 
     Private Sub TxtID_DoubleClick(sender As Object, e As EventArgs) Handles txtID.DoubleClick
-        MessageBox.Show("[Plane ID] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Quick.ShowWarning("Function disabled!", "[Plane ID] may not be edited.]")
     End Sub
 
     Private Sub TxtCapacity_DoubleClick(sender As Object, e As EventArgs) Handles txtCapacity.DoubleClick
-        MessageBox.Show("[Capacity] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Quick.ShowWarning("Function disabled!", "[Capacity] may not be edited.]")
     End Sub
 
     Private Sub TxtMaxCols_DoubleClick(sender As Object, e As EventArgs) Handles txtMaxCols.DoubleClick
-        MessageBox.Show("[Max cols] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Quick.ShowWarning("Function disabled!", "[Max cols] may not be edited.]")
     End Sub
 End Class

@@ -107,6 +107,14 @@ Public Class Quick
         errorMsg.ShowIfError()
     End Sub
 
+    Public Shared Sub ShowErrors(title As String, messages As List(Of String))
+        Dim errorMsg As New ErrorMsg()
+        For Each message As String In messages
+            errorMsg.Add(message)
+        Next
+        errorMsg.ShowIfError()
+    End Sub
+
     Public Shared Sub ShowWarning(title As String, message As String)
         'Code possible thanks to Dot Net Perls @ https://www.dotnetperls.com/messagebox-show-vbnet
         MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)

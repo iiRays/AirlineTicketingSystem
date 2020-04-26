@@ -39,7 +39,7 @@ Partial Class HomeUser
         Me.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAccount.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnAccount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.btnAccount.Location = New System.Drawing.Point(833, 324)
+        Me.btnAccount.Location = New System.Drawing.Point(832, 292)
         Me.btnAccount.Name = "btnAccount"
         Me.btnAccount.Size = New System.Drawing.Size(300, 300)
         Me.btnAccount.TabIndex = 2
@@ -53,7 +53,7 @@ Partial Class HomeUser
         Me.btnMyBookings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMyBookings.Font = New System.Drawing.Font("Poppins", 27.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnMyBookings.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.btnMyBookings.Location = New System.Drawing.Point(502, 273)
+        Me.btnMyBookings.Location = New System.Drawing.Point(501, 241)
         Me.btnMyBookings.Name = "btnMyBookings"
         Me.btnMyBookings.Size = New System.Drawing.Size(300, 300)
         Me.btnMyBookings.TabIndex = 1
@@ -67,7 +67,7 @@ Partial Class HomeUser
         Me.btnFlights.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFlights.Font = New System.Drawing.Font("Poppins", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnFlights.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.btnFlights.Location = New System.Drawing.Point(175, 229)
+        Me.btnFlights.Location = New System.Drawing.Point(174, 197)
         Me.btnFlights.Name = "btnFlights"
         Me.btnFlights.Size = New System.Drawing.Size(300, 300)
         Me.btnFlights.TabIndex = 0
@@ -82,7 +82,7 @@ Partial Class HomeUser
         Me.lblLoginMsg.BackColor = System.Drawing.Color.Transparent
         Me.lblLoginMsg.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.lblLoginMsg.ForeColor = System.Drawing.Color.Snow
-        Me.lblLoginMsg.Location = New System.Drawing.Point(182, 598)
+        Me.lblLoginMsg.Location = New System.Drawing.Point(656, 595)
         Me.lblLoginMsg.Name = "lblLoginMsg"
         Me.lblLoginMsg.Size = New System.Drawing.Size(145, 36)
         Me.lblLoginMsg.TabIndex = 34
@@ -96,7 +96,7 @@ Partial Class HomeUser
         Me.lblUsername.BackColor = System.Drawing.Color.Transparent
         Me.lblUsername.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.lblUsername.ForeColor = System.Drawing.Color.Salmon
-        Me.lblUsername.Location = New System.Drawing.Point(182, 634)
+        Me.lblUsername.Location = New System.Drawing.Point(277, 633)
         Me.lblUsername.Name = "lblUsername"
         Me.lblUsername.Size = New System.Drawing.Size(524, 36)
         Me.lblUsername.TabIndex = 35

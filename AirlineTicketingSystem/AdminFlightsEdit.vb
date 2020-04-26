@@ -34,24 +34,24 @@
         Dim priceStr As String = txtPrice.Text
         Dim price As Decimal
 
-        Dim errorMsg As String = ""
+        Dim errors As New List(Of String)
         Dim errorsFound As Boolean = False
 
         If String.IsNullOrEmpty(flightNo) Then
-            errorMsg += "- [Flight no] must not be empty." & vbNewLine
+            errors.Add("- [Flight no] must not be empty.")
         End If
 
         If String.IsNullOrEmpty(priceStr) Then
-            errorMsg += "- [Price] must not be empty." & vbNewLine
+            errors.Add("- [Price] must not be empty.")
         End If
 
         Try
             price = Convert.ToDecimal(priceStr)
         Catch ex As Exception
-            errorMsg += "- [Price] should be numeric." & vbNewLine
+            errors.Add("- [Price] should be numeric.")
         End Try
 
-        If Not errorMsg = "" Then
+        If Not errors.Count = 0 Then
             errorsFound = True
         End If
 
@@ -84,18 +84,18 @@
                 Quick.Navigate(Me, New AdminDashboard)
             End If
         Else
-            MessageBox.Show("Errors found:" & vbNewLine & errorMsg, "Errors found!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Quick.ShowErrors("Errors found!", errors)
         End If
     End Sub
 
     Private Sub BtnEditRoute_Click(sender As Object, e As EventArgs) Handles btnEditRoute.Click
         'Quick.Navigate(Me, New AdminFlightsEditRoute)
-        MessageBox.Show("[Route] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Quick.ShowWarning("Function disabled!", "[Route] may not be edited.]")
     End Sub
 
     Private Sub btnEditPlane_Click(sender As Object, e As EventArgs) Handles btnEditPlane.Click
         'Quick.Navigate(Me, New AdminFlightsEditPlane)
-        MessageBox.Show("[Plane] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Quick.ShowWarning("Function disabled!", "[Plane] may not be edited.]")
     End Sub
 
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
@@ -113,22 +113,22 @@
     End Sub
 
     Private Sub TxtRouteId_DoubleClick(sender As Object, e As EventArgs) Handles txtRouteId.DoubleClick
-        MessageBox.Show("[Route ID] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Quick.ShowWarning("Function disabled!", "[Route ID] may not be edited.]")
     End Sub
 
     Private Sub TxtPlaneId_DoubleClick(sender As Object, e As EventArgs) Handles txtPlaneId.DoubleClick
-        MessageBox.Show("[Plane ID] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Quick.ShowWarning("Function disabled!", "[Plane ID] may not be edited.]")
     End Sub
 
     Private Sub RbDailyYes_Click(sender As Object, e As EventArgs) Handles rbDailyYes.Click
-        MessageBox.Show("[Is daily] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Quick.ShowWarning("Function disabled!", "[Is daily] may not be edited.]")
     End Sub
 
     Private Sub RbDailyNo_Click(sender As Object, e As EventArgs) Handles rbDailyNo.Click
-        MessageBox.Show("[Is daily] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Quick.ShowWarning("Function disabled!", "[Is daily] may not be edited.]")
     End Sub
 
     Private Sub DtpDeparture_Click(sender As Object, e As EventArgs) Handles dtpDeparture.Click
-        MessageBox.Show("[Departure time] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Quick.ShowWarning("Function disabled!", "[Departure time] may not be edited.]")
     End Sub
 End Class

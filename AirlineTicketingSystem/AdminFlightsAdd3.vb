@@ -25,28 +25,28 @@
         Dim priceStr As String = txtPrice.Text
         Dim price As Decimal
 
-        Dim errorMsg As String = ""
+        Dim errors As New List(Of String)
         Dim errorsFound As Boolean = False
 
         If String.IsNullOrEmpty(flightNo) Then
-            errorMsg += "- [Flight no] must not be empty." & vbNewLine
+            errors.Add("- [Flight no] must not be empty.")
         End If
 
         If departureTime < DateTime.Now Then
-            errorMsg += "- [Departure time] should be after current date and time." & vbNewLine
+            errors.Add("- [Departure time] should be after current date and time.")
         End If
 
         If String.IsNullOrEmpty(priceStr) Then
-            errorMsg += "- [Price] must not be empty." & vbNewLine
+            errors.Add("- [Price] must not be empty.")
         End If
 
         Try
             price = Convert.ToDecimal(priceStr)
         Catch ex As Exception
-            errorMsg += "- [Price] should be numeric." & vbNewLine
+            errors.Add("- [Price] should be numeric.")
         End Try
 
-        If Not errorMsg = "" Then
+        If Not errors.Count = 0 Then
             errorsFound = True
         End If
 
@@ -80,7 +80,7 @@
 
             Quick.Navigate(Me, New AdminFlightsAddSummary)
         Else
-            MessageBox.Show("Errors found:" & vbNewLine & errorMsg, "Errors found!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Quick.ShowErrors("Errors found!", errors)
         End If
     End Sub
 End Class

@@ -19,7 +19,7 @@
 
         For Each booking In bookings
             Dim bookingViewItem As New BookingViewItem()
-            bookingViewItem.Location = New Point(130, 120 + (loopCount * 100))
+            bookingViewItem.Location = New Point(50, 120 + (loopCount * 100))
             bookingViewItem.Booking = booking
             bookingViewItem.AdminBookingsViewResults = Me
             Me.Controls.Add(bookingViewItem)

@@ -15,34 +15,34 @@
         Dim latitude As String = txtLatitude.Text
         Dim longitude As String = txtLongitude.Text
 
-        Dim errorMsg As String = ""
+        Dim errors As New List(Of String)
         Dim errorsFound As Boolean = False
 
         If String.IsNullOrEmpty(name) Then
-            errorMsg += "- [Name] must not be empty." & vbNewLine
+            errors.Add("- [Name] must not be empty.")
         End If
 
         If String.IsNullOrEmpty(country) Then
-            errorMsg += "- [Country] must not be empty." & vbNewLine
+            errors.Add("- [Country] must not be empty.")
         End If
 
         If String.IsNullOrEmpty(state) Then
-            errorMsg += "- [State] must not be empty." & vbNewLine
+            errors.Add("- [State] must not be empty.")
         End If
 
         Try
             Dim latitudeDec = Convert.ToDecimal(latitude)
         Catch ex As Exception
-            errorMsg += "- [Latitude] must be numeric." & vbNewLine
+            errors.Add("- [Latitude] must be numeric.")
         End Try
 
         Try
             Dim longitudeDec = Convert.ToDecimal(longitude)
         Catch ex As Exception
-            errorMsg += "- [Longitude] must be numeric." & vbNewLine
+            errors.Add("- [Longitude] must be numeric.")
         End Try
 
-        If Not errorMsg = "" Then
+        If Not errors.Count = 0 Then
             errorsFound = True
         End If
 
@@ -61,7 +61,7 @@
 
             Quick.Navigate(Me, New AdminCitiesAddSummary)
         Else
-            MessageBox.Show("Errors found:" & vbNewLine & errorMsg, "Errors found!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Quick.ShowErrors("Errors found!", errors)
         End If
     End Sub
 End Class

@@ -60,12 +60,12 @@
     End Sub
 
     Private Sub BtnEditSource_Click(sender As Object, e As EventArgs) Handles btnEditSource.Click
-        MessageBox.Show("[Source city] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Quick.ShowWarning("Function disabled!", "[Source city] may not be edited.]")
         'Quick.Navigate(Me, New AdminRoutesEditSource)
     End Sub
 
     Private Sub BtnEditDestination_Click(sender As Object, e As EventArgs) Handles btnEditDestination.Click
-        MessageBox.Show("[Destination city] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Quick.ShowWarning("Function disabled!", "[Destination city] may not be edited.]")
         'Quick.Navigate(Me, New AdminRoutesEditDestination)
     End Sub
 
@@ -84,22 +84,22 @@
     End Sub
 
     Private Sub TxtID_DoubleClick(sender As Object, e As EventArgs) Handles txtID.DoubleClick
-        MessageBox.Show("[Route ID] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Quick.ShowWarning("Function disabled!", "[Route ID] may not be edited.]")
     End Sub
 
     Private Sub TxtSource_DoubleClick(sender As Object, e As EventArgs) Handles txtSource.DoubleClick
-        MessageBox.Show("[Source city] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Quick.ShowWarning("Function disabled!", "[Source city] may not be edited.]")
     End Sub
 
     Private Sub TxtDestination_DoubleClick(sender As Object, e As EventArgs) Handles txtDestination.DoubleClick
-        MessageBox.Show("[Destination city] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Quick.ShowWarning("Function disabled!", "[Destination city] may not be edited.]")
     End Sub
 
     Private Sub TxtHrs_DoubleClick(sender As Object, e As EventArgs) Handles txtHrs.DoubleClick
-        MessageBox.Show("[Hrs] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Quick.ShowWarning("Function disabled!", "[Hrs] may not be edited.]")
     End Sub
 
     Private Sub TxtMins_DoubleClick(sender As Object, e As EventArgs) Handles txtMins.DoubleClick
-        MessageBox.Show("[Mins] may not be edited.", "Function disabled!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Quick.ShowWarning("Function disabled!", "[Mins] may not be edited.]")
     End Sub
 End Class

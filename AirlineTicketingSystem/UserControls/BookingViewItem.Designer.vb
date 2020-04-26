@@ -102,7 +102,7 @@ Partial Class BookingViewItem
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Poppins", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(256, 20)
+        Me.Label2.Location = New System.Drawing.Point(241, 20)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(94, 39)
         Me.Label2.TabIndex = 55
@@ -114,7 +114,7 @@ Partial Class BookingViewItem
         Me.lblUserId.AutoSize = True
         Me.lblUserId.Font = New System.Drawing.Font("Poppins", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUserId.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.lblUserId.Location = New System.Drawing.Point(344, 20)
+        Me.lblUserId.Location = New System.Drawing.Point(329, 20)
         Me.lblUserId.Name = "lblUserId"
         Me.lblUserId.Size = New System.Drawing.Size(78, 39)
         Me.lblUserId.TabIndex = 54

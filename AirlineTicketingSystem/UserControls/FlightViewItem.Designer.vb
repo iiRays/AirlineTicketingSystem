@@ -68,7 +68,7 @@ Partial Class FlightViewItem
         Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(250, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1000, 75)
+        Me.Panel1.Size = New System.Drawing.Size(962, 75)
         Me.Panel1.TabIndex = 45
         '
         'lblDate
@@ -76,7 +76,7 @@ Partial Class FlightViewItem
         Me.lblDate.AutoSize = True
         Me.lblDate.Font = New System.Drawing.Font("Poppins", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.lblDate.Location = New System.Drawing.Point(702, 20)
+        Me.lblDate.Location = New System.Drawing.Point(652, 20)
         Me.lblDate.Name = "lblDate"
         Me.lblDate.Size = New System.Drawing.Size(129, 34)
         Me.lblDate.TabIndex = 52
@@ -88,7 +88,7 @@ Partial Class FlightViewItem
         Me.lblDestination.AutoSize = True
         Me.lblDestination.Font = New System.Drawing.Font("Poppins", 20.0!, System.Drawing.FontStyle.Bold)
         Me.lblDestination.ForeColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.lblDestination.Location = New System.Drawing.Point(397, 14)
+        Me.lblDestination.Location = New System.Drawing.Point(374, 14)
         Me.lblDestination.Name = "lblDestination"
         Me.lblDestination.Size = New System.Drawing.Size(215, 48)
         Me.lblDestination.TabIndex = 51
@@ -100,7 +100,7 @@ Partial Class FlightViewItem
         Me.lblTo.AutoSize = True
         Me.lblTo.Font = New System.Drawing.Font("Poppins", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.lblTo.Location = New System.Drawing.Point(365, 20)
+        Me.lblTo.Location = New System.Drawing.Point(342, 20)
         Me.lblTo.Name = "lblTo"
         Me.lblTo.Size = New System.Drawing.Size(40, 39)
         Me.lblTo.TabIndex = 50
@@ -138,7 +138,7 @@ Partial Class FlightViewItem
         Me.btnGo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGo.Font = New System.Drawing.Font("Poppins", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.btnGo.ForeColor = System.Drawing.Color.White
-        Me.btnGo.Location = New System.Drawing.Point(872, 6)
+        Me.btnGo.Location = New System.Drawing.Point(832, 6)
         Me.btnGo.Name = "btnGo"
         Me.btnGo.Size = New System.Drawing.Size(125, 65)
         Me.btnGo.TabIndex = 45
@@ -152,7 +152,7 @@ Partial Class FlightViewItem
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "FlightViewItem"
-        Me.Size = New System.Drawing.Size(1253, 85)
+        Me.Size = New System.Drawing.Size(1217, 85)
         Me.Panel2.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

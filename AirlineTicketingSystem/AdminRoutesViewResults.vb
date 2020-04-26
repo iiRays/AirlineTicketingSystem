@@ -19,7 +19,7 @@
 
         For Each route In routes
             Dim routeItem As New RouteItem()
-            routeItem.Location = New Point(130, 120 + (loopCount * 100))
+            routeItem.Location = New Point(50, 120 + (loopCount * 100))
             routeItem.Route = route
             routeItem.AdminRoutesViewResults = Me
             Me.Controls.Add(routeItem)

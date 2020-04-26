@@ -27,7 +27,7 @@
 
         For Each plane In planes
             Dim planeAddItem As New PlaneAddItem()
-            planeAddItem.Location = New Point(130, 120 + (loopCount * 50))
+            planeAddItem.Location = New Point(500, 250 + (loopCount * 50))
             planeAddItem.Form = "AdminFlightsAdd2"
             planeAddItem.Plane = plane
             planeAddItem.AdminFlightsAdd2 = Me

@@ -10,6 +10,16 @@
         Me.ErrorMsg = errorMsg
     End Sub
 
+    Sub New(errorMsg As String, additionalHeight As Integer)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        Me.ErrorMsg = errorMsg
+        Me.Height += additionalHeight
+    End Sub
+
 
     Private Sub ErrorWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TitleBar.LoadResizable(Me)

@@ -15,7 +15,7 @@
 
         For Each city In cities
             Dim cityAddItem As New CityAddItem()
-            cityAddItem.Location = New Point(130, 120 + (loopCount * 50))
+            cityAddItem.Location = New Point(500, 250 + (loopCount * 50))
             cityAddItem.Form = "AdminRoutesAdd2"
             cityAddItem.City = city
             cityAddItem.AdminRoutesAdd2 = Me

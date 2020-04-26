@@ -26,7 +26,7 @@
 
         For Each route In routes
             Dim routeAddItem As New RouteAddItem()
-            routeAddItem.Location = New Point(130, 120 + (loopCount * 50))
+            routeAddItem.Location = New Point(500, 250 + (loopCount * 50))
             routeAddItem.Form = "AdminFlightsAdd1"
             routeAddItem.Route = route
             routeAddItem.AdminFlightsAdd1 = Me
