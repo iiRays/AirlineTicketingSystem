@@ -54,6 +54,15 @@ Public Class BookFlight1
         If kgCount > 50 And hasKgErrors = False Then
             errorStr.AppendLine(" - We only allow a maximum of 50 kg per booking.")
         End If
+
+        If peopleCount < 1 Then
+            errorStr.AppendLine(" - Minimum passengers must be 1")
+        End If
+
+        If kgCount < 0 And hasKgErrors = False Then
+            errorStr.AppendLine(" - Minimum luggage kilograms must be 0")
+        End If
+
         Dim plane = DB.Get(Of Plane)(Flight.PlaneID)
         If DB.GetExistingFlight(Flight, Flight.DepartureTime.Date) IsNot Nothing Then
             'If this flight already exists

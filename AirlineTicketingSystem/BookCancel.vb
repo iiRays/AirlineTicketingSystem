@@ -71,7 +71,7 @@
         DB.Update(Booking, Booking.BookingID)
 
         'Send email
-        Email.Send("Booking cancelled", "<h1>Booking cancelled</h1>We would like to inform you that your booking of <b>" & Booking.BookingID & "</b> to <b><i>" & DB.GetFlightDestination(Booking.FlightID).City.Name & "</i></b> has been cancelled.", Booking.User.Email)
+        Email.Send("Booking cancelled", "<h1>Booking cancelled</h1>We would like to inform you that your booking of <b>" & Booking.BookingID & "</b> to <b><i>" & DB.GetFlightDestination(Booking.FlightID).City.Name & "</i></b> has been cancelled. <br/> You have been refunded " & (Booking.TotalPrice * 0.1).ToString("RM 0.00"), Booking.User.Email)
 
         'Navigate
         BookingDetailsForm.UpdateBooking()
