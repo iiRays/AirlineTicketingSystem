@@ -124,6 +124,9 @@ Public Class CancellationReport
         lstLoss.Items.Clear()
         cboMonth.SelectedIndex = -1
         cboYear.SelectedIndex = -1
+
+        cboDay.Enabled = False
+        cboMonth.Enabled = False
         lblTotalLoss.Text = Nothing
         lblCount.Text = Nothing
         total = 0
