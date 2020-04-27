@@ -5,12 +5,6 @@ Imports Newtonsoft.Json
 Public Class Quick
     'This class aids in shortening code
 
-    Public Shared Sub CatchUnknownException(ex As Exception)
-        Quick.Print(ex.Message)
-        Quick.Print(ex.StackTrace)
-        Quick.ShowError("", "It seems like an unknown error has occured. The application will restart.")
-        Application.Restart()
-    End Sub
     Public Shared Function HasInvalidChar(str As String) As Boolean
         Return If(str Like "*#*", True, If(str Like "*[/#%$@&*!]*", True, False))
     End Function
@@ -108,8 +102,7 @@ Public Class Quick
     End Sub
 
     Public Shared Sub ShowError(title As String, message As String)
-        Dim errorMsg As New ErrorMsg(message)
-        errorMsg.ErrorTitle = title
+        Dim errorMsg As New ErrorMsg()
         errorMsg.Add(message)
         errorMsg.ShowIfError()
     End Sub
