@@ -63,19 +63,23 @@ Public Class UserReport
         lstStatistic.Items.Clear()
 
         For Each row1 In dbo.Users
-            If (row1.Name.ToUpper).Contains((txtSearch.Text).ToUpper) Then
+            If row1.Email = Nothing Then
+                cnt += 1
+                total += 1
+                lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & "-")
+            Else
                 If category = "All" Then
                     cnt += 1
                     total += 1
-                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.PhoneNo)
+                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.Email)
                 ElseIf row1.IsStaff = False And category = "Customers" Then
                     cnt += 1
                     total += 1
-                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.PhoneNo)
+                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.Email)
                 ElseIf row1.IsStaff = True And category = "Staffs" Then
                     cnt += 1
                     total += 1
-                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.PhoneNo)
+                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.Email)
                 End If
             End If
         Next
