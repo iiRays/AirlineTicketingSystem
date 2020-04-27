@@ -76,6 +76,7 @@ Partial Class AdminFlightsAdd3
         Me.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPrice.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPrice.Location = New System.Drawing.Point(390, 483)
+        Me.txtPrice.MaxLength = 9
         Me.txtPrice.Multiline = True
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.Size = New System.Drawing.Size(200, 65)
@@ -101,6 +102,7 @@ Partial Class AdminFlightsAdd3
         Me.txtPlaneId.Enabled = False
         Me.txtPlaneId.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPlaneId.Location = New System.Drawing.Point(460, 258)
+        Me.txtPlaneId.MaxLength = 10
         Me.txtPlaneId.Multiline = True
         Me.txtPlaneId.Name = "txtPlaneId"
         Me.txtPlaneId.Size = New System.Drawing.Size(479, 60)
@@ -126,6 +128,7 @@ Partial Class AdminFlightsAdd3
         Me.txtRouteId.Enabled = False
         Me.txtRouteId.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRouteId.Location = New System.Drawing.Point(460, 181)
+        Me.txtRouteId.MaxLength = 10
         Me.txtRouteId.Multiline = True
         Me.txtRouteId.Name = "txtRouteId"
         Me.txtRouteId.Size = New System.Drawing.Size(479, 60)
@@ -164,6 +167,7 @@ Partial Class AdminFlightsAdd3
         Me.txtFlightNo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtFlightNo.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFlightNo.Location = New System.Drawing.Point(460, 331)
+        Me.txtFlightNo.MaxLength = 10
         Me.txtFlightNo.Multiline = True
         Me.txtFlightNo.Name = "txtFlightNo"
         Me.txtFlightNo.Size = New System.Drawing.Size(479, 60)

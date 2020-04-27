@@ -56,6 +56,7 @@ Partial Class AdminPlanesEdit
         Me.txtID.Enabled = False
         Me.txtID.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID.Location = New System.Drawing.Point(497, 197)
+        Me.txtID.MaxLength = 10
         Me.txtID.Multiline = True
         Me.txtID.Name = "txtID"
         Me.txtID.Size = New System.Drawing.Size(453, 75)
@@ -144,6 +145,7 @@ Partial Class AdminPlanesEdit
         Me.txtManufacturer.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtManufacturer.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtManufacturer.Location = New System.Drawing.Point(497, 376)
+        Me.txtManufacturer.MaxLength = 25
         Me.txtManufacturer.Multiline = True
         Me.txtManufacturer.Name = "txtManufacturer"
         Me.txtManufacturer.Size = New System.Drawing.Size(453, 75)
@@ -168,6 +170,7 @@ Partial Class AdminPlanesEdit
         Me.txtModel.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtModel.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtModel.Location = New System.Drawing.Point(497, 287)
+        Me.txtModel.MaxLength = 30
         Me.txtModel.Multiline = True
         Me.txtModel.Name = "txtModel"
         Me.txtModel.Size = New System.Drawing.Size(453, 75)

@@ -69,6 +69,7 @@ Partial Class AdminCitiesAdd
         Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtName.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtName.Location = New System.Drawing.Point(461, 187)
+        Me.txtName.MaxLength = 25
         Me.txtName.Multiline = True
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(500, 75)
@@ -93,6 +94,7 @@ Partial Class AdminCitiesAdd
         Me.txtCountry.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCountry.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCountry.Location = New System.Drawing.Point(461, 283)
+        Me.txtCountry.MaxLength = 35
         Me.txtCountry.Multiline = True
         Me.txtCountry.Name = "txtCountry"
         Me.txtCountry.Size = New System.Drawing.Size(500, 75)
@@ -117,6 +119,7 @@ Partial Class AdminCitiesAdd
         Me.txtState.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtState.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtState.Location = New System.Drawing.Point(461, 380)
+        Me.txtState.MaxLength = 30
         Me.txtState.Multiline = True
         Me.txtState.Name = "txtState"
         Me.txtState.Size = New System.Drawing.Size(500, 75)
@@ -141,6 +144,7 @@ Partial Class AdminCitiesAdd
         Me.txtLongitude.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtLongitude.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLongitude.Location = New System.Drawing.Point(761, 475)
+        Me.txtLongitude.MaxLength = 15
         Me.txtLongitude.Multiline = True
         Me.txtLongitude.Name = "txtLongitude"
         Me.txtLongitude.Size = New System.Drawing.Size(200, 65)
@@ -165,6 +169,7 @@ Partial Class AdminCitiesAdd
         Me.txtLatitude.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtLatitude.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLatitude.Location = New System.Drawing.Point(414, 475)
+        Me.txtLatitude.MaxLength = 15
         Me.txtLatitude.Multiline = True
         Me.txtLatitude.Name = "txtLatitude"
         Me.txtLatitude.Size = New System.Drawing.Size(200, 65)

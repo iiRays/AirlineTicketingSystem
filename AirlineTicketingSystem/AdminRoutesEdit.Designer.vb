@@ -122,6 +122,7 @@ Partial Class AdminRoutesEdit
         Me.txtDestination.Enabled = False
         Me.txtDestination.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDestination.Location = New System.Drawing.Point(424, 378)
+        Me.txtDestination.MaxLength = 25
         Me.txtDestination.Multiline = True
         Me.txtDestination.Name = "txtDestination"
         Me.txtDestination.Size = New System.Drawing.Size(479, 75)
@@ -147,6 +148,7 @@ Partial Class AdminRoutesEdit
         Me.txtSource.Enabled = False
         Me.txtSource.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSource.Location = New System.Drawing.Point(424, 279)
+        Me.txtSource.MaxLength = 25
         Me.txtSource.Multiline = True
         Me.txtSource.Name = "txtSource"
         Me.txtSource.Size = New System.Drawing.Size(479, 75)
@@ -186,6 +188,7 @@ Partial Class AdminRoutesEdit
         Me.txtID.Enabled = False
         Me.txtID.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID.Location = New System.Drawing.Point(424, 183)
+        Me.txtID.MaxLength = 10
         Me.txtID.Multiline = True
         Me.txtID.Name = "txtID"
         Me.txtID.Size = New System.Drawing.Size(479, 75)
