@@ -77,7 +77,7 @@ Public Class CancellationReport
                             totalLoss += loss
                             cnt += 1
                             total += 1
-                            lstLoss.Items.Add(String.Format("{0,-20}", cnt) & vbTab & String.Format("{0,-60}", row1.FlightNo) & vbTab & String.Format("{0,-60}", passengerNo) & vbTab & String.Format("{0,-20}", loss.ToString("RM 00.00")))
+                            lstLoss.Items.Add(cnt & vbTab & row1.FlightNo & vbTab & passengerNo & vbTab & loss.ToString("                                 RM 00.00"))
                             Exit For
 
                         End If
@@ -174,7 +174,7 @@ Public Class CancellationReport
             If value <= 30 Then
                 cnt1 += 1
                 parts = CStr(lstLoss.Items(value - 1)).Split(CChar(vbTab))
-                body.AppendFormat("{0,0}" & vbTab & vbTab & "{1,0}" & vbTab & vbTab & vbTab & "{2,0}" & vbTab & vbTab & vbTab & vbTab & "{3,-5}" & vbNewLine, parts(0).Trim, parts(1).Trim, parts(2).Trim, parts(3).Trim)
+                body.AppendFormat("{0,0}" & vbTab & vbTab & "{1,0}" & vbTab & vbTab & vbTab & "{2,0}" & vbTab & vbTab & "{3,-5}" & vbNewLine, parts(0), parts(1), parts(2), parts(3))
 
                 e.Graphics.DrawString(body.ToString(), fontBody, Brushes.Black, 80, 320)
                 e.HasMorePages = False
@@ -192,7 +192,7 @@ Public Class CancellationReport
             ElseIf value <= value + intCounter Then
                 cnt1 += 1
                 parts = CStr(lstLoss.Items(value - 1)).Split(CChar(vbTab))
-                body.AppendFormat("{0,0}" & vbTab & vbTab & "{1,0}" & vbTab & vbTab & vbTab & "{2,0}" & vbTab & vbTab & vbTab & vbTab & "{3,-5}" & vbNewLine, parts(0).Trim, parts(1).Trim, parts(2).Trim, parts(3).Trim)
+                body.AppendFormat("{0,0}" & vbTab & vbTab & "{1,0}" & vbTab & vbTab & vbTab & "{2,0}" & vbTab & vbTab & "{3,-5}" & vbNewLine, parts(0), parts(1), parts(2), parts(3))
 
                 Dim max As Integer = value + intCounter
 
@@ -216,7 +216,7 @@ Public Class CancellationReport
 
         Dim footer As New StringBuilder()
         footer.AppendLine()
-        footer.AppendFormat(vbTab + vbTab + vbTab + vbTab + vbTab + vbTab + vbTab + " Total Loss: {0,2}", lblTotalLoss.Text)
+        footer.AppendFormat(vbTab + vbTab + vbTab + vbTab + vbTab + vbTab + vbTab + vbTab + " Total Loss: {0,2}", lblTotalLoss.Text)
         footer.AppendLine()
         footer.AppendFormat("{0,2} record(s) out of", cnt1)
         footer.AppendFormat(" {0,2} record(s)", total)
