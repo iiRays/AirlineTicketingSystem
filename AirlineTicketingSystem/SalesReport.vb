@@ -81,7 +81,7 @@ Public Class SalesReport
                             totalSales += sales
                             cnt += 1
                             total += 1
-                            lstSales.Items.Add(cnt & vbTab & row1.FlightNo & vbTab & passengerNo & vbTab & sales.ToString("                   RM 00.00"))
+                            lstSales.Items.Add(String.Format("{0,-20}", cnt) & vbTab & String.Format("{0,-40}", row1.FlightNo) & vbTab & String.Format("{0,-60}", passengerNo) & vbTab & String.Format("{0,-20}", sales.ToString("RM 00.00")))
                             Exit For
                         End If
                     Next
@@ -159,8 +159,8 @@ Public Class SalesReport
         title.AppendLine("For the Day " + selectedDay.ToString + " on Month of " + cboMonth.SelectedItem.ToString + " at the year " + selectedYear.ToString)
         title.AppendLine()
         title.AppendLine()
-        title.AppendLine("No" + vbTab + vbTab + "Flight No" + vbTab + vbTab + "No Of Passenger(s)" + vbTab + vbTab + "   Total Sales")
-        title.AppendLine("-----" + vbTab + vbTab + "--------------" + vbTab + vbTab + "--------------------------------" + vbTab + vbTab + "   ---------------")
+        title.AppendLine("No" + vbTab + "   Flight No" + vbTab + vbTab + vbTab + "No Of Passenger(s)" + vbTab + vbTab + "Total Sales")
+        title.AppendLine("-----" + vbTab + "   --------------" + vbTab + vbTab + vbTab + "--------------------------------" + vbTab + vbTab + "---------------")
         title.AppendLine()
 
         With e.Graphics
@@ -177,7 +177,7 @@ Public Class SalesReport
             If value <= 30 Then
                 cnt1 += 1
                 parts = CStr(lstSales.Items(value - 1)).Split(CChar(vbTab))
-                body.AppendFormat("{0,0}" & vbTab & vbTab & "{1,0}" & vbTab & vbTab & vbTab & "{2,0}" & vbTab & vbTab & vbTab & "{3,-5}" & vbNewLine, parts(0), parts(1), parts(2), parts(3))
+                body.AppendFormat("{0,0}" & "{1,0}" & vbTab & "{2,0}" & "{3,0}" & vbNewLine, parts(0), parts(1), parts(2), parts(3))
 
                 e.Graphics.DrawString(body.ToString(), fontBody, Brushes.Black, 80, 320)
                 e.HasMorePages = False
@@ -195,7 +195,7 @@ Public Class SalesReport
             ElseIf value <= value + intCounter Then
                 cnt1 += 1
                 parts = CStr(lstSales.Items(value - 1)).Split(CChar(vbTab))
-                body.AppendFormat("{0,0}" & vbTab & vbTab & "{1,0}" & vbTab & vbTab & vbTab & "{2,0}" & vbTab & vbTab & vbTab & "{3,-5}" & vbNewLine, parts(0), parts(1), parts(2), parts(3))
+                body.AppendFormat("{0,0}" & "{1,0}" & "{2,0}" & "{3,0}" & vbNewLine, parts(0), parts(1), parts(2), parts(3))
 
                 Dim max As Integer = value + intCounter
 
@@ -219,7 +219,7 @@ Public Class SalesReport
 
         Dim footer As New StringBuilder()
         footer.AppendLine()
-        footer.AppendFormat(vbTab + vbTab + vbTab + vbTab + vbTab + vbTab + vbTab + vbTab + " Total Sales: {0,2}", lblTotalSales.Text)
+        footer.AppendFormat(vbTab + vbTab + vbTab + vbTab + vbTab + vbTab + vbTab + " Total Sales: {0,2}", lblTotalSales.Text)
         footer.AppendLine()
         footer.AppendFormat("{0,2} record(s) out of", cnt1)
         footer.AppendFormat(" {0,2} record(s)", total)
