@@ -22,19 +22,26 @@ Public Class UserReport
         Dim cnt As Integer = 0
         Try
             For Each row1 In dbo.Users
-                If category = "All" Then
+                If row1.Email = Nothing Then
                     cnt += 1
                     total += 1
-                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.PhoneNo)
-                ElseIf row1.IsStaff = False And category = "Customers" Then
-                    cnt += 1
-                    total += 1
-                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.PhoneNo)
-                ElseIf row1.IsStaff = True And category = "Staffs" Then
-                    cnt += 1
-                    total += 1
-                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.PhoneNo)
+                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & "-")
+                Else
+                    If category = "All" Then
+                        cnt += 1
+                        total += 1
+                        lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.Email)
+                    ElseIf row1.IsStaff = False And category = "Customers" Then
+                        cnt += 1
+                        total += 1
+                        lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.Email)
+                    ElseIf row1.IsStaff = True And category = "Staffs" Then
+                        cnt += 1
+                        total += 1
+                        lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.Email)
+                    End If
                 End If
+
             Next
 
             If cnt = 0 Then
@@ -135,8 +142,8 @@ Public Class UserReport
         title.AppendLine("For the " + cboCategory.SelectedItem.ToString + " Account")
         title.AppendLine()
         title.AppendLine()
-        title.AppendLine("No" + vbTab + vbTab + "Name" + vbTab + vbTab + vbTab + vbTab + vbTab + "Contact No.")
-        title.AppendLine("-----" + vbTab + vbTab + "--------------------------------" + vbTab + vbTab + vbTab + "-----------------")
+        title.AppendLine("No" + vbTab + vbTab + "Name" + vbTab + vbTab + vbTab + vbTab + vbTab + "Email")
+        title.AppendLine("-----" + vbTab + vbTab + "--------------------------------" + vbTab + vbTab + vbTab + "-----------------------------")
         title.AppendLine()
 
         With e.Graphics
