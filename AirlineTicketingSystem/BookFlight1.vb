@@ -35,6 +35,7 @@ Public Class BookFlight1
         Dim kgCount = 0
         Dim errorStr As New StringBuilder()
         Dim hasKgErrors = False
+        Dim hasPeopleCountErrors = False
 
         errorStr.AppendLine(If(lblInfoStatus.Text = "not yet filled", "- Please fill in payer details.", ""))
 
@@ -42,6 +43,7 @@ Public Class BookFlight1
             peopleCount = CType(txtPeople.Text, Int32)
         Catch ex As Exception
             errorStr.AppendLine(" - No. of people must be in numbers only")
+            hasPeopleCountErrors = True
         End Try
 
         Try
@@ -55,7 +57,7 @@ Public Class BookFlight1
             errorStr.AppendLine(" - We only allow a maximum of 50 kg per booking.")
         End If
 
-        If peopleCount < 1 Then
+        If peopleCount < 1 AndAlso hasPeopleCountErrors = False Then
             errorStr.AppendLine(" - Minimum passengers must be 1")
         End If
 
