@@ -230,4 +230,8 @@ Public Class CancellationReport
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         Quick.Navigate(Me, New AdminReport)
     End Sub
+
+    Private Sub LstLoss_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstLoss.SelectedIndexChanged
+
+    End Sub
 End Class
