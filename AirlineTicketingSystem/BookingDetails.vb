@@ -51,6 +51,10 @@
         lblArrivalTime.Text = Booking.Flight.ArrivalTime.ToString("HH:mm")
         lblPaymentDate.Text = Booking.PaymentDate.ToString("d MMM yyyy")
 
+        Dim flight = Booking.Flight
+        lblDate.Text = flight.DepartureTime.DayOfWeek.ToString & ", " & DateAndTime.MonthName(flight.DepartureTime.Month) & " " & flight.DepartureTime.Day.ToString
+
+
         If Booking.IsCancelled Then
             lblStatus.Text = "Cancelled"
             lblStatus.ForeColor = Color.OrangeRed
