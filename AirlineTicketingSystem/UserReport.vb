@@ -25,15 +25,15 @@ Public Class UserReport
                 If category = "All" Then
                     cnt += 1
                     total += 1
-                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-30}", row1.Name) & vbTab & row1.PhoneNo)
+                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.PhoneNo)
                 ElseIf row1.IsStaff = False And category = "Customers" Then
                     cnt += 1
                     total += 1
-                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-30}", row1.Name) & vbTab & row1.PhoneNo)
+                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.PhoneNo)
                 ElseIf row1.IsStaff = True And category = "Staffs" Then
                     cnt += 1
                     total += 1
-                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-30}", row1.Name) & vbTab & row1.PhoneNo)
+                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.PhoneNo)
                 End If
             Next
 
@@ -60,15 +60,15 @@ Public Class UserReport
                 If category = "All" Then
                     cnt += 1
                     total += 1
-                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-30}", row1.Name) & vbTab & row1.PhoneNo)
+                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.PhoneNo)
                 ElseIf row1.IsStaff = False And category = "Customers" Then
                     cnt += 1
                     total += 1
-                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-30}", row1.Name) & vbTab & row1.PhoneNo)
+                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.PhoneNo)
                 ElseIf row1.IsStaff = True And category = "Staffs" Then
                     cnt += 1
                     total += 1
-                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-30}", row1.Name) & vbTab & row1.PhoneNo)
+                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.PhoneNo)
                 End If
             End If
         Next
@@ -135,8 +135,8 @@ Public Class UserReport
         title.AppendLine("For the " + cboCategory.SelectedItem.ToString + " Account")
         title.AppendLine()
         title.AppendLine()
-        title.AppendLine("No" + vbTab + vbTab + "Name" + vbTab + vbTab + vbTab + vbTab + "Contact No.")
-        title.AppendLine("-----" + vbTab + vbTab + "--------------------------------" + vbTab + vbTab + "-----------------")
+        title.AppendLine("No" + vbTab + vbTab + "Name" + vbTab + vbTab + vbTab + vbTab + vbTab + "Contact No.")
+        title.AppendLine("-----" + vbTab + vbTab + "--------------------------------" + vbTab + vbTab + vbTab + "-----------------")
         title.AppendLine()
 
         With e.Graphics
@@ -153,7 +153,7 @@ Public Class UserReport
             If value <= 30 Then
                 cnt1 += 1
                 parts = CStr(lstStatistic.Items(value - 1)).Split(CChar(vbTab))
-                body.AppendFormat("{0,0}" & vbTab & vbTab & "{1,-40}" & vbTab & "{2,0}" & vbNewLine, parts(0), parts(1), parts(2))
+                body.AppendFormat("{0,0}" & vbTab & vbTab & "{1,-40}" & vbTab & vbTab & "{2,0}" & vbNewLine, parts(0), parts(1).Trim, parts(2))
 
                 e.Graphics.DrawString(body.ToString(), fontBody, Brushes.Black, 80, 320)
                 e.HasMorePages = False
