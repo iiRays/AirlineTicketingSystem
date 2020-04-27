@@ -16,13 +16,13 @@ Public Class CancellationReport
             cboYear.Items.Add(value)
         Next
 
-        cboYear.Enabled = False
+        cboMonth.Enabled = False
         cboDay.Enabled = False
         btnPrint.Enabled = False
     End Sub
 
     Private Sub cboMonth_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMonth.SelectedIndexChanged
-        cboYear.Enabled = True
+        cboDay.Enabled = True
     End Sub
 
     Public Function GetLastDayOfMonth(intMonth, intYear) As Date
@@ -30,7 +30,7 @@ Public Class CancellationReport
     End Function
 
     Private Sub cboYear_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboYear.SelectedIndexChanged
-        cboDay.Enabled = True
+        cboMonth.Enabled = True
     End Sub
 
     Private Sub Date_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboYear.SelectedIndexChanged, cboMonth.SelectedIndexChanged

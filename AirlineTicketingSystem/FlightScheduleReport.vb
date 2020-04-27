@@ -15,7 +15,7 @@ Public Class FlightScheduleReport
             cboYear.Items.Add(value)
         Next
 
-        cboYear.Enabled = False
+        cboMonth.Enabled = False
         cboDay.Enabled = False
         btnPrint.Enabled = False
     End Sub
@@ -25,11 +25,11 @@ Public Class FlightScheduleReport
     End Function
 
     Private Sub cboMonth_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMonth.SelectedIndexChanged
-        cboYear.Enabled = True
+        cboDay.Enabled = True
     End Sub
 
     Private Sub cboYear_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboYear.SelectedIndexChanged
-        cboDay.Enabled = True
+        cboMonth.Enabled = True
     End Sub
 
     Private Sub Date_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboYear.SelectedIndexChanged, cboMonth.SelectedIndexChanged
