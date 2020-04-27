@@ -41,9 +41,9 @@
         lblId.Text = Flight.FlightNo
         lblDuration.Text = route.DurationHour.ToString & "h " & route.DurationMins.ToString & "m approx."
         lblSource.Text = DB.GetFlightSource(Flight.FlightID).City.Name
-        lblDepartureTime.Text = Flight.DepartureTime.ToString("h:mm tt")
+        lblDepartureTime.Text = Flight.DepartureTime.ToString("HH:mm")
         lblDestination.Text = DB.GetFlightDestination(Flight.FlightID).City.Name
-        lblArrivalTime.Text = Flight.ArrivalTime.ToString("h:mm tt")
+        lblArrivalTime.Text = Flight.ArrivalTime.ToString("HH:mm")
         lblDuration.Text = Flight.ArrivalTime.Subtract(Flight.DepartureTime).Hours & "h " & Flight.ArrivalTime.Subtract(Flight.DepartureTime).Minutes & "M approx."
         lblPrice.Text = "RM " & Flight.Price
 
