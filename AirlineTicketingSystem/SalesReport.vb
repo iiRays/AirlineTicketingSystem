@@ -127,6 +127,8 @@ Public Class SalesReport
         lstSales.Items.Clear()
         cboMonth.SelectedIndex = -1
         cboYear.SelectedIndex = -1
+        cboDay.Enabled = False
+        cboMonth.Enabled = False
         lblTotalSales.Text = Nothing
         lblCount.Text = Nothing
         total = 0
