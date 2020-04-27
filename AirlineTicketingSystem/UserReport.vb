@@ -132,6 +132,7 @@ Public Class UserReport
         title.AppendLine("-----------------------------------------------------------------------------------------------------------------------------")
         title.AppendLine()
         title.AppendLine("Staffs and Customers Report")
+        title.AppendLine("For the " + cboCategory.SelectedItem.ToString + " Account")
         title.AppendLine()
         title.AppendLine()
         title.AppendLine("No" + vbTab + vbTab + "Name" + vbTab + vbTab + vbTab + vbTab + "Contact No.")
