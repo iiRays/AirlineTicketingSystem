@@ -144,7 +144,7 @@ Public Class FlightScheduleReport
 
         Dim title As New StringBuilder()
         title.AppendLine()
-        title.AppendLine("----------------------------------------------------------------------------------------------------------------------------------")
+        title.AppendLine("--------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
         title.AppendLine()
         title.AppendLine("Daily Flight Route & Schedule Report")
         title.AppendLine("For the Day " + selectedDay.ToString + " on Month of " + cboMonth.SelectedItem.ToString + " at the year " + selectedYear.ToString)

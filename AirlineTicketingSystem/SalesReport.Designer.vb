@@ -49,56 +49,56 @@ Partial Class SalesReport
         'cboYear
         '
         Me.cboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboYear.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.cboYear.FormattingEnabled = True
         Me.cboYear.Location = New System.Drawing.Point(901, 21)
         Me.cboYear.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cboYear.Name = "cboYear"
-        Me.cboYear.Size = New System.Drawing.Size(185, 37)
+        Me.cboYear.Size = New System.Drawing.Size(185, 52)
         Me.cboYear.TabIndex = 17
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.SystemColors.Control
         Me.Label3.Location = New System.Drawing.Point(792, 31)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(93, 29)
+        Me.Label3.Size = New System.Drawing.Size(97, 44)
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "Year : "
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.SystemColors.Control
         Me.Label4.Location = New System.Drawing.Point(423, 31)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(112, 29)
+        Me.Label4.Size = New System.Drawing.Size(120, 44)
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "Month : "
         '
         'cboMonth
         '
         Me.cboMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboMonth.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboMonth.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.cboMonth.FormattingEnabled = True
         Me.cboMonth.Items.AddRange(New Object() {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"})
         Me.cboMonth.Location = New System.Drawing.Point(556, 21)
         Me.cboMonth.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cboMonth.Name = "cboMonth"
-        Me.cboMonth.Size = New System.Drawing.Size(185, 37)
+        Me.cboMonth.Size = New System.Drawing.Size(185, 52)
         Me.cboMonth.TabIndex = 14
         '
         'lblCount
         '
         Me.lblCount.AutoSize = True
-        Me.lblCount.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCount.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.lblCount.ForeColor = System.Drawing.SystemColors.Control
         Me.lblCount.Location = New System.Drawing.Point(53, 677)
         Me.lblCount.Name = "lblCount"
-        Me.lblCount.Size = New System.Drawing.Size(100, 26)
+        Me.lblCount.Size = New System.Drawing.Size(130, 44)
         Me.lblCount.TabIndex = 19
         Me.lblCount.Text = "lblCount"
         '
@@ -107,7 +107,7 @@ Partial Class SalesReport
         Me.btnPrint.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnPrint.FlatAppearance.BorderSize = 0
         Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Bold)
+        Me.btnPrint.Font = New System.Drawing.Font("Poppins", 25.0!, System.Drawing.FontStyle.Bold)
         Me.btnPrint.ForeColor = System.Drawing.Color.White
         Me.btnPrint.Location = New System.Drawing.Point(1392, 711)
         Me.btnPrint.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -119,13 +119,13 @@ Partial Class SalesReport
         '
         'lstSales
         '
-        Me.lstSales.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lstSales.Font = New System.Drawing.Font("Poppins", 13.0!)
         Me.lstSales.FormattingEnabled = True
-        Me.lstSales.ItemHeight = 26
+        Me.lstSales.ItemHeight = 39
         Me.lstSales.Location = New System.Drawing.Point(61, 192)
         Me.lstSales.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.lstSales.Name = "lstSales"
-        Me.lstSales.Size = New System.Drawing.Size(1563, 446)
+        Me.lstSales.Size = New System.Drawing.Size(1563, 433)
         Me.lstSales.TabIndex = 22
         '
         'doc
@@ -145,7 +145,7 @@ Partial Class SalesReport
         'Label2
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
         Me.Label2.Location = New System.Drawing.Point(59, 150)
         Me.Label2.Name = "Label2"
@@ -156,7 +156,7 @@ Partial Class SalesReport
         'Label5
         '
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.SystemColors.Control
         Me.Label5.Location = New System.Drawing.Point(183, 150)
         Me.Label5.Name = "Label5"
@@ -167,7 +167,7 @@ Partial Class SalesReport
         'Label6
         '
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.SystemColors.Control
         Me.Label6.Location = New System.Drawing.Point(504, 150)
         Me.Label6.Name = "Label6"
@@ -178,7 +178,7 @@ Partial Class SalesReport
         'Label7
         '
         Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.SystemColors.Control
         Me.Label7.Location = New System.Drawing.Point(939, 150)
         Me.Label7.Name = "Label7"
@@ -209,33 +209,33 @@ Partial Class SalesReport
         'cboDay
         '
         Me.cboDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboDay.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboDay.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.cboDay.FormattingEnabled = True
         Me.cboDay.Location = New System.Drawing.Point(203, 21)
         Me.cboDay.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cboDay.Name = "cboDay"
-        Me.cboDay.Size = New System.Drawing.Size(172, 37)
+        Me.cboDay.Size = New System.Drawing.Size(172, 52)
         Me.cboDay.TabIndex = 42
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(103, 31)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(85, 29)
+        Me.Label1.Size = New System.Drawing.Size(88, 44)
         Me.Label1.TabIndex = 43
         Me.Label1.Text = "Day : "
         '
         'lblTotalSales
         '
         Me.lblTotalSales.AutoSize = True
-        Me.lblTotalSales.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalSales.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.lblTotalSales.ForeColor = System.Drawing.SystemColors.Control
         Me.lblTotalSales.Location = New System.Drawing.Point(1297, 640)
         Me.lblTotalSales.Name = "lblTotalSales"
-        Me.lblTotalSales.Size = New System.Drawing.Size(172, 29)
+        Me.lblTotalSales.Size = New System.Drawing.Size(183, 44)
         Me.lblTotalSales.TabIndex = 28
         Me.lblTotalSales.Text = "lblTotalSales"
         Me.lblTotalSales.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -245,7 +245,7 @@ Partial Class SalesReport
         Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.btnBack.FlatAppearance.BorderSize = 0
         Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Bold)
+        Me.btnBack.Font = New System.Drawing.Font("Poppins", 25.0!, System.Drawing.FontStyle.Bold)
         Me.btnBack.ForeColor = System.Drawing.Color.White
         Me.btnBack.Location = New System.Drawing.Point(1139, 711)
         Me.btnBack.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -258,11 +258,11 @@ Partial Class SalesReport
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold)
+        Me.Label8.Font = New System.Drawing.Font("Poppins", 30.0!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
         Me.Label8.Location = New System.Drawing.Point(43, 44)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(326, 58)
+        Me.Label8.Size = New System.Drawing.Size(357, 88)
         Me.Label8.TabIndex = 44
         Me.Label8.Text = "Sales Report"
         '

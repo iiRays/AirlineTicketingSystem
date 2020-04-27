@@ -51,10 +51,9 @@ Partial Class CancellationReport
         Me.lblTotalLoss.AutoSize = True
         Me.lblTotalLoss.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold)
         Me.lblTotalLoss.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblTotalLoss.Location = New System.Drawing.Point(1099, 530)
-        Me.lblTotalLoss.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblTotalLoss.Location = New System.Drawing.Point(1465, 652)
         Me.lblTotalLoss.Name = "lblTotalLoss"
-        Me.lblTotalLoss.Size = New System.Drawing.Size(123, 31)
+        Me.lblTotalLoss.Size = New System.Drawing.Size(150, 39)
         Me.lblTotalLoss.TabIndex = 37
         Me.lblTotalLoss.Text = "lblTotalLoss"
         Me.lblTotalLoss.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -67,11 +66,11 @@ Partial Class CancellationReport
         Me.grpDateSelection.Controls.Add(Me.cboMonth)
         Me.grpDateSelection.Controls.Add(Me.Label4)
         Me.grpDateSelection.Controls.Add(Me.Label3)
-        Me.grpDateSelection.Location = New System.Drawing.Point(469, 33)
-        Me.grpDateSelection.Margin = New System.Windows.Forms.Padding(2)
+        Me.grpDateSelection.Location = New System.Drawing.Point(625, 41)
+        Me.grpDateSelection.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.grpDateSelection.Name = "grpDateSelection"
-        Me.grpDateSelection.Padding = New System.Windows.Forms.Padding(2)
-        Me.grpDateSelection.Size = New System.Drawing.Size(754, 121)
+        Me.grpDateSelection.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.grpDateSelection.Size = New System.Drawing.Size(1005, 149)
         Me.grpDateSelection.TabIndex = 36
         Me.grpDateSelection.TabStop = False
         '
@@ -80,10 +79,10 @@ Partial Class CancellationReport
         Me.cboDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboDay.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.cboDay.FormattingEnabled = True
-        Me.cboDay.Location = New System.Drawing.Point(106, 38)
-        Me.cboDay.Margin = New System.Windows.Forms.Padding(2)
+        Me.cboDay.Location = New System.Drawing.Point(141, 47)
+        Me.cboDay.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cboDay.Name = "cboDay"
-        Me.cboDay.Size = New System.Drawing.Size(126, 44)
+        Me.cboDay.Size = New System.Drawing.Size(167, 52)
         Me.cboDay.TabIndex = 42
         '
         'Label1
@@ -91,10 +90,9 @@ Partial Class CancellationReport
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(31, 41)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(41, 50)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(71, 36)
+        Me.Label1.Size = New System.Drawing.Size(88, 44)
         Me.Label1.TabIndex = 43
         Me.Label1.Text = "Day : "
         '
@@ -103,10 +101,10 @@ Partial Class CancellationReport
         Me.cboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboYear.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.cboYear.FormattingEnabled = True
-        Me.cboYear.Location = New System.Drawing.Point(600, 41)
-        Me.cboYear.Margin = New System.Windows.Forms.Padding(2)
+        Me.cboYear.Location = New System.Drawing.Point(800, 50)
+        Me.cboYear.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cboYear.Name = "cboYear"
-        Me.cboYear.Size = New System.Drawing.Size(124, 44)
+        Me.cboYear.Size = New System.Drawing.Size(164, 52)
         Me.cboYear.TabIndex = 17
         '
         'cboMonth
@@ -115,10 +113,10 @@ Partial Class CancellationReport
         Me.cboMonth.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.cboMonth.FormattingEnabled = True
         Me.cboMonth.Items.AddRange(New Object() {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"})
-        Me.cboMonth.Location = New System.Drawing.Point(363, 41)
-        Me.cboMonth.Margin = New System.Windows.Forms.Padding(2)
+        Me.cboMonth.Location = New System.Drawing.Point(484, 50)
+        Me.cboMonth.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cboMonth.Name = "cboMonth"
-        Me.cboMonth.Size = New System.Drawing.Size(124, 44)
+        Me.cboMonth.Size = New System.Drawing.Size(164, 52)
         Me.cboMonth.TabIndex = 14
         '
         'Label4
@@ -126,10 +124,9 @@ Partial Class CancellationReport
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label4.Location = New System.Drawing.Point(263, 46)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(351, 57)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(96, 36)
+        Me.Label4.Size = New System.Drawing.Size(120, 44)
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "Month : "
         '
@@ -138,10 +135,9 @@ Partial Class CancellationReport
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(518, 49)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(691, 60)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(78, 36)
+        Me.Label3.Size = New System.Drawing.Size(97, 44)
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "Year : "
         '
@@ -154,10 +150,9 @@ Partial Class CancellationReport
         Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label7.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label7.Location = New System.Drawing.Point(832, 156)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Location = New System.Drawing.Point(1109, 192)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(390, 26)
+        Me.Label7.Size = New System.Drawing.Size(519, 32)
         Me.Label7.TabIndex = 35
         Me.Label7.Text = "Refund (10%)"
         '
@@ -166,10 +161,9 @@ Partial Class CancellationReport
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label6.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label6.Location = New System.Drawing.Point(487, 156)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Location = New System.Drawing.Point(649, 192)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(647, 26)
+        Me.Label6.Size = New System.Drawing.Size(862, 32)
         Me.Label6.TabIndex = 34
         Me.Label6.Text = "No Of Passenger(s) Cancel"
         '
@@ -178,10 +172,9 @@ Partial Class CancellationReport
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label5.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label5.Location = New System.Drawing.Point(160, 156)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Location = New System.Drawing.Point(213, 192)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(848, 26)
+        Me.Label5.Size = New System.Drawing.Size(1130, 32)
         Me.Label5.TabIndex = 33
         Me.Label5.Text = "Flight No."
         '
@@ -190,10 +183,9 @@ Partial Class CancellationReport
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label2.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(44, 156)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(59, 192)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(896, 26)
+        Me.Label2.Size = New System.Drawing.Size(1194, 32)
         Me.Label2.TabIndex = 32
         Me.Label2.Text = "No"
         '
@@ -215,11 +207,11 @@ Partial Class CancellationReport
         '
         Me.lstLoss.Font = New System.Drawing.Font("Poppins", 13.0!)
         Me.lstLoss.FormattingEnabled = True
-        Me.lstLoss.ItemHeight = 30
-        Me.lstLoss.Location = New System.Drawing.Point(48, 184)
-        Me.lstLoss.Margin = New System.Windows.Forms.Padding(2)
+        Me.lstLoss.ItemHeight = 39
+        Me.lstLoss.Location = New System.Drawing.Point(64, 226)
+        Me.lstLoss.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.lstLoss.Name = "lstLoss"
-        Me.lstLoss.Size = New System.Drawing.Size(1174, 334)
+        Me.lstLoss.Size = New System.Drawing.Size(1564, 394)
         Me.lstLoss.TabIndex = 31
         '
         'btnPrint
@@ -229,10 +221,10 @@ Partial Class CancellationReport
         Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPrint.Font = New System.Drawing.Font("Poppins", 25.0!, System.Drawing.FontStyle.Bold)
         Me.btnPrint.ForeColor = System.Drawing.Color.White
-        Me.btnPrint.Location = New System.Drawing.Point(1048, 579)
-        Me.btnPrint.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnPrint.Location = New System.Drawing.Point(1397, 713)
+        Me.btnPrint.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(175, 75)
+        Me.btnPrint.Size = New System.Drawing.Size(233, 92)
         Me.btnPrint.TabIndex = 30
         Me.btnPrint.Text = "Print"
         Me.btnPrint.UseVisualStyleBackColor = False
@@ -242,10 +234,9 @@ Partial Class CancellationReport
         Me.lblCount.AutoSize = True
         Me.lblCount.Font = New System.Drawing.Font("Poppins", 13.0!, System.Drawing.FontStyle.Bold)
         Me.lblCount.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblCount.Location = New System.Drawing.Point(53, 566)
-        Me.lblCount.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblCount.Location = New System.Drawing.Point(71, 697)
         Me.lblCount.Name = "lblCount"
-        Me.lblCount.Size = New System.Drawing.Size(93, 31)
+        Me.lblCount.Size = New System.Drawing.Size(114, 39)
         Me.lblCount.TabIndex = 29
         Me.lblCount.Text = "lblCount"
         '
@@ -256,10 +247,10 @@ Partial Class CancellationReport
         Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBack.Font = New System.Drawing.Font("Poppins", 25.0!, System.Drawing.FontStyle.Bold)
         Me.btnBack.ForeColor = System.Drawing.Color.White
-        Me.btnBack.Location = New System.Drawing.Point(853, 579)
-        Me.btnBack.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnBack.Location = New System.Drawing.Point(1137, 713)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(175, 75)
+        Me.btnBack.Size = New System.Drawing.Size(233, 92)
         Me.btnBack.TabIndex = 46
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = False
@@ -269,19 +260,18 @@ Partial Class CancellationReport
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Poppins", 25.0!, System.Drawing.FontStyle.Bold)
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(201, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(38, 50)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label10.Location = New System.Drawing.Point(51, 62)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(375, 60)
+        Me.Label10.Size = New System.Drawing.Size(459, 74)
         Me.Label10.TabIndex = 47
         Me.Label10.Text = "Cancellation Report"
         '
         'CancellationReport
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.ClientSize = New System.Drawing.Size(1685, 838)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.lblTotalLoss)
@@ -294,7 +284,7 @@ Partial Class CancellationReport
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.lblCount)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "CancellationReport"
         Me.Text = "CancellationReport"
         Me.grpDateSelection.ResumeLayout(False)
