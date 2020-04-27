@@ -15,7 +15,7 @@ Public Class UserReport
     End Sub
 
     Private Sub cboCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCategory.SelectedIndexChanged
-
+        total = 0
         lstStatistic.Items.Clear()
 
         Dim category As String = cboCategory.SelectedItem
@@ -58,30 +58,34 @@ Public Class UserReport
     End Sub
 
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        total = 0
         Dim cnt As Integer = 0
         Dim category As String = cboCategory.SelectedItem
         lstStatistic.Items.Clear()
 
         For Each row1 In dbo.Users
-            If row1.Email = Nothing Then
-                cnt += 1
-                total += 1
-                lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & "-")
-            Else
-                If category = "All" Then
+            If (row1.Name.ToUpper).Contains((txtSearch.Text).ToUpper) Then
+                If row1.Email = Nothing Then
                     cnt += 1
                     total += 1
-                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.Email)
-                ElseIf row1.IsStaff = False And category = "Customers" Then
-                    cnt += 1
-                    total += 1
-                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.Email)
-                ElseIf row1.IsStaff = True And category = "Staffs" Then
-                    cnt += 1
-                    total += 1
-                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.Email)
+                    lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & "-")
+                Else
+                    If category = "All" Then
+                        cnt += 1
+                        total += 1
+                        lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.Email)
+                    ElseIf row1.IsStaff = False And category = "Customers" Then
+                        cnt += 1
+                        total += 1
+                        lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.Email)
+                    ElseIf row1.IsStaff = True And category = "Staffs" Then
+                        cnt += 1
+                        total += 1
+                        lstStatistic.Items.Add(cnt & vbTab & String.Format("{0,-140}", row1.Name) & vbTab & row1.Email)
+                    End If
                 End If
             End If
+
         Next
 
         If cnt = 0 Then
@@ -216,6 +220,7 @@ Public Class UserReport
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        total = 0
         Quick.Navigate(Me, New AdminReport)
     End Sub
 

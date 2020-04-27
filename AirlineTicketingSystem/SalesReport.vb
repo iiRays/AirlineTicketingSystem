@@ -47,6 +47,7 @@ Public Class SalesReport
     End Sub
 
     Private Sub cboDay_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMonth.SelectedIndexChanged, cboYear.SelectedIndexChanged, cboDay.SelectedIndexChanged
+        total = 0
         lstSales.Items.Clear()
         Try
             Dim selectedMonth As Integer = cboMonth.SelectedIndex + 1
@@ -346,6 +347,7 @@ Public Class SalesReport
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        total = 0
         Quick.Navigate(Me, New AdminReport)
     End Sub
 End Class
