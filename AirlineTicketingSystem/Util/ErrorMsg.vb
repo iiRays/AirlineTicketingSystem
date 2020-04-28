@@ -4,6 +4,15 @@ Public Class ErrorMsg
     Private ErrorStr As New StringBuilder()
     Private AdditionalHeight As Integer = 0
     Private ErrorCount As Integer = 0
+    Private ErrorTitle As String
+
+    Sub New()
+        ErrorTitle = ""
+    End Sub
+
+    Sub New(errorTitle As String)
+        Me.ErrorTitle = errorTitle
+    End Sub
 
     Public Sub Add(errorLine As String)
         ErrorStr.AppendLine(errorLine)
@@ -16,10 +25,10 @@ Public Class ErrorMsg
         If ErrorStr.ToString.Trim.Length > 0 Then
 
             If Not AdditionalHeight = 0 Then
-                Dim errorDialog As New ErrorDialog(ErrorStr.ToString.Trim, AdditionalHeight)
+                Dim errorDialog As New ErrorDialog(ErrorStr.ToString.Trim, AdditionalHeight, ErrorTitle)
                 errorDialog.ShowDialog()
             Else
-                Dim errorDialog As New ErrorDialog(ErrorStr.ToString.Trim)
+                Dim errorDialog As New ErrorDialog(ErrorStr.ToString.Trim, ErrorTitle)
                 errorDialog.ShowDialog()
             End If
 

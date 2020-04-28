@@ -7,6 +7,12 @@ Public Class Register
         cust.UserID = Quick.GenerateId(Of User)
         cust.IsStaff = False
 
+        'Prevent duplicate email
+        If (From user In DB.context.Users Where user.Email = txtEmail.Text And user.Password IsNot Nothing).Count > 0 Then
+            Quick.ShowError("Duplicate email", "This email has already been used by another user.")
+            Return
+        End If
+
         If rbMale.Checked Then
             cust.Gender = Convert.ToChar("M")
         ElseIf rbFemale.Checked Then
@@ -15,7 +21,7 @@ Public Class Register
             cust.Gender = Convert.ToChar("N")
         Else
             'No gender is chosen
-            Quick.ShowError("Registration Failed", "Ensure gender is selected.")
+            Quick.ShowError("", "Ensure gender is selected.")
             Return
         End If
 

@@ -102,13 +102,13 @@ Public Class Quick
     End Sub
 
     Public Shared Sub ShowError(title As String, message As String)
-        Dim errorMsg As New ErrorMsg()
+        Dim errorMsg As New ErrorMsg(title)
         errorMsg.Add(message)
         errorMsg.ShowIfError()
     End Sub
 
     Public Shared Sub ShowErrors(title As String, messages As List(Of String))
-        Dim errorMsg As New ErrorMsg()
+        Dim errorMsg As New ErrorMsg(title)
         For Each message As String In messages
             errorMsg.Add(message)
         Next
