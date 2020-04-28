@@ -339,9 +339,9 @@ Partial Class Account
         Me.Label9.Location = New System.Drawing.Point(77, 572)
         Me.Label9.Name = "Label9"
         Me.Label9.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-        Me.Label9.Size = New System.Drawing.Size(207, 50)
+        Me.Label9.Size = New System.Drawing.Size(267, 50)
         Me.Label9.TabIndex = 73
-        Me.Label9.Text = "You have flown"
+        Me.Label9.Text = "You have flown (Hrs)"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblFlightHours
@@ -349,10 +349,10 @@ Partial Class Account
         Me.lblFlightHours.BackColor = System.Drawing.Color.White
         Me.lblFlightHours.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Bold)
         Me.lblFlightHours.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(189, Byte), Integer))
-        Me.lblFlightHours.Location = New System.Drawing.Point(281, 572)
+        Me.lblFlightHours.Location = New System.Drawing.Point(337, 572)
         Me.lblFlightHours.Name = "lblFlightHours"
         Me.lblFlightHours.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-        Me.lblFlightHours.Size = New System.Drawing.Size(354, 50)
+        Me.lblFlightHours.Size = New System.Drawing.Size(138, 50)
         Me.lblFlightHours.TabIndex = 74
         Me.lblFlightHours.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
